@@ -72,6 +72,18 @@ export const sourceRegistry: RegisteredSource[] = [
     relevanceTags: ["Saffire-I", "Saffire-II", "Saffire-III", "objectives", "flammability-limits", "low-gravity"],
   },
   {
+    id: "ntrs-saffire-i-iii-results-2018",
+    title: "Saffire: A Novel Approach to Study of Spacecraft Fire Safety Using Un-Manned Spacecraft",
+    url: "https://ntrs.nasa.gov/citations/20180005168",
+    organization: "NASA NTRS",
+    sourceKind: "technical-report",
+    verificationStatus: "verified-official",
+    year: 2017,
+    nasaProgram: "Spacecraft Fire Safety Demonstration (Saffire)",
+    relevanceTags: ["Saffire-I", "Saffire-II", "Saffire-III", "steady-flame-spread", "flow-velocity", "confinement", "microgravity"],
+    notes: ["Contains a consolidated table of Saffire I-III test conditions and selected results."],
+  },
+  {
     id: "nasa-saffire-iii-2017",
     title: "NASA Prepares to Ignite Third SAFFIRE Experiment",
     url: "https://www.nasa.gov/news-release/nasa-prepares-to-ignite-third-saffire-experiment/",
