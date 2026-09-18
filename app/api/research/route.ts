@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
-import { createEvidenceUnavailableResult } from "../../../lib/research-pipeline";
+import {
+  createEvidenceUnavailableResult,
+  runInterpretationGate,
+} from "../../../lib/research-pipeline";
+import type { InterpretationAssessment } from "../../../lib/interpretation-gate";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -10,16 +14,25 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Request body must be valid JSON." }, { status: 400 });
   }
 
-  const question =
-    typeof body === "object" && body !== null && "question" in body
-      ? String((body as { question?: unknown }).question ?? "").trim()
-      : "";
+  const record = typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
+  const question = String(record.question ?? "").trim();
 
   if (!question) {
     return NextResponse.json({ error: "A scientific question is required." }, { status: 400 });
   }
 
-  // Safe baseline: until verified NASA sources are ingested, the API refuses
-  // to fabricate evidence, citations, comparisons, or safety conclusions.
+  const interpretationAssessment =
+    record.interpretationAssessment && typeof record.interpretationAssessment === "object"
+      ? (record.interpretationAssessment as InterpretationAssessment)
+      : undefined;
+
+  const gateResult = runInterpretationGate(question, interpretationAssessment);
+  if (gateResult) {
+    return NextResponse.json(gateResult);
+  }
+
+  // Safe baseline: until the full retrieval/reasoning layer is connected,
+  // FREEZGROVER refuses to fabricate evidence, citations, comparisons, or
+  // safety conclusions.
   return NextResponse.json(createEvidenceUnavailableResult(question));
 }
