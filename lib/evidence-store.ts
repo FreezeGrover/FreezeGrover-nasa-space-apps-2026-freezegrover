@@ -1,13 +1,14 @@
 import type { EvidenceLink, Experiment, Finding } from "./domain";
+import { saffireExperiments, saffireFindings } from "./data/saffire";
 import { getSourceById } from "./source-registry";
 
 /**
- * These collections intentionally start empty.
- * Verified findings and experiments are added only after review of official NASA
- * source material. Keeping these empty is a deliberate anti-hallucination guard.
+ * Evidence is only added here after review against official NASA/NTRS source
+ * material. This store is therefore intentionally conservative: unverified
+ * summaries, inferred claims, and unsupported safety extrapolations stay out.
  */
-export const experiments: Experiment[] = [];
-export const findings: Finding[] = [];
+export const experiments: Experiment[] = [...saffireExperiments];
+export const findings: Finding[] = [...saffireFindings];
 export const evidenceLinks: EvidenceLink[] = [];
 
 export interface EvidenceValidationIssue {
