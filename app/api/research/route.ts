@@ -10,6 +10,7 @@ import {
   runInterpretationGate,
   createEvidenceUnavailableResult,
 } from "../../../lib/research-pipeline";
+import { understandQuestion } from "../../../lib/question-understanding";
 import type { EvidenceQuery } from "../../../lib/evidence-ranking";
 import type { InterpretationAssessment } from "../../../lib/interpretation-gate";
 
@@ -74,6 +75,15 @@ function parseInterpretationAssessment(value: unknown): InterpretationAssessment
   };
 }
 
+function hasMeaningfulQuery(query: EvidenceQuery): boolean {
+  return Boolean(
+    query.topic ||
+      query.material ||
+      query.measurement ||
+      (query.conditions && Object.values(query.conditions).some((value) => value !== undefined)),
+  );
+}
+
 export async function POST(request: Request) {
   let body: ResearchBody;
 
@@ -89,19 +99,42 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "A scientific question is required." }, { status: 400 });
   }
 
+  let interpretationAssessment = parseInterpretationAssessment(body.interpretationAssessment);
+  let evidenceQuery = parseEvidenceQuery(body.query);
+  let understandingMode: "model-assisted" | "caller-supplied" | "fallback" =
+    interpretationAssessment || hasMeaningfulQuery(evidenceQuery) ? "caller-supplied" : "fallback";
+
+  // Automatically determine plausible scientific scopes and retrieval dimensions
+  // when the caller has not already supplied them.
+  if (!interpretationAssessment || !hasMeaningfulQuery(evidenceQuery)) {
+    const understood = await understandQuestion(question);
+    if (understood) {
+      interpretationAssessment ??= understood.interpretationAssessment;
+      if (!hasMeaningfulQuery(evidenceQuery)) evidenceQuery = understood.evidenceQuery;
+      understandingMode = "model-assisted";
+    }
+  }
+
   // 1. Interpretation Gate: do not retrieve evidence until the intended scope
   // is sufficiently clear.
-  const interpretationAssessment = parseInterpretationAssessment(body.interpretationAssessment);
   const gateResult = runInterpretationGate(question, interpretationAssessment);
-  if (gateResult) return NextResponse.json(gateResult);
+  if (gateResult) {
+    return NextResponse.json({
+      ...gateResult,
+      understandingMode,
+    });
+  }
 
   // 2. Retrieve and rank verified evidence.
-  const evidenceQuery = parseEvidenceQuery(body.query);
   if (!evidenceQuery.topic) evidenceQuery.topic = question;
   const retrieval = retrieveEvidence(evidenceQuery);
 
   if (retrieval.candidates.length === 0) {
-    return NextResponse.json(createEvidenceUnavailableResult(question));
+    return NextResponse.json({
+      ...createEvidenceUnavailableResult(question),
+      understandingMode,
+      evidenceQuery,
+    });
   }
 
   // For this baseline, keep the evidence set intentionally small and inspectable.
@@ -138,7 +171,9 @@ export async function POST(request: Request) {
       "surface-limitations",
       "report-sources",
     ],
+    understandingMode,
     question,
+    evidenceQuery,
     capabilities: {
       summarize: summary,
       rank: rankedEvidence,
