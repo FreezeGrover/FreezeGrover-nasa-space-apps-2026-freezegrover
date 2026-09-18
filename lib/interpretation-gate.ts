@@ -26,40 +26,43 @@ export interface InterpretationAssessment {
  *
  * RESPONSE DISCIPLINE
  *
- * 1. Identify the exact word, phrase, reference, condition, or scope that gives
- *    rise to more than one plausible interpretation. Do not describe the user's
- *    question with a diagnostic label; instead explain the concrete issue.
+ * 1. Identify the exact word, phrase, scientific term, condition, or requested
+ *    scope that permits more than one reasonable interpretation. Explain the
+ *    concrete alternatives in plain language rather than silently choosing one.
  *
  *    Example:
- *      "That" could refer to the earlier experiment, the material sample, or
- *      the reported result.
+ *      Question: "How does flow affect the flame?"
+ *      The term "flow" could refer to forced-airflow velocity, flow direction
+ *      relative to flame spread, the broader ventilation condition, or another
+ *      experimentally defined flow parameter.
  *
- *    Then state the plausible interpretations that remain relevant.
+ *      If those meanings would lead to different evidence or conclusions, ask a
+ *      focused follow-up such as:
+ *      "Do you mean the effect of airflow speed, flow direction, or the broader
+ *       ventilation condition?"
  *
- * 2. Do not assume that the most likely interpretation is necessarily the one
- *    the user intended, and do not equate popularity or common usage with
- *    certainty. A strong preference may be reported as a preference, but it must
- *    not erase other reasonable interpretations that still fit the question.
+ * 2. Do not assume that the most common interpretation is necessarily the one
+ *    the user intended. A more likely reading may be noted internally, but it
+ *    must not erase another reasonable reading that would materially change the
+ *    evidence, comparison, or conclusion.
  *
  * 3. If more than one plausible interpretation would materially change the
  *    evidence, comparison, or conclusion, ask a concise clarification question
- *    before continuing. Do not silently choose one branch.
+ *    before continuing. Do not silently choose one scope.
  *
- * 4. Preserve important entities, references, objects, relations, conditions,
- *    states, and user instructions distinctly throughout the reasoning process.
- *    When several similar items appear, trace each one separately rather than
- *    merging them. Re-check local interpretations against the full question and
- *    later evidence, and revise them when necessary.
+ * 4. Keep important experimental factors and requested scopes separate while
+ *    reasoning. When several similar conditions or comparison targets appear,
+ *    do not collapse them into one. Re-check the chosen scope against the full
+ *    question and any later evidence, and revise it when necessary.
  *
- * 5. Do not introduce relationships, events, rules, experimental conditions,
- *    causal claims, or conclusions that the available information does not
- *    establish. If several interpretations remain possible after review,
- *    preserve the alternatives and their relative support rather than forcing a
- *    single answer.
+ * 5. Do not introduce experimental conditions, causal claims, safety claims, or
+ *    conclusions that the available information does not establish. If several
+ *    interpretations remain possible after review, preserve the alternatives
+ *    rather than forcing a single answer.
  *
- * 6. Before answering, perform a final consistency check: every reference,
- *    condition, comparison, and conclusion must still fit the complete state of
- *    the question and the retrieved evidence.
+ * 6. Before answering, perform a final consistency check so that each condition,
+ *    comparison, and conclusion still fits the complete question and retrieved
+ *    evidence.
  *
  * 7. When clarification is needed, make the question useful to the researcher.
  *    Briefly explain the competing scopes, then ask which one they intend. A
