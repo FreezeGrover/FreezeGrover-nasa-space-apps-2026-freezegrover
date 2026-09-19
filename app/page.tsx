@@ -1,24 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
-  Activity,
-  BarChart3,
-  BookOpenText,
-  BrainCircuit,
-  ChevronRight,
-  CircleDot,
-  Database,
-  ExternalLink,
-  Flame,
-  Gauge,
-  Layers3,
-  Orbit,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  Telescope,
-  Wind,
+  Activity, BarChart3, BookOpenText, BrainCircuit, ChevronRight, Database,
+  Download, ExternalLink, FileText, Filter, Flame, Image as ImageIcon,
+  Layers3, Orbit, Search, ShieldCheck, Sparkles, Telescope, X
 } from "lucide-react";
 import { saffireExperiments, saffireFindings } from "../lib/data/saffire";
 import { sourceRegistry } from "../lib/source-registry";
@@ -26,8 +12,8 @@ import { sourceRegistry } from "../lib/source-registry";
 const nav = [
   ["Overview", Orbit],
   ["Summarize", BookOpenText],
-  ["Rank", BarChart3],
-  ["Interpret", BrainCircuit],
+  ["Ranking", BarChart3],
+  ["Interpretation", BrainCircuit],
   ["Safety Insights", ShieldCheck],
   ["Experiments", Telescope],
   ["Evidence", Database],
@@ -36,277 +22,150 @@ const nav = [
 
 type TabName = (typeof nav)[number][0];
 
-const capabilities = [
-  {
-    title: "SUMMARIZE" as TabName,
-    eyebrow: "SYNTHESIS",
-    body: "Condense complex combustion research into structured findings without losing experimental context.",
-    icon: BookOpenText,
-    accent: "cyan",
-  },
-  {
-    title: "RANK" as TabName,
-    eyebrow: "RELEVANCE",
-    body: "Surface the strongest evidence for a question by comparing conditions, measurements and experimental fit.",
-    icon: BarChart3,
-    accent: "violet",
-  },
-  {
-    title: "INTERPRET" as TabName,
-    eyebrow: "MEANING",
-    body: "Separate direct observation from interpretation, limitations and possible scientific implications.",
-    icon: BrainCircuit,
-    accent: "blue",
-  },
-  {
-    title: "SAFETY INSIGHTS" as TabName,
-    eyebrow: "HUMAN SPACEFLIGHT",
-    body: "Connect traceable findings to fire-safety questions while preserving uncertainty and source provenance.",
-    icon: ShieldCheck,
-    accent: "orange",
-  },
+const criteria = [
+  "Date range", "Experiment", "Mission / program", "Material / fuel", "Airflow",
+  "Oxygen", "Pressure", "Gravity", "Geometry", "Ignition", "Measurement",
+  "Phenomenon", "Evidence type", "Source type", "Finding", "Keyword / topic"
 ];
 
-const researchNodes = [
-  { label: "Material", value: "Surface & fuel", icon: Layers3, className: "node n1" },
-  { label: "Oxygen", value: "Atmosphere", icon: CircleDot, className: "node n2" },
-  { label: "Airflow", value: "Forced flow", icon: Wind, className: "node n3" },
-  { label: "Pressure", value: "Cabin state", icon: Gauge, className: "node n4" },
-];
-
-const sectionStyle = { paddingTop: 22 } as const;
-const gridStyle = { display: "grid", gap: 12 } as const;
-const cardStyle = {
-  border: "1px solid rgba(91,204,255,.11)",
-  background: "linear-gradient(180deg,rgba(8,21,39,.74),rgba(4,13,27,.77))",
-  borderRadius: 14,
-  padding: 18,
-} as const;
-const mutedStyle = { color: "#7890a3", fontSize: 11, lineHeight: 1.65 } as const;
-const labelStyle = { color: "#55d8ff", fontSize: 9, letterSpacing: ".14em", fontWeight: 800 } as const;
-
-function sourceFor(id: string) {
-  return sourceRegistry.find((source) => source.id === id);
+function PageHeader({ kicker, title, description }: { kicker: string; title: string; description: string }) {
+  return <header className="workspace-head">
+    <div><span className="section-kicker">{kicker}</span><h1>{title}</h1><p>{description}</p></div>
+    <span className="connected"><i /> RESEARCH SYSTEM ONLINE</span>
+  </header>;
 }
 
-function formatCondition(label: string, value: unknown) {
-  if (value === undefined || value === null || value === "") return null;
-  const unit = label === "Airflow" ? " cm/s" : label === "Thickness" ? " mm" : label === "Pressure" ? " kPa" : "";
-  return `${label}: ${String(value)}${unit}`;
+function SelectCard({ index, title, description, Icon, selected, onClick }: { index: number; title: string; description: string; Icon: React.ElementType; selected?: boolean; onClick?: () => void }) {
+  return <button className={selected ? "select-card selected" : "select-card"} onClick={onClick}>
+    <div className="select-card-top"><span>0{index}</span><div className="select-icon"><Icon size={19} /></div></div>
+    <strong>{title}</strong><small>{description}</small><div className="select-footer">SELECT <ChevronRight size={14} /></div>
+  </button>;
 }
 
-function ConditionChips({ conditions }: { conditions: Record<string, unknown> }) {
-  const chips = [
-    formatCondition("Gravity", conditions.gravity),
-    formatCondition("Airflow", conditions.airflowCmPerS),
-    formatCondition("Oxygen", conditions.oxygenPercent),
-    formatCondition("Pressure", conditions.pressureKPa),
-    formatCondition("Material", conditions.material),
-    formatCondition("Thickness", conditions.thicknessMm),
-    formatCondition("Geometry", conditions.geometry),
-    formatCondition("Ignition", conditions.ignition),
-  ].filter(Boolean) as string[];
-
-  return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 10 }}>
-      {chips.map((chip) => (
-        <span key={chip} style={{ border: "1px solid rgba(82,211,255,.12)", background: "rgba(10,50,70,.28)", color: "#91c9d8", borderRadius: 999, padding: "5px 8px", fontSize: 9 }}>
-          {chip}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-function SourceLinks({ ids }: { ids: string[] }) {
-  return (
-    <div style={{ display: "grid", gap: 7, marginTop: 12 }}>
-      {ids.map((id) => {
-        const source = sourceFor(id);
-        if (!source) return null;
-        return (
-          <a key={id} href={source.url} target="_blank" rel="noreferrer" style={{ color: "#7edfff", textDecoration: "none", fontSize: 10, display: "flex", alignItems: "center", gap: 6 }}>
-            <ExternalLink size={12} /> {source.title}
-          </a>
-        );
-      })}
-    </div>
-  );
-}
-
-function FlameCore() {
-  return (
-    <div className="flame-stage" aria-label="Microgravity combustion research visualization">
-      <div className="orbit orbit-one" />
-      <div className="orbit orbit-two" />
-      <div className="orbit orbit-three" />
-      <div className="crosshair horizontal" />
-      <div className="crosshair vertical" />
-      <div className="flame-halo" />
-      <div className="flame-shell shell-a" />
-      <div className="flame-shell shell-b" />
-      <div className="flame-core" />
-      <div className="core-label"><span>MICROGRAVITY</span><strong>COMBUSTION</strong><small>Evidence environment</small></div>
-      {researchNodes.map(({ label, value, icon: Icon, className }) => (
-        <div className={className} key={label}><Icon size={14} /><div><span>{label}</span><small>{value}</small></div></div>
-      ))}
-      <div className="telemetry left-telemetry"><span>THERMAL SIGNATURE</span><div className="micro-chart">{[34,50,43,72,61,86,68].map((h) => <i key={h} style={{ height: `${h}%` }} />)}</div></div>
-      <div className="telemetry right-telemetry"><span>RESEARCH TRACE</span><b>Evidence linked</b><small>Source-aware analysis</small></div>
-    </div>
-  );
-}
-
-function PageHeader({ kicker, title, note }: { kicker: string; title: string; note: string }) {
-  return (
-    <header className="topbar">
-      <div><span className="section-kicker">{kicker}</span><h1>{title}</h1></div>
-      <div className="topbar-actions"><span className="connected"><i /> VERIFIED EVIDENCE</span><span style={{ color: "#60778c", fontSize: 9 }}>{note}</span></div>
-    </header>
-  );
+function CriteriaLab({ selected, setSelected, placeholder }: { selected: string[]; setSelected: (value: string[]) => void; placeholder: string }) {
+  return <section className="criteria-lab">
+    <div className="lab-heading"><div><span className="section-kicker">CRITERIA & CONSTRAINTS</span><h3>Define exactly what belongs in the scope.</h3><p>Use one criterion or combine many. FREEZGROVER should adapt to the research question rather than force a fixed template.</p></div><Filter size={20} /></div>
+    <div className="criteria-cloud">{criteria.map(item => <button key={item} className={selected.includes(item) ? "criteria-pill active" : "criteria-pill"} onClick={() => setSelected(selected.includes(item) ? selected.filter(x => x !== item) : [...selected, item])}>{item}{selected.includes(item) && <b>✓</b>}</button>)}</div>
+    <div className="scope-search"><Search size={18} /><input placeholder={placeholder} /><button>Apply scope</button></div>
+  </section>;
 }
 
 function Overview({ openTab }: { openTab: (tab: TabName) => void }) {
+  const layers: Array<{ title: string; text: string; target: TabName }> = [
+    { title: "SAFETY INSIGHTS", text: "Connect supported understanding to fire-safety significance for human spaceflight.", target: "Safety Insights" },
+    { title: "INTERPRETATION", text: "Understand what findings mean, what they support and where certainty ends.", target: "Interpretation" },
+    { title: "SUMMARIZE + RANK", text: "Condense the knowledge base or prioritize information for a defined purpose.", target: "Summarize" },
+    { title: "RESEARCH LANDSCAPE", text: "Experiments, publications, measurements, imagery, findings and datasets.", target: "Experiments" },
+    { title: "EVIDENCE FOUNDATION", text: "Verified NASA and NTRS material with traceable provenance.", target: "Evidence" },
+  ];
+
   return <>
-    <PageHeader kicker="MICROGRAVITY COMBUSTION RESEARCH" title="Discover what the evidence actually supports." note="Saffire evidence seed" />
-    <section className="hero-grid">
-      <div className="hero-copy panel">
-        <div className="eyebrow"><Sparkles size={14} /> AI-POWERED RESEARCH CONSOLE</div>
-        <h2>From decades of experiments to <span>traceable fire-safety insight.</span></h2>
-        <p>Explore, compare and interpret NASA microgravity combustion research through an interface designed around evidence, conditions and scientific uncertainty.</p>
-        <div className="workflow-strip">{['DATA','EXPERIMENTS','MODELS','INSIGHTS','SAFER SPACEFLIGHT'].map((item,i)=><div className="workflow-item" key={item}><b>{String(i+1).padStart(2,'0')}</b><span>{item}</span>{i<4&&<ChevronRight size={13}/>}</div>)}</div>
-        <div className="hero-actions"><button className="primary-button" onClick={() => openTab("Evidence")}><Search size={16}/> Explore evidence</button><button className="secondary-button" onClick={() => openTab("Ask FREEZGROVER")}><Sparkles size={16}/> Ask FREEZGROVER</button></div>
-      </div>
-      <div className="visual-panel panel"><div className="panel-label"><span>LIVE RESEARCH VIEW</span><b>VERIFIED SEED DATA</b></div><FlameCore/></div>
+    <PageHeader kicker="FREEZGROVER · RESEARCH OVERVIEW" title="From research evidence to defensible fire-safety understanding." description="A connected view of the knowledge, tools and reasoning used to explore NASA microgravity-combustion research." />
+    <section className="overview-grid">
+      <article className="architecture-panel panel">
+        <div className="panel-label"><span>RESEARCH ARCHITECTURE</span><b>INTERACTIVE OVERVIEW</b></div>
+        <h2>The system at a glance</h2><p className="lead">Not a rigid pipeline. Different forms of research feed a connected intelligence layer.</p>
+        <div className="knowledge-stack">{layers.map((layer, i) => <button key={layer.title} className={`stack-layer layer-${i}`} onClick={() => openTab(layer.target)}><span>{String(layers.length - i).padStart(2, "0")}</span><div><strong>{layer.title}</strong><small>{layer.text}</small></div><ChevronRight size={17} /></button>)}</div>
+      </article>
+      <article className="knowledge-panel panel">
+        <div className="panel-label"><span>KNOWLEDGE BASE</span><b>CONNECTED SOURCES</b></div>
+        <div className="research-orbit"><div className="orbit-core"><Flame size={25} /><strong>FREEZGROVER</strong><small>Research intelligence</small></div>{["Experiments", "Publications", "Findings", "Measurements", "Imagery", "Datasets"].map((name, i) => <span key={name} className={`satellite sat-${i}`}>{name}</span>)}</div>
+        <div className="overview-actions"><button onClick={() => openTab("Evidence")}><Database size={16} /> Explore evidence</button><button onClick={() => openTab("Ask FREEZGROVER")}><Sparkles size={16} /> Ask FREEZGROVER</button></div>
+      </article>
     </section>
-    <section className="metrics-row">
-      <article className="metric-card"><span>Experiments indexed</span><strong>{saffireExperiments.length}</strong><small>Saffire I–III currently structured</small></article>
-      <article className="metric-card"><span>Scientific findings</span><strong>{saffireFindings.length}</strong><small>Traceable evidence records</small></article>
-      <article className="metric-card"><span>Official sources</span><strong>{sourceRegistry.filter(s=>s.verificationStatus === "verified-official").length}</strong><small>NASA & NASA NTRS registry</small></article>
-      <article className="metric-card"><span>Condition fields</span><strong>8</strong><small>Material · flow · pressure · geometry…</small></article>
-    </section>
-    <section className="section-heading"><div><span className="section-kicker">CORE RESEARCH CAPABILITIES</span><h3>Four ways to move from evidence to understanding</h3></div><span className="section-note">Open any capability to inspect the current evidence.</span></section>
-    <section className="capability-grid">{capabilities.map(({title,eyebrow,body,icon:Icon,accent},index)=><article className={`capability-card accent-${accent}`} key={title}><div className="cap-top"><div className="cap-icon"><Icon size={21}/></div><span>0{index+1}</span></div><small>{eyebrow}</small><h4>{title}</h4><p>{body}</p><button onClick={()=>openTab(title)}>Open workspace <ChevronRight size={15}/></button></article>)}</section>
+    <section className="metric-strip"><div><b>{saffireExperiments.length}</b><span>Structured experiments</span></div><div><b>{saffireFindings.length}</b><span>Traceable findings</span></div><div><b>{sourceRegistry.length}</b><span>Registered sources</span></div><div><b>{criteria.length}</b><span>Research criteria available</span></div></section>
+    <section className="overview-bottom"><div><span className="section-kicker">ONE CONNECTED ENVIRONMENT</span><h2>Explore the research from whichever direction makes sense.</h2></div><p>Experiments are one important part of the knowledge base—not the only foundation. Publications, observations, measurements, imagery, findings and future datasets can all contribute to summarization, ranking, interpretation and safety insight.</p></section>
   </>;
 }
 
 function SummarizeView() {
-  return <><PageHeader kicker="SUMMARIZE · SYNTHESIS" title="See the findings without losing the experimental context." note={`${saffireFindings.length} findings currently indexed`} />
-    <section style={{ ...sectionStyle, ...gridStyle }}>
-      {saffireFindings.map((finding) => {
-        const experiment = saffireExperiments.find(e => e.id === finding.experimentId);
-        return <article key={finding.id} style={cardStyle}>
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 14, alignItems: "start" }}><div><span style={labelStyle}>{experiment?.name.toUpperCase()}</span><h3 style={{ margin: "7px 0 8px", fontSize: 18 }}>{finding.measurement ?? "Research finding"}</h3></div><span style={{ color: "#83e7c4", fontSize: 9 }}>{finding.evidenceType.replaceAll("-", " ").toUpperCase()}</span></div>
-          <p style={{ ...mutedStyle, color: "#b7cbd8", fontSize: 12 }}>{finding.statement}</p>
-          <ConditionChips conditions={finding.conditions as Record<string, unknown>} />
-          {finding.limitations?.length ? <details style={{ marginTop: 13 }}><summary style={{ color: "#7fa8ba", fontSize: 10, cursor: "pointer" }}>View limitations</summary><div style={{ marginTop: 8 }}>{finding.limitations.map(l => <p key={l} style={mutedStyle}>{l}</p>)}</div></details> : null}
-          <SourceLinks ids={finding.sourceIds} />
-        </article>;
-      })}
+  const options = [
+    ["All current research", "Build a synthesis across the verified knowledge base.", Layers3],
+    ["Experiment", "Summarize one experiment or a selected comparison.", Telescope],
+    ["Document or chapter", "Focus on a NASA report, article, section or chapter.", FileText],
+    ["Topic or question", "Bring together evidence around a scientific question.", Search],
+    ["Image or figure", "Summarize and explain a selected scientific visual.", ImageIcon],
+    ["Custom selection", "Combine sources, dates, conditions and constraints.", Filter],
+  ] as const;
+  const [scope, setScope] = useState(options[0][0]);
+  const [filters, setFilters] = useState<string[]>([]);
+  return <>
+    <PageHeader kicker="SUMMARIZE · AI SYNTHESIS" title="What would you like to summarize?" description="Create a focused synthesis from the whole knowledge base or only the material matching your criteria. The output keeps important context, limitations and sources attached." />
+    <section className="research-builder">
+      <div className="builder-intro"><span className="section-kicker">CHOOSE A STARTING POINT</span><h2>Start broad. Narrow only when you need to.</h2><p>A summary could cover everything currently known, one experiment, one report, a date range, a topic, an image, or a highly specific combination of conditions.</p></div>
+      <div className="select-card-grid">{options.map(([title, description, Icon], i) => <SelectCard key={title} index={i + 1} title={title} description={description} Icon={Icon} selected={scope === title} onClick={() => setScope(title)} />)}</div>
+      <CriteriaLab selected={filters} setSelected={setFilters} placeholder="Describe the scope naturally — e.g. summarize Saffire airflow findings between selected years…" />
+      <section className="report-composer"><div><span className="section-kicker">SUMMARY REQUEST</span><h3>{scope}</h3><p>{filters.length ? `Active criteria: ${filters.join(" · ")}` : "No additional criteria selected. The full chosen scope will be considered."}</p></div><textarea placeholder="Add instructions: What should the summary focus on? How detailed should it be? Who is it for?" /><div className="report-actions"><button className="format active">Research brief</button><button className="format">Detailed report</button><button className="format">Executive summary</button><button className="format">Technical synthesis</button><button className="generate"><Sparkles size={15} /> Generate summary</button></div></section>
+      <section className="output-preview"><div><span className="section-kicker">REPORT OUTPUT</span><h2>Your evidence-linked summary will appear here.</h2><p>The generated report should organize findings, scope, conditions, limitations and source provenance into a readable document rather than exposing internal database labels.</p></div><button className="pdf-button" onClick={() => window.print()}><Download size={16} /> Create PDF</button></section>
     </section>
   </>;
 }
 
-function RankView() {
-  return <><PageHeader kicker="RANK · RELEVANCE" title="Understand why one piece of evidence should be considered before another." note="No opaque relevance score" />
-    <section style={sectionStyle}>
-      <div style={{ ...cardStyle, marginBottom: 12 }}><span style={labelStyle}>HOW RANKING WORKS</span><h3 style={{ margin: "8px 0" }}>Scientific relevance, not similarity alone</h3><p style={mutedStyle}>FREEZGROVER considers condition match, experiment relevance, material match, measurement relevance and evidence strength. A high textual match is not enough if the experimental conditions do not fit the question.</p></div>
-      <div style={{ ...gridStyle }}>
-        {saffireFindings.map((finding,index) => {
-          const exp = saffireExperiments.find(e=>e.id===finding.experimentId);
-          const conditionCount = Object.values(finding.conditions).filter(v=>v!==undefined).length;
-          return <article key={finding.id} style={cardStyle}>
-            <div style={{ display:"grid", gridTemplateColumns:"56px 1fr auto", gap:14, alignItems:"start" }}><div style={{ fontSize:28, color:"#4fdcff", fontWeight:800 }}>#{index+1}</div><div><span style={labelStyle}>{exp?.name}</span><h3 style={{ margin:"7px 0 6px", fontSize:16 }}>{finding.statement}</h3><p style={mutedStyle}>{finding.measurement}</p></div><span style={{ color:"#7d93a6", fontSize:9 }}>{finding.evidenceType}</span></div>
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(4,minmax(0,1fr))", gap:8, marginTop:14 }}>
-              {[['Conditions',`${conditionCount} fields`],['Material',finding.conditions.material ? 'specified' : 'not specified'],['Measurement',finding.measurement ? 'specified' : 'not specified'],['Evidence',finding.evidenceType]].map(([a,b])=><div key={a} style={{ border:"1px solid rgba(255,255,255,.05)", borderRadius:9, padding:9 }}><span style={{ ...labelStyle, color:"#607f91", fontSize:8 }}>{a}</span><b style={{ display:"block", marginTop:5, color:"#c3d9e4", fontSize:10 }}>{b}</b></div>)}
-            </div>
-            <p style={{ ...mutedStyle, marginTop:12 }}><b style={{ color:"#93dff1" }}>Why it can rank highly:</b> it carries explicit experimental conditions, a traceable source record and a defined measurement. Final order should change with the user’s actual question.</p>
-          </article>;
-        })}
-      </div>
+function RankingView() {
+  const options = [
+    ["Evidence for a question", "Prioritize the evidence most relevant to a research question."],
+    ["Experiments", "Compare experiments against selected scientific conditions."],
+    ["Sources", "Rank reports and articles by relevance to a chosen topic."],
+    ["Findings", "Prioritize findings using explicit constraints and evidence strength."],
+  ];
+  const [scope, setScope] = useState(options[0][0]);
+  const [filters, setFilters] = useState<string[]>([]);
+  return <>
+    <PageHeader kicker="RANKING · PURPOSE-DRIVEN RELEVANCE" title="What do you want to rank—and for what purpose?" description="There is no universal number one. FREEZGROVER builds a ranking only after the target, question and scientific criteria are clear, then explains why each item sits where it does." />
+    <section className="research-builder">
+      <div className="builder-intro"><span className="section-kicker">DEFINE THE RANKING</span><h2>A ranking needs a question before it needs numbers.</h2><p>Select what is being ranked and which constraints matter. Changing the question or criteria can legitimately change the order.</p></div>
+      <div className="select-card-grid four">{options.map(([title, description], i) => <SelectCard key={title} index={i + 1} title={title} description={description} Icon={BarChart3} selected={scope === title} onClick={() => setScope(title)} />)}</div>
+      <CriteriaLab selected={filters} setSelected={setFilters} placeholder="e.g. Rank evidence most relevant to airflow velocity and flame spread in microgravity…" />
+      <section className="ranking-logic"><div><span className="section-kicker">VISIBLE RANKING LOGIC</span><h3>Users should always know why something ranks where it does.</h3><p>Each result will state the ranking question, active criteria, condition match, measurement relevance, evidence strength, source traceability and a plain-language explanation.</p></div><div className="logic-bars">{["Condition match", "Question relevance", "Material / fuel match", "Measurement relevance", "Evidence strength", "Source traceability"].map((x, i) => <div key={x}><span>{x}</span><i style={{ width: `${88 - i * 7}%` }} /></div>)}</div></section>
+      <section className="output-preview"><div><span className="section-kicker">RANKED RESULT</span><h2>A ranking with reasons—not unexplained numbers.</h2><p>The order will only be produced after the target and criteria are defined.</p></div><button className="pdf-button" onClick={() => window.print()}><Download size={16} /> Export ranking PDF</button></section>
     </section>
   </>;
 }
 
-function InterpretView() {
-  return <><PageHeader kicker="INTERPRET · MEANING" title="Move from observation to meaning without crossing the evidence boundary." note="Observation ≠ extrapolation" />
-    <section style={{ ...sectionStyle, ...gridStyle }}>
-      {saffireFindings.map((finding) => <article key={finding.id} style={cardStyle}>
-        <span style={labelStyle}>{finding.id.replaceAll("-"," ").toUpperCase()}</span>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr auto 1fr", gap:14, alignItems:"stretch", marginTop:12 }}>
-          <div style={{ border:"1px solid rgba(68,220,255,.1)", borderRadius:12, padding:14 }}><span style={labelStyle}>OBSERVATION</span><p style={{ ...mutedStyle, color:"#c1d4df", marginBottom:0 }}>{finding.statement}</p></div>
-          <ChevronRight size={18} style={{ alignSelf:"center", color:"#36586a" }}/>
-          <div style={{ border:"1px solid rgba(127,106,255,.1)", borderRadius:12, padding:14 }}><span style={{ ...labelStyle, color:"#9389ff" }}>INTERPRETATION BOUNDARY</span><p style={{ ...mutedStyle, marginBottom:0 }}>{finding.limitations?.[0] ?? "No broader interpretation should be asserted beyond the recorded conditions without additional evidence."}</p></div>
-        </div>
-        <ConditionChips conditions={finding.conditions as Record<string, unknown>} />
-      </article>)}
+function InterpretationView() {
+  return <>
+    <PageHeader kicker="INTERPRETATION · FROM FINDING TO MEANING" title="Understand what the research actually means." description="Interpretation goes beyond repeating a finding. It explains what the evidence supports, what context changes its meaning, what remains uncertain and which conclusions would go too far." />
+    <section className="research-builder">
+      <div className="builder-intro"><span className="section-kicker">WHAT THIS WORKSPACE DOES</span><h2>Move from observation to meaning without crossing the evidence boundary.</h2><p>Interpret a finding, graph, image, dataset, report, experiment, comparison or group of sources.</p></div>
+      <div className="interpret-path">{[["01","OBSERVATION","What was actually reported or measured"],["02","CONTEXT","Conditions, source and comparison set"],["03","MEANING","What the evidence reasonably supports"],["04","BOUNDARY","Uncertainty and unsupported conclusions"]].map(([n, t, d], i) => <div className="interpret-step" key={t}><span>{n}</span><strong>{t}</strong><small>{d}</small>{i < 3 && <ChevronRight size={16} />}</div>)}</div>
+      <div className="select-card-grid four"><SelectCard index={1} title="Finding or claim" description="Understand a reported result in its experimental context." Icon={FileText} /><SelectCard index={2} title="Graph, image or figure" description="Interpret a scientific visual while keeping provenance visible." Icon={ImageIcon} /><SelectCard index={3} title="Experiment or comparison" description="Explain what similarities and differences actually imply." Icon={Telescope} /><SelectCard index={4} title="Multiple sources" description="Examine supporting, differing or conflicting evidence together." Icon={Database} /></div>
+      <div className="scope-search interpretation-search"><BrainCircuit size={18} /><input placeholder="What would you like FREEZGROVER to help you understand?" /><button>Interpret</button></div>
     </section>
   </>;
 }
 
 function SafetyView() {
-  const insightCards = [
-    ["Material response is configuration-dependent", "Saffire-II shows that samples can sustain, limit, or extinguish flame spread under the same nominal spacecraft flow. That supports treating material/configuration as part of the safety question rather than assuming one universal behavior.", "saffire-ii-material-dependent-response"],
-    ["Flow comparisons need matched conditions", "Saffire-I and Saffire-III provide a closely related large-SIBAL comparison at different forced-flow conditions, but the current structured record does not yet encode a quantitative causal spread-rate relationship.", "saffire-iii-higher-flow-comparison"],
-    ["Large microgravity flames can remain constrained", "The Saffire-I record reports a constrained concurrent flame after the ignition transient for that specific configuration. This is useful evidence, but not a universal spacecraft rule.", "saffire-i-concurrent-flame-constrained"],
-  ];
-  return <><PageHeader kicker="SAFETY INSIGHTS · HUMAN SPACEFLIGHT" title="See what the evidence may mean for fire safety—and where it stops." note="No unsupported operational guidance" />
-    <section style={{ ...sectionStyle, ...gridStyle }}>
-      {insightCards.map(([title,text,id]) => {
-        const f=saffireFindings.find(x=>x.id===id)!;
-        return <article key={id} style={cardStyle}><div style={{ display:"flex", gap:12, alignItems:"start" }}><div className="cap-icon"><ShieldCheck size={20}/></div><div><span style={{ ...labelStyle, color:"#ff9d72" }}>TRACEABLE SAFETY SIGNIFICANCE</span><h3 style={{ margin:"7px 0 8px" }}>{title}</h3><p style={{ ...mutedStyle, color:"#b6cbd6" }}>{text}</p></div></div><details style={{ marginTop:12 }}><summary style={{ color:"#7fa8ba",fontSize:10,cursor:"pointer" }}>View supporting evidence</summary><div style={{ marginTop:10 }}><p style={mutedStyle}>{f.statement}</p><SourceLinks ids={f.sourceIds}/></div></details></article>;
-      })}
-      <article style={{ ...cardStyle, borderColor:"rgba(255,135,76,.15)" }}><span style={{ ...labelStyle, color:"#ff9d72" }}>IMPORTANT</span><p style={{ ...mutedStyle, marginBottom:0 }}>FREEZGROVER should distinguish research significance from operational safety recommendations. The current dataset contains experimental findings and limitations; it does not contain enough verified evidence to issue spacecraft operational procedures.</p></article>
-    </section>
+  const domains = ["Materials & flammability", "Ignition & extinction", "Flame spread", "Airflow & ventilation", "Atmosphere & oxygen", "Pressure & environment", "Detection & observation", "Spacecraft fire risk"];
+  return <>
+    <PageHeader kicker="SAFETY INSIGHTS · HUMAN SPACEFLIGHT" title="Connect evidence to fire-safety significance—without overstating it." description="Explore safety questions by domain. Every insight should keep its supporting evidence, conditions, interpretation and uncertainty visible." />
+    <section className="research-builder"><div className="safety-grid">{domains.map((domain, i) => <button key={domain} className="safety-card"><div><ShieldCheck size={20} /><span>0{i + 1}</span></div><strong>{domain}</strong><small>Explore supported findings, relevant evidence and important gaps.</small><div className="select-footer">EXPLORE <ChevronRight size={14} /></div></button>)}</div><div className="safety-chain"><span>VERIFIED EVIDENCE</span><ChevronRight size={15} /><span>SUPPORTED FINDING</span><ChevronRight size={15} /><span>INTERPRETATION</span><ChevronRight size={15} /><strong>SAFETY SIGNIFICANCE</strong></div></section>
   </>;
 }
 
 function ExperimentsView() {
-  return <><PageHeader kicker="EXPERIMENT EXPLORER" title="Inspect each experiment as a complete condition-aware record." note={`${saffireExperiments.length} structured experiments`} />
-    <section style={{ ...sectionStyle, ...gridStyle }}>
-      {saffireExperiments.map((exp) => <article key={exp.id} style={cardStyle}><div style={{ display:"flex",justifyContent:"space-between",gap:16 }}><div><span style={labelStyle}>{exp.id.toUpperCase()}</span><h2 style={{ margin:"7px 0 8px",fontSize:20 }}>{exp.name}</h2><p style={{ ...mutedStyle, color:"#aec5d2" }}>{exp.objective}</p></div><Telescope size={24} style={{ color:"#55d8ff" }}/></div><ConditionChips conditions={exp.conditions as Record<string, unknown>}/><div style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:14 }}><div><span style={labelStyle}>MEASUREMENTS</span>{exp.measurements.map(m=><p key={m} style={{ ...mutedStyle, margin:"6px 0" }}>• {m}</p>)}</div><div><span style={labelStyle}>EXPERIMENT NOTES</span>{exp.conditions.notes?.map(n=><p key={n} style={{ ...mutedStyle, margin:"6px 0" }}>• {n}</p>)}</div></div><SourceLinks ids={exp.sourceIds}/></article>)}
-    </section>
+  return <>
+    <PageHeader kicker="EXPERIMENT EXPLORER" title="Explore the experimental landscape, not a wall of fields." description="Browse by experiment, date, material, conditions, phenomenon or measurement. Open a record to understand its purpose, setup, findings and relationship to other research." />
+    <section className="research-builder"><div className="scope-search"><Search size={18} /><input placeholder="Search experiments, materials, measurements or conditions…" /><button>Search</button></div><div className="quick-filters">{["Timeline", "Material", "Airflow", "Oxygen", "Pressure", "Geometry", "Measurement"].map(x => <button key={x}>{x}</button>)}</div><div className="experiment-timeline">{saffireExperiments.map((experiment, i) => <article className="experiment-card" key={experiment.id}><div className="timeline-dot" /><span className="section-kicker">EXPERIMENT 0{i + 1}</span><h2>{experiment.name}</h2><p>{experiment.objective}</p><div className="experiment-meta"><span>Microgravity</span>{experiment.conditions.airflowCmPerS && <span>{experiment.conditions.airflowCmPerS} cm/s airflow</span>}<span>{experiment.measurements.length} measurements</span><span>{experiment.sourceIds.length} sources</span></div><button>Open experiment profile <ChevronRight size={14} /></button></article>)}</div></section>
   </>;
 }
 
 function EvidenceView() {
-  return <><PageHeader kicker="EVIDENCE LIBRARY" title="Trace every structured finding back to NASA or NASA NTRS." note={`${sourceRegistry.length} registered sources`} />
-    <section style={sectionStyle}>
-      <div style={{ ...gridStyle, gridTemplateColumns:"repeat(2,minmax(0,1fr))" }}>
-        {sourceRegistry.map(source => {
-          const related = saffireFindings.filter(f=>f.sourceIds.includes(source.id));
-          return <article key={source.id} style={cardStyle}><div style={{ display:"flex",justifyContent:"space-between",gap:12 }}><div><span style={labelStyle}>{source.organization} · {source.sourceKind.replaceAll("-"," ").toUpperCase()}</span><h3 style={{ margin:"7px 0 5px",fontSize:15 }}>{source.title}</h3><p style={{ ...mutedStyle, margin:"0" }}>{source.nasaProgram}{source.year ? ` · ${source.year}` : ""}</p></div><span style={{ color:source.verificationStatus === "verified-official" ? "#83e7c4":"#d8ba72",fontSize:8 }}>{source.verificationStatus.toUpperCase()}</span></div><div style={{ display:"flex",gap:5,flexWrap:"wrap",marginTop:10 }}>{source.relevanceTags.slice(0,7).map(tag=><span key={tag} style={{ border:"1px solid rgba(255,255,255,.06)",borderRadius:999,padding:"4px 7px",color:"#6f91a3",fontSize:8 }}>{tag}</span>)}</div>{related.length>0&&<details style={{ marginTop:12 }}><summary style={{ color:"#7fa8ba",fontSize:10,cursor:"pointer" }}>{related.length} structured finding{related.length===1?'':'s'} linked</summary><div style={{ marginTop:8 }}>{related.map(f=><p key={f.id} style={mutedStyle}>{f.statement}{f.sourceLocator ? <><br/><span style={{ color:"#5f8294" }}>Location: {f.sourceLocator}</span></> : null}</p>)}</div></details>}<a href={source.url} target="_blank" rel="noreferrer" style={{ display:"inline-flex",alignItems:"center",gap:6,marginTop:12,color:"#7edfff",fontSize:10,textDecoration:"none" }}><ExternalLink size={12}/> Open official source</a></article>;
-        })}
-      </div>
-    </section>
+  const [query, setQuery] = useState("");
+  const visible = useMemo(() => sourceRegistry.filter(source => `${source.title} ${source.relevanceTags.join(" ")} ${source.nasaProgram}`.toLowerCase().includes(query.toLowerCase())), [query]);
+  return <>
+    <PageHeader kicker="EVIDENCE LIBRARY" title="The research foundation behind every answer." description="Browse verified NASA and NTRS material as a scientific library. See what a source is, why it matters, which research it connects to and where it supports a finding." />
+    <section className="research-builder"><div className="scope-search"><Search size={18} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search the evidence library…" /><button>Search</button></div><div className="quick-filters">{["All sources", "Technical reports", "Mission articles", "Saffire", "Combustion", "Fire safety"].map(x => <button key={x}>{x}</button>)}</div><div className="evidence-grid">{visible.map(source => <article className="source-card" key={source.id}><div className="source-top"><span>{source.organization}</span><b>{source.year ?? "NASA"}</b></div><div className="source-icon"><FileText size={22} /></div><h3>{source.title}</h3><p>{source.sourceKind.replaceAll("-", " ")} · {source.nasaProgram}</p><div className="source-tags">{source.relevanceTags.slice(0, 4).map(tag => <span key={tag}>{tag}</span>)}</div><a href={source.url} target="_blank" rel="noreferrer">Open official source <ExternalLink size={13} /></a></article>)}</div></section>
   </>;
 }
 
-function AskView() {
-  return <><PageHeader kicker="ASK FREEZGROVER" title="Natural conversation on the surface. Evidence-grounded research underneath." note="Interpretation Gate enabled" />
-    <section style={sectionStyle}><article style={{ ...cardStyle, minHeight:320,display:"grid",placeItems:"center",textAlign:"center" }}><div style={{ maxWidth:620 }}><div className="brand-orb" style={{ margin:"0 auto 16px" }}><Sparkles size={18}/></div><span style={labelStyle}>CONVERSATIONAL RESEARCH ASSISTANT</span><h2 style={{ fontSize:28,margin:"10px 0" }}>Ask a scientific question.</h2><p style={{ ...mutedStyle,fontSize:12 }}>FREEZGROVER can clarify the experimental variable when needed, retrieve the relevant evidence, compare conditions, surface limitations and show where the answer comes from.</p><a href="/test" className="primary-button" style={{ textDecoration:"none",marginTop:14 }}><Sparkles size={16}/> Open conversation test</a></div></article></section>
-  </>;
+function ChatModal({ close }: { close: () => void }) {
+  return <div className="chat-backdrop"><section className="chat-modal"><header><div className="chat-brand"><div className="brand-orb"><Sparkles size={18} /></div><div><strong>FREEZGROVER</strong><span>Research intelligence</span></div></div><button onClick={close}><X size={19} /></button></header><iframe title="FREEZGROVER chat" src="/test" /></section></div>;
 }
 
 export default function Home() {
-  const [activeTab,setActiveTab] = useState<TabName>("Overview");
-
-  const view = activeTab === "Overview" ? <Overview openTab={setActiveTab}/> :
-    activeTab === "Summarize" ? <SummarizeView/> :
-    activeTab === "Rank" ? <RankView/> :
-    activeTab === "Interpret" ? <InterpretView/> :
-    activeTab === "Safety Insights" ? <SafetyView/> :
-    activeTab === "Experiments" ? <ExperimentsView/> :
-    activeTab === "Evidence" ? <EvidenceView/> : <AskView/>;
-
-  return (
-    <main className="app-shell">
-      <aside className="sidebar">
-        <div className="brand-mark"><div className="brand-orb"><Flame size={20}/></div><div><strong>FREEZGROVER</strong><span>From Questions to Discovery</span></div></div>
-        <div className="mission-chip"><span className="status-dot"/> NASA SPACE APPS 2026</div>
-        <nav>{nav.map(([label,Icon])=><button className={activeTab===label?"nav-item active":"nav-item"} key={label} onClick={()=>setActiveTab(label)}><Icon size={17} strokeWidth={1.8}/><span>{label}</span>{activeTab===label&&<span className="nav-pulse"/>}</button>)}</nav>
-        <div className="sidebar-footer"><div className="signal-line"><Activity size={15}/><span>Research system</span><b>ONLINE</b></div><div className="signal-line"><Database size={15}/><span>Evidence layer</span><b>READY</b></div></div>
-      </aside>
-      <section className="workspace">{view}<footer className="footer-banner" style={{ marginTop:28 }}><div className="earth-glow"/><div><span>FREEZGROVER · FROM QUESTIONS TO DISCOVERY</span><strong>Evidence made clearer. Decisions made safer.</strong></div><span className="footer-badge">NASA SPACE APPS 2026 · RESEARCH BUILD</span></footer></section>
-    </main>
-  );
+  const [activeTab, setActiveTab] = useState<TabName>("Overview");
+  const [chatOpen, setChatOpen] = useState(false);
+  const openTab = (tab: TabName) => { if (tab === "Ask FREEZGROVER") { setChatOpen(true); return; } setActiveTab(tab); };
+  const view = activeTab === "Overview" ? <Overview openTab={openTab} /> : activeTab === "Summarize" ? <SummarizeView /> : activeTab === "Ranking" ? <RankingView /> : activeTab === "Interpretation" ? <InterpretationView /> : activeTab === "Safety Insights" ? <SafetyView /> : activeTab === "Experiments" ? <ExperimentsView /> : <EvidenceView />;
+  return <main className="app-shell"><aside className="sidebar"><div className="brand-mark"><div className="brand-orb"><Flame size={20} /></div><div><strong>FREEZGROVER</strong><span>From Questions to Discovery</span></div></div><div className="mission-chip"><span className="status-dot" /> NASA SPACE APPS 2026</div><nav>{nav.map(([label, Icon]) => <button className={activeTab === label ? "nav-item active" : "nav-item"} key={label} onClick={() => openTab(label)}><Icon size={17} strokeWidth={1.8} /><span>{label}</span>{activeTab === label && <span className="nav-pulse" />}</button>)}</nav><div className="sidebar-footer"><div className="signal-line"><Activity size={15} /><span>Research system</span><b>ONLINE</b></div><div className="signal-line"><Database size={15} /><span>Evidence layer</span><b>READY</b></div></div></aside><section className="workspace">{view}</section>{chatOpen && <ChatModal close={() => setChatOpen(false)} />}</main>;
 }
