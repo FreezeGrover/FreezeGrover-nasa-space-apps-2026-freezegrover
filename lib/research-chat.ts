@@ -5,6 +5,7 @@ import type {
   EvidenceInterpretation,
   SafetyInsightDraft,
 } from "./research-capabilities";
+import { getSourceById } from "./source-registry";
 
 export interface ChatMessage {
   role: "user" | "assistant";
@@ -191,26 +192,29 @@ Scientific discipline:
 - If evidence is mixed, incomplete, or not directly comparable, say so plainly.
 - A likely interpretation is not automatically certain.
 - Do not turn an experimental result into operational safety guidance unless the supplied safety evidence explicitly supports it.
-- Source IDs are traceability references, not the main voice of the answer.
 
 Natural answer style:
-- Begin with the answer or main scientific point, in ordinary conversational language.
-- Explain the reasoning as a connected thought. Use natural transitions such as "What the evidence does show...", "The important catch is...", "That means...", or similarly appropriate wording when useful, but do not repeat stock phrases mechanically.
+- Begin with the answer or main scientific point in ordinary conversational language.
+- Let the wording emerge naturally from the specific question and evidence. Do not imitate a stock phrase, canned transition, or repeated rhetorical pattern.
+- Do not use a memorized set of transitions. Vary the way ideas connect according to what the reasoning actually requires.
 - Vary sentence structure and response shape according to the question. Do not force every answer into the same sequence of finding, evidence, limitation, conclusion.
 - Use paragraphs by default. Use bullets only when they genuinely make several distinct items easier to compare or scan.
 - Avoid report-like labels such as "What is documented", "Observation", "Interpretation", "Conclusion", or "Limitations" unless the user asks for a structured analysis or those headings materially improve a complex answer.
-- Do not sound legalistic or procedural. Prefer direct human wording such as "we can't isolate thickness from these tests" over unnecessarily formal phrasing such as "a defensible thickness relationship would require" when both are equally accurate.
+- Prefer clear human wording over formal or procedural language when both are equally accurate.
 - Preserve scientific precision while using contractions and natural phrasing where appropriate.
-- If the answer has an important limitation, weave it into the explanation at the point where it matters instead of appending a generic disclaimer.
-- When evidence is insufficient, explain what prevents a stronger conclusion and what evidence would resolve it in a natural way.
+- If the answer has an important limitation, weave it into the explanation where it becomes relevant instead of attaching a generic disclaimer.
+- When evidence is insufficient, explain why the evidence cannot support a stronger conclusion and what additional evidence would resolve the question.
 - Do not pad the ending with a generic recap if the point is already clear.
 
 Sources and traceability:
-- Keep source references visually secondary to the conversation.
-- When a source directly supports a specific claim and an inline reference reads naturally, place the source ID after that claim.
-- Otherwise, put a single compact "Sources:" line at the very end with only the source IDs actually used.
-- Do not interrupt the explanation repeatedly with source IDs.
-- Do not make the Sources line the emotional or rhetorical ending of the answer. The prose immediately before it should already feel complete and natural.
+- Do not finish with a bare list of internal source IDs.
+- If sources are useful for the answer, introduce them naturally with wording such as "Sources used" or another context-appropriate phrase; do not use the same phrase mechanically every time.
+- Prefer the human-readable source title over the internal ID. The ID may appear secondarily for traceability.
+- For each source, briefly state what part of the answer it supports.
+- When a source locator is supplied with a finding, include that locator so the user can see where in the source the evidence comes from.
+- If no page, section, table, figure, or other locator is supplied, do not invent one and do not imply that an exact location was verified.
+- Include the source URL when available so the researcher can open the original NASA/NTRS source.
+- Keep the source section compact enough that it supports the conversation rather than overwhelming it.
 
 Conversation behavior:
 - Answer the user's actual latest question first.
@@ -227,11 +231,24 @@ export async function generateConversationalReply(
   const { apiKey, model } = getApiConfig();
   if (!apiKey) return null;
 
+  const sourceDetails = context.sourceIds
+    .map((sourceId) => getSourceById(sourceId))
+    .filter((source): source is NonNullable<ReturnType<typeof getSourceById>> => Boolean(source))
+    .map((source) => ({
+      id: source.id,
+      title: source.title,
+      url: source.url,
+      organization: source.organization,
+      year: source.year,
+      sourceKind: source.sourceKind,
+    }));
+
   const evidencePacket = {
     question: context.question,
     summary: context.summary,
     rankedEvidence: context.rankedEvidence.slice(0, 6).map((item) => ({
       finding: item.finding,
+      sourceLocator: item.finding.sourceLocator,
       whyRanked: item.whyRanked,
       conditionMatch: item.conditionMatch,
       materialMatch: item.materialMatch,
@@ -243,6 +260,7 @@ export async function generateConversationalReply(
     safetyInsight: context.safetyInsight,
     limitations: context.limitations,
     sourceIds: context.sourceIds,
+    sourceDetails,
   };
 
   const response = await fetch("https://api.openai.com/v1/responses", {
