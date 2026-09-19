@@ -60,11 +60,11 @@ function getApiConfig() {
   return { apiKey, model };
 }
 
-function recentInput(messages: ChatMessage[]) {
-  return messages.slice(-12).map((message) => ({
-    role: message.role,
-    content: [{ type: "input_text", text: message.content }],
-  }));
+function conversationTranscript(messages: ChatMessage[]): string {
+  return messages
+    .slice(-12)
+    .map((message) => `${message.role === "assistant" ? "FREEZGROVER" : "USER"}: ${message.content}`)
+    .join("\n\n");
 }
 
 const INTENT_SCHEMA = {
@@ -76,22 +76,32 @@ const INTENT_SCHEMA = {
   required: ["intent"],
 };
 
-const INTENT_INSTRUCTIONS = `Classify the user's latest conversational intent for FREEZGROVER.
+const INTENT_INSTRUCTIONS = `Classify the intent of the USER'S LATEST MESSAGE in a conversation with FREEZGROVER.
 
-Use the conversation context, not only isolated keywords.
+Use earlier turns only to understand context. Do not classify an earlier topic instead of the latest message.
 
 Choose exactly one:
-- casual: greetings, thanks, jokes, social conversation, small talk, conversational remarks, or questions about FREEZGROVER itself that do not require scientific evidence.
+- casual: greetings, thanks, jokes, social conversation, small talk, conversational remarks, questions like how the assistant is doing, or questions about FREEZGROVER itself that do not require scientific evidence.
 - general: a genuine question or task that is not about NASA microgravity combustion research and does not require FREEZGROVER's scientific evidence pipeline.
 - research: a question, comparison, follow-up, clarification, or task about combustion, flames, fire safety, microgravity experiments, Saffire, NASA combustion evidence, experimental conditions, materials, oxygen, airflow, pressure, measurements, findings, or the current scientific research thread.
 
-A short follow-up such as "what about Saffire III?" can be research because of conversation context. A greeting such as "hey, how are you?" is casual even though FREEZGROVER is a research assistant.
+Important examples:
+- "hey" -> casual
+- "how are you doing?" -> casual
+- "that's interesting, thanks" -> casual
+- "what can you do?" -> casual
+- "what is the capital of Spain?" -> general
+- "how does airflow affect flame spread?" -> research
+- after discussing Saffire, "what about Saffire III?" -> research
 
 Do not answer the user. Return only the requested structured classification.`;
 
 export async function classifyConversationIntent(messages: ChatMessage[]): Promise<ConversationIntent> {
   const { apiKey, model } = getApiConfig();
   if (!apiKey) return "research";
+
+  const transcript = conversationTranscript(messages);
+  const latest = messages[messages.length - 1]?.content ?? "";
 
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
@@ -103,7 +113,7 @@ export async function classifyConversationIntent(messages: ChatMessage[]): Promi
       model,
       reasoning: { effort: "low" },
       instructions: INTENT_INSTRUCTIONS,
-      input: recentInput(messages),
+      input: `CONVERSATION:\n${transcript}\n\nLATEST USER MESSAGE TO CLASSIFY:\n${latest}`,
       text: {
         format: {
           type: "json_schema",
@@ -135,11 +145,11 @@ export async function classifyConversationIntent(messages: ChatMessage[]): Promi
 
 const GENERAL_CHAT_INSTRUCTIONS = `You are FREEZGROVER. You are intelligent, natural, warm, and conversational.
 
-Talk like a capable assistant rather than a scientific report. You can greet the user, respond to thanks, hold ordinary conversation, explain ideas, ask relevant follow-up questions, and understand conversational context.
+Talk like a capable assistant rather than a scientific report. You can greet the user, respond to thanks, hold ordinary conversation, explain ideas, ask relevant follow-up questions, and understand recent conversational context.
 
-For this response, the system has already determined that the user is not asking for the NASA combustion evidence pipeline. Do not pretend to have retrieved scientific evidence. Do not force the conversation into a rigid research template.
+For this response, the system has already determined that the user's latest message does not need the NASA combustion evidence pipeline. Do not pretend to have retrieved scientific evidence. Do not force the conversation into a rigid research template.
 
-Keep responses natural and proportionate to the user's message. A simple greeting deserves a simple greeting. A substantive general question deserves a useful answer.
+Keep responses natural and proportionate to the user's latest message. A simple greeting deserves a simple greeting. A social question such as "how are you doing?" should receive a natural social response. A substantive general question deserves a useful answer.
 
 Do not artificially redirect every casual message back to NASA research. Separate guardrails can add gentle research nudges later.`;
 
@@ -157,7 +167,7 @@ export async function generateGeneralConversationalReply(messages: ChatMessage[]
       model,
       reasoning: { effort: "medium" },
       instructions: GENERAL_CHAT_INSTRUCTIONS,
-      input: recentInput(messages),
+      input: `Continue this conversation naturally. Respond to the latest USER message.\n\n${conversationTranscript(messages)}`,
     }),
   });
 
@@ -184,7 +194,7 @@ Scientific discipline:
 - Source IDs are traceability references. Mention the relevant source IDs naturally at the end of claims or in a short Sources section when useful.
 
 Conversation behavior:
-- Answer the user's actual question first.
+- Answer the user's actual latest question first.
 - Be concise when the question is simple and more detailed when the question requires it.
 - Understand follow-up questions in light of recent conversation.
 - You may end with one genuinely useful follow-up question when that helps the research goal.
@@ -216,19 +226,6 @@ export async function generateConversationalReply(
     sourceIds: context.sourceIds,
   };
 
-  const input = [
-    ...recentInput(messages),
-    {
-      role: "user" as const,
-      content: [
-        {
-          type: "input_text" as const,
-          text: `Use the verified research context below to answer the latest user request conversationally.\n\nVERIFIED RESEARCH CONTEXT\n${JSON.stringify(evidencePacket, null, 2)}`,
-        },
-      ],
-    },
-  ];
-
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
     headers: {
@@ -239,7 +236,7 @@ export async function generateConversationalReply(
       model,
       reasoning: { effort: "medium" },
       instructions: CHAT_INSTRUCTIONS,
-      input,
+      input: `CONVERSATION:\n${conversationTranscript(messages)}\n\nVERIFIED RESEARCH CONTEXT:\n${JSON.stringify(evidencePacket, null, 2)}\n\nRespond conversationally to the latest USER message using only the verified scientific context for scientific claims.`,
     }),
   });
 
