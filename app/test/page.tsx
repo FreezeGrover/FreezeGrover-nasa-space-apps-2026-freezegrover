@@ -62,7 +62,7 @@ function EvidenceDetails({ result }: { result: unknown }) {
 }
 
 export default function ResearchTestPage() {
-  const [question, setQuestion] = useState("How does flow affect the flame?");
+  const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [lastResult, setLastResult] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
@@ -91,7 +91,7 @@ export default function ResearchTestPage() {
 
       const reply = typeof data?.conversationalReply === "string"
         ? data.conversationalReply
-        : "I received the research result, but no conversational reply was returned.";
+        : "I received your message, but I couldn't generate a conversational reply.";
 
       setMessages([...nextMessages, { role: "assistant", content: reply }]);
       setLastResult(data);
@@ -105,21 +105,21 @@ export default function ResearchTestPage() {
   return (
     <main className="test-shell">
       <section className="test-card">
-        <div className="kicker">FREEZGROVER · CONVERSATIONAL RESEARCH TEST</div>
+        <div className="kicker">FREEZGROVER · CONVERSATION TEST</div>
         <h1>Talk to FREEZGROVER</h1>
         <p>
-          Chat naturally. FREEZGROVER will clarify scope when needed, use verified evidence when it can, and keep the structured analysis available underneath.
+          Chat naturally. FREEZGROVER can hold ordinary conversation and will switch into the evidence pipeline when the discussion becomes relevant to the research domain.
         </p>
 
         <div className="chat-window">
-          {messages.length === 0 && <div className="empty-chat">Ask a question to start the research conversation.</div>}
+          {messages.length === 0 && <div className="empty-chat">Say hello, ask a general question, or start a research conversation.</div>}
           {messages.map((message, index) => (
             <div className={`bubble ${message.role}`} key={`${message.role}-${index}`}>
               <span>{message.role === "assistant" ? "FREEZGROVER" : "YOU"}</span>
               <p>{message.content}</p>
             </div>
           ))}
-          {loading && <div className="bubble assistant"><span>FREEZGROVER</span><p>Thinking through the evidence…</p></div>}
+          {loading && <div className="bubble assistant"><span>FREEZGROVER</span><p>Thinking…</p></div>}
         </div>
 
         <form onSubmit={submit}>
@@ -127,16 +127,16 @@ export default function ResearchTestPage() {
             aria-label="Message FREEZGROVER"
             value={question}
             onChange={(event) => setQuestion(event.target.value)}
-            placeholder="Ask a scientific question or reply to FREEZGROVER…"
+            placeholder="Message FREEZGROVER…"
             rows={3}
           />
-          <button disabled={loading || !question.trim()} type="submit">{loading ? "Running…" : "Send"}</button>
+          <button disabled={loading || !question.trim()} type="submit">{loading ? "Thinking…" : "Send"}</button>
         </form>
 
         <div className="examples">
-          <button type="button" onClick={() => setQuestion("How does flow affect the flame?")}>Multi-scope example</button>
-          <button type="button" onClick={() => setQuestion("How did airflow speed affect flame behavior in Saffire-III?")}>Clearer example</button>
-          <button type="button" onClick={() => setQuestion("Can you compare Saffire-I and Saffire-III for me?")}>Follow-up example</button>
+          <button type="button" onClick={() => setQuestion("Hey, how are you?")}>Casual conversation</button>
+          <button type="button" onClick={() => setQuestion("How does flow affect the flame?")}>Research question</button>
+          <button type="button" onClick={() => setQuestion("Can you compare Saffire-I and Saffire-III for me?")}>Research follow-up</button>
         </div>
 
         {error && <div className="error">{error}</div>}
