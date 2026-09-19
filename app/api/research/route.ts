@@ -121,7 +121,6 @@ export async function POST(request: Request) {
   }
 
   const question = typeof body.question === "string" ? body.question.trim() : "";
-
   if (!question) {
     return NextResponse.json({ error: "A message is required." }, { status: 400 });
   }
@@ -135,9 +134,7 @@ export async function POST(request: Request) {
       conversationIntent,
       understandingMode: "conversation",
       question,
-      conversationalReply:
-        conversationalReply ??
-        "I’m here. What would you like to talk about?",
+      conversationalReply: conversationalReply ?? "I’m here. What would you like to talk about?",
       capabilities: null,
       evidenceQuery: null,
       sourceIds: [],
@@ -147,41 +144,51 @@ export async function POST(request: Request) {
 
   let interpretationAssessment = parseInterpretationAssessment(body.interpretationAssessment);
   let evidenceQuery = parseEvidenceQuery(body.query);
+  let resolvedQuestion = question;
+  let naturalClarification: string | undefined;
   let understandingMode: "model-assisted" | "caller-supplied" | "fallback" =
     interpretationAssessment || hasMeaningfulQuery(evidenceQuery) ? "caller-supplied" : "fallback";
 
   if (!interpretationAssessment || !hasMeaningfulQuery(evidenceQuery)) {
-    const understood = await understandQuestion(question);
+    const understood = await understandQuestion(question, messages);
     if (understood) {
+      resolvedQuestion = understood.resolvedQuestion;
+      naturalClarification = understood.clarificationQuestion;
       interpretationAssessment ??= understood.interpretationAssessment;
       if (!hasMeaningfulQuery(evidenceQuery)) evidenceQuery = understood.evidenceQuery;
       understandingMode = "model-assisted";
     }
   }
 
-  const gateResult = runInterpretationGate(question, interpretationAssessment);
+  const gateResult = runInterpretationGate(resolvedQuestion, interpretationAssessment);
   if (gateResult) {
-    const clarificationQuestion = gateResult.answer.clarificationQuestion ?? "Could you clarify the scope you mean?";
     return NextResponse.json({
       ...gateResult,
       conversationIntent,
       understandingMode,
-      conversationalReply: clarificationQuestion,
+      question,
+      resolvedQuestion,
+      conversationalReply:
+        naturalClarification ??
+        gateResult.answer.clarificationQuestion ??
+        "Could you clarify what you mean so I can use the right evidence?",
     });
   }
 
-  if (!evidenceQuery.topic) evidenceQuery.topic = question;
+  if (!evidenceQuery.topic) evidenceQuery.topic = resolvedQuestion;
   const retrieval = retrieveEvidence(evidenceQuery);
 
   if (retrieval.candidates.length === 0) {
-    const unavailable = createEvidenceUnavailableResult(question);
+    const unavailable = createEvidenceUnavailableResult(resolvedQuestion);
     return NextResponse.json({
       ...unavailable,
       conversationIntent,
       understandingMode,
+      question,
+      resolvedQuestion,
       evidenceQuery,
       conversationalReply:
-        "I don’t have enough verified NASA evidence connected yet to answer that reliably. I can tell you what evidence is missing or help narrow the question to the closest supported scope.",
+        "I don’t have enough verified NASA evidence connected yet to answer that confidently. I can still tell you exactly what evidence is missing, or we can narrow the question to the closest supported comparison.",
     });
   }
 
@@ -201,7 +208,7 @@ export async function POST(request: Request) {
   ];
 
   const conversationalReply = await generateConversationalReply(messages, {
-    question,
+    question: resolvedQuestion,
     rankedEvidence,
     summary,
     interpretations,
@@ -229,10 +236,11 @@ export async function POST(request: Request) {
     conversationIntent,
     understandingMode,
     question,
+    resolvedQuestion,
     evidenceQuery,
     conversationalReply:
       conversationalReply ??
-      "I found relevant verified evidence, but the conversational synthesis layer did not return a response. The structured evidence remains available below.",
+      "I found relevant evidence, but I couldn’t turn it into a reliable conversational answer on this pass. The structured evidence is still available below.",
     capabilities: {
       summarize: summary,
       rank: rankedEvidence,
