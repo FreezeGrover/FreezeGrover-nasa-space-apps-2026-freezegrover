@@ -17,6 +17,7 @@ import {
   generateGeneralConversationalReply,
   type ChatMessage,
 } from "../../../lib/research-chat";
+import { getSourceById } from "../../../lib/source-registry";
 import type { EvidenceQuery } from "../../../lib/evidence-ranking";
 import type { InterpretationAssessment } from "../../../lib/interpretation-gate";
 
@@ -138,6 +139,7 @@ export async function POST(request: Request) {
       capabilities: null,
       evidenceQuery: null,
       sourceIds: [],
+      sourceDetails: [],
       limitations: [],
     });
   }
@@ -172,6 +174,7 @@ export async function POST(request: Request) {
         naturalClarification ??
         gateResult.answer.clarificationQuestion ??
         "Could you clarify what you mean so I can use the right evidence?",
+      sourceDetails: [],
     });
   }
 
@@ -189,6 +192,7 @@ export async function POST(request: Request) {
       evidenceQuery,
       conversationalReply:
         "I don’t have enough verified NASA evidence connected yet to answer that confidently. I can still tell you exactly what evidence is missing, or we can narrow the question to the closest supported comparison.",
+      sourceDetails: [],
     });
   }
 
@@ -199,6 +203,30 @@ export async function POST(request: Request) {
   const safetyInsight = deriveSafetyInsight(rankedEvidence);
 
   const sourceIds = [...new Set(rankedEvidence.flatMap((item) => item.finding.sourceIds))];
+  const sourceDetails = sourceIds
+    .map((sourceId) => getSourceById(sourceId))
+    .filter((source): source is NonNullable<ReturnType<typeof getSourceById>> => Boolean(source))
+    .map((source) => ({
+      id: source.id,
+      title: source.title,
+      url: source.url,
+      organization: source.organization,
+      year: source.year,
+      sourceKind: source.sourceKind,
+      locators: [
+        ...new Set(
+          rankedEvidence
+            .filter((item) => item.finding.sourceIds.includes(source.id))
+            .map((item) => item.finding.sourceLocator)
+            .filter((locator): locator is string => Boolean(locator)),
+        ),
+      ],
+      supports: rankedEvidence
+        .filter((item) => item.finding.sourceIds.includes(source.id))
+        .slice(0, 2)
+        .map((item) => item.finding.statement),
+    }));
+
   const limitations = [
     ...new Set([
       ...summary.limitations,
@@ -251,5 +279,6 @@ export async function POST(request: Request) {
     retrievalNotes: retrieval.notes,
     limitations,
     sourceIds,
+    sourceDetails,
   });
 }
