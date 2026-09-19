@@ -54,8 +54,6 @@ Natural clarification behavior:
 - If a previous turn already establishes one dimension, do not reopen it merely because the new message introduces another dimension.
 - Once the user has supplied a clear choice, accept it and move forward unless a new material uncertainty appears.
 - A clarification should reduce uncertainty, not create a new tree of unnecessary sub-questions.
-- Keep the clarification neutral about experimental mechanism. Distinguish what variable or condition the user means without assuming how researchers changed, produced, or controlled that variable unless the user or prior evidence has already established that mechanism.
-- Do not turn a clarification into a hidden scientific claim. If two variables can be related experimentally, name the variables themselves rather than embedding an unestablished causal or procedural relationship between them.
 
 Clarification priority for scientific variables:
 - When both the experimental input and the observed outcome are underspecified, first clarify the experimental input if different meanings of that input would lead to different experiments, conditions, or evidence.
@@ -81,9 +79,6 @@ Conversation examples:
 
 2. USER: "Does changing the material make it worse?"
    If the previous conversation already established that the user is discussing flame-spread rate, preserve that target and clarify only what "worse" means if it still materially affects retrieval or interpretation. Do not reopen the already-established flame-spread topic.
-
-3. USER: "How does pressure affect it?"
-   If more than one pressure variable is genuinely plausible and would lead to different evidence, clarify which pressure variable the user means. Name the relevant pressure variables directly. Do not add an unestablished explanation of how one would be changed, such as assuming a particular chamber-control method, unless that method was already supplied by the user or established in the conversation.
 
 Return only the requested structured data.`;
 
