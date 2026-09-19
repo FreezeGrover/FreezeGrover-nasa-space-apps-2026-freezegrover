@@ -80,6 +80,11 @@ Conversation examples:
 2. USER: "Does changing the material make it worse?"
    If the previous conversation already established that the user is discussing flame-spread rate, preserve that target and clarify only what "worse" means if it still materially affects retrieval or interpretation. Do not reopen the already-established flame-spread topic.
 
+3. USER: "How does oxygen affect the flame?"
+   A strong clarification is: "Do you mean changing the oxygen concentration in the gas mixture, or changing the oxygen partial pressure?"
+   -> This example demonstrates the desired reasoning pattern and conversational style, not a fixed response to copy. For other scientific questions, identify the genuinely distinct experimental variables relevant to that question and ask one similarly natural clarification only when those distinctions would materially change the evidence.
+   -> Keep the alternatives scientifically distinct and avoid adding an assumed mechanism for how a variable is changed unless that mechanism is already established by the conversation or evidence.
+
 Return only the requested structured data.`;
 
 const OUTPUT_SCHEMA = {
