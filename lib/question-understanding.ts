@@ -6,8 +6,19 @@ export interface QuestionUnderstandingResult {
   evidenceQuery: EvidenceQuery;
 }
 
+interface ResponsesApiContentItem {
+  type?: string;
+  text?: string;
+}
+
+interface ResponsesApiOutputItem {
+  type?: string;
+  content?: ResponsesApiContentItem[];
+}
+
 interface ResponsesApiResult {
   output_text?: string;
+  output?: ResponsesApiOutputItem[];
 }
 
 const SYSTEM_PROMPT = `You are the scientific question-understanding layer for FREEZGROVER, a NASA Space Apps research dashboard for microgravity combustion evidence.
@@ -95,9 +106,28 @@ function cleanNullableNumber(value: unknown): number | undefined {
   return typeof value === "number" && Number.isFinite(value) ? value : undefined;
 }
 
+function extractResponseText(result: ResponsesApiResult): string | null {
+  if (typeof result.output_text === "string" && result.output_text.trim()) {
+    return result.output_text;
+  }
+
+  for (const item of result.output ?? []) {
+    for (const content of item.content ?? []) {
+      if ((content.type === "output_text" || content.type === "text") && typeof content.text === "string" && content.text.trim()) {
+        return content.text;
+      }
+    }
+  }
+
+  return null;
+}
+
 export async function understandQuestion(question: string): Promise<QuestionUnderstandingResult | null> {
   const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
+  if (!apiKey) {
+    console.error("FREEZGROVER question understanding skipped: OPENAI_API_KEY is missing.");
+    return null;
+  }
 
   const model = process.env.OPENAI_MODEL?.trim() || "gpt-5.6-luna";
 
@@ -130,12 +160,17 @@ export async function understandQuestion(question: string): Promise<QuestionUnde
   }
 
   const result = (await response.json()) as ResponsesApiResult;
-  if (!result.output_text) return null;
+  const responseText = extractResponseText(result);
+  if (!responseText) {
+    console.error("FREEZGROVER question understanding returned no readable output text.");
+    return null;
+  }
 
   let parsed: Record<string, unknown>;
   try {
-    parsed = JSON.parse(result.output_text) as Record<string, unknown>;
+    parsed = JSON.parse(responseText) as Record<string, unknown>;
   } catch {
+    console.error("FREEZGROVER question understanding returned non-JSON output.");
     return null;
   }
 
