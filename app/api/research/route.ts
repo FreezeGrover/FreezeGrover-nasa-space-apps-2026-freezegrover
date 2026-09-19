@@ -11,7 +11,12 @@ import {
   createEvidenceUnavailableResult,
 } from "../../../lib/research-pipeline";
 import { understandQuestion } from "../../../lib/question-understanding";
-import { generateConversationalReply, type ChatMessage } from "../../../lib/research-chat";
+import {
+  classifyConversationIntent,
+  generateConversationalReply,
+  generateGeneralConversationalReply,
+  type ChatMessage,
+} from "../../../lib/research-chat";
 import type { EvidenceQuery } from "../../../lib/evidence-ranking";
 import type { InterpretationAssessment } from "../../../lib/interpretation-gate";
 
@@ -36,7 +41,7 @@ function parseMessages(value: unknown, question: string): ChatMessage[] {
       content: typeof item.content === "string" ? item.content.trim() : "",
     }))
     .filter((item) => item.content.length > 0)
-    .slice(-10);
+    .slice(-12);
 
   const last = messages[messages.length - 1];
   if (!last || last.role !== "user" || last.content !== question) {
@@ -118,10 +123,28 @@ export async function POST(request: Request) {
   const question = typeof body.question === "string" ? body.question.trim() : "";
 
   if (!question) {
-    return NextResponse.json({ error: "A scientific question is required." }, { status: 400 });
+    return NextResponse.json({ error: "A message is required." }, { status: 400 });
   }
 
   const messages = parseMessages(body.messages, question);
+  const conversationIntent = await classifyConversationIntent(messages);
+
+  if (conversationIntent !== "research") {
+    const conversationalReply = await generateGeneralConversationalReply(messages);
+    return NextResponse.json({
+      conversationIntent,
+      understandingMode: "conversation",
+      question,
+      conversationalReply:
+        conversationalReply ??
+        "I’m here. What would you like to talk about?",
+      capabilities: null,
+      evidenceQuery: null,
+      sourceIds: [],
+      limitations: [],
+    });
+  }
+
   let interpretationAssessment = parseInterpretationAssessment(body.interpretationAssessment);
   let evidenceQuery = parseEvidenceQuery(body.query);
   let understandingMode: "model-assisted" | "caller-supplied" | "fallback" =
@@ -141,6 +164,7 @@ export async function POST(request: Request) {
     const clarificationQuestion = gateResult.answer.clarificationQuestion ?? "Could you clarify the scope you mean?";
     return NextResponse.json({
       ...gateResult,
+      conversationIntent,
       understandingMode,
       conversationalReply: clarificationQuestion,
     });
@@ -153,6 +177,7 @@ export async function POST(request: Request) {
     const unavailable = createEvidenceUnavailableResult(question);
     return NextResponse.json({
       ...unavailable,
+      conversationIntent,
       understandingMode,
       evidenceQuery,
       conversationalReply:
@@ -201,6 +226,7 @@ export async function POST(request: Request) {
       "report-sources",
       "conversational-response",
     ],
+    conversationIntent,
     understandingMode,
     question,
     evidenceQuery,
