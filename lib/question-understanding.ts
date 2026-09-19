@@ -55,6 +55,14 @@ Natural clarification behavior:
 - Once the user has supplied a clear choice, accept it and move forward unless a new material uncertainty appears.
 - A clarification should reduce uncertainty, not create a new tree of unnecessary sub-questions.
 
+Clarification priority for scientific variables:
+- When both the experimental input and the observed outcome are underspecified, first clarify the experimental input if different meanings of that input would lead to different experiments, conditions, or evidence.
+- Resolve what is being varied before asking what effect the user wants measured, unless the outcome ambiguity is clearly more important for retrieval.
+- Treat distinctions such as concentration versus partial pressure, speed versus direction, material identity versus thickness, or total pressure versus gas composition as potentially different experimental variables when they would change the evidence set.
+- After the experimental variable is clear, clarify the outcome only if it still materially changes retrieval or interpretation.
+- Do not ask both questions at once when one focused clarification can establish the experimental setup first.
+- This is a priority rule, not a rigid script: if conversation context has already established the experimental variable, preserve it and move on.
+
 Interpretation Gate rules:
 - Identify whether a word, scientific term, condition, comparison target, measurement, or requested scope permits more than one reasonable interpretation.
 - Do not assume the most common interpretation must be the intended one.
