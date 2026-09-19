@@ -11,6 +11,7 @@ import {
   createEvidenceUnavailableResult,
 } from "../../../lib/research-pipeline";
 import { understandQuestion } from "../../../lib/question-understanding";
+import { generateConversationalReply, type ChatMessage } from "../../../lib/research-chat";
 import type { EvidenceQuery } from "../../../lib/evidence-ranking";
 import type { InterpretationAssessment } from "../../../lib/interpretation-gate";
 
@@ -18,10 +19,31 @@ interface ResearchBody {
   question?: unknown;
   query?: unknown;
   interpretationAssessment?: unknown;
+  messages?: unknown;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
+}
+
+function parseMessages(value: unknown, question: string): ChatMessage[] {
+  if (!Array.isArray(value)) return [{ role: "user", content: question }];
+
+  const messages = value
+    .filter(isRecord)
+    .map((item) => ({
+      role: item.role === "assistant" ? "assistant" as const : "user" as const,
+      content: typeof item.content === "string" ? item.content.trim() : "",
+    }))
+    .filter((item) => item.content.length > 0)
+    .slice(-10);
+
+  const last = messages[messages.length - 1];
+  if (!last || last.role !== "user" || last.content !== question) {
+    messages.push({ role: "user", content: question });
+  }
+
+  return messages;
 }
 
 function parseEvidenceQuery(value: unknown): EvidenceQuery {
@@ -99,13 +121,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "A scientific question is required." }, { status: 400 });
   }
 
+  const messages = parseMessages(body.messages, question);
   let interpretationAssessment = parseInterpretationAssessment(body.interpretationAssessment);
   let evidenceQuery = parseEvidenceQuery(body.query);
   let understandingMode: "model-assisted" | "caller-supplied" | "fallback" =
     interpretationAssessment || hasMeaningfulQuery(evidenceQuery) ? "caller-supplied" : "fallback";
 
-  // Automatically determine plausible scientific scopes and retrieval dimensions
-  // when the caller has not already supplied them.
   if (!interpretationAssessment || !hasMeaningfulQuery(evidenceQuery)) {
     const understood = await understandQuestion(question);
     if (understood) {
@@ -115,35 +136,32 @@ export async function POST(request: Request) {
     }
   }
 
-  // 1. Interpretation Gate: do not retrieve evidence until the intended scope
-  // is sufficiently clear.
   const gateResult = runInterpretationGate(question, interpretationAssessment);
   if (gateResult) {
+    const clarificationQuestion = gateResult.answer.clarificationQuestion ?? "Could you clarify the scope you mean?";
     return NextResponse.json({
       ...gateResult,
       understandingMode,
+      conversationalReply: clarificationQuestion,
     });
   }
 
-  // 2. Retrieve and rank verified evidence.
   if (!evidenceQuery.topic) evidenceQuery.topic = question;
   const retrieval = retrieveEvidence(evidenceQuery);
 
   if (retrieval.candidates.length === 0) {
+    const unavailable = createEvidenceUnavailableResult(question);
     return NextResponse.json({
-      ...createEvidenceUnavailableResult(question),
+      ...unavailable,
       understandingMode,
       evidenceQuery,
+      conversationalReply:
+        "I don’t have enough verified NASA evidence connected yet to answer that reliably. I can tell you what evidence is missing or help narrow the question to the closest supported scope.",
     });
   }
 
-  // For this baseline, keep the evidence set intentionally small and inspectable.
   const rankedEvidence = retrieval.candidates.slice(0, 6);
-
-  // 3. Compare/cross-check before synthesis.
   const crossCheck = crossCheckEvidence(rankedEvidence);
-
-  // 4. Challenge capabilities.
   const summary = summarizeEvidence(rankedEvidence);
   const interpretations = rankedEvidence.map((item) => interpretFinding(item.finding));
   const safetyInsight = deriveSafetyInsight(rankedEvidence);
@@ -156,6 +174,17 @@ export async function POST(request: Request) {
       ...safetyInsight.limitations,
     ]),
   ];
+
+  const conversationalReply = await generateConversationalReply(messages, {
+    question,
+    rankedEvidence,
+    summary,
+    interpretations,
+    safetyInsight,
+    crossCheck,
+    sourceIds,
+    limitations,
+  });
 
   return NextResponse.json({
     stages: [
@@ -170,10 +199,14 @@ export async function POST(request: Request) {
       "derive-safety-insights",
       "surface-limitations",
       "report-sources",
+      "conversational-response",
     ],
     understandingMode,
     question,
     evidenceQuery,
+    conversationalReply:
+      conversationalReply ??
+      "I found relevant verified evidence, but the conversational synthesis layer did not return a response. The structured evidence remains available below.",
     capabilities: {
       summarize: summary,
       rank: rankedEvidence,
