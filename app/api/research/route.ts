@@ -11,6 +11,7 @@ import {
   createEvidenceUnavailableResult,
 } from "../../../lib/research-pipeline";
 import { understandQuestion } from "../../../lib/question-understanding";
+import { understandQuestionWithPrivateReasoner } from "../../../lib/private-reasoning";
 import {
   classifyConversationIntent,
   generateConversationalReply,
@@ -148,17 +149,18 @@ export async function POST(request: Request) {
   let evidenceQuery = parseEvidenceQuery(body.query);
   let resolvedQuestion = question;
   let naturalClarification: string | undefined;
-  let understandingMode: "model-assisted" | "caller-supplied" | "fallback" =
+  let understandingMode: "private-reasoner" | "model-assisted" | "caller-supplied" | "fallback" =
     interpretationAssessment || hasMeaningfulQuery(evidenceQuery) ? "caller-supplied" : "fallback";
 
   if (!interpretationAssessment || !hasMeaningfulQuery(evidenceQuery)) {
-    const understood = await understandQuestion(question, messages);
+    const privateUnderstanding = await understandQuestionWithPrivateReasoner(question, messages);
+    const understood = privateUnderstanding ?? await understandQuestion(question, messages);
     if (understood) {
       resolvedQuestion = understood.resolvedQuestion;
       naturalClarification = understood.clarificationQuestion;
       interpretationAssessment ??= understood.interpretationAssessment;
       if (!hasMeaningfulQuery(evidenceQuery)) evidenceQuery = understood.evidenceQuery;
-      understandingMode = "model-assisted";
+      understandingMode = privateUnderstanding ? "private-reasoner" : "model-assisted";
     }
   }
 
