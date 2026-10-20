@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Activity, BarChart3, BookOpenText, BrainCircuit, ChevronRight, Database,
   Download, ExternalLink, FileText, Filter, Flame, Image as ImageIcon,
@@ -10,17 +10,16 @@ import { saffireExperiments, saffireFindings } from "../lib/data/saffire";
 import { sourceRegistry } from "../lib/source-registry";
 
 const nav = [
-  ["Overview", Orbit],
-  ["Summarize", BookOpenText],
-  ["Ranking", BarChart3],
-  ["Interpretation", BrainCircuit],
-  ["Safety Insights", ShieldCheck],
-  ["Experiments", Telescope],
-  ["Evidence", Database],
-  ["Ask FREEZGROVER", Sparkles],
+  ["Overview", Orbit, "Home"],
+  ["Ask FREEZGROVER", Sparkles, "Ask FREEZGROVER"],
+  ["Experiments", Telescope, "Experiments"],
+  ["Evidence", Database, "Evidence Library"],
+  ["Datasets & Data", BarChart3, "Datasets & Data"],
+  ["Saved Results", BookOpenText, "Saved Results"],
+  ["About", ShieldCheck, "About"],
 ] as const;
 
-type TabName = (typeof nav)[number][0];
+type TabName = (typeof nav)[number][0] | "Summarize" | "Ranking" | "Interpretation" | "Safety Insights";
 
 const criteria = [
   "Date range", "Experiment", "Mission / program", "Material / fuel", "Airflow",
@@ -50,32 +49,25 @@ function CriteriaLab({ selected, setSelected, placeholder }: { selected: string[
   </section>;
 }
 
-function Overview({ openTab }: { openTab: (tab: TabName) => void }) {
-  const layers: Array<{ title: string; text: string; target: TabName }> = [
-    { title: "SAFETY INSIGHTS", text: "Connect supported understanding to fire-safety significance for human spaceflight.", target: "Safety Insights" },
-    { title: "INTERPRETATION", text: "Understand what findings mean, what they support and where certainty ends.", target: "Interpretation" },
-    { title: "SUMMARIZE + RANK", text: "Condense the knowledge base or prioritize information for a defined purpose.", target: "Summarize" },
-    { title: "RESEARCH LANDSCAPE", text: "Experiments, publications, measurements, imagery, findings and datasets.", target: "Experiments" },
-    { title: "EVIDENCE FOUNDATION", text: "Verified NASA and NTRS material with traceable provenance.", target: "Evidence" },
+function Overview({ openTab, ask, saveQuestion }: { openTab: (tab: TabName) => void; ask: (question: string) => void; saveQuestion: (question: string) => void }) {
+  const [question, setQuestion] = useState("");
+  const steps: Array<{ title: string; text: string; action: string; target: TabName }> = [
+    { title: "Summarize Findings", text: "Distill key information from NASA’s research, experiments and data on microgravity combustion.", action: "Explore Summaries", target: "Summarize" },
+    { title: "Rank Findings", text: "Prioritize experiments, findings or factors by relevance, impact and confidence for specific research questions.", action: "View Rankings", target: "Ranking" },
+    { title: "Interpret Findings", text: "Analyze what the summarized and ranked results mean — with context, certainty and real-world boundaries.", action: "See Interpretation", target: "Interpretation" },
+    { title: "Fire Safety Insights", text: "Explore evidence and considerations for safer spacecraft, habitats and operations.", action: "View Insights", target: "Safety Insights" }
   ];
-
-  return <>
-    <PageHeader kicker="FREEZGROVER · RESEARCH OVERVIEW" title="From research evidence to defensible fire-safety understanding." description="A connected view of the knowledge, tools and reasoning used to explore NASA microgravity-combustion research." />
-    <section className="overview-grid">
-      <article className="architecture-panel panel">
-        <div className="panel-label"><span>RESEARCH ARCHITECTURE</span><b>INTERACTIVE OVERVIEW</b></div>
-        <h2>The system at a glance</h2><p className="lead">Not a rigid pipeline. Different forms of research feed a connected intelligence layer.</p>
-        <div className="knowledge-stack">{layers.map((layer, i) => <button key={layer.title} className={`stack-layer layer-${i}`} onClick={() => openTab(layer.target)}><span>{String(layers.length - i).padStart(2, "0")}</span><div><strong>{layer.title}</strong><small>{layer.text}</small></div><ChevronRight size={17} /></button>)}</div>
-      </article>
-      <article className="knowledge-panel panel">
-        <div className="panel-label"><span>KNOWLEDGE BASE</span><b>CONNECTED SOURCES</b></div>
-        <div className="research-orbit"><div className="orbit-core"><Flame size={25} /><strong>FREEZGROVER</strong><small>Research intelligence</small></div>{["Experiments", "Publications", "Findings", "Measurements", "Imagery", "Datasets"].map((name, i) => <span key={name} className={`satellite sat-${i}`}>{name}</span>)}</div>
-        <div className="overview-actions"><button onClick={() => openTab("Evidence")}><Database size={16} /> Explore evidence</button><button onClick={() => openTab("Ask FREEZGROVER")}><Sparkles size={16} /> Ask FREEZGROVER</button></div>
-      </article>
+  const examples = ["Summarize key findings on flame spread in microgravity", "Rank the most relevant experiments on solid fuel combustion", "What do these results mean for spacecraft fire safety?", "Recommend fire safety considerations for lunar habitats"];
+  const asset = "/freezegrover-dashboard/";
+  return <div className="fg-dashboard"><div className="fg-main">
+    <section className="fg-hero"><div className="fg-hero-copy"><h1>Flame and <span>Free Fall</span></h1><p>Exploring combustion in microgravity using NASA’s research, experiments and data — with research analysis to explore fire safety insights for human space exploration.</p></div>
+      <div className="fg-stats">{[{ label: "Registered Sources", value: sourceRegistry.length, detail: "NASA research · Evidence", target: "Evidence" as TabName, Icon: FileText }, { label: "Experiments", value: saffireExperiments.length, detail: "Structured experiment records", target: "Experiments" as TabName, Icon: Telescope }, { label: "Traceable Findings", value: saffireFindings.length, detail: "Findings in this knowledge base", target: "Datasets & Data" as TabName, Icon: BarChart3 }].map(({label,value,detail,target,Icon}) => <button key={label} onClick={() => openTab(target)}><Icon size={32}/><span><small>{label}</small><strong>{value.toLocaleString()}</strong><small>{detail}</small></span></button>)}</div>
     </section>
-    <section className="metric-strip"><div><b>{saffireExperiments.length}</b><span>Structured experiments</span></div><div><b>{saffireFindings.length}</b><span>Traceable findings</span></div><div><b>{sourceRegistry.length}</b><span>Registered sources</span></div><div><b>{criteria.length}</b><span>Research criteria available</span></div></section>
-    <section className="overview-bottom"><div><span className="section-kicker">ONE CONNECTED ENVIRONMENT</span><h2>Explore the research from whichever direction makes sense.</h2></div><p>Experiments are one important part of the knowledge base—not the only foundation. Publications, observations, measurements, imagery, findings and future datasets can all contribute to summarization, ranking, interpretation and safety insight.</p></section>
-  </>;
+    <section className="fg-pipeline"><header><h2>From NASA Research to Fire Safety Insights</h2><p><span>A step-by-step</span> research analysis workflow.</p></header><div className="fg-steps">{steps.map((step,i) => <button className={`fg-step fg-step-${i}`} key={step.title} onClick={() => openTab(step.target)}><div className="fg-step-heading"><span>{i+1}</span><h3>{step.title}</h3></div><img src={`${asset}card-complete-art${i}.png`} alt=""/><p>{step.text}</p><div className="fg-cta">{step.action}<ChevronRight size={20}/></div>{i<3 && <span className="fg-connector" aria-hidden="true"><ChevronRight size={20}/></span>}</button>)}</div></section>
+  </div><aside className="fg-right"><div className="fg-event"><span className="fg-nasa-crop"><img src={`${asset}nasa.png`} alt="NASA"/></span><p>NASA<br/>SPACE APPS<br/>CHALLENGE 2026</p></div>
+    <section className="fg-why"><h2><img src={`${asset}impact3.png`} alt=""/>Why It Matters</h2><p>Understanding how flames behave in microgravity helps make space missions safer and advances cleaner, more efficient combustion technologies on Earth.</p></section>
+    <section className="fg-ask"><h2><Sparkles size={26}/>Ask FREEZGROVER</h2><form onSubmit={e => {e.preventDefault(); ask(question);}}><textarea aria-label="Your research question" placeholder="Ask a question about microgravity combustion, experiments, data, or fire safety insights…" value={question} onChange={e => setQuestion(e.target.value)}/><div className="fg-ask-actions"><button type="button" disabled={!question.trim()} onClick={() => saveQuestion(question)}>Save question</button><button type="submit">Open chat <ChevronRight size={15}/></button></div></form><p className="fg-examples-label">Try these examples:</p><div className="fg-examples">{examples.map(example => <button key={example} onClick={() => setQuestion(example)}>{example}<ChevronRight size={16}/></button>)}</div></section>
+  </aside></div>;
 }
 
 function SummarizeView() {
@@ -165,7 +157,16 @@ function ChatModal({ close }: { close: () => void }) {
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabName>("Overview");
   const [chatOpen, setChatOpen] = useState(false);
-  const openTab = (tab: TabName) => { if (tab === "Ask FREEZGROVER") { setChatOpen(true); return; } setActiveTab(tab); };
-  const view = activeTab === "Overview" ? <Overview openTab={openTab} /> : activeTab === "Summarize" ? <SummarizeView /> : activeTab === "Ranking" ? <RankingView /> : activeTab === "Interpretation" ? <InterpretationView /> : activeTab === "Safety Insights" ? <SafetyView /> : activeTab === "Experiments" ? <ExperimentsView /> : <EvidenceView />;
-  return <main className="app-shell"><aside className="sidebar"><div className="brand-mark"><div className="brand-orb"><Flame size={20} /></div><div><strong>FREEZGROVER</strong><span>From Questions to Discovery</span></div></div><div className="mission-chip"><span className="status-dot" /> NASA SPACE APPS 2026</div><nav>{nav.map(([label, Icon]) => <button className={activeTab === label ? "nav-item active" : "nav-item"} key={label} onClick={() => openTab(label)}><Icon size={17} strokeWidth={1.8} /><span>{label}</span>{activeTab === label && <span className="nav-pulse" />}</button>)}</nav><div className="sidebar-footer"><div className="signal-line"><Activity size={15} /><span>Research system</span><b>ONLINE</b></div><div className="signal-line"><Database size={15} /><span>Evidence layer</span><b>READY</b></div></div></aside><section className="workspace">{view}</section>{chatOpen && <ChatModal close={() => setChatOpen(false)} />}</main>;
+  const [draft, setDraft] = useState("");
+  const [saved, setSaved] = useState<string[]>([]);
+  const [notice, setNotice] = useState("");
+  useEffect(() => { try { const value = JSON.parse(localStorage.getItem("freezegrover-saved-questions") || "[]"); if (Array.isArray(value)) setSaved(value.filter((x): x is string => typeof x === "string")); } catch { setNotice("Saved questions could not be loaded from this browser."); } }, []);
+  const persist = (next: string[]) => { setSaved(next); try { localStorage.setItem("freezegrover-saved-questions", JSON.stringify(next)); setNotice("Saved questions updated in this browser."); } catch { setNotice("Browser storage is unavailable; these questions will last only for this session."); } };
+  const ask = (question: string) => {setDraft(question.trim()); setChatOpen(true);};
+  const openTab = (tab: TabName) => { if (tab === "Ask FREEZGROVER") { ask(""); return; } setActiveTab(tab); setNotice(""); };
+  const saveQuestion = (question: string) => { if (question.trim()) persist(Array.from(new Set([...saved,question.trim()]))); };
+  const download = (name: string, data: unknown) => { const url = URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"})); const link = document.createElement("a"); link.href=url; link.download=name; link.click(); setTimeout(() => URL.revokeObjectURL(url),1000); };
+  const extra = activeTab === "Datasets & Data" ? <><PageHeader kicker="DATASETS & DATA" title="Explore the project’s structured research records." description="Download the experiment records, traceable findings and source registry currently included in this project."/><div className="fg-data-grid">{[{title:"Experiment records",data:saffireExperiments},{title:"Traceable findings",data:saffireFindings},{title:"Source registry",data:sourceRegistry}].map(item => <article className="panel fg-data-card" key={item.title}><Database size={24}/><h2>{item.title}</h2><p>{item.data.length} records in this knowledge base.</p><button onClick={() => download(item.title.toLowerCase().replaceAll(" ","-")+".json",item.data)}><Download size={16}/> Download JSON</button></article>)}</div></> : activeTab === "Saved Results" ? <><PageHeader kicker="SAVED RESULTS" title="Your saved research questions." description="Questions saved here stay in this browser. Open a question to continue in the existing research chat."/>{saved.length ? <div className="fg-saved-list">{saved.map(question => <article className="panel fg-data-card" key={question}><h3>{question}</h3><button onClick={() => ask(question)}>Open in chat</button><button onClick={() => persist(saved.filter(x => x !== question))}>Remove</button></article>)}</div> : <div className="panel fg-data-card"><p>No saved questions yet. Write a question on Home and select Save question.</p><button onClick={() => openTab("Overview")}>Back to Home</button></div>}</> : <><PageHeader kicker="ABOUT FREEZGROVER" title="From questions to discovery." description="An independent research interface exploring NASA microgravity combustion and spacecraft fire safety."/><article className="panel fg-data-card"><h2>Research with traceable evidence</h2><p>Explore experiments, inspect source records, and use the summarization, ranking, interpretation and safety workspaces to investigate research questions.</p><p>Homepage counts reflect the records included in this project. The artwork is illustrative. This project is independent of NASA; it is not an official NASA service.</p><button onClick={() => openTab("Evidence")}>Explore the evidence library</button></article></>;
+  const view = activeTab === "Overview" ? <Overview openTab={openTab} ask={ask} saveQuestion={saveQuestion}/> : activeTab === "Summarize" ? <SummarizeView/> : activeTab === "Ranking" ? <RankingView/> : activeTab === "Interpretation" ? <InterpretationView/> : activeTab === "Safety Insights" ? <SafetyView/> : activeTab === "Experiments" ? <ExperimentsView/> : activeTab === "Evidence" ? <EvidenceView/> : extra;
+  return <main className={`app-shell fg-shell ${activeTab === "Overview" ? "fg-home" : ""}`}><aside className="sidebar"><button className="fg-brand" onClick={() => openTab("Overview")} aria-label="FreezeGrover home"><img src="/freezegrover-dashboard/brand.png" alt="FreezeGrover — NASA Space Apps 2026"/></button><nav>{nav.map(([tab,Icon,label]) => <button className={activeTab===tab ? "nav-item active" : "nav-item"} key={tab} onClick={() => openTab(tab)} aria-current={activeTab===tab ? "page" : undefined}><Icon size={22} strokeWidth={1.8}/><span>{label}</span></button>)}</nav></aside><section className="workspace">{notice && <div className="fg-notice" role="status">{notice}</div>}{view}</section>{chatOpen && <div className="chat-backdrop" onKeyDown={e => {if(e.key === "Escape")setChatOpen(false);}}><section className="chat-modal fg-chat" role="dialog" aria-modal="true" aria-label="FREEZGROVER research chat"><header><div className="chat-brand"><Sparkles size={20}/><strong>Ask FREEZGROVER</strong></div><button autoFocus aria-label="Close research chat" onClick={() => setChatOpen(false)}><X size={19}/></button></header>{draft && <label className="fg-draft">Your question — select and copy it into the chat below.<textarea readOnly value={draft} onFocus={e => e.target.select()} aria-label="Question to copy into research chat"/></label>}<iframe title="FREEZGROVER chat" src="/test"/></section></div>}</main>;
 }
