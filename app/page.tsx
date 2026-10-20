@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import {
-  Activity, BarChart3, BookOpenText, BrainCircuit, ChevronRight, Database,
+  Home as HomeIcon, FlaskConical, MessageCircle, Bookmark, Info, Activity, BarChart3, BookOpenText, BrainCircuit, ChevronRight, Database,
   Download, ExternalLink, FileText, Filter, Flame, Image as ImageIcon,
   Layers3, Orbit, Search, ShieldCheck, Sparkles, Telescope, X
 } from "lucide-react";
@@ -10,13 +10,13 @@ import { saffireExperiments, saffireFindings } from "../lib/data/saffire";
 import { sourceRegistry } from "../lib/source-registry";
 
 const nav = [
-  ["Overview", Orbit, "Home"],
-  ["Ask FREEZGROVER", Sparkles, "Ask FREEZGROVER"],
-  ["Experiments", Telescope, "Experiments"],
+  ["Overview", HomeIcon, "Home"],
+  ["Ask FREEZGROVER", MessageCircle, "Ask FREEZGROVER"],
+  ["Experiments", FlaskConical, "Experiments"],
   ["Evidence", Database, "Evidence Library"],
   ["Datasets & Data", BarChart3, "Datasets & Data"],
-  ["Saved Results", BookOpenText, "Saved Results"],
-  ["About", ShieldCheck, "About"],
+  ["Saved Results", Bookmark, "Saved Results"],
+  ["About", Info, "About"],
 ] as const;
 
 type TabName = (typeof nav)[number][0] | "Summarize" | "Ranking" | "Interpretation" | "Safety Insights";
@@ -61,7 +61,7 @@ function Overview({ openTab, ask, saveQuestion }: { openTab: (tab: TabName) => v
   const asset = "/freezegrover-dashboard/";
   return <div className="fg-dashboard"><div className="fg-main">
     <section className="fg-hero"><div className="fg-hero-copy"><h1>Flame and <span>Free Fall</span></h1><p>Exploring combustion in microgravity using NASA’s research, experiments and data — with research analysis to explore fire safety insights for human space exploration.</p></div>
-      <div className="fg-stats">{[{ label: "Registered Sources", value: sourceRegistry.length, detail: "NASA research · Evidence", target: "Evidence" as TabName, Icon: FileText }, { label: "Experiments", value: saffireExperiments.length, detail: "Structured experiment records", target: "Experiments" as TabName, Icon: Telescope }, { label: "Traceable Findings", value: saffireFindings.length, detail: "Findings in this knowledge base", target: "Datasets & Data" as TabName, Icon: BarChart3 }].map(({label,value,detail,target,Icon}) => <button key={label} onClick={() => openTab(target)}><Icon size={32}/><span><small>{label}</small><strong>{value.toLocaleString()}</strong><small>{detail}</small></span></button>)}</div>
+      <div className="fg-stats">{[{ label: "Registered Sources", value: sourceRegistry.length, detail: "NASA research · Evidence", target: "Evidence" as TabName, Icon: FileText }, { label: "Experiments", value: saffireExperiments.length, detail: "Microgravity combustion", target: "Experiments" as TabName, Icon: FlaskConical }, { label: "Traceable Findings", value: saffireFindings.length, detail: "Evidence-linked records", target: "Datasets & Data" as TabName, Icon: BarChart3 }].map(({label,value,detail,target,Icon}) => <button key={label} onClick={() => openTab(target)}><Icon size={32}/><span><small>{label}</small><strong>{value.toLocaleString()}</strong><small>{detail}</small></span></button>)}</div>
     </section>
     <section className="fg-pipeline"><header><h2>From NASA Research to Fire Safety Insights</h2><p><span>A step-by-step</span> research analysis workflow.</p></header><div className="fg-steps">{steps.map((step,i) => <button className={`fg-step fg-step-${i}`} key={step.title} onClick={() => openTab(step.target)}><div className="fg-step-heading"><span>{i+1}</span><h3>{step.title}</h3></div><img src={`${asset}card-complete-art${i}.png`} alt=""/><p>{step.text}</p><div className="fg-cta">{step.action}<ChevronRight size={20}/></div>{i<3 && <span className="fg-connector" aria-hidden="true"><ChevronRight size={20}/></span>}</button>)}</div></section>
   </div><aside className="fg-right"><div className="fg-event"><span className="fg-nasa-crop"><img src={`${asset}nasa.png`} alt="NASA"/></span><p>NASA<br/>SPACE APPS<br/>CHALLENGE 2026</p></div>
@@ -79,7 +79,7 @@ function SummarizeView() {
     ["Image or figure", "Summarize and explain a selected scientific visual.", ImageIcon],
     ["Custom selection", "Combine sources, dates, conditions and constraints.", Filter],
   ] as const;
-  const [scope, setScope] = useState(options[0][0]);
+  const [scope, setScope] = useState<string>(options[0][0]);
   const [filters, setFilters] = useState<string[]>([]);
   return <>
     <PageHeader kicker="SUMMARIZE · AI SYNTHESIS" title="What would you like to summarize?" description="Create a focused synthesis from the whole knowledge base or only the material matching your criteria. The output keeps important context, limitations and sources attached." />
@@ -100,7 +100,7 @@ function RankingView() {
     ["Sources", "Rank reports and articles by relevance to a chosen topic."],
     ["Findings", "Prioritize findings using explicit constraints and evidence strength."],
   ];
-  const [scope, setScope] = useState(options[0][0]);
+  const [scope, setScope] = useState<string>(options[0][0]);
   const [filters, setFilters] = useState<string[]>([]);
   return <>
     <PageHeader kicker="RANKING · PURPOSE-DRIVEN RELEVANCE" title="What do you want to rank—and for what purpose?" description="There is no universal number one. FREEZGROVER builds a ranking only after the target, question and scientific criteria are clear, then explains why each item sits where it does." />
@@ -170,3 +170,4 @@ export default function Home() {
   const view = activeTab === "Overview" ? <Overview openTab={openTab} ask={ask} saveQuestion={saveQuestion}/> : activeTab === "Summarize" ? <SummarizeView/> : activeTab === "Ranking" ? <RankingView/> : activeTab === "Interpretation" ? <InterpretationView/> : activeTab === "Safety Insights" ? <SafetyView/> : activeTab === "Experiments" ? <ExperimentsView/> : activeTab === "Evidence" ? <EvidenceView/> : extra;
   return <main className={`app-shell fg-shell ${activeTab === "Overview" ? "fg-home" : ""}`}><aside className="sidebar"><button className="fg-brand" onClick={() => openTab("Overview")} aria-label="FreezeGrover home"><img src="/freezegrover-dashboard/brand.png" alt="FreezeGrover — NASA Space Apps 2026"/></button><nav>{nav.map(([tab,Icon,label]) => <button className={activeTab===tab ? "nav-item active" : "nav-item"} key={tab} onClick={() => openTab(tab)} aria-current={activeTab===tab ? "page" : undefined}><Icon size={22} strokeWidth={1.8}/><span>{label}</span></button>)}</nav></aside><section className="workspace">{notice && <div className="fg-notice" role="status">{notice}</div>}{view}</section>{chatOpen && <div className="chat-backdrop" onKeyDown={e => {if(e.key === "Escape")setChatOpen(false);}}><section className="chat-modal fg-chat" role="dialog" aria-modal="true" aria-label="FREEZGROVER research chat"><header><div className="chat-brand"><Sparkles size={20}/><strong>Ask FREEZGROVER</strong></div><button autoFocus aria-label="Close research chat" onClick={() => setChatOpen(false)}><X size={19}/></button></header>{draft && <label className="fg-draft">Your question — select and copy it into the chat below.<textarea readOnly value={draft} onFocus={e => e.target.select()} aria-label="Question to copy into research chat"/></label>}<iframe title="FREEZGROVER chat" src="/test"/></section></div>}</main>;
 }
+

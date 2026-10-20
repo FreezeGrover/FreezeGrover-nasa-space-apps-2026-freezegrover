@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./dashboard.css";
 
 export const metadata: Metadata = {
   title: "FREEZGROVER | From Questions to Discovery",
@@ -14,3 +15,4 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
