@@ -82,3 +82,10 @@ The user observed catalog results appearing before the slower AI response replac
 Search is disabled while pending and a synchronous in-flight guard prevents repeat submissions from consuming more attempts. The configured AI cap remains unchanged. Exhaustion returns an explicit unavailable state without pretending to have no scientific evidence or silently replacing AI output with catalog results. The user can choose catalog browsing explicitly without a paid call.
 
 25 tests, typecheck and production build pass. A deferred-response DOM test checks the loading state, absence of provisional cards, duplicate-submission guard, final display and explicit catalog choice. The exhausted-budget API test makes no external request. Updated Windows visual verification remains pending installation; no live paid API request was made in this task.
+
+
+## Remove artificial request-count cap — 15 November 2026
+
+After receiving model pricing estimates, the user explicitly authorized removal of the two-request cap. Removed the request counter, AI_LIMIT_REACHED branch, count-dependent configuration and launcher prompt. Existing AI_MAX_REQUESTS environment values are ignored, so old startup commands setting 2 no longer cap searches. Retained duplicate-submission protection, the fetching state, output-length/timeout constraints and independent NASA grounding.
+
+25 tests, typecheck and production build pass. A fake-transport regression makes five calls while AI_MAX_REQUESTS is set to 2, confirming there is no local request-count enforcement. No live paid requests were made. The user's reported 10-million-token offer has not been independently verified for project/model eligibility or expiration; no free-usage guarantee is made.

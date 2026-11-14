@@ -43,3 +43,8 @@ The existing repository URL is https://github.com/FreezeGrover/flames-in-freefal
 ## Loading-state regression update
 
 25 Node tests now pass. The five-tab DOM test deliberately holds a request unresolved, verifies that no result rows or BASS-II placeholders appear, checks that repeat form submission makes only one request, then resolves the response and checks the final results. It also checks that an exhausted allowance shows AI Search Paused and that choosing catalog matches makes no additional request. Typecheck and production build passed. This remains simulated DOM verification, not a Windows screenshot check.
+
+
+## Request-cap removal update
+
+25 tests, typecheck and production build passed after cap removal. Five fake-transport calls succeed despite an old AI_MAX_REQUESTS=2 environment value. No live API request was made. Existing fetching, duplicate-request and scientific grounding checks remain covered.

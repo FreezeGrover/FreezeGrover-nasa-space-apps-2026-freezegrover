@@ -70,7 +70,7 @@ test("API validates input and returns usable catalog responses without a key",as
 });
 test("OpenAI adapter contract is tested with a fake transport, never a paid call",async()=>{
  assert.equal(aiConfiguration({}).configured,false);
- assert.equal(aiConfiguration({OPENAI_API_KEY:"test",OPENAI_MODEL:"test",AI_MAX_REQUESTS:"0"}).configured,false);
+ assert.equal(aiConfiguration({OPENAI_API_KEY:"test",OPENAI_MODEL:"test",AI_MAX_REQUESTS:"0"}).configured,true);
  const previous={key:process.env.OPENAI_API_KEY,model:process.env.OPENAI_MODEL,limit:process.env.AI_MAX_REQUESTS};
  process.env.OPENAI_API_KEY="test-not-a-real-key";process.env.OPENAI_MODEL="test-model";process.env.AI_MAX_REQUESTS="10";
  try{
@@ -90,16 +90,15 @@ test("OpenAI adapter contract is tested with a fake transport, never a paid call
 });
 
 
-test("spent AI allowance pauses search without replacing it with catalog results",async()=>{
+test("legacy two-request environment settings no longer cap OpenAI attempts",async()=>{
  const previous={key:process.env.OPENAI_API_KEY,model:process.env.OPENAI_MODEL,limit:process.env.AI_MAX_REQUESTS};
- const originalFetch=globalThis.fetch;
- process.env.OPENAI_API_KEY="test-not-a-real-key";process.env.OPENAI_MODEL="test-model";process.env.AI_MAX_REQUESTS="1";
- globalThis.fetch=async()=>{throw new Error("A spent allowance must not contact OpenAI");};
+ process.env.OPENAI_API_KEY="test-not-a-real-key";process.env.OPENAI_MODEL="test-model";process.env.AI_MAX_REQUESTS="2";
+ let calls=0;
+ const transport:typeof fetch=async()=>{calls++;return Response.json({status:"completed",output:[{content:[{type:"output_text",text:JSON.stringify({statements:[]})}]}]});};
  try{
-  const response=await POST(new Request("http://localhost:3022/api/research",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:"PSI-69",environment:"All"})}));
-  const answer=await response.json();assert.equal(answer.mode,"unavailable");assert.deepEqual(answer.recordIds,[]);assert.match(answer.notice,/No further OpenAI request was sent/);
+  for(let i=0;i<5;i++)await interpretQuestion("droplets","All",transport);
+  assert.equal(calls,5);
  }finally{
-  globalThis.fetch=originalFetch;
   for(const [name,value] of Object.entries({OPENAI_API_KEY:previous.key,OPENAI_MODEL:previous.model,AI_MAX_REQUESTS:previous.limit})){if(value===undefined)delete process.env[name];else process.env[name]=value;}
  }
 });

@@ -18,13 +18,10 @@ export async function POST(request:Request){
     // Keep the useful catalog available after a provider failure.
     // Error bodies are never echoed because they may contain request data.
     const code=error instanceof Error?error.message:"";
-    const reason=code==="AI_LIMIT_REACHED" ? "Configured AI request limit reached." :
-      code==="OPENAI_HTTP_401" ? "OpenAI authentication failed." :
+    const reason=code==="OPENAI_HTTP_401" ? "OpenAI authentication failed." :
       code==="OPENAI_HTTP_429" ? "OpenAI rate or quota limit reached." :
       code==="OPENAI_HTTP_403" ? "OpenAI access was denied." : "OpenAI could not complete a source-grounded response.";
-    // A spent request budget is a paused AI search, not an empty scientific result.
-    // Catalog browsing is offered separately and does not spend another AI attempt.
-    answer=code==="AI_LIMIT_REACHED" ? {query:value.query,mode:"unavailable",recordIds:[],statements:[],groundingIssues:[],notice:"AI search paused: the configured request allowance for this server session has been used. No further OpenAI request was sent. You can browse catalog matches instead; no AI explanation will be generated."} : catalogAnswer(value.query,reason+" Showing catalog matches only.");
+    answer=catalogAnswer(value.query,reason+" Showing catalog matches only.");
   }
   return Response.json(answer,{headers:{"Cache-Control":"no-store"}});
 }

@@ -23,9 +23,9 @@ Scientific calculations and unit conversion beyond existing source preservation 
 
 ## OpenAI and future Google integration
 
-POST /api/research validates a question and environment. With a server-side OPENAI_API_KEY, OPENAI_MODEL and positive AI_MAX_REQUESTS, it requests structured output from the OpenAI Responses API. The provider sees public NASA objective/approach/condition/measurement excerpts and original downloaded CSV headers plus the first imported sample rows. This is NOT complete document or full-dataset analysis. No external search, autonomous file downloads or AI numerical calculations are enabled.
+POST /api/research validates a question and environment. With a server-side OPENAI_API_KEY, OPENAI_MODEL , it requests structured output from the OpenAI Responses API. The provider sees public NASA objective/approach/condition/measurement excerpts and original downloaded CSV headers plus the first imported sample rows. This is NOT complete document or full-dataset analysis. No external search, autonomous file downloads or AI numerical calculations are enabled.
 
-The server uses store:false, a 45-second timeout and max_output_tokens:2400. It counts at most AI_MAX_REQUESTS attempts per server process (clamped to 100); failures count too. A restart/module reload resets this counter. It is not a billing-account dollar limit. The supplied launcher asks the user to approve the attempt count before enabling calls; defaults to one attempt. No paid API request was made during development.
+The server uses store:false, a 45-second timeout and max_output_tokens:2400. The user authorized removal of the artificial request-count cap after reviewing pricing. AI_MAX_REQUESTS is ignored, including existing values of 2. Only explicit Search invokes AI; concurrent duplicate submissions are still prevented. Provider account limits, quotas, billing and any credits remain controlled by OpenAI. No paid API request was made during development.
 
 The answer provider is an injected function, so a future Google adapter can replace OpenAI without changing deterministic scientific checks. An independent AI scientific reviewer is NOT connected. Deterministic quote checks run separately from generation regardless of provider. They check provenance and basic constraints, not scientific truth or claim entailment.
 
@@ -42,4 +42,4 @@ Node tests cover the scientific modules, API failure paths with a fake transport
 
 ## Search response lifecycle
 
-Pending searches render a fetching state only; provisional catalog results are not presented as final results. Duplicate requests are blocked while a request is active. Exhausted local AI allowance is an unavailable state, not a scientific zero-result outcome. Catalog fallback after an exhausted allowance requires an explicit user choice. The cap is not increased or removed by this change.
+Pending searches render a fetching state only; provisional catalog results are not presented as final results. Duplicate requests are blocked while a request is active. There is no artificial app request-count allowance. Provider failures remain clearly labeled; no provider error is presented as a verified scientific result.

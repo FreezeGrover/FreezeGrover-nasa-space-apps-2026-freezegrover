@@ -9,7 +9,7 @@
 - NASA source links are not evidence of successful data ingestion. Mark missing information explicitly.
 - No scientific claim may be Verified without completed evidence checks.
 - Keep QA logically independent of answer generation when it is connected.
-- Keep secrets on the server and outside Git. No paid requests without approved limits.
+- Keep secrets on the server and outside Git. Paid requests require user authorization. The user has explicitly removed the app request-count cap; do not reintroduce it.
 - Localhost only. Do not use Sites or deploy without a new explicit request.
 - Run npm test, npm run typecheck, and npm run build for meaningful changes; inspect affected UI in a browser.
 - Update documentation and development log. GitHub is canonical; do not claim a push succeeded without remote evidence.

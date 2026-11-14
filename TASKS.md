@@ -12,7 +12,7 @@
 
 ## Must verify after installation
 
-- Real OpenAI response using the user's existing key and approved request limit. Configuration is not proof of successful API access.
+- Real OpenAI response using the user's existing key . Configuration is not proof of successful API access.
 - Visual and interactive review of the updated Windows localhost build at the user's window size.
 - Full regression checklist in DEVELOPMENT_LOG.md and VERIFICATION.md.
 

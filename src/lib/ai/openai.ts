@@ -14,21 +14,16 @@ const jsonSchema={
     properties:{recordId:{type:"string"},field:{type:"string",enum:["objective","approach","measurements","conditions","table"]},quote:{type:"string"},interpretation:{type:"string"}},
   }}},
 };
-let requests=0;
 export function aiConfiguration(env:Record<string,string|undefined>=process.env){
-  const limit=Number(env.AI_MAX_REQUESTS??0);
-  return {configured:Boolean(env.OPENAI_API_KEY?.trim() && env.OPENAI_MODEL?.trim() && Number.isInteger(limit) && limit>0),
-    model:env.OPENAI_MODEL?.trim(),limit:Number.isInteger(limit)?Math.min(100,Math.max(0,limit)):0};
+  return {configured:Boolean(env.OPENAI_API_KEY?.trim() && env.OPENAI_MODEL?.trim()),model:env.OPENAI_MODEL?.trim()};
 }
 export function aiStatus(){
   const config=aiConfiguration();
-  return {configured:config.configured,remaining:Math.max(0,config.limit-requests),provider:"OpenAI"};
+  return {configured:config.configured,provider:"OpenAI"};
 }
 export async function interpretQuestion(query:string,context:string,transport:typeof fetch=fetch):Promise<CitedStatement[]>{
   const config=aiConfiguration();
   if(!config.configured) throw new Error("AI_NOT_CONFIGURED");
-  if(requests>=config.limit) throw new Error("AI_LIMIT_REACHED");
-  requests++;
   // Send public source excerpts, not private files or a user's API key.
   // Objectives describe what was studied; they are not measured findings.
   const catalog=investigations.map(item=>({
