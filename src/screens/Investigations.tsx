@@ -14,8 +14,10 @@ import { MissionContext } from "@/components/MissionContext";
 import { Applications } from "@/components/Applications";
 import type {ResearchAnswer as Answer} from "@/types/answer";
 import {ResearchAnswer} from "@/components/ResearchAnswer";
+import {FetchingResearch} from "@/components/FetchingResearch";
 export function Investigations({
   query,
+  onBrowseCatalog=()=>{},
   answer=null,searching=false,onReview=()=>{},
   showResults,
   onResultsChange: setShowResults,
@@ -23,6 +25,7 @@ export function Investigations({
   setEnvironment,
 }: {
   query: string;
+  onBrowseCatalog?:()=>void;
   answer?:Answer|null;searching?:boolean;onReview?:(id:string,statement:string)=>void;
   showResults: boolean;
   onResultsChange: (open: boolean) => void;
@@ -32,7 +35,8 @@ export function Investigations({
   const [showDetail,setShowDetail]=useState(false);
   const [selected, setSelected] = useState("flex");
   const [filters, setFilters] = useState({ ...emptyFilters });
-  const matches = answer && answer.query===query ? answer.recordIds.flatMap(id=>{
+  const paused=answer?.mode==="unavailable";
+  const matches = searching ? [] : answer && answer.query===query ? answer.recordIds.flatMap(id=>{
     const item=investigations.find(record=>record.id===id);
     return item?[{item,reasons:[answer.mode==="openai"?"AI-selected · NASA quote checked":"Catalog match"],relevance:0}]:[];
   }) : retrieveInvestigations(investigations, query);
@@ -73,21 +77,20 @@ export function Investigations({
     <div className="investigations-page">
       <InvestigationFilters value={filters} onChange={setFilters} />
       <div className="retrieval-summary" role="status">
-        {results.length} relevant investigations{query ? ` for “${query}”` : ""}{" "}
-        · {searching?"Searching NASA catalog…":answer?.mode==="openai"?"source-linked AI interpretation · review pending":"catalog retrieval"}
+        {searching ? "Fetching information… Please wait." : paused ? "AI search paused · catalog browsing is available" : results.length+" relevant investigations"+(query?' for “'+query+'”':"")+" · "+(answer?.mode==="openai"?"source-linked AI interpretation · review pending":"catalog retrieval")}
       </div>
       <div className="investigation-top">
         <Panel title="Research Briefing" icon={<Sparkle />}>
-          <CatalogBriefing compact query={query} records={results} answer={answer}/>
+          {searching?<p role="status">Fetching information…</p>:paused?<p>AI search paused. Browse catalog matches from the results popup.</p>:<CatalogBriefing compact query={query} records={results} answer={answer}/>}
         </Panel>
         <MissionContext value={environment} onChange={setEnvironment} compact />
       </div>
       <div className="investigation-columns">
         <Panel title="Research Results" icon={<FileText />}>
           <div className="muted tiny">
-            {results.length ? `${results.length} retrieved NASA PSI records · review pending` : "No matches · Reset filters or refine your question"}
+            {searching?"Preparing your response…":paused?"AI allowance used · no new AI request sent":results.length ? `${results.length} retrieved NASA PSI records · review pending` : "No matches · Reset filters or refine your question"}
           </div>
-          <button className="research-open-button" onClick={()=>setShowResults(true)}>View search results · {results.length} ↗</button>
+          <button className="research-open-button" disabled={searching} onClick={()=>setShowResults(true)}>{searching?"Fetching information…":paused?"View search status ↗":"View search results · "+results.length+" ↗"}</button>
           {results.length > 0 && <p className="results-preview-note">Browse matching records in the popup.</p>}
           <div className="list-note">
             Showing the retrieved Combustion Science catalog
@@ -100,13 +103,24 @@ export function Investigations({
         ) : (
           <Panel title="Selected Investigation">
             <div className="empty-investigation-preview">
-              <span className="muted tiny">No matching investigation selected</span>
-              <button className="research-open-button" onClick={()=>setShowResults(true)}>Review search and filters ↗</button>
+              <span className="muted tiny">{searching?"Waiting for the completed results…":paused?"AI search is paused":"No matching investigation selected"}</span>
+              <button className="research-open-button" disabled={searching} onClick={()=>setShowResults(true)}>Review search and filters ↗</button>
             </div>
           </Panel>
         )}
       </div>
-      <ResearchDialog open={showResults} onClose={()=>setShowResults(false)} title={`Research Results · ${results.length} investigations`}><div className="search-output-summary"><strong>{query ? `Results for “${query}”` : "All Combustion Science Investigations"}</strong><p>Documented NASA records · select a card to open its full investigation.</p>{Object.values(filters).some(Boolean)&&<div><span>Active filters narrow these results.</span><button className="research-open-button" onClick={()=>setFilters({...emptyFilters})}>Clear filters</button></div>}</div>{searching&&<p role="status">Interpreting your question against the NASA catalog…</p>}{answer&&<ResearchAnswer answer={answer} availableIds={results.map(record=>record.id)} onReview={onReview}/>}{renderResults(true)}{!searching&&!results.length&&<Notice>No documented records match these filters.</Notice>}</ResearchDialog>
+      <ResearchDialog open={showResults} onClose={()=>setShowResults(false)} title={searching?"Research Search":paused?"AI Search Paused":`Research Results · ${results.length} investigations`}>
+        <div aria-busy={searching}>
+          {searching?<FetchingResearch/>:<>
+            <div className="search-output-summary"><strong>{query?`Results for “${query}”`:"All Combustion Science Investigations"}</strong>
+              {!paused&&<p>Documented NASA records · select a card to open its full investigation.</p>}
+              {Object.values(filters).some(Boolean)&&<div><span>Active filters narrow these results.</span><button className="research-open-button" onClick={()=>setFilters({...emptyFilters})}>Clear filters</button></div>}
+            </div>
+            {answer&&<ResearchAnswer answer={answer} availableIds={results.map(record=>record.id)} onReview={onReview}/>}
+            {paused?<button className="research-open-button" onClick={onBrowseCatalog}>Browse catalog matches instead ↗</button>:<>{renderResults(true)}{!results.length&&<Notice>No documented records match these filters.</Notice>}</>}
+          </>}
+        </div>
+      </ResearchDialog>
       <ResearchDialog open={showDetail && !!item} onClose={()=>setShowDetail(false)} title={item ? `${item.name} · Investigation Details` : "Investigation Details"}>{item&&<InvestigationDetail item={item} onSelectRelated={setSelected} availableIds={results.map(record=>record.id)}/>}</ResearchDialog>
       <Applications environment={environment}/>
     </div>

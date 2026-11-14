@@ -6,22 +6,24 @@ import { Panel } from "@/components/ui";
 import { MissionContext } from "@/components/MissionContext";
 import { Applications } from "@/components/Applications";
 import type {ResearchAnswer} from "@/types/answer";
+import {FetchingResearch} from "@/components/FetchingResearch";
 export function Overview({
   environment,
   setEnvironment,
   navigate,
-  query="",answer,
+  query="",answer,searching=false,
 }: {
   environment: Environment;
   setEnvironment: (v: Environment) => void;
   navigate: (v: Tab) => void;
   query?:string;answer?:ResearchAnswer|null;
+  searching?:boolean;
 }) {
   return (
     <div className="overview-page">
       <div className="overview-top">
         <Panel title="Research Briefing — NASA PSI" icon={<Sparkle />}>
-          <CatalogBriefing query={query} answer={answer}/>
+          {searching?<FetchingResearch/>:answer?.mode==="unavailable"?<p>AI search paused. Open Investigations to review the search status or browse the catalog.</p>:<CatalogBriefing query={query} answer={answer}/>}
         </Panel>
         <MissionContext value={environment} onChange={setEnvironment} />
       </div>

@@ -38,3 +38,8 @@ All five approved tabs, blue/white styles and popup layout remain. Search visibi
 ## Verification boundaries
 
 Node tests cover the scientific modules, API failure paths with a fake transport and a Happy DOM interaction workflow across all five tabs. Happy DOM is a DOM simulation, not a visual browser or proof of real OpenAI connectivity. Production build and typecheck are required. Windows browser review of the updated package and live AI success are separate post-install checks. GitHub publication requires a verified remote commit SHA; local commits must be identified as local.
+
+
+## Search response lifecycle
+
+Pending searches render a fetching state only; provisional catalog results are not presented as final results. Duplicate requests are blocked while a request is active. Exhausted local AI allowance is an unavailable state, not a scientific zero-result outcome. Catalog fallback after an exhausted allowance requires an explicit user choice. The cap is not increased or removed by this change.

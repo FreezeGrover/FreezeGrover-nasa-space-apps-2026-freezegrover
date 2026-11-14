@@ -7,7 +7,7 @@ export interface CitedStatement {
 }
 export interface ResearchAnswer {
   query: string;
-  mode: "openai" | "catalog";
+  mode: "openai" | "catalog" | "unavailable";
   recordIds: string[];
   statements: CitedStatement[];
   notice: string;

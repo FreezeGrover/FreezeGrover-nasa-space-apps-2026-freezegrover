@@ -4,10 +4,12 @@ export function ResearchSearch({
   value,
   onChange,
   onSearch,
+  pending=false,
 }: {
   value: string;
   onChange: (v: string) => void;
   onSearch: () => void;
+  pending?:boolean;
 }) {
   return (
     <section className="research-search">
@@ -31,9 +33,9 @@ export function ResearchSearch({
             onChange={(e) => onChange(e.target.value)}
           />
         </label>
-        <button className="search-button" type="submit">
+        <button className="search-button" type="submit" disabled={pending} aria-busy={pending}>
           <MagnifyingGlass />
-          Search
+          {pending?"Fetching…":"Search"}
         </button>
       </form>
     </section>

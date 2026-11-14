@@ -88,3 +88,18 @@ test("OpenAI adapter contract is tested with a fake transport, never a paid call
   for(const [name,value] of Object.entries({OPENAI_API_KEY:previous.key,OPENAI_MODEL:previous.model,AI_MAX_REQUESTS:previous.limit})){if(value===undefined)delete process.env[name];else process.env[name]=value;}
  }
 });
+
+
+test("spent AI allowance pauses search without replacing it with catalog results",async()=>{
+ const previous={key:process.env.OPENAI_API_KEY,model:process.env.OPENAI_MODEL,limit:process.env.AI_MAX_REQUESTS};
+ const originalFetch=globalThis.fetch;
+ process.env.OPENAI_API_KEY="test-not-a-real-key";process.env.OPENAI_MODEL="test-model";process.env.AI_MAX_REQUESTS="1";
+ globalThis.fetch=async()=>{throw new Error("A spent allowance must not contact OpenAI");};
+ try{
+  const response=await POST(new Request("http://localhost:3022/api/research",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:"PSI-69",environment:"All"})}));
+  const answer=await response.json();assert.equal(answer.mode,"unavailable");assert.deepEqual(answer.recordIds,[]);assert.match(answer.notice,/No further OpenAI request was sent/);
+ }finally{
+  globalThis.fetch=originalFetch;
+  for(const [name,value] of Object.entries({OPENAI_API_KEY:previous.key,OPENAI_MODEL:previous.model,AI_MAX_REQUESTS:previous.limit})){if(value===undefined)delete process.env[name];else process.env[name]=value;}
+ }
+});

@@ -39,10 +39,13 @@ export function Dashboard() {
   const [aiConfigured,setAiConfigured]=useState(false);
   const [qaReview,setQaReview]=useState<{recordId:string;statement:string}|undefined>();
   const searchSequence=useRef(0);
+  const requestPending=useRef(false);
   useEffect(()=>{fetch("/api/research").then(response=>response.json()).then(status=>setAiConfigured(status.configured===true)).catch(()=>setAiConfigured(false));},[]);
   const [showSearchResults,setShowSearchResults]=useState(false);
   const [disclosure, setDisclosure] = useState(false);
   async function searchResearch() {
+    if(requestPending.current) return;
+    requestPending.current=true;
     const sequence=++searchSequence.current;
     setSubmitted(query);
     setAnswer(null);
@@ -56,7 +59,7 @@ export function Dashboard() {
       if(sequence===searchSequence.current) setAnswer(result);
     }catch{
       if(sequence===searchSequence.current) setAnswer(catalogAnswer(query,"Research service unavailable. Showing local catalog matches only."));
-    }finally{if(sequence===searchSequence.current) setSearching(false);}
+    }finally{requestPending.current=false;if(sequence===searchSequence.current) setSearching(false);}
   }
   function reviewStatement(recordId:string,statement:string){
     setQaReview({recordId,statement});
@@ -128,6 +131,7 @@ export function Dashboard() {
               value={query}
               onChange={setQuery}
               onSearch={searchResearch}
+              pending={searching}
             />
           )}
           <div className="screen-content" key={tab}>
@@ -138,6 +142,7 @@ export function Dashboard() {
                 navigate={navigate}
                 query={submitted}
                 answer={answer}
+                searching={searching}
               />
             )}{" "}
             {tab === "Investigations" && (
@@ -146,6 +151,7 @@ export function Dashboard() {
                 answer={answer}
                 searching={searching}
                 onReview={reviewStatement}
+                onBrowseCatalog={()=>setAnswer(catalogAnswer(submitted,"Catalog matches selected explicitly. No AI explanation was generated."))}
                 showResults={showSearchResults}
                 onResultsChange={setShowSearchResults}
                 environment={environment}

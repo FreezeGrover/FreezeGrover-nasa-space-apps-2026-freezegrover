@@ -38,3 +38,8 @@ Configured status is not proof of successful authentication, billing or model ac
 ## GitHub boundary
 
 The existing repository URL is https://github.com/FreezeGrover/flames-in-freefall . Connected access returned 404. The local branch and commit are recorded in BUILD_INFO.json when the ZIP is packaged; remote publication is unverified.
+
+
+## Loading-state regression update
+
+25 Node tests now pass. The five-tab DOM test deliberately holds a request unresolved, verifies that no result rows or BASS-II placeholders appear, checks that repeat form submission makes only one request, then resolves the response and checks the final results. It also checks that an exhausted allowance shows AI Search Paused and that choosing catalog matches makes no additional request. Typecheck and production build passed. This remains simulated DOM verification, not a Windows screenshot check.

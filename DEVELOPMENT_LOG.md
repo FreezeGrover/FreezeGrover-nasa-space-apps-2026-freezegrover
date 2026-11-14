@@ -73,3 +73,12 @@ Replaced fixed research-briefing examples with submitted-question/filtered-recor
 Implemented server-side OpenAI Responses adapter behind an injected provider boundary and separate grounding checks. No secret is shipped; the PowerShell launcher accepts an existing key through hidden input, asks for a paid-attempt cap and keeps the credential in the server environment only. Google integration is deferred. No live OpenAI test was possible without a local key; all adapter contract tests use a fake transport. This is not autonomous scientific verification.
 
 24 Node tests, four Python tests, typecheck, production build and loopback HTTP checks passed. Two challenging HTTP search cases returned four and six documented matches; all 22 CSV downloads matched their saved hashes. Live NASA PSI-69 and PSI-25 returned HTTP 200 and correct categories/versions. Updated Windows visual review and real OpenAI success remain pending. Connected GitHub access returned 404; only a local commit is claimed. See VERIFICATION.md.
+
+
+## Search loading and exhausted-budget behavior — 15 November 2026
+
+The user observed catalog results appearing before the slower AI response replaced them. Investigations now hides provisional matches, briefings and selection until the request finishes. Overview uses the same fetching state if revisited while a request is pending. The popup says “Fetching information… Please wait.” No artificial delay was added.
+
+Search is disabled while pending and a synchronous in-flight guard prevents repeat submissions from consuming more attempts. The configured AI cap remains unchanged. Exhaustion returns an explicit unavailable state without pretending to have no scientific evidence or silently replacing AI output with catalog results. The user can choose catalog browsing explicitly without a paid call.
+
+25 tests, typecheck and production build pass. A deferred-response DOM test checks the loading state, absence of provisional cards, duplicate-submission guard, final display and explicit catalog choice. The exhausted-budget API test makes no external request. Updated Windows visual verification remains pending installation; no live paid API request was made in this task.

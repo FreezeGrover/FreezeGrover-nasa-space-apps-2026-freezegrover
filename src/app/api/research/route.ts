@@ -1,4 +1,5 @@
 import {z} from "zod";
+import type {ResearchAnswer} from "@/types/answer";
 import {aiConfiguration,aiStatus,interpretQuestion} from "@/lib/ai/openai";
 import {answerResearchQuestion,catalogAnswer} from "@/lib/research/answer";
 export const runtime="nodejs";
@@ -10,7 +11,7 @@ export async function POST(request:Request){
   if(Number(request.headers.get("content-length")??0)>10000) return Response.json({error:"Question too large."},{status:413});
   let value;
   try {const body=await request.text();if(body.length>10000) return Response.json({error:"Question too large."},{status:413});value=input.parse(JSON.parse(body));}catch{return Response.json({error:"Enter a question of at most 1200 characters and a valid environment."},{status:400});}
-  let answer;
+  let answer:ResearchAnswer;
   if(!value.query.trim() || !aiConfiguration().configured) answer=catalogAnswer(value.query);
   else try {answer=await answerResearchQuestion(value.query,value.environment,interpretQuestion);}
   catch(error){
@@ -21,7 +22,9 @@ export async function POST(request:Request){
       code==="OPENAI_HTTP_401" ? "OpenAI authentication failed." :
       code==="OPENAI_HTTP_429" ? "OpenAI rate or quota limit reached." :
       code==="OPENAI_HTTP_403" ? "OpenAI access was denied." : "OpenAI could not complete a source-grounded response.";
-    answer=catalogAnswer(value.query,reason+" Showing catalog matches only.");
+    // A spent request budget is a paused AI search, not an empty scientific result.
+    // Catalog browsing is offered separately and does not spend another AI attempt.
+    answer=code==="AI_LIMIT_REACHED" ? {query:value.query,mode:"unavailable",recordIds:[],statements:[],groundingIssues:[],notice:"AI search paused: the configured request allowance for this server session has been used. No further OpenAI request was sent. You can browse catalog matches instead; no AI explanation will be generated."} : catalogAnswer(value.query,reason+" Showing catalog matches only.");
   }
   return Response.json(answer,{headers:{"Cache-Control":"no-store"}});
 }

@@ -13,9 +13,13 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
  }
  globals.React=React;globals.IS_REACT_ACT_ENVIRONMENT=true;
  const originalFetch=globalThis.fetch;
- globalThis.fetch=async(_url,options)=>options?.method==="POST"
-  ?Response.json(catalogAnswer(JSON.parse(options.body as string).query))
-  :Response.json({configured:false});
+ let finishSearch:((response:Response)=>void)|undefined;
+ let requestCount=0;
+ globalThis.fetch=async(_url,options)=>{
+  if(options?.method!=="POST")return Response.json({configured:false});
+  requestCount++;
+  return new Promise<Response>(resolve=>{finishSearch=resolve;});
+ };
  const {createRoot}=await import("react-dom/client");
  const {Dashboard}=await import("../src/components/Dashboard");
  const container=window.document.createElement("div");window.document.body.append(container);
@@ -35,7 +39,15 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
   assert.equal(window.document.querySelectorAll("nav button").length,5);
   await field('input[aria-label="Research question"]',"How does microgravity affect flame propagation");
   await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
-  assert.ok(dialog());assert.match(dialog()!.textContent,/BASS-II/);
+  assert.ok(dialog());assert.match(dialog()!.textContent,/Fetching information/);
+  assert.equal(window.document.querySelectorAll(".result-row").length,0,"No provisional results may flash during a request");
+  assert.doesNotMatch(dialog()!.textContent,/BASS-II|No documented records/);
+  assert.equal(window.document.querySelector('.research-search button')!.getAttribute("disabled"),"");
+  await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
+  assert.equal(requestCount,1,"Duplicate submissions must not spend another AI attempt");
+  await act(async()=>{finishSearch!(Response.json(catalogAnswer("How does microgravity affect flame propagation")));});
+  globalThis.fetch=async(_url,options)=>options?.method==="POST"?Response.json(catalogAnswer(JSON.parse(options.body as string).query)):Response.json({configured:false});
+  assert.match(dialog()!.textContent,/BASS-II/);assert.doesNotMatch(dialog()!.textContent,/Fetching information/);
   await close();await click(button("Compare"));await click(button("Investigations"));
   assert.equal(dialog(),null,"A dismissed search must not reopen on tab navigation");
   assert.equal((window.document.querySelector('input[aria-label="Research question"]') as unknown as HTMLInputElement).value,"How does microgravity affect flame propagation");
@@ -76,6 +88,16 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
   await click(button("Review statement in Scientific QA ↗"));
   assert.equal(window.document.querySelector(".page-title")!.textContent,"Scientific QA");
   assert.equal((window.document.querySelector("#qa-statement") as unknown as HTMLTextAreaElement).value,"A liquid-fuel research objective.");
+  await click(button("Overview"));
+  let pausedRequests=0;
+  globalThis.fetch=async()=>{pausedRequests++;return Response.json({query:"PSI-69",mode:"unavailable",recordIds:[],statements:[],groundingIssues:[],notice:"AI allowance used. No further OpenAI request was sent."});};
+  await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
+  assert.match(dialog()!.textContent,/AI Search Paused/);
+  assert.doesNotMatch(dialog()!.textContent,/No documented records/);
+  assert.equal(dialog()!.querySelectorAll(".result-row").length,0);
+  await click(button("Browse catalog matches instead ↗"));
+  assert.match(dialog()!.textContent,/FLEX/);assert.equal(pausedRequests,1);
+
  }finally{
   await act(async()=>root.unmount());
   globalThis.fetch=originalFetch;
