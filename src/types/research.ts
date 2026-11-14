@@ -36,7 +36,7 @@ export interface RelatedInvestigation {
 }
 export interface ExperimentMetadata {
   topics: string[];
-  fuelCategory: "liquid" | "solid" | "smoke";
+  fuelCategory: "liquid" | "solid" | "smoke" | "gas" | "unknown";
   gravity: string[];
   hardware: string[];
   oxygenVariation: boolean;
@@ -54,4 +54,48 @@ export interface InvestigationFilters {
   gravity: string;
   hardware: string;
   related: string;
+}
+
+export interface PsiTable {
+  name: string;
+  url: string;
+  status: string;
+  kind: string;
+  localUrl?: string;
+  rows?: number;
+  bytes?: number;
+  columns?: string[];
+  preview?: string[][];
+  sha256?: string;
+  encoding?: string;
+  error?: string;
+}
+export interface PsiEvidenceRecord {
+  accession: string;
+  version: number;
+  doi: string | null;
+  researchArea: string;
+  projectType: string;
+  objective: string;
+  approach: string;
+  hypothesis: string;
+  impacts: string;
+  retrievedAt: string;
+  recordSha256: string;
+  license: string;
+  inventoryStatus: string;
+  inventoryError: string | null;
+  fileCount: number;
+  unrestrictedFiles: number;
+  rawFileCount: number;
+  restrictedFiles: number;
+  tables: PsiTable[];
+  fileExamples: {
+    name: string;
+    category: string;
+    bytes: number;
+    restricted: boolean;
+    url: string;
+  }[];
+  findingsStatus: string;
 }

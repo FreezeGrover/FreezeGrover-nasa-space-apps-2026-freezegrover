@@ -11,3 +11,6 @@ Consulted 14 November 2026. These are source references, not a claim that raw da
 No guessed PSI identifiers are assigned to FLEX-2 or BASS-II. Their links lead to the NASA overview until exact original records are checked. Numerical conditions, dimensions, and sensors not imported from original test files remain explicitly unavailable. Hypotheses are not treated as measured findings.
 
 Rankings currently use curated topic tags. They are neither a NASA ranking nor a validated scientific scoring method. Lunar and Martian relevance requires gravity, atmosphere, geometry, and ventilation transfer analysis.
+
+## Current authoritative catalog
+The 24 retrieved NASA PSI Combustion Science records supersede the four-record starter catalog above. Original responses, file inventories, accession/version/DOI and SHA-256 are retained under data/psi and src/data/psi-catalog.json. See PSI_CONNECTION.md and PSI_CATALOG.md for the current per-record inventory and access distinctions.

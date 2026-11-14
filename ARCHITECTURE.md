@@ -9,7 +9,7 @@ Each module has one job and exports named functions. React components are functi
 - `components/InvestigationDetail.tsx`: selected record and expandable evidence details.
 - `components/Applications.tsx`: reusable research-theme panels and scope note.
 - `screens/`: one function component per main screen.
-- `lib/research/catalog.ts`: curated source records, `findInvestigationById`, and `searchInvestigations`.
+- `lib/research/catalog.ts`: the retrieved PSI snapshot, `findInvestigationById`, and `searchInvestigations`.
 - `lib/comparison/compare.ts`: `compareExperimentalConditions` returns aligned attributes.
 - `lib/ranking/rank.ts`: `findRelevantInvestigations` and `explainRankingReason` provide topic matches without invented scores.
 - `lib/qa/review.ts`: `reviewScientificClaim` keeps evidence-dependent checks pending.
@@ -18,6 +18,9 @@ Each module has one job and exports named functions. React components are functi
 
 UI components import the functions; the functions do not depend on React. This allows the source catalog to be replaced later without rewriting every screen.
 
-The planned live pipeline is NASA documents → source registry → retrieval → answer provider → independent evidence reviewer → dashboard. Only curated registry/retrieval and the interface are implemented in this milestone. Empty future API directories contain no server functionality.
+The current pipeline is NASA PSI public records/files → validated ingestion → normalized snapshot → source-linked retrieval → dashboard. GET /api/psi/catalog exposes that snapshot. Future answer generation must send claims to a separate evidence reviewer; no answer provider is currently configured.
 
-No API keys are stored or requested by the interface. Live AI integration is deferred by the project lead.
+No API keys are stored or requested by the interface. Live AI integration is not configured in this milestone.
+
+## PSI source pipeline (current)
+`ingest_psi.py` discovers category-filtered NASA records, validates identities, reads official file inventories, resolves unrestricted experimental CSVs and preserves original bytes. `compile_psi.py` creates the shared snapshot used by catalog, metadata, comparison, ranking, briefing and independent QA modules. PsiEvidence renders provenance, original narrative, sample rows and links. GET /api/psi/catalog uses the same retrieval functions. PSI_CONNECTION.md documents the current ingestion contract.

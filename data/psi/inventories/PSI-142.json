@@ -1,0 +1,36 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "67c9ea87ccb9559f59bfc6fe",
+      "name": "PSI-142_metadata_PSI-164_Quantitative Studies.zip",
+      "key": "psi-data/PSI-142/metadata/PSI-142_metadata_PSI-164_Quantitative Studies.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 12158,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "67c9ea87ccb9559f59bfc6ff",
+      "name": "PSI-142_Analyzed Data_PSI data summary Princeton with links.xlsx",
+      "key": "psi-data/PSI-142/Analyzed Data/PSI-142_Analyzed Data_PSI data summary Princeton with links.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 735232.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "67c9ea87ccb9559f59bfc700",
+      "name": "PSI-142_Experimental table_Data Summary Table.csv",
+      "key": "psi-data/PSI-142/Experimental table/PSI-142_Experimental table_Data Summary Table.csv",
+      "category": "Experimental table",
+      "bytes": 727,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

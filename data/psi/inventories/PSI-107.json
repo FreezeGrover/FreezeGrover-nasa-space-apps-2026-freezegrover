@@ -1,0 +1,1886 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "683da125b8656d2315bf4486",
+      "name": "PSI-107_metadata_PSI-176_SPICE.zip",
+      "key": "psi-data/PSI-107/metadata/PSI-107_metadata_PSI-176_SPICE.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 9313,
+      "version": 4,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf4487",
+      "name": "PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+      "key": "psi-data/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
+      "category": "Reports",
+      "bytes": 2227738.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf4489",
+      "name": "PSI-107_Reports_SPICE_30-DayPostFlightReport.pdf",
+      "key": "psi-data/PSI-107/Reports/PSI-107_Reports_SPICE_30-DayPostFlightReport.pdf",
+      "category": "Reports",
+      "bytes": 160909.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448a",
+      "name": "PSI-107_Reports_SPICE_FinalReport.pdf",
+      "key": "psi-data/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf",
+      "category": "Reports",
+      "bytes": 601754.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf4488",
+      "name": "PSI-107_Science Documents_SPICE_SRD.doc",
+      "key": "psi-data/PSI-107/Science Documents/PSI-107_Science Documents_SPICE_SRD.doc",
+      "category": "Science Documents",
+      "bytes": 1112064.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448b",
+      "name": "PSI-107_Presentations_SPICE Overview.ppt",
+      "key": "psi-data/PSI-107/Presentations/PSI-107_Presentations_SPICE Overview.ppt",
+      "category": "Presentations",
+      "bytes": 28868608.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448c",
+      "name": "PSI-107_Presentations_Laminar Smoke Points in Coflow Measured Aboard ISS.pdf",
+      "key": "psi-data/PSI-107/Presentations/PSI-107_Presentations_Laminar Smoke Points in Coflow Measured Aboard ISS.pdf",
+      "category": "Presentations",
+      "bytes": 1306705.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448d",
+      "name": "PSI-107_Presentations_SPICE-1 Ops Overview and Smoke Point Cue Card.ppt",
+      "key": "psi-data/PSI-107/Presentations/PSI-107_Presentations_SPICE-1 Ops Overview and Smoke Point Cue Card.ppt",
+      "category": "Presentations",
+      "bytes": 4048384.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448f",
+      "name": "PSI-107_Presentations_IP-C Crew training 2010.pdf",
+      "key": "psi-data/PSI-107/Presentations/PSI-107_Presentations_IP-C Crew training 2010.pdf",
+      "category": "Presentations",
+      "bytes": 1348519.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4490",
+      "name": "PSI-107_Presentations_IP-D Crew training 2011.pdf",
+      "key": "psi-data/PSI-107/Presentations/PSI-107_Presentations_IP-D Crew training 2011.pdf",
+      "category": "Presentations",
+      "bytes": 1339967.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da125b8656d2315bf448e",
+      "name": "PSI-107_Raw Data_Ethylene assembled smoke hieght slide.  GMT 045 1503      11 26 2011.pptx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Ethylene assembled smoke hieght slide.  GMT 045 1503      11 26 2011.pptx",
+      "category": "Raw Data",
+      "bytes": 1447201.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4491",
+      "name": "PSI-107_Raw Data_SPICE_GMT045_2009_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT045_2009_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 93862400.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4492",
+      "name": "PSI-107_Raw Data_Spice_Flight_Flamelength.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Spice_Flight_Flamelength.xls",
+      "category": "Raw Data",
+      "bytes": 16896.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4493",
+      "name": "PSI-107_Raw Data_045_SPICE_DSC_num.txt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_045_SPICE_DSC_num.txt",
+      "category": "Raw Data",
+      "bytes": 1475.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4494",
+      "name": "PSI-107_Raw Data_SmokePointReview-0g-3.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SmokePointReview-0g-3.xlsx",
+      "category": "Raw Data",
+      "bytes": 295735.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44a9",
+      "name": "PSI-107_Raw Data_SPICE_GMT045_2009_NEF.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT045_2009_NEF.zip",
+      "category": "Raw Data",
+      "bytes": 249350792.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44ad",
+      "name": "PSI-107_Raw Data_SPICE Image Organization Guide.docx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Image Organization Guide.docx",
+      "category": "Raw Data",
+      "bytes": 139512.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44ae",
+      "name": "PSI-107_Raw Data_Spice Flight Test Data II modified.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Spice Flight Test Data II modified.xls",
+      "category": "Raw Data",
+      "bytes": 429568.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44dd",
+      "name": "PSI-107_Raw Data_vlcsnap downlink frame grabs.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_vlcsnap downlink frame grabs.zip",
+      "category": "Raw Data",
+      "bytes": 48667244.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44de",
+      "name": "PSI-107_Raw Data_SPICE Day 045 Test Point Images.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Day 045 Test Point Images.zip",
+      "category": "Raw Data",
+      "bytes": 3006740.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44df",
+      "name": "PSI-107_Raw Data_SPICE GMT045 2009 Contact Sheets.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE GMT045 2009 Contact Sheets.zip",
+      "category": "Raw Data",
+      "bytes": 86668356.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44e0",
+      "name": "PSI-107_Raw Data_SPICE GMT045 2009 jpegs.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE GMT045 2009 jpegs.zip",
+      "category": "Raw Data",
+      "bytes": 6793541.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44fa",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs 36f.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs 36f.zip",
+      "category": "Raw Data",
+      "bytes": 7380242.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4495",
+      "name": "PSI-107_Raw Data_048_SPICE_num.txt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_048_SPICE_num.txt",
+      "category": "Raw Data",
+      "bytes": 1577.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4496",
+      "name": "PSI-107_Raw Data_SPICE_GMT048_2009_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT048_2009_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 88787968.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44ac",
+      "name": "PSI-107_Raw Data_SPICE_GMT048_2009_NEF.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT048_2009_NEF.zip",
+      "category": "Raw Data",
+      "bytes": 252817183.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e1",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - Ruler.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - Ruler.zip",
+      "category": "Raw Data",
+      "bytes": 1028100.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e2",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 13.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 13.zip",
+      "category": "Raw Data",
+      "bytes": 1291833.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e3",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 14.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 14.zip",
+      "category": "Raw Data",
+      "bytes": 2116454.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e4",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 15.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 15.zip",
+      "category": "Raw Data",
+      "bytes": 1317589.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e5",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 16.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 16.zip",
+      "category": "Raw Data",
+      "bytes": 15486800.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e6",
+      "name": "PSI-107_Raw Data_SPICE GMT048 2009 Contact Sheets.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE GMT048 2009 Contact Sheets.zip",
+      "category": "Raw Data",
+      "bytes": 81007511.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e7",
+      "name": "PSI-107_Raw Data_SPICE GMT048 2009 jpegs.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE GMT048 2009 jpegs.zip",
+      "category": "Raw Data",
+      "bytes": 9011150.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4497",
+      "name": "PSI-107_Raw Data_SPICE_GMT052_2009_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT052_2009_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 229785600.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44aa",
+      "name": "PSI-107_Raw Data_SPICE_GMT052_2009_NEF.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT052_2009_NEF.zip",
+      "category": "Raw Data",
+      "bytes": 660834359.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44ab",
+      "name": "PSI-107_Raw Data_GMT052nikon_propy.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT052nikon_propy.xls",
+      "category": "Raw Data",
+      "bytes": 5451264.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e8",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 25.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 25.zip",
+      "category": "Raw Data",
+      "bytes": 9962438.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44e9",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 26.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 26.zip",
+      "category": "Raw Data",
+      "bytes": 2571678.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44ea",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 27.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 27.zip",
+      "category": "Raw Data",
+      "bytes": 4768314.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12db8656d2315bf44eb",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 28.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 28.zip",
+      "category": "Raw Data",
+      "bytes": 1401819.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44ec",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 29.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 29.zip",
+      "category": "Raw Data",
+      "bytes": 4116722.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44ed",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 30.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 30.zip",
+      "category": "Raw Data",
+      "bytes": 2695192.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44ee",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs - TP 31_Liftoff.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs - TP 31_Liftoff.zip",
+      "category": "Raw Data",
+      "bytes": 16130682.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44ef",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 32a.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 32a.zip",
+      "category": "Raw Data",
+      "bytes": 3797305.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f0",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 32b.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 32b.zip",
+      "category": "Raw Data",
+      "bytes": 5187002.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f1",
+      "name": "PSI-107_Raw Data_Downlink Frame Grab TP 33a.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grab TP 33a.zip",
+      "category": "Raw Data",
+      "bytes": 2006337.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f2",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 33b.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 33b.zip",
+      "category": "Raw Data",
+      "bytes": 2197497.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f3",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 33c.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 33c.zip",
+      "category": "Raw Data",
+      "bytes": 4781942.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f4",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP34.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP34.zip",
+      "category": "Raw Data",
+      "bytes": 1193949.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f5",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 35_36.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 35_36.zip",
+      "category": "Raw Data",
+      "bytes": 12274813.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f6",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 36b.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 36b.zip",
+      "category": "Raw Data",
+      "bytes": 9253993.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12eb8656d2315bf44f7",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 36c.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 36c.zip",
+      "category": "Raw Data",
+      "bytes": 3585884.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44f8",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP36d.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP36d.zip",
+      "category": "Raw Data",
+      "bytes": 4269717.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44f9",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 36e.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 36e.zip",
+      "category": "Raw Data",
+      "bytes": 9201580.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44fb",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 36g_i.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 36g_i.zip",
+      "category": "Raw Data",
+      "bytes": 5850017.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44fc",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 36j_last_propane.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 36j_last_propane.zip",
+      "category": "Raw Data",
+      "bytes": 1975000.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44fd",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 37.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 37.zip",
+      "category": "Raw Data",
+      "bytes": 2270519.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44fe",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 38.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 38.zip",
+      "category": "Raw Data",
+      "bytes": 2079704.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf44ff",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 39_40.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 39_40.zip",
+      "category": "Raw Data",
+      "bytes": 8464802.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf4500",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 41_42.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 41_42.zip",
+      "category": "Raw Data",
+      "bytes": 7295379.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf4501",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 43_44.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 43_44.zip",
+      "category": "Raw Data",
+      "bytes": 1567786.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12fb8656d2315bf4502",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 43a_44a.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 43a_44a.zip",
+      "category": "Raw Data",
+      "bytes": 12361194.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4503",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 45.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 45.zip",
+      "category": "Raw Data",
+      "bytes": 12648978.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4504",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 46.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 46.zip",
+      "category": "Raw Data",
+      "bytes": 7904508.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4505",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 49_50.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 49_50.zip",
+      "category": "Raw Data",
+      "bytes": 8551760.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4506",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 51_52.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 51_52.zip",
+      "category": "Raw Data",
+      "bytes": 12471156.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4507",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 53.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 53.zip",
+      "category": "Raw Data",
+      "bytes": 10647838.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4508",
+      "name": "PSI-107_Raw Data_SPICE_GMT052_2009_ContactSheet.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT052_2009_ContactSheet.zip",
+      "category": "Raw Data",
+      "bytes": 208600503.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf4509",
+      "name": "PSI-107_Raw Data_SPICE_GMT052_2009_jpegs.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT052_2009_jpegs.zip",
+      "category": "Raw Data",
+      "bytes": 131468585.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da130b8656d2315bf450a",
+      "name": "PSI-107_Raw Data_Still Images.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Still Images.zip",
+      "category": "Raw Data",
+      "bytes": 32841324.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4498",
+      "name": "PSI-107_Raw Data_GMT055nikon.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT055nikon.xls",
+      "category": "Raw Data",
+      "bytes": 4804096.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf4499",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_055_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_055_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 144185344.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf450b",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 55.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 55.zip",
+      "category": "Raw Data",
+      "bytes": 9856113.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf450c",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 57.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 57.zip",
+      "category": "Raw Data",
+      "bytes": 8529955.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf450d",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 59.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 59.zip",
+      "category": "Raw Data",
+      "bytes": 15806483.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf450e",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 61.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 61.zip",
+      "category": "Raw Data",
+      "bytes": 15345342.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf450f",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 63.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 63.zip",
+      "category": "Raw Data",
+      "bytes": 7125231.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf4510",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 65.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 65.zip",
+      "category": "Raw Data",
+      "bytes": 24931159.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da131b8656d2315bf4511",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 67.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 67.zip",
+      "category": "Raw Data",
+      "bytes": 5983015.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4512",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 67A.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 67A.zip",
+      "category": "Raw Data",
+      "bytes": 6958490.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4513",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_055_Contact Sheet.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_055_Contact Sheet.zip",
+      "category": "Raw Data",
+      "bytes": 128123447.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4514",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_055_jpeg.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_055_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 77523642.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4515",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_055_NEF.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_055_NEF.zip",
+      "category": "Raw Data",
+      "bytes": 462755461.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf449c",
+      "name": "PSI-107_Raw Data_GMT058nikon.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT058nikon.xls",
+      "category": "Raw Data",
+      "bytes": 11449344.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf449d",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_058_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_058_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 195301888.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4516",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs Playback Images.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs Playback Images.zip",
+      "category": "Raw Data",
+      "bytes": 36986942.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4517",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 73.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 73.zip",
+      "category": "Raw Data",
+      "bytes": 13888709.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4518",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 75.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 75.zip",
+      "category": "Raw Data",
+      "bytes": 8506451.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf4519",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 77.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 77.zip",
+      "category": "Raw Data",
+      "bytes": 6871867.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf451a",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 79.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 79.zip",
+      "category": "Raw Data",
+      "bytes": 8760961.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf451b",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 81.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 81.zip",
+      "category": "Raw Data",
+      "bytes": 7225091.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da132b8656d2315bf451c",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 83.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 83.zip",
+      "category": "Raw Data",
+      "bytes": 3020070.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf451d",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 85.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 85.zip",
+      "category": "Raw Data",
+      "bytes": 8570510.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf451e",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 87.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 87.zip",
+      "category": "Raw Data",
+      "bytes": 7088473.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf451f",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 89.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 89.zip",
+      "category": "Raw Data",
+      "bytes": 7480137.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4520",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 90B.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 90B.zip",
+      "category": "Raw Data",
+      "bytes": 12452901.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4521",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 90C.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 90C.zip",
+      "category": "Raw Data",
+      "bytes": 11533246.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4522",
+      "name": "PSI-107_Raw Data_Downlink Frame GrabsTP 90D Manual Camera 0.4mm.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame GrabsTP 90D Manual Camera 0.4mm.zip",
+      "category": "Raw Data",
+      "bytes": 7928483.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4523",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 90E Manual Camera 0.8mm.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 90E Manual Camera 0.8mm.zip",
+      "category": "Raw Data",
+      "bytes": 6583973.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf449e",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_119_ContactSheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_119_ContactSheet.pdf",
+      "category": "Raw Data",
+      "bytes": 68775.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44db",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_119_video.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_119_video.mp4",
+      "category": "Raw Data",
+      "bytes": 82939533.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453e",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_119_video.avi",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_119_video.avi",
+      "category": "Raw Data",
+      "bytes": 1228746628.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf449f",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Ign7.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Ign7.mp4",
+      "category": "Raw Data",
+      "bytes": 306843442.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a0",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Ign8a.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Ign8a.mp4",
+      "category": "Raw Data",
+      "bytes": 37797434.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a1",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Ign6.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Ign6.mp4",
+      "category": "Raw Data",
+      "bytes": 332386414.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a2",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Ign8.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Ign8.mp4",
+      "category": "Raw Data",
+      "bytes": 80001109.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a3",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Ign8b.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Ign8b.mp4",
+      "category": "Raw Data",
+      "bytes": 197793111.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a4",
+      "name": "PSI-107_Raw Data_SPICE_GMT136_Contact_Sheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT136_Contact_Sheet.pdf",
+      "category": "Raw Data",
+      "bytes": 83835.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a5",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_166_SootClean_ContactSheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_166_SootClean_ContactSheet.pdf",
+      "category": "Raw Data",
+      "bytes": 214153.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf44a6",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_167_ContactSheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_167_ContactSheet.pdf",
+      "category": "Raw Data",
+      "bytes": 149256.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44a7",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_173_ContactSheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_173_ContactSheet.pdf",
+      "category": "Raw Data",
+      "bytes": 347642.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44a8",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_174_ContactSheet.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_174_ContactSheet.pdf",
+      "category": "Raw Data",
+      "bytes": 405360.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44af",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_062_NEF.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_062_NEF.zip",
+      "category": "Raw Data",
+      "bytes": 419536901.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44b0",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_062_NikonD100_PictureBook.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_062_NikonD100_PictureBook.ppt",
+      "category": "Raw Data",
+      "bytes": 161559040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44cf",
+      "name": "PSI-107_Raw Data_GMT62_11.16.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.16.mp4",
+      "category": "Raw Data",
+      "bytes": 16674759.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44d0",
+      "name": "PSI-107_Raw Data_GMT62_11.20.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.20.mp4",
+      "category": "Raw Data",
+      "bytes": 13961465.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44d1",
+      "name": "PSI-107_Raw Data_GMT62_11.25.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.25.mp4",
+      "category": "Raw Data",
+      "bytes": 9916669.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44d2",
+      "name": "PSI-107_Raw Data_GMT62_11.27.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.27.mp4",
+      "category": "Raw Data",
+      "bytes": 8305779.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44d3",
+      "name": "PSI-107_Raw Data_GMT62_11.32.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.32.mp4",
+      "category": "Raw Data",
+      "bytes": 8503851.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44d4",
+      "name": "PSI-107_Raw Data_GMT62_11.41.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.41.mp4",
+      "category": "Raw Data",
+      "bytes": 6824167.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44d5",
+      "name": "PSI-107_Raw Data_GMT62_11.45.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.45.mp4",
+      "category": "Raw Data",
+      "bytes": 4818935.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44d6",
+      "name": "PSI-107_Raw Data_GMT62_11.39.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.39.mp4",
+      "category": "Raw Data",
+      "bytes": 7136093.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44d7",
+      "name": "PSI-107_Raw Data_GMT62_11.55.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_11.55.mp4",
+      "category": "Raw Data",
+      "bytes": 19250645.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44d8",
+      "name": "PSI-107_Raw Data_GMT62_12.06.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_12.06.mp4",
+      "category": "Raw Data",
+      "bytes": 3786122.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44d9",
+      "name": "PSI-107_Raw Data_GMT62_12.03.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_12.03.mp4",
+      "category": "Raw Data",
+      "bytes": 12452117.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44da",
+      "name": "PSI-107_Raw Data_GMT62_12.12.mp4",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_GMT62_12.12.mp4",
+      "category": "Raw Data",
+      "bytes": 15552259.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4524",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0091_2_1.6Nzl.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0091_2_1.6Nzl.zip",
+      "category": "Raw Data",
+      "bytes": 5941456.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4525",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0091.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0091.zip",
+      "category": "Raw Data",
+      "bytes": 471593.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4526",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0093.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0093.zip",
+      "category": "Raw Data",
+      "bytes": 497308.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4527",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0093_4.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0093_4.zip",
+      "category": "Raw Data",
+      "bytes": 5021587.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da133b8656d2315bf4528",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0095.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0095.zip",
+      "category": "Raw Data",
+      "bytes": 482684.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf4529",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 95_6.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 95_6.zip",
+      "category": "Raw Data",
+      "bytes": 3347611.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452a",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0096.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0096.zip",
+      "category": "Raw Data",
+      "bytes": 699983.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452b",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0096B_C.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0096B_C.zip",
+      "category": "Raw Data",
+      "bytes": 2514382.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452c",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0096D_E.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0096D_E.zip",
+      "category": "Raw Data",
+      "bytes": 3493414.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452d",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0097.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0097.zip",
+      "category": "Raw Data",
+      "bytes": 583538.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452e",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0097_8_0.8Nzl.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0097_8_0.8Nzl.zip",
+      "category": "Raw Data",
+      "bytes": 3443882.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf452f",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0099.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0099.zip",
+      "category": "Raw Data",
+      "bytes": 482926.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf4530",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0099_100.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0099_100.zip",
+      "category": "Raw Data",
+      "bytes": 2910586.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf4531",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0101.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0101.zip",
+      "category": "Raw Data",
+      "bytes": 258787.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf4532",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0101_102_end_of 1st bottle.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0101_102_end_of 1st bottle.zip",
+      "category": "Raw Data",
+      "bytes": 1789047.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da134b8656d2315bf4533",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0102.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0102.zip",
+      "category": "Raw Data",
+      "bytes": 1228372.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4534",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0102_b_NewBottle_Fumi.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0102_b_NewBottle_Fumi.zip",
+      "category": "Raw Data",
+      "bytes": 9278310.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4535",
+      "name": "PSI-107_Raw Data_062 TP 103 vlcsnap-4272441.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_062 TP 103 vlcsnap-4272441.zip",
+      "category": "Raw Data",
+      "bytes": 422650.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4536",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0103a_e_104_0.4Nzl.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0103a_e_104_0.4Nzl.zip",
+      "category": "Raw Data",
+      "bytes": 4144346.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4537",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0103f_blowoff.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0103f_blowoff.zip",
+      "category": "Raw Data",
+      "bytes": 2122778.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4538",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0104.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0104.zip",
+      "category": "Raw Data",
+      "bytes": 1492110.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf4539",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0104_1.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0104_1.zip",
+      "category": "Raw Data",
+      "bytes": 855618.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453a",
+      "name": "PSI-107_Raw Data_Downlink Frame Grabs TP 0104b.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Downlink Frame Grabs TP 0104b.zip",
+      "category": "Raw Data",
+      "bytes": 9100966.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453b",
+      "name": "PSI-107_Raw Data_Focus Check - Flight Hdwr.nef",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_Focus Check - Flight Hdwr.nef",
+      "category": "Raw Data",
+      "bytes": 11226428.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453c",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_062_jpegs.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_062_jpegs.zip",
+      "category": "Raw Data",
+      "bytes": 94753456.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453d",
+      "name": "PSI-107_Raw Data_SPICE_GMT2009_062_Movie Files.zip",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_GMT2009_062_Movie Files.zip",
+      "category": "Raw Data",
+      "bytes": 71809994.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da126b8656d2315bf449a",
+      "name": "PSI-107_Raw Data_SPICE_Airflow_Test_VelocityData.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_Airflow_Test_VelocityData.xlsx",
+      "category": "Raw Data",
+      "bytes": 258387.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da128b8656d2315bf44b1",
+      "name": "PSI-107_Raw Data_SPICE_Airflow_Test_VelocityComparison.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_Airflow_Test_VelocityComparison.xlsx",
+      "category": "Raw Data",
+      "bytes": 93488.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b2",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b3",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b4",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b5",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 19 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b6",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b7",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b8",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 36 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44b9",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44ba",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 13 mm Station x 57 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44bc",
+      "name": "PSI-107_Raw Data_SPICE_Airflow_Test_Duct Velocity Profiles.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_Airflow_Test_Duct Velocity Profiles.xls",
+      "category": "Raw Data",
+      "bytes": 74752.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44bd",
+      "name": "PSI-107_Raw Data_SPICE_AIRFLOW_TEST.ppt",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_AIRFLOW_TEST.ppt",
+      "category": "Raw Data",
+      "bytes": 1302528.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44be",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44bf",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c0",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c1",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 19 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c2",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c3",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c4",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, OUTSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 36 mm Height, OUTSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87040.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c5",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, CENTER.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, CENTER.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c6",
+      "name": "PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, INSIDE.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow Duct Cal - 56 mm Station x 57 mm Height, INSIDE.xls",
+      "category": "Raw Data",
+      "bytes": 87552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c7",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.pptx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.pptx",
+      "category": "Raw Data",
+      "bytes": 888772.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12ab8656d2315bf44c8",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.xlsx",
+      "category": "Raw Data",
+      "bytes": 650473.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44c9",
+      "name": "PSI-107_Raw Data_MASS_FLOW_CALIBRATION.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_MASS_FLOW_CALIBRATION.xls",
+      "category": "Raw Data",
+      "bytes": 20480.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44ca",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow_MFC_settings.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow_MFC_settings.xlsx",
+      "category": "Raw Data",
+      "bytes": 60355.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44cb",
+      "name": "PSI-107_Raw Data_SPICE Flow settings_w chart.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE Flow settings_w chart.xls",
+      "category": "Raw Data",
+      "bytes": 27648.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44cc",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow__Voltage.xlsx",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow__Voltage.xlsx",
+      "category": "Raw Data",
+      "bytes": 41334.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44cd",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow_411259meter.xls",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow_411259meter.xls",
+      "category": "Raw Data",
+      "bytes": 17408.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12bb8656d2315bf44ce",
+      "name": "PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.pdf",
+      "key": "psi-data/PSI-107/Raw Data/PSI-107_Raw Data_SPICE_FuelFlow_EngineeringUnitControl.pdf",
+      "category": "Raw Data",
+      "bytes": 909218.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da127b8656d2315bf449b",
+      "name": "PSI-107_Engineering Documents_SPICE_Phase III Flight Safety Data Package.pdf",
+      "key": "psi-data/PSI-107/Engineering Documents/PSI-107_Engineering Documents_SPICE_Phase III Flight Safety Data Package.pdf",
+      "category": "Engineering Documents",
+      "bytes": 4490750.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da129b8656d2315bf44bb",
+      "name": "PSI-107_Engineering Documents_SPICE-MEM-010.pdf",
+      "key": "psi-data/PSI-107/Engineering Documents/PSI-107_Engineering Documents_SPICE-MEM-010.pdf",
+      "category": "Engineering Documents",
+      "bytes": 113106.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da12cb8656d2315bf44dc",
+      "name": "PSI-107_Engineering Documents_60054MAFH000-C SPICE Experiment Assembly.pdf",
+      "key": "psi-data/PSI-107/Engineering Documents/PSI-107_Engineering Documents_60054MAFH000-C SPICE Experiment Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 591060.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da136b8656d2315bf4540",
+      "name": "PSI-107_Engineering Documents_SPICE_ScienceVerificationReport.pdf",
+      "key": "psi-data/PSI-107/Engineering Documents/PSI-107_Engineering Documents_SPICE_ScienceVerificationReport.pdf",
+      "category": "Engineering Documents",
+      "bytes": 237000.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da135b8656d2315bf453f",
+      "name": "PSI-107_Reference Data_SPICE_VIDEO OVERLAY RESET.pdf",
+      "key": "psi-data/PSI-107/Reference Data/PSI-107_Reference Data_SPICE_VIDEO OVERLAY RESET.pdf",
+      "category": "Reference Data",
+      "bytes": 1060135.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "67a3845a09ed061032c13804",
+      "name": "PSI-107_Experimental table_Spice.csv",
+      "key": "psi-data/PSI-107/Experimental table/PSI-107_Experimental table_Spice.csv",
+      "category": "Experimental table",
+      "bytes": 31205,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

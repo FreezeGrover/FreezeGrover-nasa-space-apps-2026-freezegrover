@@ -1,0 +1,3446 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "683dc530b8656d2315bf508b",
+      "name": "PSI-101_Engineering Documents_SAME EIRD Rev 2.00 02-25-05 HIgh Q.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME EIRD Rev 2.00 02-25-05 HIgh Q.pdf",
+      "category": "Engineering Documents",
+      "bytes": 5378409.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf5091",
+      "name": "PSI-101_Engineering Documents_SAME VPRED Matrix PLN-005 Baseline.xls",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME VPRED Matrix PLN-005 Baseline.xls",
+      "category": "Engineering Documents",
+      "bytes": 537600.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf5092",
+      "name": "PSI-101_Engineering Documents_Drawing_SAME Aging Chamber.PDF",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_Drawing_SAME Aging Chamber.PDF",
+      "category": "Engineering Documents",
+      "bytes": 212840.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5177",
+      "name": "PSI-101_Engineering Documents_SAME-R_ThermalPrecipitatorUsage.xlsx",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME-R_ThermalPrecipitatorUsage.xlsx",
+      "category": "Engineering Documents",
+      "bytes": 11054.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf5179",
+      "name": "PSI-101_Engineering Documents_60089MFHD509 P-Trak Condenser Tube Modification.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHD509 P-Trak Condenser Tube Modification.pdf",
+      "category": "Engineering Documents",
+      "bytes": 162861.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517a",
+      "name": "PSI-101_Engineering Documents_60089MFHA150-B Aging Chamber Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA150-B Aging Chamber Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 335105.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517b",
+      "name": "PSI-101_Engineering Documents_60089MFHD126-B Smoke Generation Tube.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHD126-B Smoke Generation Tube.pdf",
+      "category": "Engineering Documents",
+      "bytes": 243826.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517c",
+      "name": "PSI-101_Engineering Documents_60089MFHA417-B Kapton Sample Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA417-B Kapton Sample Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 149738.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517d",
+      "name": "PSI-101_Engineering Documents_60089MFHA432-A Kapton Ignitor Wire Coil Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA432-A Kapton Ignitor Wire Coil Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 169403.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517e",
+      "name": "PSI-101_Engineering Documents_60089MFHA415 Ignitor Wire Coil Assembly (for 0 .250 OD samples).pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA415 Ignitor Wire Coil Assembly (for 0 .250 OD samples).pdf",
+      "category": "Engineering Documents",
+      "bytes": 98185.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf517f",
+      "name": "PSI-101_Engineering Documents_60089MFHA414-A Lampwick Sample Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA414-A Lampwick Sample Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 151181.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf5180",
+      "name": "PSI-101_Engineering Documents_60089MFHP000-C SAME Fluids System Schematic.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHP000-C SAME Fluids System Schematic.pdf",
+      "category": "Engineering Documents",
+      "bytes": 258861.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf5181",
+      "name": "PSI-101_Engineering Documents_S1171MFHA401 Pyrell Sample Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_S1171MFHA401 Pyrell Sample Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 154569.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf5182",
+      "name": "PSI-101_Engineering Documents_80089MFHP000-E SAME Fluids System Schematic.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_80089MFHP000-E SAME Fluids System Schematic.pdf",
+      "category": "Engineering Documents",
+      "bytes": 333332.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5183",
+      "name": "PSI-101_Engineering Documents_60089MFHA416-A Silicone Sample Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA416-A Silicone Sample Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 152496.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5184",
+      "name": "PSI-101_Engineering Documents_60089MFHA419 Silicone Ignitor Wire Coil Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA419 Silicone Ignitor Wire Coil Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 161926.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5185",
+      "name": "PSI-101_Engineering Documents_60089MFHA410-A Teflon Sample Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA410-A Teflon Sample Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 156530.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5186",
+      "name": "PSI-101_Engineering Documents_60089MFHD413 Teflon Sample Part.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHD413 Teflon Sample Part.pdf",
+      "category": "Engineering Documents",
+      "bytes": 150152.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5187",
+      "name": "PSI-101_Engineering Documents_60089MFHA411 Teflon Ignitor Wire Coil Assembly.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_60089MFHA411 Teflon Ignitor Wire Coil Assembly.pdf",
+      "category": "Engineering Documents",
+      "bytes": 175857.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5188",
+      "name": "PSI-101_Engineering Documents_Fluids Control Unit, Schematic, left side-1.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_Fluids Control Unit, Schematic, left side-1.pdf",
+      "category": "Engineering Documents",
+      "bytes": 1163957.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf5189",
+      "name": "PSI-101_Engineering Documents_80089MFHP000-E SAME Fluids System Schematic, right side-1.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_80089MFHP000-E SAME Fluids System Schematic, right side-1.pdf",
+      "category": "Engineering Documents",
+      "bytes": 1611750.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5192",
+      "name": "PSI-101_Engineering Documents_SAME-R Flight Ops photos.zip",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME-R Flight Ops photos.zip",
+      "category": "Engineering Documents",
+      "bytes": 41201731.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51da",
+      "name": "PSI-101_Engineering Documents_SAME_Wire_Report.pdf",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME_Wire_Report.pdf",
+      "category": "Engineering Documents",
+      "bytes": 1852991.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51db",
+      "name": "PSI-101_Engineering Documents_SAME_Wire_Test.xls",
+      "key": "psi-data/PSI-101/Engineering Documents/PSI-101_Engineering Documents_SAME_Wire_Test.xls",
+      "category": "Engineering Documents",
+      "bytes": 297984.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf508c",
+      "name": "PSI-101_Reports_SAME-R_Final Report.pdf",
+      "key": "psi-data/PSI-101/Reports/PSI-101_Reports_SAME-R_Final Report.pdf",
+      "category": "Reports",
+      "bytes": 4578437.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf508d",
+      "name": "PSI-101_Presentations_SAME-2_Comparison of Flight and Ground Test Results.pptx",
+      "key": "psi-data/PSI-101/Presentations/PSI-101_Presentations_SAME-2_Comparison of Flight and Ground Test Results.pptx",
+      "category": "Presentations",
+      "bytes": 5634955.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf508e",
+      "name": "PSI-101_Presentations_SAME-R_Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2.pptx",
+      "key": "psi-data/PSI-101/Presentations/PSI-101_Presentations_SAME-R_Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2.pptx",
+      "category": "Presentations",
+      "bytes": 11483943.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf508f",
+      "name": "PSI-101_Presentations_SAME_Measurement of Smoke Particle Size under Low-Gravity Conditions.ppt",
+      "key": "psi-data/PSI-101/Presentations/PSI-101_Presentations_SAME_Measurement of Smoke Particle Size under Low-Gravity Conditions.ppt",
+      "category": "Presentations",
+      "bytes": 7918592.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc530b8656d2315bf5090",
+      "name": "PSI-101_Presentations_Detection of Smoke from Microgravity Fires.ppt",
+      "key": "psi-data/PSI-101/Presentations/PSI-101_Presentations_Detection of Smoke from Microgravity Fires.ppt",
+      "category": "Presentations",
+      "bytes": 8259584.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51dc",
+      "name": "PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_SAME, SAME-R_Results.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 4061669.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5093",
+      "name": "PSI-101_Analyzed Data_54 lampwick binneddatacorr from GWM.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_54 lampwick binneddatacorr from GWM.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 241661.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5094",
+      "name": "PSI-101_Analyzed Data_TEMflowvsnoflow.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_TEMflowvsnoflow.xls",
+      "category": "Analyzed Data",
+      "bytes": 39936.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5095",
+      "name": "PSI-101_Analyzed Data_thermal precipitator map updated.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_thermal precipitator map updated.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 17138.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5096",
+      "name": "PSI-101_Analyzed Data_Sample descriptions tables.docx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_Sample descriptions tables.docx",
+      "category": "Analyzed Data",
+      "bytes": 28571083.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a5",
+      "name": "PSI-101_Analyzed Data_2010_210_10_lampwick_run54.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_210_10_lampwick_run54.xls",
+      "category": "Analyzed Data",
+      "bytes": 7128576.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5097",
+      "name": "PSI-101_Analyzed Data_55 Lampwick.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_55 Lampwick.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 690112.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a6",
+      "name": "PSI-101_Analyzed Data_2010_210_10_lampwick_run55.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_210_10_lampwick_run55.xls",
+      "category": "Analyzed Data",
+      "bytes": 2990080.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a2",
+      "name": "PSI-101_Analyzed Data_2010_200_12_lampwick_run49.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_200_12_lampwick_run49.xls",
+      "category": "Analyzed Data",
+      "bytes": 4892160.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a8",
+      "name": "PSI-101_Analyzed Data_2010_210_10_lampwick_run57_a.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_210_10_lampwick_run57_a.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 539444.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50a9",
+      "name": "PSI-101_Analyzed Data_2010_210_10_lampwick_run57.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_210_10_lampwick_run57.xls",
+      "category": "Analyzed Data",
+      "bytes": 5050880.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50bb",
+      "name": "PSI-101_Analyzed Data_2010_239_13_lampwick_run78.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_13_lampwick_run78.xls",
+      "category": "Analyzed Data",
+      "bytes": 6881280.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50bd",
+      "name": "PSI-101_Analyzed Data_2010_239_15_lampwick_run80.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_15_lampwick_run80.xls",
+      "category": "Analyzed Data",
+      "bytes": 6142464.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50bf",
+      "name": "PSI-101_Analyzed Data_2010_239_16_lampwick_run82.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_16_lampwick_run82.xls",
+      "category": "Analyzed Data",
+      "bytes": 6536192.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c7",
+      "name": "PSI-101_Analyzed Data_2010_236_10_lampwick_run68.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_236_10_lampwick_run68.xls",
+      "category": "Analyzed Data",
+      "bytes": 6075904.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50ce",
+      "name": "PSI-101_Analyzed Data_2010_242_14_lampwick_run88.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_14_lampwick_run88.xls",
+      "category": "Analyzed Data",
+      "bytes": 8515584.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50d7",
+      "name": "PSI-101_Analyzed Data_2010_250_15_lampwick_run96.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_15_lampwick_run96.xls",
+      "category": "Analyzed Data",
+      "bytes": 6966784.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50da",
+      "name": "PSI-101_Analyzed Data_2010_251_11_lampwick_run98.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_11_lampwick_run98.xls",
+      "category": "Analyzed Data",
+      "bytes": 6456320.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50e1",
+      "name": "PSI-101_Analyzed Data_2010_252_14_lampwick_run106.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_14_lampwick_run106.xls",
+      "category": "Analyzed Data",
+      "bytes": 8719872.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e5",
+      "name": "PSI-101_Analyzed Data_2010_253_13_lampwick_run110.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_13_lampwick_run110.xls",
+      "category": "Analyzed Data",
+      "bytes": 6128128.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5098",
+      "name": "PSI-101_Analyzed Data_60 silicone.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_60 silicone.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 423378.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50ae",
+      "name": "PSI-101_Analyzed Data_2010_211_14_silicon_run60.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_211_14_silicon_run60.xls",
+      "category": "Analyzed Data",
+      "bytes": 5135360.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50af",
+      "name": "PSI-101_Analyzed Data_2010_211_14_silicon_run60 a.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_211_14_silicon_run60 a.xls",
+      "category": "Analyzed Data",
+      "bytes": 6913024.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a0",
+      "name": "PSI-101_Analyzed Data_2010_197_13_silicon_run48.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_197_13_silicon_run48.xls",
+      "category": "Analyzed Data",
+      "bytes": 5797888.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a1",
+      "name": "PSI-101_Analyzed Data_2010_202_14_silcon_run53.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_202_14_silcon_run53.xls",
+      "category": "Analyzed Data",
+      "bytes": 5819904.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50ac",
+      "name": "PSI-101_Analyzed Data_2010_211_13_silcon_run59.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_211_13_silcon_run59.xls",
+      "category": "Analyzed Data",
+      "bytes": 6681600.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50b7",
+      "name": "PSI-101_Analyzed Data_2010_235_10_silicone_run65.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_10_silicone_run65.xls",
+      "category": "Analyzed Data",
+      "bytes": 7300096.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50b8",
+      "name": "PSI-101_Analyzed Data_2010_235_10_silicone_run65a.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_10_silicone_run65a.xls",
+      "category": "Analyzed Data",
+      "bytes": 7281664.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50b9",
+      "name": "PSI-101_Analyzed Data_2010_235_10_silicone_run66.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_10_silicone_run66.xls",
+      "category": "Analyzed Data",
+      "bytes": 6486016.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50ba",
+      "name": "PSI-101_Analyzed Data_Copy of 2010_235_10_silicone_run66 test.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_Copy of 2010_235_10_silicone_run66 test.xls",
+      "category": "Analyzed Data",
+      "bytes": 6486016.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c6",
+      "name": "PSI-101_Analyzed Data_2010_236_9_silicone_run67.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_236_9_silicone_run67.xls",
+      "category": "Analyzed Data",
+      "bytes": 6136320.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50cb",
+      "name": "PSI-101_Analyzed Data_2010_237_14_silcone_run72.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_237_14_silcone_run72.xls",
+      "category": "Analyzed Data",
+      "bytes": 5757440.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50cf",
+      "name": "PSI-101_Analyzed Data_2010_242_14_silicone_run86.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_14_silicone_run86.xls",
+      "category": "Analyzed Data",
+      "bytes": 6390784.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d3",
+      "name": "PSI-101_Analyzed Data_2010_250_12_silicone_run91.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_12_silicone_run91.xls",
+      "category": "Analyzed Data",
+      "bytes": 5535744.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50dc",
+      "name": "PSI-101_Analyzed Data_2010_251_12_silicone_run99.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_12_silicone_run99.xls",
+      "category": "Analyzed Data",
+      "bytes": 6533632.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50df",
+      "name": "PSI-101_Analyzed Data_2010_252_12_silicone_run104.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_12_silicone_run104.xls",
+      "category": "Analyzed Data",
+      "bytes": 8724992.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e3",
+      "name": "PSI-101_Analyzed Data_2010_252_15_silicone_run103.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_15_silicone_run103.xls",
+      "category": "Analyzed Data",
+      "bytes": 8713216.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e6",
+      "name": "PSI-101_Analyzed Data_2010_253_13_silicone_run109.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_13_silicone_run109.xls",
+      "category": "Analyzed Data",
+      "bytes": 6092800.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf5099",
+      "name": "PSI-101_Analyzed Data_62 Kapton unaged.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_62 Kapton unaged.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 425564.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf509a",
+      "name": "PSI-101_Analyzed Data_62 Kapton aged issue with bins.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_62 Kapton aged issue with bins.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 426012.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50b2",
+      "name": "PSI-101_Analyzed Data_2010_214_10_kapton_run62.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_214_10_kapton_run62.xls",
+      "category": "Analyzed Data",
+      "bytes": 6525440.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf509f",
+      "name": "PSI-101_Analyzed Data_94 Kapton aged- results.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_94 Kapton aged- results.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 415552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d5",
+      "name": "PSI-101_Analyzed Data_2010_250_13_kapton_run94.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_13_kapton_run94.xls",
+      "category": "Analyzed Data",
+      "bytes": 6554112.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50b1",
+      "name": "PSI-101_Analyzed Data_2010_214_10_kapton_run61.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_214_10_kapton_run61.xls",
+      "category": "Analyzed Data",
+      "bytes": 6652416.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c1",
+      "name": "PSI-101_Analyzed Data_2010_238_17_kapton_run73.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_238_17_kapton_run73.xls",
+      "category": "Analyzed Data",
+      "bytes": 6193152.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c3",
+      "name": "PSI-101_Analyzed Data_2010_238_18_kapton_run75.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_238_18_kapton_run75.xls",
+      "category": "Analyzed Data",
+      "bytes": 6082048.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c5",
+      "name": "PSI-101_Analyzed Data_2010_238_19_kapton_run77.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_238_19_kapton_run77.xls",
+      "category": "Analyzed Data",
+      "bytes": 6254080.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c9",
+      "name": "PSI-101_Analyzed Data_2010_237_12_kapton_run70.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_237_12_kapton_run70.xls",
+      "category": "Analyzed Data",
+      "bytes": 6429184.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50cc",
+      "name": "PSI-101_Analyzed Data_2010_242_12_kapton_run85.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_12_kapton_run85.xls",
+      "category": "Analyzed Data",
+      "bytes": 6240768.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d0",
+      "name": "PSI-101_Analyzed Data_2010_242_15_kapton_run90.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_15_kapton_run90.xls",
+      "category": "Analyzed Data",
+      "bytes": 6123008.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d4",
+      "name": "PSI-101_Analyzed Data_2010_250_13_kapton_run93.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_13_kapton_run93.xls",
+      "category": "Analyzed Data",
+      "bytes": 6305792.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50d8",
+      "name": "PSI-101_Analyzed Data_2010_250_16_kapton_run92.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_16_kapton_run92.xls",
+      "category": "Analyzed Data",
+      "bytes": 5737472.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50dd",
+      "name": "PSI-101_Analyzed Data_2010_251_13_kapton_run101.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_13_kapton_run101.xls",
+      "category": "Analyzed Data",
+      "bytes": 6484480.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50de",
+      "name": "PSI-101_Analyzed Data_2010_251_14_kapton_run102.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_14_kapton_run102.xls",
+      "category": "Analyzed Data",
+      "bytes": 6569472.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e4",
+      "name": "PSI-101_Analyzed Data_2010_252_16_kapton_run108.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_16_kapton_run108.xls",
+      "category": "Analyzed Data",
+      "bytes": 6617600.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e8",
+      "name": "PSI-101_Analyzed Data_2010_253_14_kapton_run112.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_14_kapton_run112.xls",
+      "category": "Analyzed Data",
+      "bytes": 5930496.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50ea",
+      "name": "PSI-101_Analyzed Data_2010_253_15_kapton_run114.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_15_kapton_run114.xls",
+      "category": "Analyzed Data",
+      "bytes": 5825024.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf509b",
+      "name": "PSI-101_Analyzed Data_63 Pyrell aged.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_63 Pyrell aged.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 711060.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf509c",
+      "name": "PSI-101_Analyzed Data_63 Pyrell unaged.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_63 Pyrell unaged.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 853799.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50b3",
+      "name": "PSI-101_Analyzed Data_2010_235_9_pyrell_run63.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_9_pyrell_run63.xls",
+      "category": "Analyzed Data",
+      "bytes": 6210560.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50b4",
+      "name": "PSI-101_Analyzed Data_2010_235_9_pyrell_run63a.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_9_pyrell_run63a.xls",
+      "category": "Analyzed Data",
+      "bytes": 6212608.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc531b8656d2315bf509d",
+      "name": "PSI-101_Analyzed Data_64 Pyrell aged.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_64 Pyrell aged.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 475108.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf509e",
+      "name": "PSI-101_Analyzed Data_64 Pyrell unaged.xlsx",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_64 Pyrell unaged.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 516572.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50b5",
+      "name": "PSI-101_Analyzed Data_2010_235_11_pyrell_run64.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_11_pyrell_run64.xls",
+      "category": "Analyzed Data",
+      "bytes": 6659072.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50b6",
+      "name": "PSI-101_Analyzed Data_2010_235_11_pyrell_run64a.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_235_11_pyrell_run64a.xls",
+      "category": "Analyzed Data",
+      "bytes": 6657536.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a4",
+      "name": "PSI-101_Analyzed Data_2010_202_13_pyrell_run52.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_202_13_pyrell_run52.xls",
+      "category": "Analyzed Data",
+      "bytes": 5827072.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c2",
+      "name": "PSI-101_Analyzed Data_2010_238_17_pyrell_run74.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_238_17_pyrell_run74.xls",
+      "category": "Analyzed Data",
+      "bytes": 6240256.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c4",
+      "name": "PSI-101_Analyzed Data_2010_238_18_pyrell_run76.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_238_18_pyrell_run76.xls",
+      "category": "Analyzed Data",
+      "bytes": 6396416.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50ca",
+      "name": "PSI-101_Analyzed Data_2010_237_13_pyrell_run71.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_237_13_pyrell_run71.xls",
+      "category": "Analyzed Data",
+      "bytes": 7195648.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50cd",
+      "name": "PSI-101_Analyzed Data_2010_242_13_pyrell_run87.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_13_pyrell_run87.xls",
+      "category": "Analyzed Data",
+      "bytes": 5726720.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d2",
+      "name": "PSI-101_Analyzed Data_2010_2342_11_pyrell_run84.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_2342_11_pyrell_run84.xls",
+      "category": "Analyzed Data",
+      "bytes": 6522368.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d6",
+      "name": "PSI-101_Analyzed Data_2010_250_14_pyrell_run95.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_250_14_pyrell_run95.xls",
+      "category": "Analyzed Data",
+      "bytes": 6855680.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50d9",
+      "name": "PSI-101_Analyzed Data_2010_251_10_pyrell_run97.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_10_pyrell_run97.xls",
+      "category": "Analyzed Data",
+      "bytes": 6767616.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50e0",
+      "name": "PSI-101_Analyzed Data_2010_252_13_pyrell_run107.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_13_pyrell_run107.xls",
+      "category": "Analyzed Data",
+      "bytes": 8727552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e9",
+      "name": "PSI-101_Analyzed Data_2010_253_14_pyrell_run113.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_14_pyrell_run113.xls",
+      "category": "Analyzed Data",
+      "bytes": 6268928.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a3",
+      "name": "PSI-101_Analyzed Data_2010_201_12_teflon_run50.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_201_12_teflon_run50.xls",
+      "category": "Analyzed Data",
+      "bytes": 6471168.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50aa",
+      "name": "PSI-101_Analyzed Data_2010_210_10_teflon_run56.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_210_10_teflon_run56.xls",
+      "category": "Analyzed Data",
+      "bytes": 4087296.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50ab",
+      "name": "PSI-101_Analyzed Data_2010_211_12_teflon_run58.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_211_12_teflon_run58.xls",
+      "category": "Analyzed Data",
+      "bytes": 6683648.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50bc",
+      "name": "PSI-101_Analyzed Data_2010_239_14_teflon_run79.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_14_teflon_run79.xls",
+      "category": "Analyzed Data",
+      "bytes": 6196224.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc534b8656d2315bf50be",
+      "name": "PSI-101_Analyzed Data_2010_239_16_teflon_run81.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_16_teflon_run81.xls",
+      "category": "Analyzed Data",
+      "bytes": 6152704.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c0",
+      "name": "PSI-101_Analyzed Data_2010_239_17_teflon_run83.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_239_17_teflon_run83.xls",
+      "category": "Analyzed Data",
+      "bytes": 6318592.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc535b8656d2315bf50c8",
+      "name": "PSI-101_Analyzed Data_2010_236_10_teflon_run69.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_236_10_teflon_run69.xls",
+      "category": "Analyzed Data",
+      "bytes": 6508032.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc536b8656d2315bf50d1",
+      "name": "PSI-101_Analyzed Data_2010_242_15_teflon_run89.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_242_15_teflon_run89.xls",
+      "category": "Analyzed Data",
+      "bytes": 5803008.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc537b8656d2315bf50db",
+      "name": "PSI-101_Analyzed Data_2010_251_11_teflon_run100.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_251_11_teflon_run100.xls",
+      "category": "Analyzed Data",
+      "bytes": 6501888.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e2",
+      "name": "PSI-101_Analyzed Data_2010_252_14_teflon_run105.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_252_14_teflon_run105.xls",
+      "category": "Analyzed Data",
+      "bytes": 8713216.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50e7",
+      "name": "PSI-101_Analyzed Data_2010_253_13_teflon_run111.xls",
+      "key": "psi-data/PSI-101/Analyzed Data/PSI-101_Analyzed Data_2010_253_13_teflon_run111.xls",
+      "category": "Analyzed Data",
+      "bytes": 6220800.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc532b8656d2315bf50a7",
+      "name": "PSI-101_Raw Data_2010_210_10_lampwick_run55 wrong.xls",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_2010_210_10_lampwick_run55 wrong.xls",
+      "category": "Raw Data",
+      "bytes": 4406784.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50ad",
+      "name": "PSI-101_Raw Data_2010_211_14_lampwick run 55 corrected.xls",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_2010_211_14_lampwick run 55 corrected.xls",
+      "category": "Raw Data",
+      "bytes": 6368768.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510c",
+      "name": "PSI-101_Raw Data_55 8L Lampwick.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_55 8L Lampwick.pdf",
+      "category": "Raw Data",
+      "bytes": 1487063.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510d",
+      "name": "PSI-101_Raw Data_55 8L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_55 8L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 4458515.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc533b8656d2315bf50b0",
+      "name": "PSI-101_Raw Data_ISS Coagulation.doc",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_ISS Coagulation.doc",
+      "category": "Raw Data",
+      "bytes": 141312.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf5108",
+      "name": "PSI-101_Raw Data_54 7L Lampwick.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_54 7L Lampwick.pdf",
+      "category": "Raw Data",
+      "bytes": 1608893.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf5109",
+      "name": "PSI-101_Raw Data_54 7L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_54 7L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 1649841.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510a",
+      "name": "PSI-101_Raw Data_54 7L Lampwick new names 4-23-12.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_54 7L Lampwick new names 4-23-12.pptx",
+      "category": "Raw Data",
+      "bytes": 4253960.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510b",
+      "name": "PSI-101_Raw Data_54 Lampwick linear for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_54 Lampwick linear for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 5417172.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5119",
+      "name": "PSI-101_Raw Data_New Microsoft Office PowerPoint Presentation.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_New Microsoft Office PowerPoint Presentation.pptx",
+      "category": "Raw Data",
+      "bytes": 27581.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf511a",
+      "name": "PSI-101_Raw Data_54 l quarters.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_54 l quarters.pptx",
+      "category": "Raw Data",
+      "bytes": 615007.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf511b",
+      "name": "PSI-101_Raw Data_SPV of 54-7L_21 all quarters (3).xlsx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_SPV of 54-7L_21 all quarters (3).xlsx",
+      "category": "Raw Data",
+      "bytes": 47188.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf5105",
+      "name": "PSI-101_Raw Data_49 - 2L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_49 - 2L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 901205.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf5106",
+      "name": "PSI-101_Raw Data_L13 images.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_L13 images.pdf",
+      "category": "Raw Data",
+      "bytes": 3203423.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf5107",
+      "name": "PSI-101_Raw Data_L13 images.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_L13 images.pptx",
+      "category": "Raw Data",
+      "bytes": 31178308.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510e",
+      "name": "PSI-101_Raw Data_68 21L Lampwick.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_68 21L Lampwick.pdf",
+      "category": "Raw Data",
+      "bytes": 4235607.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53bb8656d2315bf510f",
+      "name": "PSI-101_Raw Data_68 21L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_68 21L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 8981135.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515b",
+      "name": "PSI-101_Raw Data_HKPData_gmt236_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt236_2.csv",
+      "category": "Raw Data",
+      "bytes": 492364.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5110",
+      "name": "PSI-101_Raw Data_78 Postage 31L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_78 Postage 31L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 836925.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5111",
+      "name": "PSI-101_Raw Data_78 Preage 31l Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_78 Preage 31l Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 845658.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf5151",
+      "name": "PSI-101_Raw Data_HKPData_gmt239_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt239_1.csv",
+      "category": "Raw Data",
+      "bytes": 779694.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5112",
+      "name": "PSI-101_Raw Data_80 Preage 33L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_80 Preage 33L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 1752731.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf5153",
+      "name": "PSI-101_Raw Data_HKPData_gmt239_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt239_3.csv",
+      "category": "Raw Data",
+      "bytes": 475594.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5113",
+      "name": "PSI-101_Raw Data_82 Postage 35L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_82 Postage 35L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 1821941.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5114",
+      "name": "PSI-101_Raw Data_82 Preage 35 L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_82 Preage 35 L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 297490.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5155",
+      "name": "PSI-101_Raw Data_HKPData_gmt239_5.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt239_5.csv",
+      "category": "Raw Data",
+      "bytes": 659660.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5115",
+      "name": "PSI-101_Raw Data_96 48L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_96 48L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 1728964.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5168",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_5.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_5.csv",
+      "category": "Raw Data",
+      "bytes": 809057.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5116",
+      "name": "PSI-101_Raw Data_98 postage 51l Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_98 postage 51l Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 1477691.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5117",
+      "name": "PSI-101_Raw Data_98 Preage 51L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_98 Preage 51L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 3012371.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf516b",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_2.csv",
+      "category": "Raw Data",
+      "bytes": 597910.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53cb8656d2315bf5118",
+      "name": "PSI-101_Raw Data_106 - 59L Lampwick.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_106 - 59L Lampwick.pptx",
+      "category": "Raw Data",
+      "bytes": 2091716.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5171",
+      "name": "PSI-101_Raw Data_HKPData_gmt252_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt252_4.csv",
+      "category": "Raw Data",
+      "bytes": 508552.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5143",
+      "name": "PSI-101_Raw Data_1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.mp4",
+      "category": "Raw Data",
+      "bytes": 303548579.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5144",
+      "name": "PSI-101_Raw Data_4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.mp4",
+      "category": "Raw Data",
+      "bytes": 279582511.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5190",
+      "name": "PSI-101_Raw Data_1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.zip",
+      "category": "Raw Data",
+      "bytes": 44787440.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5191",
+      "name": "PSI-101_Raw Data_4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.zip",
+      "category": "Raw Data",
+      "bytes": 41582320.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51a8",
+      "name": "PSI-101_Raw Data_#49 - 2L - Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#49 - 2L - Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 13505560.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51a9",
+      "name": "PSI-101_Raw Data_more 54.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_more 54.zip",
+      "category": "Raw Data",
+      "bytes": 960620.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51aa",
+      "name": "PSI-101_Raw Data_#54 7L Lampwick - new.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#54 7L Lampwick - new.zip",
+      "category": "Raw Data",
+      "bytes": 6778846.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51ab",
+      "name": "PSI-101_Raw Data_#54 - 7L - Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#54 - 7L - Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 52423002.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51ac",
+      "name": "PSI-101_Raw Data_#54 Lampwick linear 5-2-12.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#54 Lampwick linear 5-2-12.zip",
+      "category": "Raw Data",
+      "bytes": 12689807.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51ad",
+      "name": "PSI-101_Raw Data_#55 - 8L Lampwick High RT_RO.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#55 - 8L Lampwick High RT_RO.zip",
+      "category": "Raw Data",
+      "bytes": 62839623.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51ae",
+      "name": "PSI-101_Raw Data_#68 21L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#68 21L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 421460.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51af",
+      "name": "PSI-101_Raw Data_#78 Preage 31L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#78 Preage 31L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 1199289.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51b0",
+      "name": "PSI-101_Raw Data_#78 Postage 31L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#78 Postage 31L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 1613620.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b1",
+      "name": "PSI-101_Raw Data_#80 Postage 33L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#80 Postage 33L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 539968.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b2",
+      "name": "PSI-101_Raw Data_#82 Postage 35L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#82 Postage 35L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 3032217.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b3",
+      "name": "PSI-101_Raw Data_#82 Preage 35L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#82 Preage 35L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 480179.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b4",
+      "name": "PSI-101_Raw Data_#96 - 49L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#96 - 49L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 20510970.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b5",
+      "name": "PSI-101_Raw Data_#98 Postage 51L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#98 Postage 51L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 16112726.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b6",
+      "name": "PSI-101_Raw Data_#98 Preage 51L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#98 Preage 51L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 32561516.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b7",
+      "name": "PSI-101_Raw Data_#106 - 59L Lampwick.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#106 - 59L Lampwick.zip",
+      "category": "Raw Data",
+      "bytes": 26147859.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b8",
+      "name": "PSI-101_Raw Data_#55 Lampwick linear 5-2-12.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#55 Lampwick linear 5-2-12.zip",
+      "category": "Raw Data",
+      "bytes": 16395536.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50eb",
+      "name": "PSI-101_Raw Data_4K-K01-4 -6x-1y 1350.tif",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_4K-K01-4 -6x-1y 1350.tif",
+      "category": "Raw Data",
+      "bytes": 547155.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50ec",
+      "name": "PSI-101_Raw Data_4K-K01-10 -6x-1y 10k.tif",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_4K-K01-10 -6x-1y 10k.tif",
+      "category": "Raw Data",
+      "bytes": 606532.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc538b8656d2315bf50ed",
+      "name": "PSI-101_Raw Data_4K-K01-15 -1x-1y 10k.tif",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_4K-K01-15 -1x-1y 10k.tif",
+      "category": "Raw Data",
+      "bytes": 634338.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50ee",
+      "name": "PSI-101_Raw Data_51 - 4K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_51 - 4K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1261921.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50ef",
+      "name": "PSI-101_Raw Data_K01-4K images.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_K01-4K images.pdf",
+      "category": "Raw Data",
+      "bytes": 8945561.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f0",
+      "name": "PSI-101_Raw Data_K01-4K images.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_K01-4K images.pptx",
+      "category": "Raw Data",
+      "bytes": 19032908.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f1",
+      "name": "PSI-101_Raw Data_62 Postage 15K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62 Postage 15K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1568467.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f2",
+      "name": "PSI-101_Raw Data_62 Post Kapton - linear for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62 Post Kapton - linear for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 5487298.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f3",
+      "name": "PSI-101_Raw Data_62 pre 15K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62 pre 15K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1076136.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f4",
+      "name": "PSI-101_Raw Data_62 pre 15K Kapton.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62 pre 15K Kapton.pdf",
+      "category": "Raw Data",
+      "bytes": 1023848.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514c",
+      "name": "PSI-101_Raw Data_HKPData_gmt214_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt214_2.csv",
+      "category": "Raw Data",
+      "bytes": 625909.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f5",
+      "name": "PSI-101_Raw Data_70-23K Kapton.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_70-23K Kapton.pdf",
+      "category": "Raw Data",
+      "bytes": 5292539.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f6",
+      "name": "PSI-101_Raw Data_70-23K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_70-23K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 11210574.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515d",
+      "name": "PSI-101_Raw Data_HKPData_gmt237_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt237_1.csv",
+      "category": "Raw Data",
+      "bytes": 576815.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f7",
+      "name": "PSI-101_Raw Data_73 postage Kapton 26K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_73 postage Kapton 26K.pptx",
+      "category": "Raw Data",
+      "bytes": 426321.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f8",
+      "name": "PSI-101_Raw Data_73 preage Kapton 26K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_73 preage Kapton 26K.pptx",
+      "category": "Raw Data",
+      "bytes": 940782.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5127",
+      "name": "PSI-101_Raw Data_73 preage Kapton (26K).pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_73 preage Kapton (26K).pptx",
+      "category": "Raw Data",
+      "bytes": 4841969.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5156",
+      "name": "PSI-101_Raw Data_HKPData_gmt238_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt238_1.csv",
+      "category": "Raw Data",
+      "bytes": 499714.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc539b8656d2315bf50f9",
+      "name": "PSI-101_Raw Data_75 postage Kapton 28K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_75 postage Kapton 28K.pptx",
+      "category": "Raw Data",
+      "bytes": 3076542.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50fa",
+      "name": "PSI-101_Raw Data_75 preage Kapton 28K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_75 preage Kapton 28K.pptx",
+      "category": "Raw Data",
+      "bytes": 750884.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5157",
+      "name": "PSI-101_Raw Data_HKPData_gmt238_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt238_3.csv",
+      "category": "Raw Data",
+      "bytes": 511400.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50fb",
+      "name": "PSI-101_Raw Data_77 postage Kapton 30K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_77 postage Kapton 30K.pptx",
+      "category": "Raw Data",
+      "bytes": 4690013.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50fc",
+      "name": "PSI-101_Raw Data_77 preage Kapton 30K.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_77 preage Kapton 30K.pptx",
+      "category": "Raw Data",
+      "bytes": 4724742.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5159",
+      "name": "PSI-101_Raw Data_HKPData_gmt238_5.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt238_5.csv",
+      "category": "Raw Data",
+      "bytes": 524152.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50fd",
+      "name": "PSI-101_Raw Data_85 38K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_85 38K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1576135.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515f",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_2.csv",
+      "category": "Raw Data",
+      "bytes": 509413.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50fe",
+      "name": "PSI-101_Raw Data_93 postage 46K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_93 postage 46K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 367139.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf50ff",
+      "name": "PSI-101_Raw Data_93 Preage 46K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_93 Preage 46K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 756899.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5165",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_2.csv",
+      "category": "Raw Data",
+      "bytes": 537394.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf5100",
+      "name": "PSI-101_Raw Data_94 postage 47k Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_94 postage 47k Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1442904.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5166",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_3.csv",
+      "category": "Raw Data",
+      "bytes": 639211.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf5101",
+      "name": "PSI-101_Raw Data_101 postage 54k Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_101 postage 54k Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 815606.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf5102",
+      "name": "PSI-101_Raw Data_101 Preage 54K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_101 Preage 54K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 1956308.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf516e",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_5.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_5.csv",
+      "category": "Raw Data",
+      "bytes": 614400.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf5103",
+      "name": "PSI-101_Raw Data_108 Postage 61K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_108 Postage 61K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 2079091.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53ab8656d2315bf5104",
+      "name": "PSI-101_Raw Data_108 Preage 61K Kapton.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_108 Preage 61K Kapton.pptx",
+      "category": "Raw Data",
+      "bytes": 2241480.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5173",
+      "name": "PSI-101_Raw Data_HKPData_gmt252_6.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt252_6.csv",
+      "category": "Raw Data",
+      "bytes": 676593.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5145",
+      "name": "PSI-101_Raw Data_2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.mp4",
+      "category": "Raw Data",
+      "bytes": 164650898.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf518a",
+      "name": "PSI-101_Raw Data_7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.mp4",
+      "category": "Raw Data",
+      "bytes": 251700257.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf518b",
+      "name": "PSI-101_Raw Data_2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.zip",
+      "category": "Raw Data",
+      "bytes": 28541664.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf518c",
+      "name": "PSI-101_Raw Data_7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.zip",
+      "category": "Raw Data",
+      "bytes": 41711655.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5193",
+      "name": "PSI-101_Raw Data_Run 051 4K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_Run 051 4K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 10060674.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5194",
+      "name": "PSI-101_Raw Data_62 Postage Kapton linear.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62 Postage Kapton linear.zip",
+      "category": "Raw Data",
+      "bytes": 11188395.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5195",
+      "name": "PSI-101_Raw Data_62-preage 15K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62-preage 15K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 41931737.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5196",
+      "name": "PSI-101_Raw Data_62_Preage Kapton linear.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_62_Preage Kapton linear.zip",
+      "category": "Raw Data",
+      "bytes": 13377910.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5197",
+      "name": "PSI-101_Raw Data_70-23K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_70-23K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 530577.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5198",
+      "name": "PSI-101_Raw Data_73 post 26K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_73 post 26K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 787886.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf5199",
+      "name": "PSI-101_Raw Data_73 preage Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_73 preage Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 1907387.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519a",
+      "name": "PSI-101_Raw Data_75 postage Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_75 postage Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 7341213.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519b",
+      "name": "PSI-101_Raw Data_75 preage-28K.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_75 preage-28K.zip",
+      "category": "Raw Data",
+      "bytes": 1497816.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519c",
+      "name": "PSI-101_Raw Data_77 post-30K_Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_77 post-30K_Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 10880180.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519d",
+      "name": "PSI-101_Raw Data_77preage Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_77preage Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 9968698.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519e",
+      "name": "PSI-101_Raw Data_85-38K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_85-38K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 3083737.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf519f",
+      "name": "PSI-101_Raw Data_94 post 47K.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_94 post 47K.zip",
+      "category": "Raw Data",
+      "bytes": 16286287.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a0",
+      "name": "PSI-101_Raw Data_108 post 61K.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_108 post 61K.zip",
+      "category": "Raw Data",
+      "bytes": 23004474.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a1",
+      "name": "PSI-101_Raw Data_#73 mis labeled pyrellpreage 26K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#73 mis labeled pyrellpreage 26K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 66969710.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a2",
+      "name": "PSI-101_Raw Data_#73 mislabeled pyrell postage 26K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#73 mislabeled pyrell postage 26K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 64003333.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a3",
+      "name": "PSI-101_Raw Data_#93 Preage 46K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#93 Preage 46K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 8132002.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a4",
+      "name": "PSI-101_Raw Data_#93 Postage 46K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#93 Postage 46K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 1906334.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc548b8656d2315bf51a5",
+      "name": "PSI-101_Raw Data_#101 Postage 54K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#101 Postage 54K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 9248880.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51a6",
+      "name": "PSI-101_Raw Data_#101 Preage 54K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#101 Preage 54K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 22975604.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc549b8656d2315bf51a7",
+      "name": "PSI-101_Raw Data_#108 Preage 61K Kapton.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#108 Preage 61K Kapton.zip",
+      "category": "Raw Data",
+      "bytes": 26765624.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514b",
+      "name": "PSI-101_Raw Data_HKPData_gmt214_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt214_1.csv",
+      "category": "Raw Data",
+      "bytes": 680383.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5163",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_7.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_7.csv",
+      "category": "Raw Data",
+      "bytes": 464302.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5169",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_6.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_6.csv",
+      "category": "Raw Data",
+      "bytes": 303771.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf516f",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_6.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_6.csv",
+      "category": "Raw Data",
+      "bytes": 654648.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf511c",
+      "name": "PSI-101_Raw Data_52-5P Pyrell.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_52-5P Pyrell.pdf",
+      "category": "Raw Data",
+      "bytes": 1824143.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf511d",
+      "name": "PSI-101_Raw Data_52-5P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_52-5P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 5649952.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf511e",
+      "name": "PSI-101_Raw Data_63 Postage Pyrell for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_63 Postage Pyrell for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 5689372.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf511f",
+      "name": "PSI-101_Raw Data_63 Preage Pyrell for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_63 Preage Pyrell for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 6897849.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5122",
+      "name": "PSI-101_Raw Data_63 Postage 16P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_63 Postage 16P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1635817.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5123",
+      "name": "PSI-101_Raw Data_63 Preage 16P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_63 Preage 16P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1737419.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514d",
+      "name": "PSI-101_Raw Data_HKPData_gmt235_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt235_1.csv",
+      "category": "Raw Data",
+      "bytes": 496614.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5120",
+      "name": "PSI-101_Raw Data_64 Preage Pyrell for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_64 Preage Pyrell for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 5239509.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5121",
+      "name": "PSI-101_Raw Data_64 Postage Pyrell for image analysis.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_64 Postage Pyrell for image analysis.pptx",
+      "category": "Raw Data",
+      "bytes": 5350396.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5124",
+      "name": "PSI-101_Raw Data_64 Postage 17P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_64 Postage 17P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 2508070.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5125",
+      "name": "PSI-101_Raw Data_64 preage - 17P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_64 preage - 17P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1749626.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514f",
+      "name": "PSI-101_Raw Data_HKPData_gmt235_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt235_3.csv",
+      "category": "Raw Data",
+      "bytes": 678028.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53db8656d2315bf5126",
+      "name": "PSI-101_Raw Data_71 - 24P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_71 - 24P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1580310.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5128",
+      "name": "PSI-101_Raw Data_74 postage Pyrell 27P.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_74 postage Pyrell 27P.pptx",
+      "category": "Raw Data",
+      "bytes": 5154529.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5129",
+      "name": "PSI-101_Raw Data_74 preage Pyrell 27P.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_74 preage Pyrell 27P.pptx",
+      "category": "Raw Data",
+      "bytes": 412976.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512a",
+      "name": "PSI-101_Raw Data_76 postage Pyrell 29P.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_76 postage Pyrell 29P.pptx",
+      "category": "Raw Data",
+      "bytes": 4086823.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512b",
+      "name": "PSI-101_Raw Data_76 preage Pyrell 29P.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_76 preage Pyrell 29P.pptx",
+      "category": "Raw Data",
+      "bytes": 3091163.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5158",
+      "name": "PSI-101_Raw Data_HKPData_gmt238_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt238_4.csv",
+      "category": "Raw Data",
+      "bytes": 578952.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512c",
+      "name": "PSI-101_Raw Data_84 preage Pyrell (37P).pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_84 preage Pyrell (37P).pptx",
+      "category": "Raw Data",
+      "bytes": 4843320.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512d",
+      "name": "PSI-101_Raw Data_84 post 37P Pyrell (26K).pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_84 post 37P Pyrell (26K).pptx",
+      "category": "Raw Data",
+      "bytes": 4500394.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515e",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_1.csv",
+      "category": "Raw Data",
+      "bytes": 625086.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512e",
+      "name": "PSI-101_Raw Data_87 - 40P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_87 - 40P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 2109315.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf5160",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_3.csv",
+      "category": "Raw Data",
+      "bytes": 300609.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf512f",
+      "name": "PSI-101_Raw Data_95 48P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_95 48P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 668920.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5167",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_4.csv",
+      "category": "Raw Data",
+      "bytes": 761534.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5130",
+      "name": "PSI-101_Raw Data_97 - 50P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_97 - 50P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1922135.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf516a",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_1.csv",
+      "category": "Raw Data",
+      "bytes": 723359.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5131",
+      "name": "PSI-101_Raw Data_107 Postage 60P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_107 Postage 60P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1613570.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53eb8656d2315bf5132",
+      "name": "PSI-101_Raw Data_107 Preage 60P Pyrell.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_107 Preage 60P Pyrell.pptx",
+      "category": "Raw Data",
+      "bytes": 1642654.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5170",
+      "name": "PSI-101_Raw Data_HKPData_gmt252_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt252_3.csv",
+      "category": "Raw Data",
+      "bytes": 1533648.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5146",
+      "name": "PSI-101_Raw Data_3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.mp4",
+      "category": "Raw Data",
+      "bytes": 463842635.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51b9",
+      "name": "PSI-101_Raw Data_3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.zip",
+      "category": "Raw Data",
+      "bytes": 76888678.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51ba",
+      "name": "PSI-101_Raw Data_# 52 - 5P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_# 52 - 5P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 2363763.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51bb",
+      "name": "PSI-101_Raw Data_#63 Postage 16P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#63 Postage 16P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 17438901.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54ab8656d2315bf51bc",
+      "name": "PSI-101_Raw Data_#63 Preage 16P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#63 Preage 16P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 18016199.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51bd",
+      "name": "PSI-101_Raw Data_#64 Postage 17P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#64 Postage 17P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 28890260.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51be",
+      "name": "PSI-101_Raw Data_#64 preage - 16P - Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#64 preage - 16P - Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 47180218.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51bf",
+      "name": "PSI-101_Raw Data_#71 - 24P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#71 - 24P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 19490799.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c0",
+      "name": "PSI-101_Raw Data_#74 Postage 27P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#74 Postage 27P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 11461931.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c1",
+      "name": "PSI-101_Raw Data_#74 Preage 27P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#74 Preage 27P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 651421.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c2",
+      "name": "PSI-101_Raw Data_#76 postage 29P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#76 postage 29P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 7913530.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c3",
+      "name": "PSI-101_Raw Data_#76 preage 29P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#76 preage 29P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 1497112.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c4",
+      "name": "PSI-101_Raw Data_#84 post-age 37P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#84 post-age 37P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 64003129.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c5",
+      "name": "PSI-101_Raw Data_#84 pre-age 37P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#84 pre-age 37P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 66969662.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c6",
+      "name": "PSI-101_Raw Data_#87 - 40P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#87 - 40P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 24626532.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54bb8656d2315bf51c7",
+      "name": "PSI-101_Raw Data_#95 - 48P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#95 - 48P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 7108991.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51c8",
+      "name": "PSI-101_Raw Data_#97 - 50P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#97 - 50P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 22559031.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51c9",
+      "name": "PSI-101_Raw Data_#107 Postage 60P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#107 Postage 60P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 20550719.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51ca",
+      "name": "PSI-101_Raw Data_#107 Preage 60P Pyrell.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#107 Preage 60P Pyrell.zip",
+      "category": "Raw Data",
+      "bytes": 22615239.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5133",
+      "name": "PSI-101_Raw Data_53 - 6S Silicone.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_53 - 6S Silicone.pptx",
+      "category": "Raw Data",
+      "bytes": 1911407.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5134",
+      "name": "PSI-101_Raw Data_60 13S Silicone.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_60 13S Silicone.pptx",
+      "category": "Raw Data",
+      "bytes": 4717609.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5149",
+      "name": "PSI-101_Raw Data_HKPData_gmt211_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt211_4.csv",
+      "category": "Raw Data",
+      "bytes": 784824.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514a",
+      "name": "PSI-101_Raw Data_2010_211_13_silcon_run60.xls",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_2010_211_13_silcon_run60.xls",
+      "category": "Raw Data",
+      "bytes": 6920704.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5135",
+      "name": "PSI-101_Raw Data_67 - 20S Silicone.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_67 - 20S Silicone.pptx",
+      "category": "Raw Data",
+      "bytes": 2057323.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515a",
+      "name": "PSI-101_Raw Data_HKPData_gmt236_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt236_1.csv",
+      "category": "Raw Data",
+      "bytes": 521399.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5136",
+      "name": "PSI-101_Raw Data_72 25S Silicone.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_72 25S Silicone.pptx",
+      "category": "Raw Data",
+      "bytes": 1497290.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5148",
+      "name": "PSI-101_Raw Data_HKPData_gmt211_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt211_3.csv",
+      "category": "Raw Data",
+      "bytes": 693361.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf514e",
+      "name": "PSI-101_Raw Data_HKPData_gmt235_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt235_2.csv",
+      "category": "Raw Data",
+      "bytes": 934806.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf5150",
+      "name": "PSI-101_Raw Data_HKPData_gmt235_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt235_4.csv",
+      "category": "Raw Data",
+      "bytes": 606228.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5161",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_4.csv",
+      "category": "Raw Data",
+      "bytes": 570590.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5164",
+      "name": "PSI-101_Raw Data_HKPData_gmt250_1.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt250_1.csv",
+      "category": "Raw Data",
+      "bytes": 222568.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf516d",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_4.csv",
+      "category": "Raw Data",
+      "bytes": 629275.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5172",
+      "name": "PSI-101_Raw Data_HKPData_gmt252_5.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt252_5.csv",
+      "category": "Raw Data",
+      "bytes": 1528232.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5174",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.mp4",
+      "category": "Raw Data",
+      "bytes": 970563377.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5175",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-13h25m07s-udp___233.1.14.7 _50100-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-13h25m07s-udp___233.1.14.7 _50100-.mp4",
+      "category": "Raw Data",
+      "bytes": 970563377.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf5176",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.mp4",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.mp4",
+      "category": "Raw Data",
+      "bytes": 282455755.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf518d",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-13h25m07s-udp___233.1.14.7 _50100-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-13h25m07s-udp___233.1.14.7 _50100-.zip",
+      "category": "Raw Data",
+      "bytes": 164070472.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc546b8656d2315bf518e",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.zip",
+      "category": "Raw Data",
+      "bytes": 36068567.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc547b8656d2315bf518f",
+      "name": "PSI-101_Raw Data_vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.zip",
+      "category": "Raw Data",
+      "bytes": 47265860.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51cb",
+      "name": "PSI-101_Raw Data_# 53 - 65 Silicone.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_# 53 - 65 Silicone.zip",
+      "category": "Raw Data",
+      "bytes": 23031718.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51cc",
+      "name": "PSI-101_Raw Data_#60 13S Silicone.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#60 13S Silicone.zip",
+      "category": "Raw Data",
+      "bytes": 7420141.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51cd",
+      "name": "PSI-101_Raw Data_#67 - 20S Silicone.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#67 - 20S Silicone.zip",
+      "category": "Raw Data",
+      "bytes": 23163931.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51ce",
+      "name": "PSI-101_Raw Data_#72 - 25S Silicone.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#72 - 25S Silicone.zip",
+      "category": "Raw Data",
+      "bytes": 17862299.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5137",
+      "name": "PSI-101_Raw Data_50 - 3T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_50 - 3T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 448844.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5138",
+      "name": "PSI-101_Raw Data_T01-3T images.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_T01-3T images.pdf",
+      "category": "Raw Data",
+      "bytes": 3342789.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf5139",
+      "name": "PSI-101_Raw Data_T01-3T images.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_T01-3T images.pptx",
+      "category": "Raw Data",
+      "bytes": 6753467.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf513a",
+      "name": "PSI-101_Raw Data_56 - 9T teflon.pdf",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_56 - 9T teflon.pdf",
+      "category": "Raw Data",
+      "bytes": 2313158.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf513b",
+      "name": "PSI-101_Raw Data_56 - 9T teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_56 - 9T teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 2185887.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf513c",
+      "name": "PSI-101_Raw Data_58 postage 11T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_58 postage 11T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 2024203.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5147",
+      "name": "PSI-101_Raw Data_HKPData_gmt211_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt211_2.csv",
+      "category": "Raw Data",
+      "bytes": 694283.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc53fb8656d2315bf513d",
+      "name": "PSI-101_Raw Data_69 - 22T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_69 - 22T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 1813728.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc542b8656d2315bf515c",
+      "name": "PSI-101_Raw Data_HKPData_gmt236_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt236_3.csv",
+      "category": "Raw Data",
+      "bytes": 652132.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf513e",
+      "name": "PSI-101_Raw Data_79 Postage 32T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_79 Postage 32T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 681410.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf513f",
+      "name": "PSI-101_Raw Data_79 preage Teflon 32T.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_79 preage Teflon 32T.pptx",
+      "category": "Raw Data",
+      "bytes": 331634.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf5152",
+      "name": "PSI-101_Raw Data_HKPData_gmt239_2.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt239_2.csv",
+      "category": "Raw Data",
+      "bytes": 537510.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5140",
+      "name": "PSI-101_Raw Data_83 postage Teflon 36T.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_83 postage Teflon 36T.pptx",
+      "category": "Raw Data",
+      "bytes": 1343676.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5141",
+      "name": "PSI-101_Raw Data_100 - 53T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_100 - 53T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 688572.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc544b8656d2315bf516c",
+      "name": "PSI-101_Raw Data_HKPData_gmt251_3.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt251_3.csv",
+      "category": "Raw Data",
+      "bytes": 620322.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc540b8656d2315bf5142",
+      "name": "PSI-101_Raw Data_105 postage 58T Teflon.pptx",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_105 postage 58T Teflon.pptx",
+      "category": "Raw Data",
+      "bytes": 1612238.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc541b8656d2315bf5154",
+      "name": "PSI-101_Raw Data_HKPData_gmt239_4.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt239_4.csv",
+      "category": "Raw Data",
+      "bytes": 519128.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc543b8656d2315bf5162",
+      "name": "PSI-101_Raw Data_HKPData_gmt242_6_run89.csv",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_HKPData_gmt242_6_run89.csv",
+      "category": "Raw Data",
+      "bytes": 328895.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51cf",
+      "name": "PSI-101_Raw Data_#50 - 3T - Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#50 - 3T - Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 2885115.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51d0",
+      "name": "PSI-101_Raw Data_#56 - 9T - Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#56 - 9T - Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 47644631.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51d1",
+      "name": "PSI-101_Raw Data_#58 Postage 11T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#58 Postage 11T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 23968084.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54cb8656d2315bf51d2",
+      "name": "PSI-101_Raw Data_#69 - 22T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#69 - 22T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 22813158.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d3",
+      "name": "PSI-101_Raw Data_#79 Postage 32T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#79 Postage 32T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 1266188.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d4",
+      "name": "PSI-101_Raw Data_#79 Preage 32T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#79 Preage 32T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 1275395.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d5",
+      "name": "PSI-101_Raw Data_#81 post age Teflon (34T).zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#81 post age Teflon (34T).zip",
+      "category": "Raw Data",
+      "bytes": 8735441.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d6",
+      "name": "PSI-101_Raw Data_#81 preage Teflon (34T).zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#81 preage Teflon (34T).zip",
+      "category": "Raw Data",
+      "bytes": 21770770.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d7",
+      "name": "PSI-101_Raw Data_#83 post age Teflon (36T).zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#83 post age Teflon (36T).zip",
+      "category": "Raw Data",
+      "bytes": 15145945.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d8",
+      "name": "PSI-101_Raw Data_#100 - 53T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#100 - 53T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 8155276.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51d9",
+      "name": "PSI-101_Raw Data_#105 postage 58T Teflon.zip",
+      "key": "psi-data/PSI-101/Raw Data/PSI-101_Raw Data_#105 postage 58T Teflon.zip",
+      "category": "Raw Data",
+      "bytes": 3032821.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc545b8656d2315bf5178",
+      "name": "SAME_VPRED.pdf",
+      "key": "psi-data/PSI-101/Raw Data/SAME_VPRED.pdf",
+      "category": "Raw Data",
+      "bytes": 514219.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51dd",
+      "name": "PSI-101_Science Documents_SAME_Baseline Concept Description Document_001 Rev A.pdf",
+      "key": "psi-data/PSI-101/Science Documents/PSI-101_Science Documents_SAME_Baseline Concept Description Document_001 Rev A.pdf",
+      "category": "Science Documents",
+      "bytes": 247315.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54db8656d2315bf51de",
+      "name": "PSI-101_Science Documents_SAME_Operations Manual_007.pdf",
+      "key": "psi-data/PSI-101/Science Documents/PSI-101_Science Documents_SAME_Operations Manual_007.pdf",
+      "category": "Science Documents",
+      "bytes": 699811.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54eb8656d2315bf51df",
+      "name": "PSI-101_Reference Data_SAME_Software Description Document_003 Rev A.pdf",
+      "key": "psi-data/PSI-101/Reference Data/PSI-101_Reference Data_SAME_Software Description Document_003 Rev A.pdf",
+      "category": "Reference Data",
+      "bytes": 270540.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683dc54eb8656d2315bf51e0",
+      "name": "PSI-101_Reference Data_SAME_Software Requirement Document_004 Rev D.pdf",
+      "key": "psi-data/PSI-101/Reference Data/PSI-101_Reference Data_SAME_Software Requirement Document_004 Rev D.pdf",
+      "category": "Reference Data",
+      "bytes": 400833.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "679a9e2209ed061032c0cd22",
+      "name": "PSI-101_metadata_PSI-169_SAME-R.zip",
+      "key": "psi-data/PSI-101/metadata/PSI-101_metadata_PSI-169_SAME-R.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 11037,
+      "version": 3,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "679a9e2209ed061032c0cd23",
+      "name": "PSI-101_Experimental table_SAME-R.csv",
+      "key": "psi-data/PSI-101/Experimental table/PSI-101_Experimental table_SAME-R.csv",
+      "category": "Experimental table",
+      "bytes": 5674,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

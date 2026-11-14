@@ -1,20 +1,23 @@
+import { getInvestigationEvidence } from "../research/catalog";
 export interface ReviewCheck {
   title: string;
   question: string;
   status: string;
   detail: string;
 }
-export function reviewScientificClaim(claim: string): ReviewCheck[] {
-  // A linked page alone cannot establish that a claim is scientifically correct.
-  // Until original evidence is connected, every source-dependent check stays pending.
+export function reviewScientificClaim(
+  claim: string,
+  investigationId = "bass2",
+): ReviewCheck[] {
+  const evidence = getInvestigationEvidence(investigationId);
+  // Successful metadata ingestion is not scientific verification of a generated claim.
   return [
     {
       title: "Evidence & Source Verification",
       question:
         "Are claims and measurements represented accurately from the original NASA sources?",
       status: "Pending Evidence",
-      detail:
-        "Original documents and test files have not been connected. Source support cannot be confirmed.",
+      detail: `${evidence.accession} v${evidence.version} metadata retrieved with SHA-256 provenance. ${evidence.tables.filter((table) => table.status === "downloaded").length} original tables downloaded. Claim-to-source support still requires review; no provider output is trusted automatically.`,
     },
     {
       title: "Scientific Accuracy & Experimental Conditions",

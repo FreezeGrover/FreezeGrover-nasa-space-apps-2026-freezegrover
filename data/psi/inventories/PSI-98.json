@@ -1,0 +1,766 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "683f4a51746db1c87dcebea0",
+      "name": "PSI-98_metadata_PSI-166_SAFFIRE-I.zip",
+      "key": "psi-data/PSI-98/metadata/PSI-98_metadata_PSI-166_SAFFIRE-I.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 10031,
+      "version": 4,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea1",
+      "name": "PSI-98_Engineering Documents_SAFFIRE Offgassing Testing Strategy.pdf",
+      "key": "psi-data/PSI-98/Engineering Documents/PSI-98_Engineering Documents_SAFFIRE Offgassing Testing Strategy.pdf",
+      "category": "Engineering Documents",
+      "bytes": 1696929.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a58746db1c87dcebeea",
+      "name": "PSI-98_Engineering Documents_SAFFIRE-I Operations.pdf",
+      "key": "psi-data/PSI-98/Engineering Documents/PSI-98_Engineering Documents_SAFFIRE-I Operations.pdf",
+      "category": "Engineering Documents",
+      "bytes": 13957.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea2",
+      "name": "PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1280x920_originals.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1280x920_originals.zip",
+      "category": "Raw Data",
+      "bytes": 566718.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeae",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C2_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C2_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 47752221.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeaf",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C2_JPEG_Mapped.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C2_JPEG_Mapped.zip",
+      "category": "Raw Data",
+      "bytes": 72041080.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeb0",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C2-Raw_DistroMaster.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C2-Raw_DistroMaster.zip",
+      "category": "Raw Data",
+      "bytes": 1808672.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeb1",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C2_Raw2TIFF.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C2_Raw2TIFF.zip",
+      "category": "Raw Data",
+      "bytes": 196227.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb2",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_Mapped_F1C2_Raw2TIFF.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_Mapped_F1C2_Raw2TIFF.zip",
+      "category": "Raw Data",
+      "bytes": 263659.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeab",
+      "name": "PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip",
+      "category": "Raw Data",
+      "bytes": 556980.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeac",
+      "name": "PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip",
+      "category": "Raw Data",
+      "bytes": 215516.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebead",
+      "name": "PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrids_1360x1024.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrids_1360x1024.zip",
+      "category": "Raw Data",
+      "bytes": 580912.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea6",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C1_jpegs.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C1_jpegs.zip",
+      "category": "Raw Data",
+      "bytes": 59197949.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebea7",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C1_JPEG_Mapped.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C1_JPEG_Mapped.zip",
+      "category": "Raw Data",
+      "bytes": 84789341.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebea8",
+      "name": "PSI-98_Raw Data_F1C1-Raw_DistroMaster_originals.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_F1C1-Raw_DistroMaster_originals.zip",
+      "category": "Raw Data",
+      "bytes": 1822059.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebea9",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F1C1_Raw2TIFF.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F1C1_Raw2TIFF.zip",
+      "category": "Raw Data",
+      "bytes": 218871.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a52746db1c87dcebeaa",
+      "name": "PSI-98_Raw Data_SAFFIRE-I_Mapped_F1C1_Raw2TIFF.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-I_Mapped_F1C1_Raw2TIFF.zip",
+      "category": "Raw Data",
+      "bytes": 277236.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea3",
+      "name": "PSI-98_Raw Data_SAFFIRE-I_ImageFrameSizes_ROI_Offsets_Grid_1280x920_v1.0.pdf",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-I_ImageFrameSizes_ROI_Offsets_Grid_1280x920_v1.0.pdf",
+      "category": "Raw Data",
+      "bytes": 784299.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea4",
+      "name": "PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C1_DistortionGrid_1280x920.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C1_DistortionGrid_1280x920.zip",
+      "category": "Raw Data",
+      "bytes": 222794.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a51746db1c87dcebea5",
+      "name": "PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1360x1024_originals.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1360x1024_originals.zip",
+      "category": "Raw Data",
+      "bytes": 588576.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb3",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F2C1_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F2C1_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 47530750.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb4",
+      "name": "PSI-98_Raw Data_SAFFIRE-I_F2C1_Mapped_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE-I_F2C1_Mapped_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 69803205.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb5",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F2C2_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F2C2_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 40043615.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb6",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_F2C2_Mapped_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_F2C2_Mapped_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 63659574.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb7",
+      "name": "PSI-98_Raw Data_SFSDP-VIS-0295_Saffire 1 and 3_Thermocouple Placement.pdf",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SFSDP-VIS-0295_Saffire 1 and 3_Thermocouple Placement.pdf",
+      "category": "Raw Data",
+      "bytes": 1065733.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb8",
+      "name": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+      "category": "Raw Data",
+      "bytes": 2775737.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeb9",
+      "name": "PSI-98_Raw Data_Saffire-I Sample 1 Sensor Data Complete TM graphs.xlsx",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire-I Sample 1 Sensor Data Complete TM graphs.xlsx",
+      "category": "Raw Data",
+      "bytes": 25066841.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebeba",
+      "name": "PSI-98_Raw Data_Saffire I Sample 1 TM graphs.docx",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire I Sample 1 TM graphs.docx",
+      "category": "Raw Data",
+      "bytes": 1412623.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebebb",
+      "name": "PSI-98_Raw Data_Saffire-I Sample 2 TM graphs.docx",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire-I Sample 2 TM graphs.docx",
+      "category": "Raw Data",
+      "bytes": 1016708.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a53746db1c87dcebebc",
+      "name": "PSI-98_Raw Data_Saffire-I Sample 2 Sensor Data Complete TM graphs.xlsx",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire-I Sample 2 Sensor Data Complete TM graphs.xlsx",
+      "category": "Raw Data",
+      "bytes": 24892655.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebebf",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw_DistroMaster.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw_DistroMaster.zip",
+      "category": "Raw Data",
+      "bytes": 301028742.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec0",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Complete.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Complete.zip",
+      "category": "Raw Data",
+      "bytes": 19169825.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec1",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1Raw2TIFF_Complete_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1Raw2TIFF_Complete_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 26095064.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec2",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Mapped_JPEGS.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Mapped_JPEGS.zip",
+      "category": "Raw Data",
+      "bytes": 25798148.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebed0",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part3.zip",
+      "category": "Raw Data",
+      "bytes": 69819932.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebed1",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part2.zip",
+      "category": "Raw Data",
+      "bytes": 83527817.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebed2",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part1.zip",
+      "category": "Raw Data",
+      "bytes": 96361383.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed3",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part1.zip",
+      "category": "Raw Data",
+      "bytes": 148690336.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed4",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part2.zip",
+      "category": "Raw Data",
+      "bytes": 135089071.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed5",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_JPEG_Mapped_part3.zip",
+      "category": "Raw Data",
+      "bytes": 109190886.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed6",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part2.zip",
+      "category": "Raw Data",
+      "bytes": 1239632015.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed7",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part3.zip",
+      "category": "Raw Data",
+      "bytes": 1023095761.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed8",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg2png_icmad_part1.zip",
+      "category": "Raw Data",
+      "bytes": 1496417130.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec3",
+      "name": "PSI-98_Raw Data_SAFFIRE_IS1C2_Raw_DistroMaster.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_IS1C2_Raw_DistroMaster.zip",
+      "category": "Raw Data",
+      "bytes": 210233376.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec4",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_Raw2TIFF_Complete.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_Raw2TIFF_Complete.zip",
+      "category": "Raw Data",
+      "bytes": 14656724.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec5",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_RAW2TIFF_Complete_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_RAW2TIFF_Complete_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 18767792.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec6",
+      "name": "PSI-98_Raw Data_SAFFIRE_S1C2_RAW2TIFF_Mapped_JPEGS.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_S1C2_RAW2TIFF_Mapped_JPEGS.zip",
+      "category": "Raw Data",
+      "bytes": 19557416.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebed9",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part1.zip",
+      "category": "Raw Data",
+      "bytes": 79786765.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebeda",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part2.zip",
+      "category": "Raw Data",
+      "bytes": 83633415.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebedb",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part3.zip",
+      "category": "Raw Data",
+      "bytes": 75425271.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebedc",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part3.zip",
+      "category": "Raw Data",
+      "bytes": 134910758.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a56746db1c87dcebedd",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part4.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part4.zip",
+      "category": "Raw Data",
+      "bytes": 121572185.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebede",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_Part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_Part1.zip",
+      "category": "Raw Data",
+      "bytes": 131787172.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebedf",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_JPEG_Mapped_part2.zip",
+      "category": "Raw Data",
+      "bytes": 134910758.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee0",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part1.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part1.zip",
+      "category": "Raw Data",
+      "bytes": 1132279391.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee1",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part3.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part3.zip",
+      "category": "Raw Data",
+      "bytes": 1126949990.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee2",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part2.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg2png_icmad_part2.zip",
+      "category": "Raw Data",
+      "bytes": 1241540148.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebec7",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 66317022.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebec8",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw_DistroMaster.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw_DistroMaster.zip",
+      "category": "Raw Data",
+      "bytes": 1449209.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebec9",
+      "name": "PSI-98_Raw Data_S2C1-1465938171811_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_S2C1-1465938171811_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 179840.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebeca",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Complete_JPEGS.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Complete_JPEGS.zip",
+      "category": "Raw Data",
+      "bytes": 157672.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebecb",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Mapped_JPEGS.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Mapped_JPEGS.zip",
+      "category": "Raw Data",
+      "bytes": 202946.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee3",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_JPEG_Mapped.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_JPEG_Mapped.zip",
+      "category": "Raw Data",
+      "bytes": 105704956.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee4",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C1_jpeg2png_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C1_jpeg2png_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 987695540.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebecc",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw_DistroMaster.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw_DistroMaster.zip",
+      "category": "Raw Data",
+      "bytes": 37429293.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebecd",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 3116776.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebece",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete.zip",
+      "category": "Raw Data",
+      "bytes": 1293306.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a55746db1c87dcebecf",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Mapped.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Mapped.zip",
+      "category": "Raw Data",
+      "bytes": 1222959.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee5",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_jpeg.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_jpeg.zip",
+      "category": "Raw Data",
+      "bytes": 71794970.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee6",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_JPEG_Mapped.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_JPEG_Mapped.zip",
+      "category": "Raw Data",
+      "bytes": 119812900.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee7",
+      "name": "PSI-98_Raw Data_SAFFIRE_I_S2C2_jpeg2png_icmad.zip",
+      "key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SAFFIRE_I_S2C2_jpeg2png_icmad.zip",
+      "category": "Raw Data",
+      "bytes": 990583882.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebebd",
+      "name": "PSI-98_Science Documents_SAFFIRE-I Image Directory Nomenclature.pdf",
+      "key": "psi-data/PSI-98/Science Documents/PSI-98_Science Documents_SAFFIRE-I Image Directory Nomenclature.pdf",
+      "category": "Science Documents",
+      "bytes": 262860.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a54746db1c87dcebebe",
+      "name": "PSI-98_Science Documents_SAFFIRE-1_MergeResult-jpeg_Update_Final_v2.xlsx",
+      "key": "psi-data/PSI-98/Science Documents/PSI-98_Science Documents_SAFFIRE-1_MergeResult-jpeg_Update_Final_v2.xlsx",
+      "category": "Science Documents",
+      "bytes": 12325177.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a57746db1c87dcebee8",
+      "name": "PSI-98_Science Documents_SAFFIRE Objectives, Development and Status.pdf",
+      "key": "psi-data/PSI-98/Science Documents/PSI-98_Science Documents_SAFFIRE Objectives, Development and Status.pdf",
+      "category": "Science Documents",
+      "bytes": 186259.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683f4a58746db1c87dcebee9",
+      "name": "PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+      "key": "psi-data/PSI-98/Science Documents/PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+      "category": "Science Documents",
+      "bytes": 65426.0,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6792c46eb7b6ff8e65037f3e",
+      "name": "PSI-98_Experimental table_SAFFIRE-1.csv",
+      "key": "psi-data/PSI-98/Experimental table/PSI-98_Experimental table_SAFFIRE-1.csv",
+      "category": "Experimental table",
+      "bytes": 469,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

@@ -1,4 +1,6 @@
 "use client";
+import { investigations } from "@/lib/research/catalog";
+import { SourceLink } from "@/components/ui";
 import { useState } from "react";
 import {
   ShieldCheck,
@@ -18,14 +20,16 @@ import { Notice, Status, Expandable } from "@/components/ui";
 const defaultClaim =
   "BASS-II provides insights into solid-fuel combustion in microgravity, relevant to crew safety and material flammability.";
 export function ScientificQA() {
+  const [recordId, setRecordId] = useState("bass2");
+  const record = investigations.find((item) => item.id === recordId)!;
   const [claim, setClaim] = useState(defaultClaim);
   const [history, setHistory] = useState<string[]>([]);
   const [showAll, setShowAll] = useState(false);
-  const checks = reviewScientificClaim(claim);
+  const checks = reviewScientificClaim(claim, recordId);
   const icons = [FileMagnifyingGlass, Flask, Stack, Users];
   function recheck() {
     setHistory((previous) => [
-      `Manual check ${previous.length + 1}: source connection unavailable; conclusion withheld.`,
+      `Manual check ${previous.length + 1}: metadata provenance checked; scientific conclusion remains pending independent review.`,
       ...previous,
     ]);
   }
@@ -35,11 +39,32 @@ export function ScientificQA() {
         Independent verification of findings, interpretations, and rankings
         using original NASA evidence.
       </Notice>
+      <label>
+        Investigation for independent review{" "}
+        <select
+          aria-label="QA investigation"
+          value={recordId}
+          onChange={(e) => {
+            setRecordId(e.target.value);
+            setClaim(
+              investigations.find((item) => item.id === e.target.value)!
+                .purpose,
+            );
+          }}
+        >
+          {investigations.map((item) => (
+            <option key={item.id} value={item.id}>
+              {item.name}
+            </option>
+          ))}
+        </select>{" "}
+        <SourceLink href={record.source} label={record.sourceLabel} />
+      </label>
       <div className="qa-head">
         <div className="qa-banner">
           <ShieldCheck />
           <strong>Scientific QA: Awaiting Evidence</strong>
-          <small>Current item: BASS-II</small>
+          <small>Current item: {record.name}</small>
         </div>
         <div className="qa-count">
           <strong>0</strong>
@@ -160,7 +185,10 @@ export function ScientificQA() {
         </p>
       </div>
       <Expandable title="Verification Notes & History" icon={<ClipboardText />}>
-        <p>Automatic scientific verification is not connected.</p>
+        <p>
+          Metadata retrieval is connected. Independent scientific claim
+          verification remains pending and is separate from answer generation.
+        </p>
         {history.length === 0 ? (
           <p>No manual checks yet.</p>
         ) : (

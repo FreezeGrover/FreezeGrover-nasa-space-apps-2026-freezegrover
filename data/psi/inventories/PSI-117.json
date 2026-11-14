@@ -1,0 +1,166 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "6a282739d9d7246402cb43de",
+      "name": "PSI-117_metadata_NEWID-13_Effect of External T.zip",
+      "key": "psi-data/PSI-117/metadata/PSI-117_metadata_NEWID-13_Effect of External T.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 10382,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a282739d9d7246402cb43df",
+      "name": "PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_PSI_Users_Group_Cool_Flames_in_Space_03302026.pdf",
+      "category": "Presentations",
+      "bytes": 10786102,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a282739d9d7246402cb43e0",
+      "name": "PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Extinction_Characteristics_TFarouk.pdf",
+      "category": "Presentations",
+      "bytes": 11802360,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a282739d9d7246402cb43e1",
+      "name": "PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Oscillatory_Cool Flame_TFarouk.pdf",
+      "category": "Presentations",
+      "bytes": 8994674,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a282739d9d7246402cb43e2",
+      "name": "PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+      "key": "psi-data/PSI-117/Presentations/PSI-117_Presentations_Three_Stage_Cool_Flame_TFarouk.pdf",
+      "category": "Presentations",
+      "bytes": 30873451,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e3",
+      "name": "PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_ReadMe_List_of_Data.xlsx",
+      "category": "Analyzed Data",
+      "bytes": 11059,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e4",
+      "name": "PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2023_Alkane_Extinction_Diameter_1atm.csv",
+      "category": "Analyzed Data",
+      "bytes": 745,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e5",
+      "name": "PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2019_Oscillatory_Cool_Flame.csv",
+      "category": "Analyzed Data",
+      "bytes": 37138,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e6",
+      "name": "PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2023_C12_Extinction_Diameter_vs_pressure.csv",
+      "category": "Analyzed Data",
+      "bytes": 449,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e7",
+      "name": "PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_2019_Stable_Cool.csv",
+      "category": "Analyzed Data",
+      "bytes": 15477,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273ad9d7246402cb43e8",
+      "name": "PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_PROCI_C12_2019_Three_Stage.csv",
+      "category": "Analyzed Data",
+      "bytes": 89130,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273bd9d7246402cb43e9",
+      "name": "PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Burning_history_Flame_diameter.csv",
+      "category": "Analyzed Data",
+      "bytes": 44107,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273bd9d7246402cb43ea",
+      "name": "PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Kavg.csv",
+      "category": "Analyzed Data",
+      "bytes": 518,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273bd9d7246402cb43eb",
+      "name": "PSI-117_Analyzed Data_MST_2024_Dext.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Dext.csv",
+      "category": "Analyzed Data",
+      "bytes": 372,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273bd9d7246402cb43ec",
+      "name": "PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+      "key": "psi-data/PSI-117/Analyzed Data/PSI-117_Analyzed Data_MST_2024_Radiance_Flame_Diameter.csv",
+      "category": "Analyzed Data",
+      "bytes": 82277,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "6a28273bd9d7246402cb43ed",
+      "name": "PSI-117_Reports_Dissertation_Combustion Behavior Of Sub-Millimeter Sized Oxygenated And N-Alka.pdf",
+      "key": "psi-data/PSI-117/Reports/PSI-117_Reports_Dissertation_Combustion Behavior Of Sub-Millimeter Sized Oxygenated And N-Alka.pdf",
+      "category": "Reports",
+      "bytes": 8072629,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

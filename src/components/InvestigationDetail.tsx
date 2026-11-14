@@ -16,6 +16,7 @@ import {
   GravityAndApplications,
 } from "./ExperimentSections";
 import { getExperimentMetadata } from "@/lib/research/metadata";
+import { PsiEvidence } from "./PsiEvidence";
 export function InvestigationDetail({
   item,
   onSelectRelated,
@@ -56,6 +57,7 @@ export function InvestigationDetail({
         <Status label="Evidence: Not Assessed" />
         <Status label="Mission Relevance: Not Assessed" />
       </div>
+      <PsiEvidence id={item.id} />
       <ObjectiveAndFuel item={item} />
       <Expandable
         title="Evidence & Data"
@@ -74,13 +76,13 @@ export function InvestigationDetail({
         <p>
           <strong>Oxygen:</strong>{" "}
           {meta.oxygenVariation
-            ? "Variation described; exact per-run concentrations are not imported."
-            : "Not imported; no concentration is assumed."}
+            ? "Mentioned in the NASA narrative; inspect downloaded tables for test-level values."
+            : "Not identified in the retrieved narrative; no concentration is assumed."}
         </p>
         <p>
           <strong>Pressure:</strong>{" "}
           {meta.pressureProtocol ??
-            "Not imported; no pressure value is assumed."}
+            "No numerical pressure protocol extracted from the narrative; inspect original tables."}
         </p>
         <p>
           <strong>Fuel & sample:</strong> {item.fuel}
@@ -97,7 +99,8 @@ export function InvestigationDetail({
       >
         <p>{item.finding}</p>
         <p className="muted">
-          Curated NASA summary. Original results require independent review.
+          Original NASA metadata is shown separately from hypotheses and
+          intended benefits. No AI-generated scientific conclusion is asserted.
         </p>
       </Expandable>
       <HardwareAndRelated

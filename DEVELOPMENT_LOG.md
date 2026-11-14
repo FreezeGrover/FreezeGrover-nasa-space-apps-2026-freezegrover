@@ -16,3 +16,6 @@ At the project lead's request, replaced cursive interface text with Segoe UI / A
 
 ## 2026-11-14: Investigation restoration
 Restored metadata filters and experiment sections, conservative natural-question retrieval, explicit source/missing-data boundaries, related navigation and viewport fit. See RESTORATION_VERIFICATION.md.
+
+## 2026-11-14: NASA PSI combustion ingestion
+Retrieved and validated all 24 combustion records (19 flight-category, five ground-category), 24 inventories and 22 original experimental CSVs across 20 records. Connected the shared snapshot across all five tabs, source provenance, original previews and relationships; retained provider-independent pending scientific QA. Added bounded read-only ingestion, compilation and validation. See PSI_CONNECTION.md for evidence and limitations. GitHub still returns 404.

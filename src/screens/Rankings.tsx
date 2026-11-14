@@ -106,10 +106,10 @@ export function Rankings({
         icon={<Gear />}
       >
         <p>
-          Research is grouped by a manually curated topic match to your goal.
-          Records retain catalog order; no scientific rank or numerical score is
-          asserted. Mission context adds a transfer limitation, not a validated
-          suitability rating.
+          Research is grouped by a local topic match derived from retrieved NASA
+          metadata to your goal. Records retain catalog order; no scientific
+          rank or numerical score is asserted. Mission context adds a transfer
+          limitation, not a validated suitability rating.
         </p>
       </Expandable>
       <Notice>

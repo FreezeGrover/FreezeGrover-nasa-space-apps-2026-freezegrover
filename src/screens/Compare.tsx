@@ -9,6 +9,7 @@ import {
   ShareNetwork,
   FileText,
 } from "@phosphor-icons/react";
+import { getExperimentMetadata } from "@/lib/research/metadata";
 import { investigations } from "@/lib/research/catalog";
 import { compareExperimentalConditions } from "@/lib/comparison/compare";
 import { Notice, Panel, Expandable, Status, SourceLink } from "@/components/ui";
@@ -63,8 +64,8 @@ export function Compare() {
         </button>
       </div>
       <Notice>
-        Compare NASA investigations side by side. Curated descriptions only; raw
-        experimental data is not yet connected.
+        Compare NASA investigations side by side. Retrieved NASA metadata;
+        downloaded tables remain separate from matched quantitative comparisons.
       </Notice>
       <div className="comparison-table-wrap">
         <table className="comparison-table">
@@ -134,10 +135,12 @@ export function Compare() {
         icon={<ShareNetwork />}
       >
         <p>
-          {investigations
-            .filter((i) => i.id !== left.id && i.id !== right.id)
-            .map((i) => i.name)
-            .join(" · ")}
+          {[
+            ...getExperimentMetadata(left.id).related,
+            ...getExperimentMetadata(right.id).related,
+          ].map((relation, index) => (
+            <SourceLink key={index} href={relation.url} label={relation.name} />
+          ))}
         </p>
       </Expandable>
       <Expandable

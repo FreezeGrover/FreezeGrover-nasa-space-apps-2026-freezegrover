@@ -13,19 +13,19 @@ npm ci
 npm run dev -- --port 3020
 ```
 
-No Sites hosting or public deployment is used. No API key is needed for the current interface.
+No Sites hosting or public deployment is used. No API key is needed for the shipped public PSI snapshot.
 
 ## Current behavior
 
 - Overview, Investigations, Compare, Rankings, and Scientific QA navigation.
 - White panels, blue borders, blue hover and selected states; clean sans-serif interface text with a Kalam brand wordmark.
-- Search over a small curated NASA source catalog, selectable investigations, expandable details.
+- Search over 24 retrieved NASA PSI combustion records, five metadata filters, source-linked details, and original downloaded CSV previews.
 - Side-by-side comparison and additional attributes.
 - Goal-based relevance filtering with explicit limitations for partial-gravity habitats.
 - Local review controls and recheck history. No claim is marked Verified.
 - AI disclosure modal explains actual connection status.
 
-NASA test-file ingestion, live AI answers, and independent scientific verification are **not connected**. Searching is catalog retrieval, not an AI answer. NASA authentication and AI-provider credentials are separate concerns.
+NASA PSI metadata and selected original experimental CSV retrieval are connected through a verified local snapshot. Live AI answers and independent scientific claim verification remain unconfigured. Searching is catalog retrieval, not an AI answer. NASA authentication and AI-provider credentials are separate concerns.
 
 ## Checks
 
@@ -48,3 +48,5 @@ Initial remote commit: 7e47a2f2f123ee61b31a260c95910da39973dfe7.
 The connected GitHub app currently returns 404 for this new private repository, so this UI milestone has not been pushed. The downloadable source preserves the work while repository access is resolved.
 
 No open-source license has been added. Design assets are extracted from user-provided mockups; the flame image is illustrative, not experimental imagery.
+
+See PSI_CONNECTION.md for verified counts, refresh commands, access limits and scientific evidence boundaries.

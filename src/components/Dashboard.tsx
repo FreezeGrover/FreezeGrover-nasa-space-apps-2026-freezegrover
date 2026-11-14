@@ -1,4 +1,5 @@
 "use client";
+import { catalogSummary } from "@/lib/research/catalog";
 import { useState } from "react";
 import {
   Flame,
@@ -85,9 +86,9 @@ export function Dashboard() {
           </nav>
           <div className="connection-state">
             <Plugs />
-            <strong>Data connection pending</strong>
+            <strong>NASA PSI snapshot loaded</strong>
             <small>
-              Curated NASA source summaries
+              {catalogSummary.verifiedCombustionRecords} combustion records
               <br />
               Live AI unavailable
             </small>
@@ -151,8 +152,9 @@ export function Dashboard() {
             <h2 id="disclosure-title">AI Usage & Disclosure</h2>
             <p>
               This interface is a research prototype. The current investigation
-              descriptions are curated summaries of public NASA sources, not a
-              live NASA API feed.
+              catalog is a retrieved NASA PSI snapshot with original metadata
+              and selected downloaded CSV files. It is not a continuous live
+              NASA feed.
             </p>
             <p>
               No live AI provider or automatic scientific reviewer is connected.
@@ -162,7 +164,8 @@ export function Dashboard() {
             <p>
               Evidence strength, research ranking, habitat suitability, and
               fire-safety recommendations are not verified. The Scientific QA
-              screen withholds conclusions until original evidence is available.
+              screen keeps claim verification pending until source support,
+              units and experimental conditions are independently checked.
             </p>
             <button
               className="search-button"

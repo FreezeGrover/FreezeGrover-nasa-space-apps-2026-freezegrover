@@ -63,12 +63,15 @@ function searchText(item: Investigation) {
   const m = getExperimentMetadata(item.id);
   return normalize(
     [
+      item.id,
+      item.sourceLabel,
       item.name,
       item.title,
       item.purpose,
       item.fuel,
       item.measurements,
-      item.finding,
+      item.conditions,
+
       m.variations,
       m.sensors,
       m.hardware.join(" "),
@@ -85,7 +88,19 @@ export function retrieveInvestigations(
       reasons: ["Catalog record"],
       relevance: 0,
     }));
-  let remaining = normalize(query);
+  const exact = normalize(query);
+  const exactRecords = items.filter(
+    (item) =>
+      normalize(item.name) === exact ||
+      normalize(item.sourceLabel.split(" · ")[0]) === exact,
+  );
+  if (exactRecords.length)
+    return exactRecords.map((item) => ({
+      item,
+      reasons: ["Exact NASA record identity"],
+      relevance: 100,
+    }));
+  let remaining = exact;
   const wanted: typeof concepts = [];
   for (const concept of concepts) {
     if (new RegExp(concept.pattern).test(remaining)) {
@@ -129,10 +144,20 @@ export function retrieveInvestigations(
       if (tokens.some((token) => !text.includes(token))) return [];
       const matches = wanted.filter((c) => m.topics.includes(c.key));
       if (wanted.length && !matches.length) return [];
-      if (gravityContext && !m.gravity.includes("microgravity")) return [];
+      if (
+        gravityContext &&
+        !m.gravity.includes("microgravity") &&
+        !m.gravity.includes("modeled-microgravity")
+      )
+        return [];
       const reasons = matches.map((c) => `Topic: ${c.key}`);
       if (tokens.length) reasons.push(`Record terms: ${tokens.join(", ")}`);
-      if (gravityContext) reasons.push("Microgravity context");
+      if (gravityContext)
+        reasons.push(
+          m.gravity.includes("modeled-microgravity")
+            ? "Ground research: microgravity modeling context"
+            : "Microgravity flight context",
+        );
       return [
         {
           item,

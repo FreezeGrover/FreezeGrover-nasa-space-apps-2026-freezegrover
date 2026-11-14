@@ -1,4 +1,5 @@
 "use client";
+import { CatalogBriefing } from "@/components/CatalogBriefing";
 import { useState } from "react";
 import { FileText, Flask, CaretRight, Sparkle } from "@phosphor-icons/react";
 import type { Environment } from "@/types/research";
@@ -36,18 +37,15 @@ export function Investigations({
       </div>
       <div className="investigation-top">
         <Panel title="Research Briefing" icon={<Sparkle />}>
-          <ul>
-            <li>Explore original NASA research sources.</li>
-            <li>Compare evidence in its experimental context.</li>
-            <li>Review uncertainty before drawing conclusions.</li>
-          </ul>
+          <CatalogBriefing compact />
         </Panel>
         <MissionContext value={environment} onChange={setEnvironment} compact />
       </div>
       <div className="investigation-columns">
         <Panel title="Research Results" icon={<FileText />}>
           <div className="muted tiny">
-            {results.length} curated records · original test data pending
+            {results.length} retrieved NASA PSI records · scientific review
+            pending
           </div>
           <div className="result-list">
             {results.map((record, index) => (
@@ -62,6 +60,7 @@ export function Investigations({
                 <span className="result-title">
                   <strong>{record.name}</strong>
                   <small>{record.title}</small>
+                  <small>{record.sourceLabel.split(" · ")[0]}</small>
                   {query && (
                     <small className="match-reason">
                       {matches
@@ -77,12 +76,14 @@ export function Investigations({
           </div>
           {results.length === 0 && (
             <Notice>
-              No relevant records in this starter catalog for the current
+              No relevant records in this retrieved catalog for the current
               question and filters. Clear filters or refine the question. No
               results have been invented.
             </Notice>
           )}
-          <div className="list-note">Showing the curated starter inventory</div>
+          <div className="list-note">
+            Showing the retrieved Combustion Science catalog
+          </div>
         </Panel>
         {item ? (
           <InvestigationDetail

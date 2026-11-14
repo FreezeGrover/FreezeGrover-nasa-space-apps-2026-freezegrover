@@ -14,6 +14,8 @@ export const filterDefinitions = [
     options: [
       ["", "All materials"],
       ["liquid", "Liquid droplets"],
+      ["gas", "Gaseous fuels / gas-phase modeling"],
+      ["unknown", "Unclassified material"],
       ["solid", "Solid fuels"],
       ["smoke", "Smoke / foam samples"],
     ],
@@ -23,9 +25,9 @@ export const filterDefinitions = [
     label: "Oxygen & Pressure",
     options: [
       ["", "All conditions"],
-      ["oxygen", "Oxygen variation described"],
+      ["oxygen", "Oxygen mentioned in NASA narrative"],
       ["pressure", "Pressure protocol reported"],
-      ["unknown", "Numerical conditions unavailable"],
+      ["unknown", "Numerical pressure protocol not identified"],
     ],
   },
   {
@@ -33,7 +35,8 @@ export const filterDefinitions = [
     label: "Gravity",
     options: [
       ["", "All gravity conditions"],
-      ["microgravity", "Microgravity"],
+      ["microgravity", "Microgravity flight investigations"],
+      ["ground", "Ground investigations / modeling"],
       ["normal-comparison", "Normal-gravity comparisons"],
       ["partial", "Partial gravity — no imported records"],
     ],
@@ -45,7 +48,11 @@ export const filterDefinitions = [
       ["", "All hardware"],
       ["MDCA", "MDCA"],
       ["CIR", "Combustion Integrated Rack"],
-      ["SAME", "SAME hardware"],
+      ["SAME", "Soot diagnostic hardware"],
+      ["MSG", "Microgravity Science Glovebox"],
+      ["ACME", "ACME"],
+      ["Cygnus", "Cygnus"],
+      ["P-Trak", "P-Trak"],
       ["unknown", "Hardware not imported"],
     ],
   },

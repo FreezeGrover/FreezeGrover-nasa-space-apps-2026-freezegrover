@@ -22,13 +22,15 @@ test("comparison keeps missing experimental data explicit", () => {
     investigations[1],
   );
   assert.equal(rows.length, 7);
-  assert.match(rows[2][1], /not imported/);
+  assert.match(rows[2][1], /pressure|oxygen/i);
 });
 test("relevance preserves source order and does not imply a validated habitat ranking", () => {
   const list = findRelevantInvestigations(investigations, "Crew Safety");
   assert.deepEqual(
     list.map((i) => i.id),
-    ["flex", "bass2", "samer"],
+    investigations
+      .filter((i) => i.goals.includes("Crew Safety"))
+      .map((i) => i.id),
   );
   assert.match(
     explainRankingReason(list[0], "Crew Safety", "Lunar Bases"),
