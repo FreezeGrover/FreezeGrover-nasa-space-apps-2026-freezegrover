@@ -1,0 +1,111 @@
+.section-bar {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #eaf5ff;
+  padding: 8px 17px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.section-bar small {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: auto;
+}
+.goal-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.goal-options > button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 12px 17px;
+  position: relative;
+  min-height: 120px;
+  color: var(--navy);
+}
+.goal-options > button.selected,
+.goal-options > button:hover {
+  color: white;
+}
+.goal-options strong {
+  font-size: 26px;
+  display: block;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.goal-options small {
+  display: block;
+  font-size: 18px;
+  margin-top: 9px;
+}
+.goal-check {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 23px;
+  height: 23px;
+}
+.rankings-page > .mission > h2,
+.rankings-page > .mission .panel-caption {
+  display: none;
+}
+.rankings-page > .mission {
+  border: 0;
+}
+.rankings-page > .mission .panel-body {
+  padding: 0;
+}
+.rankings-page .environment-options button {
+  flex-direction: row;
+  min-height: 53px;
+  font-size: 19px;
+}
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ranking-row {
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 12px 20px;
+  min-height: 83px;
+  background: #fbfdff;
+}
+.ranking-row > svg {
+  width: 42px;
+  height: 42px;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.ranking-name {
+  min-width: 155px;
+  border-right: 2px solid var(--navy);
+}
+.ranking-name strong {
+  display: block;
+  font-size: 28px;
+  color: var(--navy);
+}
+.ranking-name small {
+  display: block;
+  font-size: 16px;
+}
+.ranking-row p {
+  font-size: 17px;
+  flex: 1;
+}
+.ranking-row .status {
+  font-size: 13px;
+  max-width: 165px;
+  white-space: normal;
+  text-align: center;
+}

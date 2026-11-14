@@ -1,0 +1,250 @@
+@media (max-width: 900px) {
+  .app-header {
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+  .brand {
+    min-width: 0;
+    flex: 1;
+  }
+  .brand > svg {
+    width: 40px;
+    height: 45px;
+  }
+  .brand strong {
+    font-size: 25px;
+  }
+  .brand span {
+    font-size: 16px;
+  }
+  .page-title {
+    order: 3;
+    border: 0;
+    padding: 0;
+    font-size: 25px;
+  }
+  .disclosure-button {
+    font-size: 0;
+    padding: 6px;
+  }
+  .disclosure-button svg {
+    width: 27px;
+  }
+  .app-body {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    border: 0;
+    padding: 10px 12px;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    gap: 7px;
+    overflow-x: auto;
+  }
+  .sidebar nav button {
+    height: 45px;
+    font-size: 17px;
+    gap: 7px;
+    padding: 8px;
+  }
+  .sidebar nav svg {
+    width: 22px;
+    height: 22px;
+  }
+  .connection-state {
+    display: none;
+  }
+  main {
+    padding: 9px 12px 0;
+  }
+  .overview-top,
+  .overview-middle,
+  .investigation-top,
+  .investigation-columns {
+    grid-template-columns: 1fr;
+  }
+  .applications {
+    grid-template-columns: 1fr;
+  }
+  .applications .details-body {
+    min-height: 0;
+  }
+  .search-heading h1 {
+    font-size: 25px;
+  }
+  .mode-switch {
+    font-size: 16px;
+    gap: 5px;
+  }
+  .mode-switch button {
+    font-size: 16px;
+    min-width: 0;
+    padding: 5px 15px;
+  }
+  .search-input input {
+    font-size: 17px;
+  }
+  .research-search form {
+    gap: 8px;
+  }
+  .search-button {
+    font-size: 19px;
+    min-width: 90px;
+    padding: 6px 10px;
+  }
+  .search-button svg {
+    display: none;
+  }
+  .goal-options {
+    grid-template-columns: 1fr 1fr;
+  }
+  .goal-options > button {
+    min-height: 100px;
+  }
+  .comparison-table {
+    font-size: 15px;
+  }
+  .comparison-table th:first-child {
+    font-size: 17px;
+  }
+  .comparison-table td,
+  .comparison-table th {
+    padding: 7px;
+  }
+  .comparison-picker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .compare-controls {
+    grid-template-columns: 1fr 38px 1fr 90px;
+  }
+  .comparison-picker select {
+    font-size: 19px;
+  }
+  .comparison-picker strong {
+    font-size: 13px;
+  }
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+  .source-grid > div {
+    border: 0;
+  }
+  .two-panels {
+    grid-template-columns: 1fr;
+  }
+  .show-all {
+    font-size: 18px;
+    min-width: 100%;
+    padding: 7px;
+  }
+  .show-all span {
+    display: none;
+  }
+  .ranking-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+  }
+  .ranking-row p {
+    flex-basis: 100%;
+    order: 5;
+  }
+  .ranking-row .status {
+    margin-left: auto;
+  }
+  .ranking-name {
+    border: 0;
+  }
+  .ranking-row .source-link {
+    font-size: 15px;
+  }
+  .section-bar {
+    font-size: 21px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .section-bar small {
+    margin-left: 0;
+  }
+  .rankings-page .environment-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .rankings-page .environment-options button {
+    font-size: 15px;
+  }
+  .qa-head {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .qa-banner {
+    grid-column: 1/-1;
+  }
+  .qa-count {
+    padding: 7px;
+  }
+  .current-review {
+    grid-template-columns: 1fr 1fr;
+  }
+  .current-review h2,
+  .current-review label {
+    grid-column: 1/-1;
+  }
+  .qa-checks summary {
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .qa-checks summary strong {
+    font-size: 20px;
+  }
+  .qa-checks summary small {
+    font-size: 15px;
+  }
+  .qa-checks summary .status {
+    min-width: 0;
+    font-size: 14px;
+    margin-left: 50px;
+  }
+  .qa-checks summary > svg:first-child {
+    width: 32px;
+    height: 32px;
+  }
+  .uncertainty-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .uncertainty-grid > div {
+    border: 0;
+  }
+  .qa-outcome {
+    flex-wrap: wrap;
+  }
+  .qa-outcome p {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .scope {
+    flex-wrap: wrap;
+  }
+  .evidence-footer {
+    font-size: 16px;
+  }
+  .evidence-footer > span {
+    font-size: 12px;
+  }
+  .environment-options.compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .notice {
+    font-size: 16px;
+  }
+  .selected-summary {
+    align-items: flex-start;
+  }
+  .brand {
+    gap: 8px;
+  }
+}

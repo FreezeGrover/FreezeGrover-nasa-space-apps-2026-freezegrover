@@ -1,0 +1,168 @@
+.qa-head {
+  display: grid;
+  grid-template-columns: 1fr 116px 130px 116px;
+  gap: 9px;
+}
+.qa-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #edf7ff;
+  padding: 13px 16px;
+  color: var(--navy);
+}
+.qa-banner > svg {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.qa-banner > strong {
+  font-size: 28px;
+}
+.qa-banner small {
+  margin-left: auto;
+  border-left: 2px solid var(--navy);
+  padding-left: 15px;
+  font-size: 17px;
+}
+.qa-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #f5fbff;
+}
+.qa-count strong {
+  font-size: 30px;
+  color: var(--navy);
+}
+.qa-count span {
+  font-size: 15px;
+}
+.current-review {
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 290px 1fr 150px 150px;
+  gap: 14px;
+  padding: 12px 15px;
+  align-items: center;
+}
+.current-review h2 {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 26px;
+}
+.current-review h2 svg {
+  width: 42px;
+  height: 42px;
+}
+.current-review label {
+  font-size: 16px;
+}
+.current-review textarea {
+  display: block;
+  width: 100%;
+  min-height: 55px;
+  resize: vertical;
+  font-size: 17px;
+  border: 0;
+  background: transparent;
+  padding: 4px;
+  color: var(--text);
+}
+.current-review button {
+  font-size: 18px;
+  font-weight: 700;
+  min-height: 58px;
+  padding: 6px;
+}
+.current-review button svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+}
+.current-review button small {
+  display: block;
+}
+.qa-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.qa-checks summary {
+  min-height: 70px;
+  padding: 9px 20px;
+}
+.qa-checks summary > svg:first-child {
+  width: 46px;
+  height: 46px;
+}
+.qa-checks summary strong {
+  font-size: 25px;
+}
+.qa-checks summary small {
+  font-size: 17px;
+}
+.qa-checks summary .status {
+  min-width: 170px;
+  font-size: 17px;
+}
+.uncertainty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr 1.2fr;
+  gap: 20px;
+}
+.uncertainty-grid > div {
+  padding-right: 15px;
+  border-right: 1px solid #9bb6e5;
+}
+.uncertainty-grid > div:last-child {
+  border: 0;
+}
+.uncertainty-grid h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.uncertainty-grid h3 svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+.uncertainty-grid p,
+.uncertainty-grid li {
+  font-size: 17px;
+  line-height: 1.23;
+}
+.qa-outcome {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #f5faff;
+  padding: 12px 18px;
+}
+.qa-outcome > svg {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+}
+.qa-outcome h2 {
+  font-size: 25px;
+  white-space: nowrap;
+}
+.qa-outcome small {
+  font-size: 16px;
+}
+.qa-outcome p {
+  border-left: 2px solid var(--navy);
+  padding-left: 20px;
+  margin-left: 10px;
+  font-size: 17px;
+}

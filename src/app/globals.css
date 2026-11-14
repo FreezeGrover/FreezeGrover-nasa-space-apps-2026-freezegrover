@@ -1,0 +1,12 @@
+@import "../styles/theme.css";
+@import "../styles/layout.css";
+@import "../styles/search.css";
+@import "../styles/panels-overview.css";
+@import "../styles/investigations.css";
+@import "../styles/comparison.css";
+@import "../styles/rankings.css";
+@import "../styles/scientific-qa.css";
+@import "../styles/disclosure.css";
+@import "../styles/desktop-responsive.css";
+@import "../styles/mobile-responsive.css";
+@import "../styles/reference-proportions.css";
