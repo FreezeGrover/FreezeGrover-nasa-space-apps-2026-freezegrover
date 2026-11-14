@@ -10,3 +10,5 @@
 @import "../styles/desktop-responsive.css";
 @import "../styles/mobile-responsive.css";
 @import "../styles/reference-proportions.css";
+@import "../styles/investigation-filters.css";
+@import "../styles/viewport-fit.css";

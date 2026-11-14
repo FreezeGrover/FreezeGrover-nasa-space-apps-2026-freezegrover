@@ -1,0 +1,142 @@
+/* Persistent controls stay in the frame. Research content scrolls within it. */
+@media (min-width: 901px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  .app-frame {
+    height: calc(100dvh / var(--canvas-scale));
+    min-height: 0;
+  }
+  .app-body {
+    height: calc(100dvh / var(--canvas-scale) - 84px);
+    min-height: 0;
+  }
+  main {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .app-header,
+  .research-search,
+  .evidence-footer {
+    flex-shrink: 0;
+  }
+  .screen-content {
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  .investigations-page {
+    height: 100%;
+    min-height: 0;
+    gap: 9px;
+  }
+  .investigations-page > .investigation-top,
+  .investigations-page > .applications,
+  .investigations-page > .scope {
+    flex-shrink: 0;
+  }
+  .investigations-page .investigation-top .panel-body {
+    min-height: 0;
+    padding: 8px 14px;
+    font-size: 16px;
+  }
+  .investigations-page .investigation-top .panel > h2 {
+    min-height: 35px;
+    font-size: 22px;
+    padding: 6px 14px;
+  }
+  .investigations-page .investigation-top .panel-caption {
+    display: none;
+  }
+  .investigations-page .environment-options.compact button {
+    font-size: 14px;
+    min-height: 38px;
+  }
+  .investigations-page .investigation-columns {
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: 0.9fr 1.3fr;
+  }
+  .investigation-columns > .panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .investigation-columns > .panel > .panel-body {
+    min-height: 0 !important;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  .investigation-columns > .panel > h2 {
+    flex-shrink: 0;
+    font-size: 25px;
+  }
+  .investigations-page .selected-summary {
+    gap: 12px;
+  }
+  .investigations-page .selected-summary .science-symbol {
+    min-width: 80px;
+    width: 80px;
+    height: 84px;
+  }
+  .investigations-page .selected-summary h3 {
+    font-size: 21px;
+  }
+  .investigations-page .selected-summary p {
+    font-size: 16px;
+  }
+  .investigations-page .details-body {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .investigations-page .applications summary {
+    min-height: 42px;
+    padding: 5px 12px;
+  }
+  .investigations-page .applications summary strong {
+    font-size: 18px;
+  }
+  .investigations-page .applications summary small {
+    display: none;
+  }
+  .investigations-page .scope {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .screen-content:has(.investigations-page) {
+    overflow: hidden;
+  }
+}
+@media (min-width: 901px) and (max-height: 700px) {
+  .investigations-page .investigation-top .panel > h2 {
+    font-size: 19px;
+    min-height: 30px;
+  }
+  .investigations-page .investigation-top .panel-body {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+  .investigations-page .environment-options.compact button {
+    min-height: 30px;
+    font-size: 13px;
+    padding: 3px;
+  }
+  .investigations-page .applications summary {
+    min-height: 34px;
+  }
+  .investigations-page .applications summary strong {
+    font-size: 16px;
+  }
+  .research-search {
+    margin-bottom: 8px;
+  }
+  .investigations-page .scope {
+    max-height: 45px;
+    overflow: auto;
+  }
+}

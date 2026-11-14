@@ -2,7 +2,10 @@
 import { useState } from "react";
 import { FileText, Flask, CaretRight, Sparkle } from "@phosphor-icons/react";
 import type { Environment } from "@/types/research";
-import { searchInvestigations, investigations } from "@/lib/research/catalog";
+import { investigations } from "@/lib/research/catalog";
+import { retrieveInvestigations } from "@/lib/research/search";
+import { emptyFilters, filterInvestigations } from "@/lib/research/filters";
+import { InvestigationFilters } from "@/components/InvestigationFilters";
 import { Panel, Status, Notice } from "@/components/ui";
 import { InvestigationDetail } from "@/components/InvestigationDetail";
 import { MissionContext } from "@/components/MissionContext";
@@ -17,10 +20,20 @@ export function Investigations({
   setEnvironment: (v: Environment) => void;
 }) {
   const [selected, setSelected] = useState("flex");
-  const results = searchInvestigations(query);
+  const [filters, setFilters] = useState({ ...emptyFilters });
+  const matches = retrieveInvestigations(investigations, query);
+  const results = filterInvestigations(
+    matches.map((match) => match.item),
+    filters,
+  );
   const item = results.find((i) => i.id === selected) ?? results[0];
   return (
     <div className="investigations-page">
+      <InvestigationFilters value={filters} onChange={setFilters} />
+      <div className="retrieval-summary" role="status">
+        {results.length} relevant investigations{query ? ` for “${query}”` : ""}{" "}
+        · catalog retrieval, not an AI answer
+      </div>
       <div className="investigation-top">
         <Panel title="Research Briefing" icon={<Sparkle />}>
           <ul>
@@ -40,14 +53,22 @@ export function Investigations({
             {results.map((record, index) => (
               <button
                 key={record.id}
-                className={`result-row ${record.id === selected ? "active" : ""}`}
+                className={`result-row ${record.id === item?.id ? "active" : ""}`}
                 onClick={() => setSelected(record.id)}
+                aria-pressed={record.id === item?.id}
               >
                 <span className="result-index">{index + 1}</span>
                 <Flask />
                 <span className="result-title">
                   <strong>{record.name}</strong>
                   <small>{record.title}</small>
+                  {query && (
+                    <small className="match-reason">
+                      {matches
+                        .find((match) => match.item.id === record.id)
+                        ?.reasons.join(" · ")}
+                    </small>
+                  )}
                 </span>
                 <Status label="Not Assessed" />
                 <CaretRight />
@@ -56,13 +77,19 @@ export function Investigations({
           </div>
           {results.length === 0 && (
             <Notice>
-              No matching investigations. Try “smoke”, “droplet”, or “FLEX”.
+              No relevant records in this starter catalog for the current
+              question and filters. Clear filters or refine the question. No
+              results have been invented.
             </Notice>
           )}
           <div className="list-note">Showing the curated starter inventory</div>
         </Panel>
         {item ? (
-          <InvestigationDetail item={item} />
+          <InvestigationDetail
+            item={item}
+            onSelectRelated={setSelected}
+            availableIds={results.map((record) => record.id)}
+          />
         ) : (
           <Notice>
             Select a matching investigation after clearing or changing your

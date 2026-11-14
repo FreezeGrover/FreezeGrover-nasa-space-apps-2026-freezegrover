@@ -1,3 +1,4 @@
+import { retrieveInvestigations } from "./search";
 import type { Investigation } from "@/types/research";
 // These are short, curated descriptions from NASA's public pages, not a live feed.
 // Missing test-level data stays missing until the original files are imported.
@@ -93,12 +94,7 @@ export function findInvestigationById(id: string) {
   return investigations.find((item) => item.id === id);
 }
 export function searchInvestigations(query: string) {
-  const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  return investigations.filter((item) =>
-    words.every((word) =>
-      `${item.name} ${item.title} ${item.purpose} ${item.fuel}`
-        .toLowerCase()
-        .includes(word),
-    ),
+  return retrieveInvestigations(investigations, query).map(
+    (match) => match.item,
   );
 }

@@ -13,3 +13,6 @@ Production build and four scientific/data tests passed before final visual refin
 ## Typography revision
 
 At the project lead's request, replaced cursive interface text with Segoe UI / Arial. Preserved the Kalam brand wordmark and the supplied flame logo. Reduced desktop navigation text to 20px to avoid clipping with wider sans-serif letters. Inspected all five local screens; Compare and QA had no horizontal viewport overflow. Added an idempotent PowerShell helper to apply the same change to the Windows copy without re-extracting the project.
+
+## 2026-11-14: Investigation restoration
+Restored metadata filters and experiment sections, conservative natural-question retrieval, explicit source/missing-data boundaries, related navigation and viewport fit. See RESTORATION_VERIFICATION.md.

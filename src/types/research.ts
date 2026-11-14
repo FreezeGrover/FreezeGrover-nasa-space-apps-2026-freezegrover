@@ -27,3 +27,31 @@ export interface Investigation {
   sourceLabel: string;
   goals: ResearchGoal[];
 }
+
+export interface RelatedInvestigation {
+  name: string;
+  reason: string;
+  url: string;
+  localId?: string;
+}
+export interface ExperimentMetadata {
+  topics: string[];
+  fuelCategory: "liquid" | "solid" | "smoke";
+  gravity: string[];
+  hardware: string[];
+  oxygenVariation: boolean;
+  pressureProtocol: string | null;
+  geometry: string;
+  variations: string;
+  sensors: string;
+  gravityGap: string;
+  related: RelatedInvestigation[];
+  sources: { label: string; url: string }[];
+}
+export interface InvestigationFilters {
+  fuel: string;
+  conditions: string;
+  gravity: string;
+  hardware: string;
+  related: string;
+}
