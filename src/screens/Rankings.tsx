@@ -1,4 +1,6 @@
 "use client";
+import {ResearchDialog} from "@/components/ResearchDialog";
+import {InvestigationDetail} from "@/components/InvestigationDetail";
 import { useState } from "react";
 import {
   ShieldCheck,
@@ -50,8 +52,28 @@ export function Rankings({
   environment: Environment;
   setEnvironment: (v: Environment) => void;
 }) {
+  const [browse,setBrowse]=useState(false);
+  const [detail,setDetail]=useState<string|null>(null);
   const [goal, setGoal] = useState<ResearchGoal>("Crew Safety");
   const relevant = findRelevantInvestigations(investigations, goal);
+  function renderRankings(expanded:boolean){return (      <div className="ranking-list">
+        {(expanded?relevant:relevant.slice(0,2)).map((item) => (
+          <article className="ranking-row" key={item.id}>
+            <button className="ranking-detail-button" onClick={()=>{setBrowse(false);setDetail(item.id);}} aria-label={`Open ${item.name} details`}><Flask/>Details ↗</button>
+            <div className="ranking-name">
+              <strong>{item.name}</strong>
+              <small>NASA investigation</small>
+            </div>
+            <p>
+              <strong>Why relevant? </strong>
+              {explainRankingReason(item, goal, environment)}
+            </p>
+            <Status label="Candidate — Review Pending" />
+            <SourceLink href={item.source} label="Source" />
+          </article>
+        ))}
+      </div>
+);}
   return (
     <div className="rankings-page">
       <Notice>
@@ -83,23 +105,10 @@ export function Rankings({
         Relevant Investigations{" "}
         <small>Topic matches · no numerical scores or verified ordering</small>
       </h2>
-      <div className="ranking-list">
-        {relevant.map((item) => (
-          <article className="ranking-row" key={item.id}>
-            <Flask />
-            <div className="ranking-name">
-              <strong>{item.name}</strong>
-              <small>NASA investigation</small>
-            </div>
-            <p>
-              <strong>Why relevant? </strong>
-              {explainRankingReason(item, goal, environment)}
-            </p>
-            <Status label="Candidate — Review Pending" />
-            <SourceLink href={item.source} label="Source" />
-          </article>
-        ))}
-      </div>
+      {renderRankings(false)}
+      <button className="research-open-button" onClick={()=>setBrowse(true)}>Browse all {relevant.length} relevant investigations ↗</button>
+      <ResearchDialog open={browse} onClose={()=>setBrowse(false)} title={`${goal} · Relevant Investigations`}><p>Environment: {environment}. Topic matches retain catalog order; suitability is unverified.</p>{renderRankings(true)}</ResearchDialog>
+      <ResearchDialog open={detail!==null} onClose={()=>setDetail(null)} title="Selected Investigation">{detail&&<InvestigationDetail item={investigations.find(item=>item.id===detail)!}/>}</ResearchDialog>
       <Expandable
         title="Advanced Research Details"
         subtitle="Criteria, evidence quality, uncertainty, and sources"

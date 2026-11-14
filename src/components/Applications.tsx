@@ -6,59 +6,20 @@ import {
   Info,
 } from "@phosphor-icons/react";
 import { Expandable } from "./ui";
-export function Applications({ expanded = false }: { expanded?: boolean }) {
-  return (
-    <>
-      <div className="applications">
-        <Expandable
-          title="Fire-Safety Applications"
-          subtitle="Space"
-          icon={<ShieldCheck />}
-          open={expanded}
-        >
-          <ul>
-            <li>Detection & early warning</li>
-            <li>Fire suppression research</li>
-            <li>Fire-resistant materials</li>
-            <li>Crew safety & protective gear</li>
-          </ul>
-        </Expandable>
-        <Expandable
-          title="From Space to Earth"
-          subtitle="Terrestrial applications"
-          icon={<GlobeHemisphereWest />}
-          open={expanded}
-        >
-          <ul>
-            <li>Smoke detection research</li>
-            <li>Combustion modeling</li>
-            <li>Firefighter protective equipment</li>
-            <li>Potential technology transfer</li>
-          </ul>
-        </Expandable>
-        <Expandable
-          title="Future Fire-Safety Innovations"
-          subtitle="Next generation"
-          icon={<Stack />}
-          open={expanded}
-        >
-          <ul>
-            <li>Environment-aware detection</li>
-            <li>Lower-resource suppression</li>
-            <li>Heat-resistant materials</li>
-            <li>Integrated habitat safety systems</li>
-          </ul>
-        </Expandable>
-      </div>
-      <div className="scope">
-        <Info />
-        <strong>Scope Note:</strong>
-        <span>
-          Fire safety in habitable environments: spacecraft, stations, lunar &
-          Martian bases, and pressurized rovers. Applications shown are research
-          themes, not verified safety recommendations.
-        </span>
-      </div>
-    </>
-  );
+import {useState} from "react";
+import {ResearchDialog} from "./ResearchDialog";
+import {investigations} from "@/lib/research/catalog";
+import {getExperimentMetadata} from "@/lib/research/metadata";
+import {SourceLink} from "./ui";
+import {explainRankingReason} from "@/lib/ranking/rank";
+import type {Environment,ResearchGoal} from "@/types/research";
+const applicationThemes=[
+ {title:"Fire-Safety Applications",subtitle:"Detection, suppression & materials",icon:ShieldCheck,goal:"Crew Safety",description:"Explore documented combustion research that may inform material screening, detection and suppression. A topic match is not a certified safety recommendation."},
+ {title:"From Space to Earth",subtitle:"Potential terrestrial relevance",icon:GlobeHemisphereWest,goal:"Earth Applications",description:"Explore investigations tagged for potential terrestrial relevance from NASA metadata. Technology transfer and equipment effectiveness require separate validation."},
+ {title:"Future Fire-Safety Innovations",subtitle:"Models & research opportunities",icon:Stack,goal:"Predictive Models",description:"Explore modeling and experimental research as starting points for future work. These are research opportunities, not demonstrated future products."},
+];
+export function Applications({expanded=false,environment="All"}:{expanded?:boolean;environment?:Environment}) {
+ const [active,setActive]=useState<number|null>(null);const theme=active===null?null:applicationThemes[active];
+ const records=theme?investigations.filter(item=>item.goals.some(goal=>goal===theme.goal)):[];
+ return <><div className="applications application-launchers">{applicationThemes.map((theme,index)=><button key={theme.title} className="application-launcher" onClick={()=>setActive(index)}><theme.icon/><span><strong>{theme.title}</strong><small>{theme.subtitle}</small></span><span aria-hidden="true">↗</span></button>)}</div><ResearchDialog open={theme!==null} onClose={()=>setActive(null)} title={theme?.title??"Research Applications"}>{theme&&<><p>{theme.description}</p><p className="muted">{records.length} source-linked topic matches · not a scientific ranking</p><div className="application-research-grid">{records.map(item=><article key={item.id}><h3>{item.name}</h3><p>{item.title}</p><p>{explainRankingReason(item,theme.goal as ResearchGoal,environment)}</p><small>Documented topics: {getExperimentMetadata(item.id).topics.join(', ')||'Not classified'}</small><SourceLink href={item.source} label={item.sourceLabel.split(' · ')[0]}/></article>)}</div></>}</ResearchDialog><div className="scope"><Info/><strong>Scope:</strong><span>Habitable-environment fire-safety research. Application browsers show potential relevance, not verified equipment performance or habitat safety limits.</span></div></>;
 }

@@ -29,6 +29,8 @@ def save(path, data):
     path.write_bytes(data)
 
 def discover():
+    # Ask NASA for its Combustion Science category rather than assuming 24 records.
+    # Read every page so the catalog count comes from actual repository results.
     hits=[]; start=0
     while True:
         query=urllib.parse.urlencode({'source':'psi','type':'investigation','from':start,'size':100,'ffield':'Research Area','fvalue':'combustion science'})
@@ -56,6 +58,8 @@ def stable_download_url(accession, version, file):
 def ingest_record(accession, refresh=False):
     path=DATA/'raw'/(accession+'.json')
     if refresh or not path.exists(): save(path,request(BASE+'/repo/investigations/'+accession))
+    # Check the identity and public category before accepting a cached or fresh record.
+    # A successful HTTP response alone does not establish the correct investigation.
     record=json.loads(path.read_bytes())
     if record['accession']!=accession or record['researchArea'].lower()!='combustion science' or not record['public']: raise ValueError('Identity, scope or visibility failed: '+accession)
     inventory={'status':'unavailable','files':[],'error':None}
@@ -67,6 +71,8 @@ def ingest_record(accession, refresh=False):
     except Exception as error: inventory['error']=str(error)
     save(DATA/'inventories'/(accession+'.json'),json.dumps(inventory,indent=2).encode())
     tables=[]
+    # Only small, public CSVs are downloaded here. Large archives remain source links.
+    # Their names and inventories are metadata, not experimental measurements.
     for f in inventory['files']:
         if f['restricted'] or not f['visible'] or not f['name'].lower().endswith('.csv') or f['bytes']>2_000_000: continue
         if 'experimental' not in f['category'].lower() and 'experimental' not in f['name'].lower(): continue
@@ -82,6 +88,8 @@ def ingest_record(accession, refresh=False):
                 decoded=body.decode('utf-8-sig'); encoding='utf-8-sig'
             except UnicodeDecodeError:
                 decoded=body.decode('cp1252'); encoding='cp1252'
+            # Keep NASA's labels and raw values. Do not guess a missing unit or
+            # change an ambiguous label such as 'Burning rate; mm'.
             rows=list(csv.reader(io.StringIO(decoded)))
             if not rows or len(rows[0])<2: raise ValueError('Not a usable CSV table')
             filename=accession+'-'+hashlib.sha256(body).hexdigest()[:12]+'.csv'

@@ -1,4 +1,4 @@
-/* Keep the reference proportions as the desktop viewport changes. */
+
 @media (min-width: 901px) {
   .app-body {
     grid-template-columns: clamp(185px, 13.8vw, 265px) minmax(0, 1fr);
@@ -69,8 +69,7 @@
     fill: currentColor;
   }
 }
-/* The desktop mockups use a 1672-pixel canvas. Scale its geometry together,
-   so a narrower desktop does not keep full-size text inside smaller panels. */
+
 @media (min-width: 901px) {
   .app-frame {
     --canvas-scale: calc(100vw / 1672px);
@@ -273,7 +272,7 @@
     min-height: 46px;
   }
 }
-/* Sans-serif labels need slightly less weight and width than the wordmark. */
+
 @media (min-width: 901px) {
   .sidebar nav button {
     font-size: 20px;

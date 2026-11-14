@@ -1,4 +1,4 @@
-/* Final typography layer: keep the wordmark intact and compact the research UI. */
+
 @media (min-width: 901px) {
   main { font-size: 17px; }
   .page-title { font-size: 32px; }

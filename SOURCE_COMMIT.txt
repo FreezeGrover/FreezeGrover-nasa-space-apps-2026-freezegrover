@@ -1,0 +1,4 @@
+Base local commit: 611118d (see the preserved repository history for the full base SHA).
+Current source is committed locally on science/source-grounded-responses-20261115.
+Packaging writes the exact local SHA to BUILD_INFO.json after commit creation.
+No remote publication is verified.

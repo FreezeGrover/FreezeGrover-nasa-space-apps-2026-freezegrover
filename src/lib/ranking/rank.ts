@@ -1,3 +1,6 @@
+import {getExperimentMetadata} from "../research/metadata";
+import {getInvestigationEvidence} from "../research/catalog";
+import {describeMissionContext} from "../research/context";
 import type {
   Investigation,
   ResearchGoal,
@@ -15,9 +18,11 @@ export function explainRankingReason(
   goal: ResearchGoal,
   environment: Environment,
 ) {
-  const transfer =
-    environment === "Lunar Bases" ||
-    environment === "Martian Bases" ||
-    environment === "Pressurized Rovers";
-  return `${item.purpose} Selected for ${goal.toLowerCase()} by topic match.${transfer ? " Transfer to partial-gravity habitats requires separate validation." : " Applicability depends on the experimental conditions."}`;
+  // Explain the inclusion using the selected record, not a fixed stock answer.
+  const meta=getExperimentMetadata(item.id),evidence=getInvestigationEvidence(item.id);
+  const tables=evidence.tables.filter(table=>table.status==="downloaded");
+  return item.name+" covers "+(meta.topics.join(", ")||"unclassified combustion topics")+
+    ". Relevant to "+goal.toLowerCase()+" by imported topic tags. "+tables.length+
+    " downloaded table(s); hardware: "+(meta.hardware.join(", ")||"not imported")+". "+
+    describeMissionContext(environment);
 }

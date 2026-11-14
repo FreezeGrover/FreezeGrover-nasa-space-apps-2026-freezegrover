@@ -1,11 +1,16 @@
 import type { Investigation } from "@/types/research";
 import { getExperimentMetadata } from "./metadata";
 const stopWords = new Set(
-  "how does do did what why when where which who is are was were a an the in on of for to and or with from by about affect affects affected effect effects influence influences impact impacts happen happens under compare compared between than can could would should will tell me explain show find research investigation investigations studies study evidence data increased increase decrease behave behavior behaviour".split(
+  "how does do did what why when where which who is are was were a an the in on of for to and or with from by about affect affects affected effect effects influence influences impact impacts happen happens under compare compared between than can could would should will tell me explain show find research investigation investigations experiments experiment studies study evidence data increased increase decrease behave behavior behaviour whether changing changes change alters alter concentration concentrations over measured measure determine determines relate related".split(
     " ",
   ),
 );
 const concepts = [
+  {
+    key: "flow",
+    pattern: /\b(ventilation|airflow|air flow|forced flow|air currents?)\b/g,
+    terms: ["airflow", "air flow", "flow", "wind tunnel"],
+  },
   {
     key: "spread",
     pattern:
@@ -88,7 +93,9 @@ export function retrieveInvestigations(
       reasons: ["Catalog record"],
       relevance: 0,
     }));
-  const exact = normalize(query);
+  // Correct a few common scientific misspellings before matching the catalog.
+  // This is a documented lexical fallback, not a substitute for AI understanding.
+  const exact = normalize(query).replace(/\bpropogation\b/g,"propagation").replace(/\bflamability\b/g,"flammability");
   const exactRecords = items.filter(
     (item) =>
       normalize(item.name) === exact ||
@@ -142,8 +149,13 @@ export function retrieveInvestigations(
       const m = getExperimentMetadata(item.id);
       if (partial) return []; // No direct partial-gravity records have been imported.
       if (tokens.some((token) => !text.includes(token))) return [];
-      const matches = wanted.filter((c) => m.topics.includes(c.key));
+      const matches = wanted.filter((c) => m.topics.includes(c.key) || c.terms.some(term=>text.includes(normalize(term))));
       if (wanted.length && !matches.length) return [];
+      // A question about droplet extinction must not match an oxygen-only record.
+      // Keep the main subject concepts; use atmosphere terms to order those matches.
+      const subjects=wanted.filter(c=>!["oxygen","pressure","flow","solid"].includes(c.key));
+      if(subjects.some(c=>!matches.includes(c))) return [];
+      if(wanted.some(c=>c.key==="solid") && !subjects.length && m.fuelCategory!=="solid") return [];
       if (
         gravityContext &&
         !m.gravity.includes("microgravity") &&

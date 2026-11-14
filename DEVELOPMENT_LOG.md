@@ -22,3 +22,54 @@ Retrieved and validated all 24 combustion records (19 flight-category, five grou
 
 ## Compact typography across all tabs
 Reduced oversized internal headings, body text, table labels, ranking cards and QA controls across all five tabs. The brand wordmark and research logic are unchanged. Added a final compact CSS layer, with further spacing adjustments for short desktop viewports.
+
+## Research Briefing presentation
+Replaced truncated bullet excerpts with short source-based topic cards, refined Segoe UI typography and compact citation links. Overview and Investigations share the presentation; original PSI records are unchanged. Typecheck/build passed; preview and three citations inspected.
+
+## Research browsing popups
+Compact inline results and selected-record cards now open native modal dialogs. Results use a 24-record card grid; selection updates the dashboard. Details retain evidence/CSV/source links. Compare has searchable A/B pickers and seven expandable attribute cards in a full-comparison popup. Escape/Close and source navigation checked in browser. Typecheck, 12 tests and production build passed. No GitHub publication is claimed.
+
+## Mission context, applications and compact Rankings
+Mission Context now explains environment-specific transfer checks without filtering or asserting suitability. Application panels open source-linked topic browsers with explicit potential-relevance limitations. Selected investigation popup styling and comparison borders strengthened. Rankings goal buttons reduced, environment selector moved to popup, result previews open the full result list and investigation details. Rover gravity is destination-dependent. Automated context tests, typecheck and build passed. Latest visual verification remains pending: automatic approval review rejected the preview tool as conflicting with localhost-only authorization; no bypass attempted.
+
+## Scientific QA visual and wording alignment
+Replaced legacy large banner and inline expanded checklist with compact draft/review cards. Review evidence opens original PSI provenance and CSVs; Review history opens session note snapshots. Save review note records the exact draft with PSI identity/version, never a completed check. Removed fake manual recheck messages and fixed hypothetical uncertainty example. Notes reset when leaving QA or reloading. Independent QA remains provider-neutral and pending; no automated reviewer is claimed. 15 tests, SSR render checks, typecheck and build passed. Browser visual verification remains pending due the previously rejected preview launch.
+
+## QA borders, Title Case and desktop screen fit
+QA review areas now use Title Case, larger readable labels, blue card outlines and blue accents. Added Overview and Investigations header titles. Final CSS layer sizes Overview and QA workspaces to available desktop height, compacts mission choices and spacing, and retains full evidence in popups. 15 tests, Title Case/header SSR checks, typecheck and production build passed. Final browser screen-fit verification is pending; no unsupported visual-completion claim is made.
+
+## Shared blue research cards and honest source label
+Extended QA soft-blue backgrounds and borders to relevant overview, investigation, comparison and ranking cards. Kept long evidence/table reading surfaces white. Removed the unused Simple/Scientific switch and its state; search header now displays NASA PSI · Combustion Science. 15 tests, typecheck and production build passed. Latest visual verification remains pending under the existing preview restriction.
+
+## Visible research search output
+Each explicit Search submission increments a request signal and opens the results dialog, including repeated identical queries. The output popup displays the submitted question, current filtered NASA records and a clear-filter action. Selecting a result opens full details. The always-visible result launcher precedes the compact inline preview; only one preview row is retained on desktop. Search retrieval and source catalog are unchanged. 15 tests, typecheck, build and six-result SSR/launcher-order check passed. Interactive browser verification remains pending under the existing preview restriction.
+
+## Prevent clipped investigation launcher buttons
+Removed inline result rows and long selected-record preview from the compact dashboard panels. Results/detail actions precede optional copy; minimum panel height reserves space. Briefing and context spacing reduce on shorter desktop viewports. Full data remains in popups. 15 tests, launcher-order/no-inline-list SSR checks, typecheck and build passed. Final visual verification on the user viewport remains pending.
+
+
+## Search popup navigation and compact empty previews — 2026-11-14
+- Reproduced on the user's Edge localhost:3022 page: returning to Investigations replayed the previous search popup; an empty result preview had scrollHeight 127 versus clientHeight 96.
+- Dashboard now owns results visibility. Explicit Search opens it, dismissal closes it, and tab navigation closes it without submitting again. The shared question and submitted search remain intact. No remount effect replays an old request.
+- Empty results use one compact status line. The unselected investigation keeps a matching bordered card and action to review search/filters; full explanations remain in the popup. Preview children cannot shrink into one another.
+- Inspected the existing Overview, Compare and Scientific QA: no measured container overflow at 1272x588. Rankings had outer content overflow (721 vs 621 CSS layout units); compacted short-screen preview to one row with the complete list still in its popup. Added long-text containment for preview headings.
+- Validation: 15 tests pass, typecheck passes; server-rendered all-record, flame-propagation and unsupported-query previews pass. Production build passes. The corrected package is not yet installed in the Windows browser, so post-install interactive and visual verification remains pending.
+- GitHub publication has not been performed or verified. Scientific retrieval and QA semantics were not changed.
+
+### Post-install regression checklist
+1. Search from Overview; close results; visit another tab, then Investigations. No automatic popup should appear; the same submitted question remains.
+2. Press Search again (including the identical question) or View search results: popup opens.
+3. Choose liquid droplets with a flame-propagation question: zero results, compact status and both bordered preview cards remain visible without overlapping the application buttons.
+4. Reset filters and verify results and details actions align.
+5. At 1272x588 inspect all five tabs; short Rankings preview shows one candidate and Browse all exposes the full list.
+
+
+## Scientific responses and revised architecture — 15 November 2026 (Pakistan)
+
+Withdrew mandatory modularity for frontend/infrastructure; retained normal React conventions and the approved design. Deliberate modules remain in scientific and NASA-retrieval functions. Removed explanatory UI/CSS comments and added natural comments in retrieval/reasoning/QA code. All 20 CSS files retain their prior declarations.
+
+Replaced fixed research-briefing examples with submitted-question/filtered-record excerpts. Compare now derives similarities and differences from the selected records. Rankings/application explanations use actual topics, hardware, table availability and mission transfer context. QA reacts to the draft and chosen source, detects unsupported narrative numbers and missing baselines, and keeps scientific verification pending. Empty related-investigation sections explain missing imported links.
+
+Implemented server-side OpenAI Responses adapter behind an injected provider boundary and separate grounding checks. No secret is shipped; the PowerShell launcher accepts an existing key through hidden input, asks for a paid-attempt cap and keeps the credential in the server environment only. Google integration is deferred. No live OpenAI test was possible without a local key; all adapter contract tests use a fake transport. This is not autonomous scientific verification.
+
+24 Node tests, four Python tests, typecheck, production build and loopback HTTP checks passed. Two challenging HTTP search cases returned four and six documented matches; all 22 CSV downloads matched their saved hashes. Live NASA PSI-69 and PSI-25 returned HTTP 200 and correct categories/versions. Updated Windows visual review and real OpenAI success remain pending. Connected GitHub access returned 404; only a local commit is claimed. See VERIFICATION.md.

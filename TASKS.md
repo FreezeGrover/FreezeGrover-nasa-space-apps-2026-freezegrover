@@ -1,23 +1,29 @@
 # Tasks
 
-## Complete
+## Implemented
 
-- Private GitHub repository created with main and README.
-- Modular React/TypeScript application foundation using named functions.
-- Five navigation screens, local fonts, white-and-blue styles.
-- Retrieved 24-record NASA PSI combustion catalog, original provenance and 22 downloaded experimental CSVs.
-- Five tested filters, terminology/natural-language retrieval, source links, and shared hardware/fuel/condition relationships.
-- Interactive search, selection, comparison, relevance grouping, disclosure, and local QA history.
-- Unit tests and production build.
+- Retained the existing five-tab Next.js UI and withdrew mandatory frontend modularity.
+- Deliberately testable NASA ingestion, retrieval, filters, relationships, comparison, briefing and independent deterministic QA.
+- 24 previously retrieved Combustion Science records, 22 original CSVs across 20 records; the count is derived from the saved source catalog.
+- Question-specific briefings, stronger lexical retrieval, actual comparison similarities/differences and record/context-specific relevance reasons.
+- Server-side OpenAI Responses adapter, source-quote checks and honest catalog fallback. Google provider intentionally deferred.
+- Review a generated statement in Scientific QA; local notes remain explicitly temporary.
+- Explanatory comments in scientific/reasoning and ingestion code; UI explanatory comments removed.
 
-## Active
+## Must verify after installation
 
-- Local review build prepared; exact pixel identity remains unconfirmed (see design-qa.md).
+- Real OpenAI response using the user's existing key and approved request limit. Configuration is not proof of successful API access.
+- Visual and interactive review of the updated Windows localhost build at the user's window size.
+- Full regression checklist in DEVELOPMENT_LOG.md and VERIFICATION.md.
 
-## Blocked / deferred
+## Pending scientific work
 
-- GitHub access to the new private repository: connected app returns 404. Remote develop/feature branches and source push remain pending.
-- Full raw-archive ingestion, calibrated measurement interpretation and extraction of reviewed findings beyond the downloaded experimental tables.
-- AI provider choice, credentials, limits, and live answers.
-- Independent scientific evidence verification.
-- Exact pixel identity to generated mockups: no original font specification or editable design was supplied.
+- Independent scientific reviewer (human or AI), claim entailment verification, calibration and matched-test analyses.
+- Full documents and raw archives beyond original metadata and downloaded CSV previews.
+- Reviewed unit-conversion/calculation features where justified; currently no formula-based scientific calculator.
+- Actual numerical evidence rankings only if defensible criteria and evidence become available.
+- Google Cloud provider setup and verification.
+
+## GitHub
+
+Existing repository: FreezeGrover/flames-in-freefall. Connected GitHub access returned 404 during this task. This does not establish that the private repository is missing. No remote publication or commit is verified. Preserve history and do not report a local SHA as a published remote SHA.

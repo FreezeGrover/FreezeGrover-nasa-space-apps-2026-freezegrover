@@ -1,6 +1,6 @@
 # Flames in Free Fall
 
-A private, modular combustion research dashboard for NASA Space Apps. This milestone implements the five-screen white-and-blue interface from the supplied references.
+A private combustion research dashboard for NASA Space Apps. This milestone implements the five-screen white-and-blue interface from the supplied references.
 
 ## Run locally on Windows
 
@@ -25,7 +25,7 @@ No Sites hosting or public deployment is used. No API key is needed for the ship
 - Local review controls and recheck history. No claim is marked Verified.
 - AI disclosure modal explains actual connection status.
 
-NASA PSI metadata and selected original experimental CSV retrieval are connected through a verified local snapshot. Live AI answers and independent scientific claim verification remain unconfigured. Searching is catalog retrieval, not an AI answer. NASA authentication and AI-provider credentials are separate concerns.
+NASA PSI metadata and selected original experimental CSV retrieval are connected through a verified local snapshot. The OpenAI adapter is implemented and enabled only with a server-side key, model and approved request limit. Without that configuration, search explicitly falls back to catalog retrieval. Independent scientific claim verification remains pending. See ARCHITECTURE.md and SCIENTIFIC_QA.md. NASA authentication and AI-provider credentials are separate concerns.
 
 ## Checks
 
@@ -50,3 +50,10 @@ The connected GitHub app currently returns 404 for this new private repository, 
 No open-source license has been added. Design assets are extracted from user-provided mockups; the flame image is illustrative, not experimental imagery.
 
 See PSI_CONNECTION.md for verified counts, refresh commands, access limits and scientific evidence boundaries.
+
+
+## Local OpenAI startup
+
+Use PowerShell from the extracted project folder: `& .\start-openai-local.ps1`. The launcher accepts your existing key with hidden input and keeps it in the server process environment, not a file. It asks you to approve a maximum paid Search attempt count (default one). Failed requests count too; a restart resets the count. This is not a billing-account dollar cap. Stop an existing server on port 3022 first. No key belongs in chat, Git, the ZIP or browser source. `.env.example` contains only non-secret examples and disables calls by default.
+
+The model ID is configurable (launcher default `gpt-5.4-mini`, documented by OpenAI as supporting Responses and structured output). Your account's model access and billing are not verified until a real request succeeds. Official references: https://developers.openai.com/api/docs/models/gpt-5.4-mini and https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses . Google Cloud integration remains deferred.

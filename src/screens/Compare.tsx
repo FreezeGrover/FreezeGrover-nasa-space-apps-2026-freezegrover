@@ -1,4 +1,6 @@
 "use client";
+import { InvestigationPicker } from "@/components/InvestigationPicker";
+import { ResearchDialog } from "@/components/ResearchDialog";
 import { useState } from "react";
 import {
   ArrowsLeftRight,
@@ -11,7 +13,7 @@ import {
 } from "@phosphor-icons/react";
 import { getExperimentMetadata } from "@/lib/research/metadata";
 import { investigations } from "@/lib/research/catalog";
-import { compareExperimentalConditions } from "@/lib/comparison/compare";
+import { analyzeComparison, compareExperimentalConditions } from "@/lib/comparison/compare";
 import { Notice, Panel, Expandable, Status, SourceLink } from "@/components/ui";
 export function Compare() {
   const [a, setA] = useState("flex");
@@ -21,27 +23,14 @@ export function Compare() {
   const left = investigations.find((i) => i.id === pair[0])!;
   const right = investigations.find((i) => i.id === pair[1])!;
   const rows = compareExperimentalConditions(left, right);
+  const analysis=analyzeComparison(left,right);
+  const related=[...getExperimentMetadata(left.id).related,...getExperimentMetadata(right.id).related].filter((entry,index,all)=>all.findIndex(other=>other.url===entry.url)===index);
   function selectInvestigation(
     label: string,
     value: string,
     setValue: (v: string) => void,
   ) {
-    return (
-      <label className="comparison-picker">
-        <strong>{label}:</strong>
-        <select
-          aria-label={label}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        >
-          {investigations.map((i) => (
-            <option value={i.id} key={i.id}>
-              {i.name}
-            </option>
-          ))}
-        </select>
-      </label>
-    );
+    return <InvestigationPicker label={label} value={value} onChange={setValue}/>;
   }
   return (
     <div className="compare-page">
@@ -58,7 +47,7 @@ export function Compare() {
           <ArrowsLeftRight />
         </button>
         {selectInvestigation("Investigation B", b, setB)}
-        <button className="search-button" onClick={() => setPair([a, b])}>
+        <button className="search-button" onClick={() => {setPair([a,b]);setAll(true);}}>
           <MagnifyingGlass />
           Compare
         </button>
@@ -67,56 +56,19 @@ export function Compare() {
         Compare NASA investigations side by side. Retrieved NASA metadata;
         downloaded tables remain separate from matched quantitative comparisons.
       </Notice>
-      <div className="comparison-table-wrap">
-        <table className="comparison-table">
-          <thead>
-            <tr>
-              <th>
-                Experimental Attribute<small>Key comparison aspects</small>
-              </th>
-              <th>
-                <Flame />
-                {left.name}
-                <small>NASA investigation</small>
-              </th>
-              <th>
-                <Flame />
-                {right.name}
-                <small>NASA investigation</small>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.slice(0, all ? rows.length : 4).map((row) => (
-              <tr key={row[0]}>
-                <th>{row[0]}</th>
-                <td><div className="comparison-cell" tabIndex={0}>{row[1]}</div></td>
-                <td><div className="comparison-cell" tabIndex={0}>{row[2]}</div></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <button className="show-all" onClick={() => setAll(!all)}>
-        {all ? "Show fewer attributes" : "Show all attributes"}{" "}
-        <span>Test variations, measurements, findings, and limitations</span>
-      </button>
+      <div className="comparison-preview-grid">{[left,right].map((record,index)=><Panel key={record.id+index} title={record.name}><div className="investigation-preview"><h3>{record.title}</h3><p>{record.purpose}</p><SourceLink href={record.source} label={record.sourceLabel.split(" · ")[0]}/></div></Panel>)}</div>
+      <button className="research-open-button" onClick={()=>setAll(true)}>Open full comparison ↗</button>
+      <Notice>Open the comparison to explore every attribute, evidence source, and related investigation in one scrollable popup.</Notice>
+      <ResearchDialog open={all} onClose={()=>setAll(false)} title={`${left.name} vs ${right.name} · Full Comparison`}>
+      <div className="comparison-attributes">{rows.map((row,index)=><details className="comparison-attribute" key={row[0]} open={index===0}><summary><span className="attribute-number">{String(index+1).padStart(2,"0")}</span><strong>{row[0]}</strong><span className="attribute-chevron">⌄</span></summary><div className="comparison-attribute-grid"><article><span className="attribute-record">{left.name}</span><p>{row[1]}</p></article><article><span className="attribute-record">{right.name}</span><p>{row[2]}</p></article></div></details>)}</div>
       <div className="two-panels">
         <Panel title="Key Similarities" icon={<CheckCircle />}>
           <ul>
-            <li>Both belong to NASA combustion research.</li>
-            <li>
-              Matched test conditions must be checked before comparing outcomes.
-            </li>
+            {analysis.similarities.map(text=><li key={text}>{text}</li>)}
           </ul>
         </Panel>
         <Panel title="Key Differences" icon={<Scales />}>
-          <p>
-            {left.name}: {left.purpose}
-          </p>
-          <p>
-            {right.name}: {right.purpose}
-          </p>
+          <ul>{analysis.differences.map(text=><li key={text}>{text}</li>)}</ul>
         </Panel>
       </div>
       <Expandable
@@ -124,10 +76,7 @@ export function Compare() {
         subtitle="What the evidence may suggest"
         icon={<Flame />}
       >
-        <p>
-          Interpretation withheld until the original test conditions and results
-          are independently reviewed.
-        </p>
+        {analysis.limitations.map(text=><p key={text}>{text}</p>)}
       </Expandable>
       <Expandable
         title="Related Investigations"
@@ -135,10 +84,8 @@ export function Compare() {
         icon={<ShareNetwork />}
       >
         <p>
-          {[
-            ...getExperimentMetadata(left.id).related,
-            ...getExperimentMetadata(right.id).related,
-          ].map((relation, index) => (
+          {!related.length && "No explicit related PSI investigations are listed in these imported records."}
+          {related.map((relation, index) => (
             <SourceLink key={index} href={relation.url} label={relation.name} />
           ))}
         </p>
@@ -169,7 +116,7 @@ export function Compare() {
       <Notice>
         Scientific QA: Verification pending. Research relevance does not
         establish hazard probability.
-      </Notice>
+      </Notice>      </ResearchDialog>
     </div>
   );
 }

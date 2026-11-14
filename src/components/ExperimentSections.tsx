@@ -81,6 +81,7 @@ export function HardwareAndRelated({
           />
         </p>
       ))}
+      {!meta.related.length&&<p>No explicit related PSI investigations are listed in the imported record.</p>}
       <ul className="related-research">
         {meta.related.map((related) => (
           <li key={related.name}>

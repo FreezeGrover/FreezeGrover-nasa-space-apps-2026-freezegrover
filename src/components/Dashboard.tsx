@@ -1,6 +1,8 @@
 "use client";
 import { catalogSummary } from "@/lib/research/catalog";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type {ResearchAnswer} from "@/types/answer";
+import {catalogAnswer} from "@/lib/research/answer";
 import {
   Flame,
   House,
@@ -30,13 +32,39 @@ const navigation: { name: Tab; icon: typeof House }[] = [
 export function Dashboard() {
   const [tab, setTab] = useState<Tab>("Overview");
   const [environment, setEnvironment] = useState<Environment>("All");
-  const [mode, setMode] = useState("Simple");
   const [query, setQuery] = useState("");
   const [submitted, setSubmitted] = useState("");
+  const [answer,setAnswer]=useState<ResearchAnswer|null>(null);
+  const [searching,setSearching]=useState(false);
+  const [aiConfigured,setAiConfigured]=useState(false);
+  const [qaReview,setQaReview]=useState<{recordId:string;statement:string}|undefined>();
+  const searchSequence=useRef(0);
+  useEffect(()=>{fetch("/api/research").then(response=>response.json()).then(status=>setAiConfigured(status.configured===true)).catch(()=>setAiConfigured(false));},[]);
+  const [showSearchResults,setShowSearchResults]=useState(false);
   const [disclosure, setDisclosure] = useState(false);
-  function searchResearch() {
+  async function searchResearch() {
+    const sequence=++searchSequence.current;
     setSubmitted(query);
+    setAnswer(null);
+    setSearching(true);
+    setShowSearchResults(true);
     setTab("Investigations");
+    try {
+      const response=await fetch("/api/research",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query,environment})});
+      if(!response.ok) throw new Error("Research request failed");
+      const result:ResearchAnswer=await response.json();
+      if(sequence===searchSequence.current) setAnswer(result);
+    }catch{
+      if(sequence===searchSequence.current) setAnswer(catalogAnswer(query,"Research service unavailable. Showing local catalog matches only."));
+    }finally{if(sequence===searchSequence.current) setSearching(false);}
+  }
+  function reviewStatement(recordId:string,statement:string){
+    setQaReview({recordId,statement});
+    navigate("Scientific QA");
+  }
+  function navigate(nextTab: Tab) {
+    setShowSearchResults(false);
+    setTab(nextTab);
   }
   return (
     <div className="app-frame">
@@ -52,7 +80,7 @@ export function Dashboard() {
             <span>Combustion Research Dashboard</span>
           </div>
         </div>
-        {tab !== "Overview" && tab !== "Investigations" && (
+        {(
           <h1 className="page-title">
             {tab === "Compare"
               ? "Compare Investigations"
@@ -75,7 +103,7 @@ export function Dashboard() {
             {navigation.map(({ name, icon: Icon }) => (
               <button
                 key={name}
-                onClick={() => setTab(name)}
+                onClick={() => navigate(name)}
                 className={tab === name ? "selected" : ""}
                 aria-current={tab === name ? "page" : undefined}
               >
@@ -90,7 +118,7 @@ export function Dashboard() {
             <small>
               {catalogSummary.verifiedCombustionRecords} combustion records
               <br />
-              Live AI unavailable
+              {aiConfigured?"OpenAI configured":"Catalog mode · AI not configured"}
             </small>
           </div>
         </aside>
@@ -100,8 +128,6 @@ export function Dashboard() {
               value={query}
               onChange={setQuery}
               onSearch={searchResearch}
-              mode={mode}
-              setMode={setMode}
             />
           )}
           <div className="screen-content" key={tab}>
@@ -109,13 +135,19 @@ export function Dashboard() {
               <Overview
                 environment={environment}
                 setEnvironment={setEnvironment}
-                navigate={setTab}
-                mode={mode}
+                navigate={navigate}
+                query={submitted}
+                answer={answer}
               />
             )}{" "}
             {tab === "Investigations" && (
               <Investigations
                 query={submitted}
+                answer={answer}
+                searching={searching}
+                onReview={reviewStatement}
+                showResults={showSearchResults}
+                onResultsChange={setShowSearchResults}
                 environment={environment}
                 setEnvironment={setEnvironment}
               />
@@ -127,7 +159,7 @@ export function Dashboard() {
                 setEnvironment={setEnvironment}
               />
             )}{" "}
-            {tab === "Scientific QA" && <ScientificQA />}
+            {tab === "Scientific QA" && <ScientificQA review={qaReview}/>}
           </div>
           <EvidenceFooter />
         </main>
@@ -157,9 +189,7 @@ export function Dashboard() {
               NASA feed.
             </p>
             <p>
-              No live AI provider or automatic scientific reviewer is connected.
-              Searching retrieves catalog records; it does not generate an AI
-              answer.
+              {aiConfigured ? "OpenAI is configured server-side. An explicit Search sends your question and public NASA excerpts to OpenAI for interpretation. Source quotes are checked separately; AI interpretations remain unverified." : "OpenAI is not configured. Searching retrieves local catalog records without generating an AI answer."}
             </p>
             <p>
               Evidence strength, research ranking, habitat suitability, and

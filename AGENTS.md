@@ -1,8 +1,10 @@
 # Project instructions
 
 - Preserve the supplied white-and-blue five-screen design. Blue marks hover and selection.
-- Use small named functions and function components, one responsibility per module.
-- Keep comments natural, explaining the reason for non-obvious code.
+- Use ordinary React/Next.js conventions for the frontend. Do not add abstraction layers to demonstrate modularity or dismantle working components.
+- Keep deliberate, independently testable modules for NASA ingestion, retrieval, comparison, calculations, relationships, evidence checks and QA. TypeScript is suitable; do not add a Python service just to demonstrate modularity.
+- Keep the approved UI design. Architecture-policy updates must not alter layout, fonts, styling or navigation.
+- Put natural explanatory comments in scientific/reasoning and NASA-fetching code, including useful input/output examples. Omit explanatory comments in UI/presentation files; preserve required directives and license notices.
 - Keep data separate from UI. Never copy mockup measurements, scores, or verified counts into the research inventory.
 - NASA source links are not evidence of successful data ingestion. Mark missing information explicitly.
 - No scientific claim may be Verified without completed evidence checks.
