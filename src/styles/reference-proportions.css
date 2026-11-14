@@ -273,3 +273,7 @@
     min-height: 46px;
   }
 }
+/* Sans-serif labels need slightly less weight and width than the wordmark. */
+@media (min-width: 901px) {
+  .sidebar nav button { font-size: 20px; }
+}

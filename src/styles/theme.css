@@ -22,7 +22,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Kalam", cursive;
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: clamp(14px, 1.16vw, 20px);
   line-height: 1.17;
 }

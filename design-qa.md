@@ -71,3 +71,7 @@ Full-view combined comparison: `/workspace/scratch/e336addc4908/qa/final-compari
 - Obtain the original font specification if literal pixel identity remains required.
 - Restore access to the new private GitHub repository before pushing the source milestone.
 - Connect original NASA data and live AI only after their separate access configuration is settled.
+
+## Authorized typography revision
+
+The project lead subsequently requested non-cursive interface text while retaining the cursive brand. Segoe UI / Arial now replaces Kalam everywhere except `.brand`. All five screens were inspected again at 1363 × 936. The navigation font was reduced to prevent the Investigations label clipping. New Overview evidence: `/workspace/shared/flames-qa/overview-clean-font.jpg`. Pixel identity with the old handwritten reference is no longer the typography target.

@@ -18,7 +18,7 @@ No Sites hosting or public deployment is used. No API key is needed for the curr
 ## Current behavior
 
 - Overview, Investigations, Compare, Rankings, and Scientific QA navigation.
-- White panels, blue borders, blue hover and selected states; locally bundled Kalam fonts.
+- White panels, blue borders, blue hover and selected states; clean sans-serif interface text with a Kalam brand wordmark.
 - Search over a small curated NASA source catalog, selectable investigations, expandable details.
 - Side-by-side comparison and additional attributes.
 - Goal-based relevance filtering with explicit limitations for partial-gravity habitats.

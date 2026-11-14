@@ -9,3 +9,7 @@ Implemented named functions and reusable function components across separate res
 Created five white-and-blue screens and tested interactive navigation, selection, search, comparison attributes, goal filtering, mission context, disclosure, and manual recheck history in a local browser preview. Corrected Next.js reserved pages-directory conflict, desktop density, clipped sidebar labels, local development origins, and a filtered-selection inconsistency found during QA.
 
 Production build and four scientific/data tests passed before final visual refinements; final verification is recorded in design-qa.md. Live NASA data and AI integration were explicitly deferred while organizers arrange access. No deployment or paid API calls occurred.
+
+## Typography revision
+
+At the project lead's request, replaced cursive interface text with Segoe UI / Arial. Preserved the Kalam brand wordmark and the supplied flame logo. Reduced desktop navigation text to 20px to avoid clipping with wider sans-serif letters. Inspected all five local screens; Compare and QA had no horizontal viewport overflow. Added an idempotent PowerShell helper to apply the same change to the Windows copy without re-extracting the project.
