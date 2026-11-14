@@ -90,8 +90,8 @@ export function Compare() {
             {rows.slice(0, all ? rows.length : 4).map((row) => (
               <tr key={row[0]}>
                 <th>{row[0]}</th>
-                <td>{row[1]}</td>
-                <td>{row[2]}</td>
+                <td><div className="comparison-cell" tabIndex={0}>{row[1]}</div></td>
+                <td><div className="comparison-cell" tabIndex={0}>{row[2]}</div></td>
               </tr>
             ))}
           </tbody>
