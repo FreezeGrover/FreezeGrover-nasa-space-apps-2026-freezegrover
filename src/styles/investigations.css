@@ -1,0 +1,136 @@
+.investigation-top {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  gap: 15px;
+}
+.investigation-top .panel-body {
+  font-size: 18px;
+  min-height: 103px;
+}
+.investigation-columns {
+  display: grid;
+  grid-template-columns: 0.87fr 1.23fr;
+  gap: 15px;
+}
+.result-list {
+  margin-top: 8px;
+}
+.result-row {
+  border: 0;
+  border-bottom: 1px solid #bad3f3;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 15px 0;
+  text-align: left;
+}
+.result-row.active {
+  background: #f1f8ff;
+}
+.result-row.active:hover {
+  background: var(--blue);
+}
+.result-index {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--navy);
+  border-radius: 9px;
+  min-width: 34px;
+  height: 38px;
+}
+.result-row > svg {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+}
+.result-row > svg:last-child {
+  width: 17px;
+}
+.result-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 18px;
+}
+.result-title small {
+  font-size: 16px;
+}
+.status {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8ca6c6;
+  background: #f1f4f8;
+  color: #33405e;
+  padding: 4px 12px;
+  border-radius: 24px;
+  font-size: 15px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.status.warning {
+  background: #fff7d4;
+  border-color: #e8ba25;
+  color: #6a5000;
+}
+.result-row .status {
+  font-size: 12px;
+  padding: 4px 7px;
+}
+.list-note {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 17px;
+  color: var(--muted);
+}
+.selected-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 13px;
+}
+.science-symbol {
+  min-width: 93px;
+  height: 104px;
+  display: grid;
+  place-items: center;
+  background: #edf7ff;
+  border: 1px solid #b1d6ff;
+  border-radius: 14px;
+  color: #123eb0;
+}
+.selected-summary p {
+  font-size: 17px;
+  margin-top: 10px;
+}
+.assessment-row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.investigation-detail .expandable {
+  margin-top: 6px;
+  border-radius: 11px;
+}
+.investigation-detail summary {
+  min-height: 41px;
+  padding: 6px 10px;
+  gap: 9px;
+}
+.investigation-detail summary strong {
+  font-size: 20px;
+}
+.investigation-detail summary small {
+  display: none;
+}
+.investigation-detail summary > svg:first-child {
+  width: 23px;
+  height: 23px;
+}
+.investigation-detail .details-body {
+  font-size: 17px;
+}

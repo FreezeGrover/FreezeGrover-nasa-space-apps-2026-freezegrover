@@ -1,0 +1,476 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "683da39bf91ab4427dbf44e4",
+      "name": "PSI-115_metadata_PSI-185_Utilization of the S.zip",
+      "key": "psi-data/PSI-115/metadata/PSI-115_metadata_PSI-185_Utilization of the S.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 7021,
+      "version": 4,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44e5",
+      "name": "PSI-115_Analyzed Data_8cmGravityNumDen.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityNumDen.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44e6",
+      "name": "PSI-115_Analyzed Data_8cmGravityNucRate.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityNucRate.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44e7",
+      "name": "PSI-115_Analyzed Data_8cmGravitySmoke.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravitySmoke.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44e8",
+      "name": "PSI-115_Analyzed Data_8cmGravityDAM.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityDAM.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44e9",
+      "name": "PSI-115_Analyzed Data_8cmGravityU.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityU.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44ea",
+      "name": "PSI-115_Analyzed Data_8cmGravityPSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityPSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1716.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44eb",
+      "name": "PSI-115_Analyzed Data_8cmGravityVort.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityVort.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44ec",
+      "name": "PSI-115_Analyzed Data_8cmGravitySpeciesMF.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravitySpeciesMF.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44ed",
+      "name": "PSI-115_Analyzed Data_8cmGravityTemperature.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityTemperature.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39bf91ab4427dbf44ee",
+      "name": "PSI-115_Analyzed Data_8cmGravityV.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityV.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44ef",
+      "name": "PSI-115_Analyzed Data_8cmGravityNS_PSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityNS_PSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1755.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f0",
+      "name": "PSI-115_Analyzed Data_8cmGravityuR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityuR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f1",
+      "name": "PSI-115_Analyzed Data_8cmGravityvR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityvR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f2",
+      "name": "PSI-115_Analyzed Data_8cmGravityNumdenR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmGravityNumdenR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f3",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityPSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityPSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1716.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f4",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNumDen.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNumDen.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f5",
+      "name": "PSI-115_Analyzed Data_8cmNoGravitySmoke.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravitySmoke.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f6",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityDAM.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityDAM.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f7",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNucRate.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNucRate.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f8",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityV.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityV.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44f9",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityVaporMF.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityVaporMF.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44fa",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityVort.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityVort.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39cf91ab4427dbf44fb",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityTemperature.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityTemperature.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf44fc",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityU.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityU.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf4510",
+      "name": "PSI-115_Analyzed Data_8cm_sGrid_grid3d.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cm_sGrid_grid3d.dat",
+      "category": "Analyzed Data",
+      "bytes": 17971238.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf44fd",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNoTF_PSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNoTF_PSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1755.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf44fe",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNoTF_u.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNoTF_u.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220839.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf44ff",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNoTF_v.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNoTF_v.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220839.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4500",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNoTF_NumDen.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNoTF_NumDen.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4501",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityuR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityuR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220865.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4502",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityvR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityvR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220865.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4503",
+      "name": "PSI-115_Analyzed Data_8cmNoGravityNumDenR.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_8cmNoGravityNumDenR.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220865.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4504",
+      "name": "PSI-115_Analyzed Data_10cmGravitySmoke.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmGravitySmoke.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220838.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4505",
+      "name": "PSI-115_Analyzed Data_10cmGravityU.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmGravityU.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220849.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4506",
+      "name": "PSI-115_Analyzed Data_10cmGravityV.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmGravityV.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220849.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4507",
+      "name": "PSI-115_Analyzed Data_10cmGravityPSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmGravityPSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1716.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39df91ab4427dbf4508",
+      "name": "PSI-115_Analyzed Data_10cmGravityNumDen.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmGravityNumDen.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220849.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf4509",
+      "name": "PSI-115_Analyzed Data_10cmNoGravitySmoke.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmNoGravitySmoke.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220866.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450a",
+      "name": "PSI-115_Analyzed Data_10cmNoGravityU.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmNoGravityU.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220866.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450b",
+      "name": "PSI-115_Analyzed Data_10cmNoGravityV.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmNoGravityV.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220866.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450c",
+      "name": "PSI-115_Analyzed Data_10cmNoGravityPSD.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmNoGravityPSD.dat",
+      "category": "Analyzed Data",
+      "bytes": 1716.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450d",
+      "name": "PSI-115_Analyzed Data_10cmNoGravityNumDen.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cmNoGravityNumDen.dat",
+      "category": "Analyzed Data",
+      "bytes": 6220866.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450e",
+      "name": "PSI-115_Analyzed Data_10cm_sGrid_grid3d.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_10cm_sGrid_grid3d.dat",
+      "category": "Analyzed Data",
+      "bytes": 17971238.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf450f",
+      "name": "PSI-115_Analyzed Data_nodeDiameters.dat",
+      "key": "psi-data/PSI-115/Analyzed Data/PSI-115_Analyzed Data_nodeDiameters.dat",
+      "category": "Analyzed Data",
+      "bytes": 1059.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf4511",
+      "name": "PSI-115_Reports_NNX17AF08A_FinalReport.pdf",
+      "key": "psi-data/PSI-115/Reports/PSI-115_Reports_NNX17AF08A_FinalReport.pdf",
+      "category": "Reports",
+      "bytes": 10617514.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    },
+    {
+      "id": "683da39ef91ab4427dbf4512",
+      "name": "PSI-115_Science Documents_DataOrganizationDocument.pdf",
+      "key": "psi-data/PSI-115/Science Documents/PSI-115_Science Documents_DataOrganizationDocument.pdf",
+      "category": "Science Documents",
+      "bytes": 96899.0,
+      "version": 2,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

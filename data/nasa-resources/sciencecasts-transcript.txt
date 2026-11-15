@@ -1,0 +1,45 @@
+YouTube transcript
+Video ID: W1oXykoz9zg
+Language: en
+Captions: authored or unspecified
+
+[0:00] [ MUSIC ]
+[0:03] The Power of Studying Combustion on the ISS - presented by Science@NASA
+[0:13] If you wanted to reduce the amount of pollution humans produce, where might you look?
+[0:21] Here? Yep.
+[0:24] Here? Sure.
+[0:25] Here? Wait, what?
+[0:30] That's exactly where scientists and researchers are looking:
+[0:32] about 250 miles above Earth, on the International Space Station (ISS).
+[0:37] Here, astronauts are working on a series of experiments to learn more about combustion.
+[0:42] Why combustion? Dennis Stocker, project scientist for the Advanced Combustion via Microgravity Experiments, or ACME, says
+[0:50] "Consider this. About 85 percent of the energy we use comes from combustion - the burning of some sort of fuel."
+[0:57] About 70% of the electricity we use at home and work comes from power plants that use combustion.
+[1:05] The combustion of fuels powers the engines in many modes of transportation.
+[1:10] Stocker continues: "If we can learn more about the process, we might be able to find
+[1:15] newer and less polluting ways to burn fuel."
+[1:19] Three series of combustion experiments taking place on the International Space Station's
+[1:23] Combustion Integration Rack (CIR) are looking at combustion in very different ways.
+[1:29] The Flame Extinguishment Experiment, or FLEX, examined the burning of a single droplet of fuel
+[1:34] in the microgravity confines of the ISS.
+[1:38] The last of the droplet combustion experiments were conducted in September 2017. ACME began in November 2017.
+[1:46] ACME is composed of six major experiments, with each taking about 5 months to complete.
+[1:53] These experiments will examine how various gasses burn without gravity affecting the flames.
+[1:58] The Solid Fuel Ignition and Extinction or SoFIE experiment, will explore the properties of burning solid matter.
+[2:06] So why study combustion in micro gravity?
+[2:10] As Stocker explains: "On the ISS, you have conditions that you can't replicate on Earth.
+[2:15] For example, consider a candle when it's burning. The flame flickers.
+[2:20] Why? Hot gasses from the flame rise while cooler, denser air is pulled to the bottom of the flame.
+[2:27] This flow occurs at high speeds, resulting in turbulence and instability.
+[2:32] That instability makes it hard to study the properties of the flame.
+[2:36] But on the ISS, there's no flicker which allows us to make more precise and consistent measurements.
+[2:43] If we have precise measurements we get closer to learning how to burn more efficiently."
+[2:47] More efficiency could lead to real cost savings for producing power.
+[2:53] The research could also lead to reducing the production of soot and other pollutants.
+[2:59] Combustion experiments conducted in space have contributed to practical applications on Earth,
+[3:04] especially in the field of fire safety. A new type of fire extinguisher is just one example.
+[3:10] And, as Stocker notes: "I think we're in for a few more surprises as a result of these microgravity experiments."
+[3:17] That's because, not surprisingly, Stocker knew where to look for answers
+[3:21] to reducing the amount of global pollution: He looked up.
+[3:26] For more from the International Space Station, go to www.nasa.gov/station.
+[3:31] If you're burning to learn more about other hot science topics, visit science.nasa.gov.

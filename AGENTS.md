@@ -1,0 +1,26 @@
+# Project instructions
+
+- Preserve the supplied white-and-blue five-screen design. Blue marks hover and selection.
+- Use ordinary React/Next.js conventions for the frontend. Do not add abstraction layers to demonstrate modularity or dismantle working components.
+- Keep deliberate, independently testable modules for NASA ingestion, retrieval, comparison, calculations, relationships, evidence checks and QA. TypeScript is suitable; do not add a Python service just to demonstrate modularity.
+- Keep the approved UI design. Architecture-policy updates must not alter layout, fonts, styling or navigation.
+- Put natural explanatory comments in scientific/reasoning and NASA-fetching code, including useful input/output examples. Omit explanatory comments in UI/presentation files; preserve required directives and license notices.
+- Keep data separate from UI. Never copy mockup measurements, scores, or verified counts into the research inventory.
+- NASA source links are not evidence of successful data ingestion. Mark missing information explicitly.
+- No scientific claim may be Verified without completed evidence checks.
+- Keep QA logically independent of answer generation when it is connected.
+- Keep secrets on the server and outside Git. Paid requests require user authorization. The user has explicitly removed the app request-count cap; do not reintroduce it.
+- Localhost only. Do not use Sites or deploy without a new explicit request.
+- Run npm test, npm run typecheck, and npm run build for meaningful changes; inspect affected UI in a browser.
+- Update documentation and development log. GitHub is canonical; do not claim a push succeeded without remote evidence.
+- Private repository only. No public exposure, deletion of existing work, or license addition without approval.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

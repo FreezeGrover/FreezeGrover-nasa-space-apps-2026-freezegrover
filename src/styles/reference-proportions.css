@@ -1,0 +1,280 @@
+
+@media (min-width: 901px) {
+  .app-body {
+    grid-template-columns: clamp(185px, 13.8vw, 265px) minmax(0, 1fr);
+  }
+  .app-header {
+    height: clamp(68px, 4.9vw, 94px);
+  }
+  .sidebar nav button {
+    font-size: clamp(18px, 1.38vw, 26px);
+    height: clamp(46px, 3.3vw, 64px);
+    gap: 12px;
+  }
+  .brand > svg {
+    fill: initial;
+  }
+  .overview-top {
+    grid-template-columns: 1.6fr 1fr;
+  }
+  .overview-top .panel-body {
+    min-height: 260px;
+  }
+  .overview-page .mission .environment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .overview-page .mission .environment-options button {
+    border: 0;
+    border-bottom: 1px solid #bad5f4;
+    border-radius: 0;
+    min-height: 38px;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 5px 12px;
+    font-size: 19px;
+  }
+  .overview-page .mission .environment-options button:first-child {
+    display: none;
+  }
+  .overview-page .mission .panel-caption {
+    display: none;
+  }
+  .overview-page .briefing {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .overview-page .applications .details-body {
+    min-height: 135px;
+  }
+  .overview-page {
+    gap: 15px;
+  }
+  .brand > svg {
+    fill: initial;
+  }
+}
+@media (min-width: 901px) {
+  .sidebar nav button {
+    font-size: clamp(16px, 1.2vw, 23px);
+    padding: 8px;
+    gap: 8px;
+  }
+  .sidebar nav svg {
+    width: 28px;
+    height: 28px;
+  }
+  .brand > svg {
+    fill: currentColor;
+  }
+}
+
+@media (min-width: 901px) {
+  .app-frame {
+    --canvas-scale: calc(100vw / 1672px);
+    width: 1672px;
+    zoom: var(--canvas-scale);
+    min-height: calc(100vh / var(--canvas-scale));
+    font-size: 20px;
+  }
+  .app-body {
+    grid-template-columns: 230px minmax(0, 1fr);
+    min-height: calc(100vh / var(--canvas-scale) - 84px);
+  }
+  .app-header {
+    height: 82px;
+  }
+  .sidebar nav button {
+    font-size: 23px;
+    height: 55px;
+    padding: 8px 13px;
+    gap: 13px;
+  }
+  .sidebar nav svg {
+    width: 31px;
+    height: 31px;
+  }
+  .brand {
+    min-width: 450px;
+  }
+  .brand strong {
+    font-size: 35px;
+  }
+  .brand span {
+    font-size: 23px;
+  }
+  .page-title {
+    font-size: 34px;
+    padding-left: 30px;
+  }
+  .investigation-top .panel-body {
+    min-height: 104px;
+  }
+  .result-row {
+    padding: 15px 0;
+  }
+  .result-title {
+    font-size: 18px;
+  }
+  .result-title small {
+    font-size: 16px;
+  }
+  .investigation-columns {
+    grid-template-columns: 0.95fr 1.33fr;
+  }
+  .investigation-detail .panel-body {
+    min-height: 330px;
+  }
+  .overview-top .panel-body {
+    min-height: 274px;
+  }
+  .overview-page .applications .details-body {
+    min-height: 125px;
+  }
+}
+.brand-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+.science-symbol {
+  background: #020203;
+  overflow: hidden;
+  min-width: 129px;
+  width: 129px;
+  height: 134px;
+}
+.science-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 901px) {
+  .compare-page > .expandable > summary > span:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .compare-page > .expandable > summary {
+    min-height: 42px;
+    padding: 6px 16px;
+  }
+  .compare-page > .expandable > summary small {
+    font-size: 16px;
+  }
+  .compare-page .two-panels .panel-body {
+    padding: 8px 17px;
+  }
+  .compare-page .comparison-table td,
+  .compare-page .comparison-table tbody th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .investigation-top .environment-options button {
+    flex-direction: row;
+    min-height: 47px;
+  }
+  .investigation-top .environment-options svg {
+    display: none;
+  }
+  .investigation-top .panel-caption {
+    margin-top: -3px;
+    margin-bottom: 6px;
+  }
+  .investigation-top .panel-body {
+    padding: 10px 17px;
+    min-height: 110px;
+  }
+  .investigations-page {
+    gap: 12px;
+  }
+  .investigation-columns .result-row {
+    padding: 11px 0;
+  }
+  .investigation-detail .panel-body {
+    min-height: 330px;
+  }
+  .investigation-detail .selected-summary {
+    gap: 15px;
+  }
+}
+@media (max-width: 900px) {
+  .brand-logo {
+    width: 45px;
+    height: 45px;
+  }
+  .science-symbol {
+    min-width: 92px;
+    width: 92px;
+    height: 99px;
+  }
+}
+@media (min-width: 901px) {
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  .page-title {
+    font-size: 42px;
+  }
+  .search-heading h1 {
+    font-size: 34px;
+  }
+  .search-input input {
+    font-size: 24px;
+  }
+  .ranking-name {
+    min-width: 215px;
+  }
+  .ranking-name strong {
+    font-size: 32px;
+  }
+  .ranking-row > svg {
+    width: 50px;
+    height: 50px;
+  }
+  .ranking-row p {
+    font-size: 20px;
+  }
+  .ranking-row .status {
+    font-size: 17px;
+    max-width: 205px;
+  }
+  .goal-options strong {
+    font-size: 30px;
+  }
+  .goal-options small {
+    font-size: 21px;
+  }
+  .qa-checks summary strong {
+    font-size: 28px;
+  }
+  .qa-checks summary small {
+    font-size: 19px;
+  }
+  .comparison-table {
+    font-size: 20px;
+  }
+  .comparison-table th:first-child {
+    font-size: 23px;
+  }
+  .rankings-page > .expandable > summary > span:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .rankings-page > .expandable > summary {
+    min-height: 46px;
+  }
+}
+
+@media (min-width: 901px) {
+  .sidebar nav button {
+    font-size: 20px;
+  }
+}

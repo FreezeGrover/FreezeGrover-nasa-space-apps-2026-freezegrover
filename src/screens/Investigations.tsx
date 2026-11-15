@@ -1,0 +1,356 @@
+"use client";
+import {
+  prioritizeForEnvironment,
+  environmentRelevance,
+} from "@/lib/research/environment-relevance";
+import { CatalogBriefing } from "@/components/CatalogBriefing";
+import { useEffect, useState } from "react";
+import { FileText, Flask, CaretRight, Sparkle } from "@phosphor-icons/react";
+import type { Environment } from "@/types/research";
+import { investigations } from "@/lib/research/catalog";
+import { retrieveInvestigations } from "@/lib/research/search";
+import { emptyFilters, filterInvestigations } from "@/lib/research/filters";
+import { InvestigationFilters } from "@/components/InvestigationFilters";
+import { ResearchDialog } from "@/components/ResearchDialog";
+import { Panel, Status, Notice, SourceLink } from "@/components/ui";
+import { InvestigationDetail } from "@/components/InvestigationDetail";
+import { MissionContext } from "@/components/MissionContext";
+import { Applications } from "@/components/Applications";
+import type { ResearchAnswer as Answer } from "@/types/answer";
+import { ResearchAnswer } from "@/components/ResearchAnswer";
+import { FetchingResearch } from "@/components/FetchingResearch";
+export function Investigations({
+  query: submittedQuery,
+  onBrowseCatalog = () => {},
+  answer: submittedAnswer = null,
+  searching = false,
+  onReview = () => {},
+  showResults,
+  onResultsChange: setShowResults,
+  environment,
+  setEnvironment,
+  onContextChange,
+}: {
+  query: string;
+  onBrowseCatalog?: () => void;
+  answer?: Answer | null;
+  searching?: boolean;
+  onReview?: (id: string, statement: string) => void;
+  showResults: boolean;
+  onResultsChange: (open: boolean) => void;
+  environment: Environment;
+  setEnvironment: (v: Environment) => void;
+  onContextChange?: (ids: string[]) => void;
+}) {
+  const [showDetail, setShowDetail] = useState(false);
+  const [selected, setSelected] = useState(environment === "All" ? "flex" : "");
+  const [filters, setFilters] = useState({ ...emptyFilters });
+  const [browseAll, setBrowseAll] = useState(false);
+  useEffect(() => setBrowseAll(false), [submittedQuery, submittedAnswer]);
+  const query = browseAll ? "" : submittedQuery;
+  const answer = browseAll ? null : submittedAnswer;
+  function browseCatalog() {
+    setBrowseAll(true);
+    setFilters({ ...emptyFilters });
+    setSelected("");
+    setShowResults(false);
+  }
+  const paused = answer?.mode === "unavailable";
+  const matches = searching
+    ? []
+    : answer && answer.query === query
+      ? answer.recordIds.flatMap((id) => {
+          const item = investigations.find((record) => record.id === id);
+          return item
+            ? [
+                {
+                  item,
+                  reasons: [
+                    answer.mode === "openai"
+                      ? "AI-selected · NASA quote checked"
+                      : "Catalog match",
+                  ],
+                  relevance: 0,
+                },
+              ]
+            : [];
+        })
+      : retrieveInvestigations(investigations, query);
+  const results = prioritizeForEnvironment(
+    filterInvestigations(
+      matches.map((match) => match.item),
+      filters,
+    ),
+    environment,
+  );
+  const item = results.find((i) => i.id === selected) ?? results[0];
+  useEffect(() => {
+    onContextChange?.(item ? [item.id] : []);
+  }, [item?.id, onContextChange]);
+  function renderResults(expanded: boolean) {
+    return (
+      <div className="result-list">
+        {(expanded ? results : results.slice(0, 2)).map((record, index) => (
+          <button
+            key={record.id}
+            className={`result-row ${record.id === item?.id ? "active" : ""}`}
+            onClick={() => {
+              setSelected(record.id);
+              if (expanded) {
+                setShowResults(false);
+                setShowDetail(true);
+              }
+            }}
+            aria-pressed={record.id === item?.id}
+          >
+            <span className="result-index">{index + 1}</span>
+            <Flask />
+            <span className="result-title">
+              <strong>{record.name}</strong>
+              <small>{record.title}</small>
+              <small>{record.sourceLabel.split(" · ")[0]}</small>
+              {(query || environment !== "All") && (
+                <small className="match-reason">
+                  {matches
+                    .find((match) => match.item.id === record.id)
+                    ?.reasons.join(" · ")}
+                  {environment !== "All" &&
+                    " · " +
+                      environmentRelevance(record, environment).reasons.join(
+                        " · ",
+                      )}
+                </small>
+              )}
+            </span>
+            <Status label="Not Assessed" />
+            <CaretRight />
+          </button>
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="investigations-page">
+      <InvestigationFilters value={filters} onChange={setFilters} />
+      <div className="retrieval-summary" role="status">
+        {environment !== "All" && (
+          <strong className="investigation-context-badge">
+            Prioritized for {environment}
+          </strong>
+        )}
+
+        {searching
+          ? "Fetching information… Please wait."
+          : paused
+            ? "AI search paused · catalog browsing is available"
+            : results.length +
+              " relevant investigations" +
+              (environment !== "All"
+                ? " · prioritized for " + environment
+                : "") +
+              (query ? " for “" + query + "”" : "") +
+              " · " +
+              (answer?.mode === "openai"
+                ? "source-linked AI interpretation · review pending"
+                : "catalog retrieval")}
+      </div>
+      {query && (
+        <div className="investigation-result-scope">
+          <span>
+            Showing studies from your last question: <strong>“{query}”</strong>
+          </span>
+          <button
+            className="research-open-button"
+            disabled={searching}
+            onClick={browseCatalog}
+          >
+            Browse all investigations
+          </button>
+        </div>
+      )}
+      <div className="investigation-top">
+        <Panel title="Research Briefing" icon={<Sparkle />}>
+          {searching ? (
+            <p role="status">Fetching information…</p>
+          ) : paused ? (
+            <p>
+              AI search paused. Browse catalog matches from the results popup.
+            </p>
+          ) : (
+            <CatalogBriefing
+              compact
+              query={query}
+              records={results}
+              answer={answer}
+            />
+          )}
+        </Panel>
+        <MissionContext
+          value={environment}
+          onChange={(value) => {
+            setEnvironment(value);
+            setSelected("");
+          }}
+          compact
+        />
+      </div>
+      <div className="investigation-columns">
+        <Panel title="Research Results" icon={<FileText />}>
+          <div className="muted tiny">
+            {searching
+              ? "Preparing your response…"
+              : paused
+                ? "AI response unavailable · catalog browsing remains available"
+                : results.length
+                  ? `${results.length} retrieved NASA PSI records · review pending`
+                  : "No matches · Reset filters or refine your question"}
+          </div>
+          <button
+            className="research-open-button"
+            disabled={searching}
+            onClick={() => setShowResults(true)}
+          >
+            {searching
+              ? "Fetching information…"
+              : paused
+                ? "View search status ↗"
+                : (query
+                    ? "View search results · "
+                    : "Browse investigations · ") +
+                  results.length +
+                  " ↗"}
+          </button>
+          {results.length > 0 && (
+            <p className="results-preview-note">
+              Browse matching records in the popup.
+            </p>
+          )}
+          <div className="list-note">
+            Showing the retrieved Combustion Science catalog
+          </div>
+        </Panel>
+        {item ? (
+          <Panel title={`Selected Investigation — ${item.name}`}>
+            <div className="selected-investigation-launcher">
+              <button
+                className="research-open-button"
+                onClick={() => setShowDetail(true)}
+              >
+                Open investigation details ↗
+              </button>
+              <div className="selected-record-source">
+                <span>{item.sourceLabel.split(" · ")[0]}</span>
+                <SourceLink href={item.source} label="NASA source" />
+              </div>
+              <p className="selected-record-title">{item.title}</p>
+            </div>
+          </Panel>
+        ) : (
+          <Panel title="Selected Investigation">
+            <div className="empty-investigation-preview">
+              <span className="muted tiny">
+                {searching
+                  ? "Waiting for the completed results…"
+                  : paused
+                    ? "AI search is paused"
+                    : "No matching investigation selected"}
+              </span>
+              <button
+                className="research-open-button"
+                disabled={searching}
+                onClick={() => setShowResults(true)}
+              >
+                Review search and filters ↗
+              </button>
+            </div>
+          </Panel>
+        )}
+      </div>
+      <ResearchDialog
+        open={showResults}
+        onClose={() => setShowResults(false)}
+        title={
+          searching
+            ? "Research Search"
+            : paused
+              ? "AI Search Paused"
+              : `${query ? "Research Results" : "Catalog"} · ${results.length} investigations`
+        }
+      >
+        <div aria-busy={searching}>
+          {searching ? (
+            <FetchingResearch />
+          ) : (
+            <>
+              <div className="search-output-summary">
+                <strong>
+                  {query
+                    ? `Results for “${query}”`
+                    : "All Combustion Science Investigations"}
+                </strong>
+                {!paused && (
+                  <p>
+                    Documented NASA records · select a card to open its full
+                    investigation.
+                  </p>
+                )}
+                {Object.values(filters).some(Boolean) && (
+                  <div>
+                    <span>Active filters narrow these results.</span>
+                    <button
+                      className="research-open-button"
+                      onClick={() => setFilters({ ...emptyFilters })}
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                )}
+              </div>
+              {answer && (
+                <ResearchAnswer
+                  answer={answer}
+                  availableIds={results.map((record) => record.id)}
+                  onReview={onReview}
+                />
+              )}
+              {paused ? (
+                <button
+                  className="research-open-button"
+                  onClick={onBrowseCatalog}
+                >
+                  Browse catalog matches instead ↗
+                </button>
+              ) : (
+                <>
+                  {renderResults(true)}
+                  {!results.length && (
+                    <Notice>No documented records match these filters.</Notice>
+                  )}
+                </>
+              )}
+            </>
+          )}
+        </div>
+      </ResearchDialog>
+      <ResearchDialog
+        open={showDetail && !!item}
+        onClose={() => setShowDetail(false)}
+        title={
+          item
+            ? `${item.name} · Investigation Details`
+            : "Investigation Details"
+        }
+      >
+        {item && (
+          <InvestigationDetail
+            onResearchAction={() => setShowDetail(false)}
+            item={item}
+            onSelectRelated={setSelected}
+            availableIds={results.map((record) => record.id)}
+          />
+        )}
+      </ResearchDialog>
+      <Applications environment={environment} />
+    </div>
+  );
+}

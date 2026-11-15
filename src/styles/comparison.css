@@ -1,0 +1,124 @@
+.compare-controls {
+  display: grid;
+  grid-template-columns: 1fr 70px 1fr 190px;
+  gap: 20px;
+}
+.comparison-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--navy);
+  border-radius: 13px;
+  padding: 5px 15px;
+  min-height: 45px;
+  color: var(--navy);
+}
+select {
+  background: white;
+  border: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 0 5px;
+}
+.comparison-picker strong {
+  font-size: 19px;
+  white-space: nowrap;
+}
+.compare-controls > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.compare-controls > button svg {
+  width: 30px;
+  height: 30px;
+}
+.comparison-table-wrap {
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.comparison-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 18px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 8px 17px;
+  vertical-align: top;
+  border-right: 1px solid #90acd6;
+  border-bottom: 1px solid #90acd6;
+  text-align: left;
+  font-weight: 400;
+}
+.comparison-table tr:last-child > * {
+  border-bottom: 0;
+}
+.comparison-table tr > *:last-child {
+  border-right: 0;
+}
+.comparison-table th:first-child {
+  width: 30%;
+  font-size: 21px;
+  font-weight: 700;
+}
+.comparison-table thead th {
+  background: #e6f2ff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 8px;
+}
+.comparison-table thead th small {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+}
+.comparison-table th svg {
+  margin-right: 15px;
+  width: 33px;
+  height: 33px;
+}
+.show-all {
+  align-self: center;
+  padding: 5px 30px;
+  font-weight: 700;
+  font-size: 21px;
+  min-width: 65%;
+}
+.show-all span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.two-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.two-panels .panel-body {
+  font-size: 17px;
+}
+.two-panels .panel-body p {
+  font-size: 16px;
+}
+.source-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  font-size: 17px;
+}
+.source-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  border-right: 1px solid #b1c9f4;
+  padding-right: 15px;
+}

@@ -1,0 +1,36 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #0b164480;
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 20px;
+}
+.modal {
+  position: relative;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 32px;
+  max-width: 670px;
+  box-shadow: 0 20px 80px #10265833;
+}
+.modal h2 {
+  margin: 15px 0;
+}
+.modal p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px;
+}
+.modal .search-button {
+  margin-top: 20px;
+  width: 100%;
+}

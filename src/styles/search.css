@@ -1,0 +1,76 @@
+.research-search {
+  margin-bottom: 17px;
+}
+.search-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-weight: 700;
+}
+.mode-switch > div {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.mode-switch button {
+  border: 0;
+  border-radius: 24px;
+  padding: 5px 30px;
+  font-size: 21px;
+  min-width: 126px;
+}
+.research-search form {
+  display: flex;
+  gap: 22px;
+}
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1.5px solid var(--navy);
+  border-radius: 14px;
+  padding: 5px 15px;
+  flex: 1;
+  min-width: 0;
+  height: 47px;
+}
+.search-input svg {
+  width: 30px;
+  height: 30px;
+  color: var(--navy);
+}
+input {
+  border: 0;
+  outline: 0;
+  min-width: 0;
+  width: 100%;
+  background: transparent;
+  font-size: 20px;
+}
+input::placeholder {
+  color: var(--navy);
+  opacity: 0.9;
+}
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 144px;
+  font-size: 23px;
+  font-weight: 700;
+  background: var(--soft);
+  color: var(--navy);
+  padding: 6px 18px;
+}
+.search-button svg {
+  width: 28px;
+  height: 28px;
+}

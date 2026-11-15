@@ -1,0 +1,93 @@
+.investigation-filters {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.filter-dropdowns {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+.filter-dropdowns label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 17px;
+  color: var(--navy);
+  font-weight: 700;
+}
+.filter-dropdowns select {
+  width: 100%;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 7px;
+  background: white;
+  cursor: pointer;
+}
+.filter-dropdowns select:hover,
+.filter-dropdowns select:focus {
+  border-color: var(--blue);
+  background: #eef7ff;
+}
+.reset-filters {
+  font-size: 15px;
+  padding: 10px 8px;
+  white-space: nowrap;
+}
+.reset-filters:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.retrieval-summary {
+  font-size: 14px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.match-reason {
+  color: #36527d;
+  font-size: 13px !important;
+}
+.result-row:hover .match-reason {
+  color: white;
+}
+.related-research {
+  margin: 8px 0;
+}
+.related-research li {
+  margin-bottom: 8px;
+}
+.related-research button {
+  font-size: 14px;
+  padding: 3px 8px;
+  margin-left: 8px;
+}
+.investigation-detail .details-body .source-link {
+  margin: 5px 12px 5px 0;
+}
+@media (max-width: 900px) {
+  .filter-dropdowns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .investigation-filters {
+    align-items: flex-start;
+  }
+  .filter-dropdowns label {
+    font-size: 14px;
+  }
+  .filter-dropdowns select {
+    font-size: 14px;
+  }
+}
+
+.investigations-page .retrieval-summary { font-size:13px; line-height:1.4; color:var(--navy); display:flex; gap:8px; align-items:center; flex-wrap:wrap; white-space:normal; overflow:visible; }
+.investigation-context-badge { display:inline-block; padding:3px 9px; border:1px solid var(--line); border-radius:12px; background:var(--soft); color:#075eac; flex-shrink:0; }
+.investigation-result-scope { display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:13px; color:var(--navy); }
+.investigation-result-scope .research-open-button { margin:0; flex-shrink:0; }

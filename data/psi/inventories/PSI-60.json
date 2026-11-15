@@ -1,0 +1,16 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "68dc02570b12ea5f81a2c173",
+      "name": "PSI-60_metadata_NEWID-5_Computational and Ex.zip",
+      "key": "psi-data/PSI-60/metadata/PSI-60_metadata_NEWID-5_Computational and Ex.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 7743,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

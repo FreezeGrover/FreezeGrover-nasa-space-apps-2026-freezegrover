@@ -1,0 +1,37 @@
+.psi-table-evidence {
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #add3ef;
+  border-radius: 9px;
+  overflow-wrap: anywhere;
+}
+.psi-table-scroll {
+  max-width: 100%;
+  overflow: auto;
+  max-height: 230px;
+  margin-top: 10px;
+}
+.psi-table-scroll table {
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.psi-table-scroll th,
+.psi-table-scroll td {
+  border: 1px solid #cbdbe8;
+  padding: 6px;
+  min-width: 100px;
+  text-align: left;
+}
+.psi-source-text {
+  white-space: pre-line;
+}
+.investigation-detail .selected-summary p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.result-title strong,
+.result-title small {
+  overflow-wrap: anywhere;
+}

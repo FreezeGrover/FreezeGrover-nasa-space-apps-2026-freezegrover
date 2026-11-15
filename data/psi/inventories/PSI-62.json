@@ -1,0 +1,16 @@
+{
+  "status": "retrieved",
+  "files": [
+    {
+      "id": "691cc8941e54369ebd26f6f7",
+      "name": "PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+      "key": "psi-data/PSI-62/metadata/PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip",
+      "category": "Investigation Metadata Files",
+      "bytes": 9694,
+      "version": 1,
+      "restricted": false,
+      "visible": true
+    }
+  ],
+  "error": null
+}

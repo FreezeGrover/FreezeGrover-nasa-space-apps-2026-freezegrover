@@ -1,0 +1,111 @@
+:root {
+  --blue: #0088ff;
+  --navy: #060b65;
+  --line: #3a83ff;
+  --soft: #edf7ff;
+  --text: #10143b;
+  --muted: #535e7c;
+  --radius: 18px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: white;
+  color: var(--text);
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: clamp(14px, 1.16vw, 20px);
+  line-height: 1.17;
+}
+button,
+input,
+select,
+textarea {
+  color: inherit;
+}
+button,
+a,
+summary,
+select {
+  touch-action: manipulation;
+}
+button {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 9px 17px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+button:hover,
+button.selected {
+  background: var(--blue);
+  color: white;
+  border-color: #0076e6;
+}
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #118afa;
+  outline-offset: 3px;
+}
+button svg,
+summary svg {
+  flex-shrink: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+strong {
+  font-weight: 700;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.43rem;
+  color: var(--navy);
+}
+h3 {
+  font-size: 1.16rem;
+  color: var(--navy);
+}
+ul,
+ol {
+  padding-left: 1.25em;
+}
+li + li {
+  margin-top: 0.24em;
+}
+p + p {
+  margin-top: 0.45em;
+}
+small {
+  font-size: 0.83em;
+}
+svg {
+  vertical-align: middle;
+}
