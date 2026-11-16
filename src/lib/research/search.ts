@@ -1,7 +1,7 @@
 import type { Investigation } from "@/types/research";
 import { getExperimentMetadata } from "./metadata";
 const stopWords = new Set(
-  "how does do did what why when where which who is are was were a an the in on of for to and or with from by about affect affects affected effect effects influence influences impact impacts happen happens under compare compared between than can could would should will tell me explain show find research investigation investigations experiments experiment studies study evidence data increased increase decrease behave behavior behaviour whether changing changes change alters alter concentration concentrations over measured measure determine determines relate related".split(
+  "how does do did what why when where which who is are was were a an the in on of for to and or with from by about affect affects affected effect effects influence influences impact impacts happen happens under compare compared between than can could would should will tell me explain show find research investigation investigations experiments experiment studies study evidence data observing observed small faint very became disappeared disappearing disappears vanished vanishing fading faded fade after while during flame flames combustion increased increase decrease behave behavior behaviour whether changing changes change alters alter concentration concentrations over measured measure determine determines relate related".split(
     " ",
   ),
 );
@@ -29,7 +29,7 @@ const concepts = [
   },
   {
     key: "suppression",
-    pattern: /\b(extinguish\w*|extinction|suppress\w*|put out)\b/g,
+    pattern: /\b(extinguish\w*|extinction|suppress\w*|put out|went out|died out|burned out|burnt out)\b/g,
     terms: ["extinction", "extinguishment", "suppressant", "suppression"],
   },
   {
@@ -115,7 +115,7 @@ export function retrieveInvestigations(
       remaining = remaining.replace(new RegExp(concept.pattern), " ");
     }
   }
-  const gravityTerms = [
+  // Observational wording is a retrieval hint, not evidence that extinction\n  // was caused by oxygen depletion or any other mechanism.\n  if (/\bflames?\b/.test(exact) && /\b(disappear(?:ed|ing|s)?|vanish(?:ed|ing|es)?|fad(?:e|ed|ing)|went out|died out)\b/.test(exact) && !wanted.some((c) => c.key === "suppression")) {\n    wanted.push(concepts.find((c) => c.key === "suppression")!);\n  }\n  const gravityTerms = [
     "microgravity",
     "weightlessness",
     "weightless",
