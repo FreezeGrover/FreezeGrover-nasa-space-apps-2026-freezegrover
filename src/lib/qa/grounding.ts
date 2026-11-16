@@ -1,3 +1,4 @@
+import {unsupportedNumericValues} from "./numbers";
 import {findInvestigationById,getInvestigationEvidence} from "../research/catalog";
 import type {CitedStatement,EvidenceField} from "@/types/answer";
 
@@ -24,8 +25,16 @@ export function validateGrounding(statements:CitedStatement[]) {
       continue;
     }
     // Example: a quote about flame spread cannot support an invented 50% change.
-    const numbers=statement.interpretation.match(/(?<![A-Za-z-])\d+(?:\.\d+)?/g)??[];
-    if(numbers.some(number=>!statement.quote.includes(number))){
+    const record=findInvestigationById(statement.recordId)!;
+    let numericClaim=statement.interpretation;
+    // FLEX-2 and PSI-68 are source identities, not experimental measurements.
+    // Ignore only the complete identity of this cited record, never bare digits.
+    for(const label of [record.name,record.sourceLabel.split(" · ")[0]]){
+      const escaped=label.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+      numericClaim=numericClaim.replace(new RegExp(`(?<![a-z0-9])${escaped}(?![a-z0-9])`,"gi"),"");
+    }
+    const unsupported=unsupportedNumericValues(numericClaim,statement.quote);
+    if(unsupported.length){
       issues.push("A statement was withheld because it introduced an unsupported numerical value.");
       continue;
     }
@@ -35,3 +44,4 @@ export function validateGrounding(statements:CitedStatement[]) {
   // Accepted interpretations still need independent scientific review.
   return {accepted,issues};
 }
+

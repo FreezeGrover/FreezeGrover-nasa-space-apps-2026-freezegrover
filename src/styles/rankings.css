@@ -109,3 +109,69 @@
   white-space: normal;
   text-align: center;
 }
+
+.ranking-question { color:var(--navy); font-size:13px; }
+.ranking-question label { font-weight:600; }
+.ranking-question > div { display:flex; align-items:center; gap:8px; margin-top:5px; }
+.ranking-question input { flex:1; min-width:0; border:1px solid var(--line); border-radius:9px; padding:8px 10px; background:white; color:var(--navy); font:inherit; }
+.ranking-question .research-open-button { margin:0; flex-shrink:0; }
+.ranking-question-scope { font-size:13px; color:var(--navy); }
+.ranking-assessment-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.ranking-assessment-dimensions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:16px 0; }
+.ranking-assessment-dimensions > div { border:1px solid var(--line); background:white; border-radius:12px; padding:14px; }
+.ranking-assessment-dimensions dt { font-weight:700; color:var(--navy); margin-bottom:8px; }
+.ranking-assessment-dimensions dd { margin:0; }
+.ranking-assessment p,.ranking-assessment li { overflow-wrap:anywhere; font-size:14px; line-height:1.45; }
+.ranking-assessment ul { padding-left:20px; margin-top:8px; }
+.ranking-assessment > details { margin:12px 0; }
+.ranking-assessment summary { color:var(--navy); font-weight:600; cursor:pointer; }
+.ranking-name .research-open-button { font-size:12px; margin:4px 0 0; }
+.qa-assessment-context { white-space:pre-wrap; }
+.app-frame .screen-content:has(.rankings-page) { overflow:auto; }
+.rankings-page { height:auto; min-height:100%; }
+@media(max-width:700px){.ranking-assessment-dimensions { grid-template-columns:1fr; }.ranking-question > div { flex-wrap:wrap; }.ranking-question input { flex-basis:100%; }}
+
+.ranking-assessment .status { white-space:normal; max-width:100%; height:auto; }
+
+.ranking-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ranking-results-context,
+.ranking-next-step {
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ranking-question button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.app-frame .rankings-page .goal-options small {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+.app-frame .rankings-page .goal-options > button {
+  min-height: 80px;
+}
+.app-frame .rankings-page .ranking-question {
+  font-size: 14px;
+}
+.app-frame .rankings-page .ranking-question .research-open-button {
+  font-size: 14px;
+  padding: 9px 12px;
+}
+.app-frame .rankings-page .ranking-row p {
+  display: block;
+  overflow: visible;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.app-frame .rankings-page .environment-picker {
+  font-size: 14px;
+  padding: 9px 12px;
+}

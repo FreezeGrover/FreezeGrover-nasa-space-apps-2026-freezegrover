@@ -1,7 +1,7 @@
 "use client";
 import { InvestigationPicker } from "@/components/InvestigationPicker";
 import { ResearchDialog } from "@/components/ResearchDialog";
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import {
   ArrowsLeftRight,
   MagnifyingGlass,
@@ -15,11 +15,13 @@ import { getExperimentMetadata } from "@/lib/research/metadata";
 import { investigations } from "@/lib/research/catalog";
 import { analyzeComparison, compareExperimentalConditions } from "@/lib/comparison/compare";
 import { Notice, Panel, Expandable, Status, SourceLink } from "@/components/ui";
-export function Compare() {
-  const [a, setA] = useState("flex");
-  const [b, setB] = useState("flex2");
+export function Compare({initialPair,onContextChange}:{initialPair?:string[];onContextChange?:(ids:string[])=>void}={}) {
+  const [a, setA] = useState(initialPair?.[0]??"flex");
+  const [b, setB] = useState(initialPair?.[1]??"flex2");
   const [all, setAll] = useState(false);
-  const [pair, setPair] = useState(["flex", "flex2"]);
+  const [pair, setPair] = useState(initialPair??["flex", "flex2"]);
+  useEffect(()=>{if(initialPair?.length===2){setA(initialPair[0]);setB(initialPair[1]);setPair(initialPair);}},[initialPair]);
+  useEffect(()=>{onContextChange?.([a,b]);},[a,b,onContextChange]);
   const left = investigations.find((i) => i.id === pair[0])!;
   const right = investigations.find((i) => i.id === pair[1])!;
   const rows = compareExperimentalConditions(left, right);

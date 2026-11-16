@@ -43,3 +43,93 @@
 .qa-workspace .qa-area-card p { font-size:18px; line-height:1.45; margin-bottom:10px; }
 .qa-workspace .qa-area-status { font-size:15px; padding:4px 9px; }
 .qa-workspace .qa-area-card { padding:16px; }
+
+.qa-workspace .qa-review-card #qa-statement { height:auto; min-height:72px; max-height:160px; resize:vertical; }
+
+.qa-handoff-question { font-size:13px; color:var(--navy); margin-bottom:8px; }
+.qa-handoff-evidence { font-size:13px; color:var(--navy); margin:7px 0; }
+.qa-handoff-evidence summary { cursor:pointer; font-weight:600; }
+.qa-handoff-evidence blockquote { border-left:2px solid var(--line); margin:8px 0; padding:8px 12px; white-space:pre-wrap; }
+.app-frame .screen-content:has(.qa-handoff-question) { overflow:auto; }
+.qa-workspace:has(.qa-handoff-question) { height:auto; min-height:100%; grid-template-rows:auto auto auto auto auto; }
+.qa-workspace:has(.qa-handoff-question) .qa-review-grid { grid-template-rows:repeat(2,minmax(130px,auto)); }
+.qa-handoff-evidence blockquote { overflow-wrap:anywhere; max-height:240px; overflow:auto; }
+
+.qa-answer-context {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  padding: 16px;
+}
+.qa-answer-context h3,
+.qa-statement-choice label,
+.qa-checks-title {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 16px;
+}
+.qa-answer-context > p {
+  margin: 8px 0 12px;
+}
+.qa-statement-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.qa-statement-choice select {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--navy);
+  background: white;
+  font: inherit;
+}
+.qa-workspace .qa-check-preview {
+  font-size: 14px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.qa-exact-passage {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+}
+.qa-exact-passage blockquote {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-left: 2px solid var(--line);
+  padding-left: 12px;
+  margin: 12px 0;
+}
+.qa-full-context {
+  margin-top: 16px;
+}
+.qa-workspace:has(.qa-answer-context) {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.app-frame .screen-content:has(.qa-answer-context) {
+  overflow: auto;
+}
+.qa-workspace:has(.qa-answer-context) .qa-area-card {
+  min-height: 170px;
+}
+
+.app-frame .qa-workspace .qa-introduction p {
+  display: block;
+}
+.app-frame .screen-content:has(.qa-workspace) {
+  overflow: auto;
+}
+.app-frame .qa-workspace {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}

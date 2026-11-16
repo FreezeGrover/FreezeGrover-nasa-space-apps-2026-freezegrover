@@ -1,0 +1,83 @@
+[
+  {
+    "id": "nasa-glenn-combustion",
+    "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:05.207898+00:00",
+    "rawSha256": "83997de9c903c96e3e2062255c6484dca65f014e2ade6a318c9b4bfb1f489f3a",
+    "extractedTextSha256": "e17b6c15ec30aab5d9dc8fd900a541cf5f55c7504bdbd1a361231531a3513d37",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-combustion-guide",
+    "url": "https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:05.125250+00:00",
+    "rawSha256": "314f08a4d9858c281b8cb8c2a5572ae4bab80074121ec57862be52f36f49b9a1",
+    "extractedTextSha256": "58af7dc295103d0f674a392fb320f927a54c7eef88f72bc7b8fd79dd0163dc61",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-combustion-guide-pdf",
+    "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:09.888255+00:00",
+    "rawSha256": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+    "extractedTextSha256": "17365a349d05b89996399e616f3b4f1a9bafbb495b3b1d4cc48256fd9e4ae9fb",
+    "method": "Reviewed transcription, printed pages 12–13; checked against the rendered NASA PDF"
+  },
+  {
+    "id": "nasa-apollo-1",
+    "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-1",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:43:00.956120+00:00",
+    "rawSha256": "877286547e9b03db87f9b6a51e4053c071c76e9bbd391ad5f96e8466f3a41220",
+    "extractedTextSha256": "e9912d6893d783a11e84b959481711dca62fed72eebc18e84094a9a820481224",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-mir-fire",
+    "url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:05.029907+00:00",
+    "rawSha256": "e8c593ad5da2d14d60643d21014aeb1c7b6b97ecd9f89e4292f505390b271b56",
+    "extractedTextSha256": "95584de25f37c714bf60ca03bad2db63165fb66be88380a8532030e3b59f9a5e",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-air-tanks",
+    "url": "https://spinoff.nasa.gov/node/9582",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:06.412692+00:00",
+    "rawSha256": "dd5b1203292e60120004a61ecd89f426c8e50d2bdfa75fcc560cf8e88f6d8764",
+    "extractedTextSha256": "0fb93510b8aa3fd065b5ea9f5f928ff7856953daaf0728efe02202ce7dd0983b",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-fire-detector",
+    "url": "https://spinoff.nasa.gov/node/9407",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:06.429438+00:00",
+    "rawSha256": "ae02ae678a75fec41696c3fab962b7c3b6e5ce68e1fb77ef3edf653f23a81367",
+    "extractedTextSha256": "d58df0c94fd8feac1a0d070d457e89091cfa240468e2d5fb4aeaf642f4f73b25",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-fire-attire",
+    "url": "https://spinoff.nasa.gov/node/9918",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:40:06.406740+00:00",
+    "rawSha256": "fa5bbda2a2d09c46a14b27098677e5fd71c3f019c5eb6031fc5f71603fc52115",
+    "extractedTextSha256": "98f497675a966a55b33adeabb95b4efa0dfe59b092c8b8ed22a72a759b516a3d",
+    "method": "HTML text extraction; scripts and styles excluded; whitespace normalized"
+  },
+  {
+    "id": "nasa-sciencecasts",
+    "url": "https://www.youtube.com/watch?v=W1oXykoz9zg",
+    "inspectionStatus": "inspected",
+    "retrievedAt": "2026-11-14T23:43:00.956120+00:00",
+    "rawSha256": "c06c04ad3d5d7ac93299aed6b5ede666891f8bc7b819ce43005287fb725698f2",
+    "extractedTextSha256": "c06c04ad3d5d7ac93299aed6b5ede666891f8bc7b819ce43005287fb725698f2",
+    "method": "Official NASA Science video; exported English captions, authored or unspecified"
+  }
+]

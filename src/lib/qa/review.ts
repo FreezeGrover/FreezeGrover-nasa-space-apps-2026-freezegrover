@@ -1,3 +1,4 @@
+import {unsupportedNumericValues} from "./numbers";
 import {getInvestigationEvidence,findInvestigationById} from "../research/catalog";
 import {getExperimentMetadata} from "../research/metadata";
 export interface ReviewCheck {title:string;question:string;status:string;detail:string;}
@@ -5,10 +6,10 @@ export function reviewScientificClaim(claim:string,investigationId="bass2"):Revi
  const evidence=getInvestigationEvidence(investigationId),record=findInvestigationById(investigationId)!;
  const metadata=getExperimentMetadata(investigationId);
  const source=[evidence.objective,evidence.approach,record.measurements,record.conditions].join(" ");
- const numbers=claim.match(/\d+(?:\.\d+)?(?:\s*%)?/g)??[];
+
  // A number absent from the narrative needs checking in the original tables.
  // A matching number alone does not prove that its quantity or units are correct.
- const unsupported=numbers.filter(number=>!source.includes(number));
+ const unsupported=unsupportedNumericValues(claim,source);
  const comparative=/\b(increas|decreas|higher|lower|faster|slower|safer|more effective)/i.test(claim);
  const baseline=/\b(compared (?:with|to)|relative to|versus|baseline|than)\b/i.test(claim);
  const tables=evidence.tables.filter(table=>table.status==="downloaded");
@@ -25,6 +26,7 @@ export function reviewScientificClaim(claim:string,investigationId="bass2"):Revi
  {title:"Uncertainty, Multiple Interpretations & Research Gaps",question:"Which gaps affect this specific statement?",status:claim.trim()?"Needs Review":"Pending Review",
  detail:(comparative&&!baseline?"Comparative wording has no explicit baseline. ":comparative?"A baseline is mentioned; matched conditions still need checking. ":"No comparative wording detected. ")+metadata.gravityGap+" "+record.limitation},
  {title:"Independent QA Review & Ranking Verification",question:"Has a separate scientific reviewer assessed this claim?",status:"Pending Review",
- detail:"Deterministic checks ran on "+evidence.accession+" independently of answer generation. No independent human or AI scientific reviewer is connected. Metadata checks and saved notes do not establish scientific validity."}
+ detail:"Deterministic checks ran on "+evidence.accession+" independently of answer generation. Conversational replies receive a separate automated semantic review. Manual drafts here receive deterministic checks and remain pending human scientific review. Metadata checks and saved notes do not establish scientific validity."}
  ];
 }
+

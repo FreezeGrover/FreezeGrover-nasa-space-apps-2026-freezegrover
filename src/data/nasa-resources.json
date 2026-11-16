@@ -1,0 +1,742 @@
+{
+  "version": 1,
+  "resources": [
+    {
+      "id": "nasa-glenn-combustion",
+      "title": "NASA Glenn Combustion Science",
+      "role": "Scientific background",
+      "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/",
+      "retrievedAt": "2026-11-14T23:40:05.207898+00:00",
+      "sha256": "83997de9c903c96e3e2062255c6484dca65f014e2ade6a318c9b4bfb1f489f3a",
+      "snapshotPath": "data/nasa-resources/glenn-combustion.html",
+      "tags": [
+        "combustion",
+        "microgravity",
+        "gravity",
+        "fire safety",
+        "oxygen",
+        "suppression",
+        "smoke",
+        "CIR",
+        "ACME",
+        "FLEX",
+        "BASS"
+      ],
+      "limitations": "Program overview and archived experiment descriptions, not test-level measurements or proof of a commercial application.",
+      "excerpts": [
+        {
+          "id": "overview",
+          "text": "The Combustion Science Discipline conducts idealized experiments on the International Space Station where the removal of gravity enables researchers to study details of the combustion processes that cannot be readily studied on the ground. The Space Station environment also provides an important test-bed for studying spacecraft fire risk.",
+          "locator": "Overview",
+          "kind": "background",
+          "sha256": "fddfcd4cf383d0fca017438df6992f2f49eaeab730c3387531542fab32e2f7f9"
+        },
+        {
+          "id": "flex",
+          "text": "The Flame Extinguishment Experiment (FLEX) experiment was designed to assess and quantify the effectiveness of inert-gas suppressants in microgravity and obtain the most conservative estimate of the limiting oxygen index for steady combustion.",
+          "locator": "Archived experiments · FLEX",
+          "kind": "background",
+          "sha256": "b285ffdf79aabcfac1a6f2fc6b3a0095ff748550a39ba44bbde7c0e56b7e8e86"
+        },
+        {
+          "id": "acme",
+          "text": "ACME is focused on advanced combustion technology via fundamental microgravity research. The primary goal is to improve efficiency and reduce pollutant emission in practical terrestrial combustion.",
+          "locator": "Archived experiments · ACME",
+          "kind": "prospect",
+          "sha256": "42009166d8bead24a8c5aef0bb896f03d6aea830594e69e97731e7f191ae2236"
+        },
+        {
+          "id": "bass",
+          "text": "The Burning and Suppression of Solids (BASS) investigation examines the burning and extinction characteristics of a wide variety of fuel samples in microgravity.",
+          "locator": "Archived experiments · BASS",
+          "kind": "background",
+          "sha256": "3316fb217817a0faa38b57eb5b02251591ec1fceab39a57a5c298de447c42986"
+        }
+      ],
+      "links": [
+        {
+          "recordId": "flex",
+          "excerptId": "flex",
+          "basis": "Explicitly names FLEX."
+        },
+        {
+          "recordId": "psi-26",
+          "excerptId": "bass",
+          "basis": "Explicitly names BASS; this is not a BASS-II attribution."
+        }
+      ],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "e17b6c15ec30aab5d9dc8fd900a541cf5f55c7504bdbd1a361231531a3513d37"
+    },
+    {
+      "id": "nasa-combustion-guide",
+      "title": "A Researcher’s Guide to Combustion Science · landing page",
+      "role": "Scientific background",
+      "url": "https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/",
+      "retrievedAt": "2026-11-14T23:40:05.125250+00:00",
+      "sha256": "314f08a4d9858c281b8cb8c2a5572ae4bab80074121ec57862be52f36f49b9a1",
+      "snapshotPath": "data/nasa-resources/combustion-guide.html",
+      "tags": [
+        "combustion",
+        "gravity",
+        "buoyancy",
+        "microgravity",
+        "spacecraft",
+        "safety",
+        "guide"
+      ],
+      "limitations": "Landing-page introduction to the October 2015 guide. The separate PDF excerpts have page locators; neither is a new dataset.",
+      "excerpts": [
+        {
+          "id": "buoyancy",
+          "text": "In the absence of gravity, buoyancy can be suppressed, and the analyses can be reduced to much simpler one-dimensional systems, adding to the body of knowledge.",
+          "locator": "2015 edition introduction",
+          "kind": "background",
+          "sha256": "16d59cc33a7f3879043dadcc199d623c0f07819b5550714a2a731d2713ce3566"
+        },
+        {
+          "id": "safety",
+          "text": "For future exploration missions, fire safety is an important operational element to minimize the likelihood and impact of accidental fires in spacecraft and human habitats. An improved knowledge of combustion in reduced gravity is essential to adapting fire safety concepts and systems to the conditions of the space environment.",
+          "locator": "Introduction · exploration safety",
+          "kind": "background",
+          "sha256": "35cbf90ec16e877f9a0fd68f396d968911ed993891660d0a249f727a3c5700ad"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "58af7dc295103d0f674a392fb320f927a54c7eef88f72bc7b8fd79dd0163dc61"
+    },
+    {
+      "id": "nasa-combustion-guide-pdf",
+      "title": "ISS Combustion Science Researcher’s Guide · October 2015 PDF",
+      "role": "Scientific background",
+      "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+      "retrievedAt": "2026-11-14T23:40:09.888255+00:00",
+      "sha256": "5fe046efe4e35e506023e27a9784d041e893026f19c9987591483614aea5d6b6",
+      "snapshotPath": "data/nasa-resources/combustion-guide-pdf.pdf",
+      "tags": [
+        "FLEX",
+        "FLEX-2",
+        "droplet",
+        "extinction",
+        "oxygen",
+        "inert gas",
+        "suppression",
+        "flammability",
+        "gravity",
+        "pressure"
+      ],
+      "limitations": "A 2015 research review reporting earlier findings, not an imported primary test dataset. The quoted flammability comparison supplies no matched numerical operating limit or universal safety recommendation.",
+      "excerpts": [
+        {
+          "id": "flex-conditions",
+          "text": "The objective of the FLEX is to study heptane and methanol droplets in ambient mixtures of oxygen and nitrogen diluted with a second inert gas (nitrogen, carbon dioxide, helium or xenon). The goal of the research is to examine how the addition of an inert gas suppressant influences the flammability limit of the two fuels.",
+          "locator": "Printed p. 12 · Flame Extinguishment Experiment",
+          "kind": "background",
+          "sha256": "40313dfacea2f933735824f3452acab827b455f5b2a526b9f6aa42b4b3e29194"
+        },
+        {
+          "id": "flex-report",
+          "text": "The research to date has shown that the flammability limit is lower in reduced gravity. The implication is that terrestrial standards for inert gas suppressants in low gravity do not offer the same margin of safety as in normal gravity.",
+          "locator": "Printed p. 12 · reported research findings",
+          "kind": "observation",
+          "sha256": "9ec0292bff04652b3ec80f359087832c3c460c36a211f195fcb09ba554af8892"
+        },
+        {
+          "id": "flex2",
+          "text": "FLEX-2, the follow-on experiment, builds upon FLEX. It studies a range of fuels including mixtures of pure fuels, real fuel surrogates, soot formation, slow sub-buoyant, convective flow effects and droplet-droplet interactions.",
+          "locator": "Printed p. 13 · follow-on experiment",
+          "kind": "background",
+          "sha256": "16a85433795d1448767856f0551c6083460dd0a3990912265c64d0281e226f53"
+        }
+      ],
+      "links": [
+        {
+          "recordId": "flex",
+          "excerptId": "flex-conditions",
+          "basis": "Explicitly names FLEX and its fuel/atmosphere."
+        },
+        {
+          "recordId": "flex",
+          "excerptId": "flex-report",
+          "basis": "FLEX section on printed p. 12; reported review finding, not newly analysed measurements."
+        },
+        {
+          "recordId": "flex2",
+          "excerptId": "flex2",
+          "basis": "Explicitly names FLEX-2."
+        },
+        {
+          "recordId": "flex",
+          "excerptId": "flex2",
+          "basis": "Explicitly names FLEX as the predecessor."
+        }
+      ],
+      "extractionMethod": "Reviewed transcription, printed pages 12–13; checked against the rendered NASA PDF",
+      "extractedTextSha256": "17365a349d05b89996399e616f3b4f1a9bafbb495b3b1d4cc48256fd9e4ae9fb"
+    },
+    {
+      "id": "nasa-apollo-1",
+      "title": "Apollo 1 · NASA Safety and Mission Assurance",
+      "role": "Historical safety evidence",
+      "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-1",
+      "retrievedAt": "2026-11-14T23:43:00.956120+00:00",
+      "sha256": "877286547e9b03db87f9b6a51e4053c071c76e9bbd391ad5f96e8466f3a41220",
+      "snapshotPath": "data/nasa-resources/apollo-1.html",
+      "tags": [
+        "Apollo",
+        "Apollo 1",
+        "oxygen",
+        "hatch",
+        "combustible materials",
+        "spacecraft",
+        "incident",
+        "fire safety",
+        "history"
+      ],
+      "limitations": "A documented ground-test accident and subsequent design changes. It is not a controlled microgravity combustion experiment and does not establish PSI extinction limits or a causal link to the listed Spinoffs.",
+      "excerpts": [
+        {
+          "id": "incident",
+          "text": "On Jan. 27, Grissom, White and Chaffee were scheduled to conduct a key test on the launch pad, during which the spacecraft would switch to its own internal power. The astronauts would be wearing spacesuits with the spacecraft’s hatches closed and the cabin pressurized with 100% oxygen. During the test, a flash fire swept through the spacecraft so quickly, there was no time to open the hatches.",
+          "locator": "History · Tragedy on the Launchpad",
+          "kind": "history",
+          "sha256": "75b369db92449a97447dde7f41cbc5c2f9af5228b0087a5fa8e9f13c3b76637f"
+        },
+        {
+          "id": "lessons",
+          "text": "Following the fire, NASA decided that all future Apollo crews would fly aboard the more advanced Block II version of the spacecraft. NASA also replaced the three-piece hatch with a unified hatch that could be opened from the inside or outside within three seconds. Additionally, NASA severely restricted and controlled the number of combustible materials in the spacecraft and made those changes in the Lunar Module as well. As another safeguard, the agency designed new spacesuits using fire-resistant materials.",
+          "locator": "AS-204 Lessons Learned",
+          "kind": "history",
+          "sha256": "32b1f992730b0e44415e9623f2fd61060bef328865b7f3cbbaae01e8d071af0a"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "e9912d6893d783a11e84b959481711dca62fed72eebc18e84094a9a820481224"
+    },
+    {
+      "id": "nasa-mir-fire",
+      "title": "25 Years Ago: Fire Aboard Space Station Mir",
+      "role": "Historical safety evidence",
+      "url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/",
+      "retrievedAt": "2026-11-14T23:40:05.029907+00:00",
+      "sha256": "e8c593ad5da2d14d60643d21014aeb1c7b6b97ecd9f89e4292f505390b271b56",
+      "snapshotPath": "data/nasa-resources/mir-fire.html",
+      "tags": [
+        "Mir",
+        "oxygen",
+        "oxygen generator",
+        "smoke",
+        "escape",
+        "Soyuz",
+        "spacecraft",
+        "station",
+        "fire safety",
+        "incident",
+        "history"
+      ],
+      "limitations": "Retrospective historical account published 23 February 2022. Incident circumstances are not matched laboratory conditions, frequency estimates or evidence that a PSI experiment caused an operational design change.",
+      "excerpts": [
+        {
+          "id": "incident",
+          "text": "On Feb. 24, 1997, the six crew members aboard the Russian space station Mir faced significant danger when a fire ignited in an oxygen generating system. The searing flame, lasting several minutes, not only cut off access to one of the two Soyuz escape vehicles but also filled the station’s modules with smoke.",
+          "locator": "Opening account · 24 February 1997 incident",
+          "kind": "history",
+          "sha256": "86a8dd21ff29fd0215d39cd24595558f795fd06a1688d61fd630c2299f0f1a1d"
+        },
+        {
+          "id": "lessons",
+          "text": "The lessons learned from the incident were passed on in the design and operations of the International Space Station.",
+          "locator": "Opening account · operational lessons",
+          "kind": "history",
+          "sha256": "63617d6ef37eec8e00ec7a8417335f3173cb6ce256a2bea1f7c37cf321c75302"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "95584de25f37c714bf60ca03bad2db63165fb66be88380a8532030e3b59f9a5e"
+    },
+    {
+      "id": "nasa-air-tanks",
+      "title": "Fireman's Air Tanks",
+      "role": "Technology transfer",
+      "url": "https://spinoff.nasa.gov/node/9582",
+      "retrievedAt": "2026-11-14T23:40:06.412692+00:00",
+      "sha256": "dd5b1203292e60120004a61ecd89f426c8e50d2bdfa75fcc560cf8e88f6d8764",
+      "snapshotPath": "data/nasa-resources/air-tanks.html",
+      "tags": [
+        "firefighter",
+        "air tanks",
+        "breathing",
+        "Scott",
+        "Johnson",
+        "equipment",
+        "Earth",
+        "application",
+        "technology transfer"
+      ],
+      "limitations": "Historical NASA Spinoff description. No documented link to FLEX, ACME, SoFIE, Apollo 1 or Mir is asserted. This is not a current equipment certification or performance recommendation.",
+      "excerpts": [
+        {
+          "id": "development",
+          "text": "Together with NASA's Johnson Space Center, A-T-O Inc.'s Scott Aviation has developed light-weight firefighter's air tanks.",
+          "locator": "Article · NASA/Scott Aviation development",
+          "kind": "application",
+          "sha256": "60c8b18af78214bd74ab45a1c0e8119590dfe6f3a486fb53a7d80afada064e63"
+        },
+        {
+          "id": "materials",
+          "text": "Made of aluminum liner wrapped by resin-impregnated glass fibers, eliminating corrosion as well as lightening the load.",
+          "locator": "Article · composite tank construction",
+          "kind": "application",
+          "sha256": "32bb6e6fba201ecefa20ad24fc5e6abae5c0dce78efee7db109ae0c1b1a82783"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "0fb93510b8aa3fd065b5ea9f5f928ff7856953daaf0728efe02202ce7dd0983b"
+    },
+    {
+      "id": "nasa-fire-detector",
+      "title": "Fire Detector · Brunswick Incipient Fire Detector",
+      "role": "Technology transfer",
+      "url": "https://spinoff.nasa.gov/node/9407",
+      "retrievedAt": "2026-11-14T23:40:06.429438+00:00",
+      "sha256": "ae02ae678a75fec41696c3fab962b7c3b6e5ce68e1fb77ef3edf653f23a81367",
+      "snapshotPath": "data/nasa-resources/fire-detector.html",
+      "tags": [
+        "fire detector",
+        "detection",
+        "smoke",
+        "particles",
+        "dust",
+        "Brunswick",
+        "shuttle",
+        "Earth",
+        "application",
+        "technology transfer"
+      ],
+      "limitations": "NASA Spinoff describes Shuttle heritage and particle discrimination. No documented derivation from SAME or another PSI experiment, current certification or quantified false-alarm rate is supplied.",
+      "excerpts": [
+        {
+          "id": "detector",
+          "text": "Sensor operates by sampling air to determine the presence of combustion particles, but unlike earlier equipment the Brunswick Incipient Fire Detector, originally used in space shuttle orbiters, can discriminate between combustion particles and extraneous matters such as dust. This gives an important advantage; it is less susceptible to false alarms.",
+          "locator": "Article · sampling and discrimination",
+          "kind": "application",
+          "sha256": "7d02128638991d947a536a7675fca5e27867ade35b91644ac741e48109962063"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "d58df0c94fd8feac1a0d070d457e89091cfa240468e2d5fb4aeaf642f4f73b25"
+    },
+    {
+      "id": "nasa-fire-attire",
+      "title": "New Technology for the Fire Attire · Project FIRES",
+      "role": "Technology transfer",
+      "url": "https://spinoff.nasa.gov/node/9918",
+      "retrievedAt": "2026-11-14T23:40:06.406740+00:00",
+      "sha256": "fa5bbda2a2d09c46a14b27098677e5fd71c3f019c5eb6031fc5f71603fc52115",
+      "snapshotPath": "data/nasa-resources/fire-attire.html",
+      "tags": [
+        "FIRES",
+        "Apollo",
+        "protective clothing",
+        "firefighter",
+        "materials",
+        "thermal",
+        "suits",
+        "Earth",
+        "application",
+        "technology transfer"
+      ],
+      "limitations": "Historical FIRES program and evaluation account. The source says Apollo-derived concepts, not that Apollo 1 or a PSI experiment produced this equipment. The archived wording is preserved, including its apparent final-word typo.",
+      "excerpts": [
+        {
+          "id": "program",
+          "text": "Project FIRES (Firefighter's Integrated Response Equipment System) involves applications of advanced materials and design concepts, derived from Apollo to update existing gear which does not adequately protect against many of the hazards encountered in fire suppression activities.",
+          "locator": "Article · Apollo-derived concepts",
+          "kind": "application",
+          "sha256": "28ea6e0c743a5489fc943c184c879013dadd3f259fc2b7ebeb9fb78e67ac8f58"
+        },
+        {
+          "id": "evaluation",
+          "text": "A major focus of the effort involves application to the FIRES ensemble of lightweight, fire-resistant, heat-protective materials originally developed for use in astronauts' space suits or in spacecraft components which require thermal protection. Data from the fourteen municipal fire departments participating in the field evaluation will form a basis for development of new nationwide protective ensemble students.",
+          "locator": "Article · materials and planned field-evaluation use",
+          "kind": "prospect",
+          "sha256": "819311328f48c68eeda29342ab6d739c060eda2e0cb5affa885fd7eed6937c66"
+        }
+      ],
+      "links": [],
+      "extractionMethod": "HTML text extraction; scripts and styles excluded; whitespace normalized",
+      "extractedTextSha256": "98f497675a966a55b33adeabb95b4efa0dfe59b092c8b8ed22a72a759b516a3d"
+    },
+    {
+      "id": "nasa-sciencecasts",
+      "title": "NASA ScienceCasts: The Power of Studying Combustion on the ISS",
+      "role": "Scientific background",
+      "url": "https://www.youtube.com/watch?v=W1oXykoz9zg",
+      "retrievedAt": "2026-11-14T23:43:00.956120+00:00",
+      "sha256": "c06c04ad3d5d7ac93299aed6b5ede666891f8bc7b819ce43005287fb725698f2",
+      "snapshotPath": "data/nasa-resources/sciencecasts-transcript.txt",
+      "tags": [
+        "ScienceCasts",
+        "FLEX",
+        "ACME",
+        "SoFIE",
+        "CIR",
+        "combustion",
+        "gravity",
+        "buoyancy",
+        "flame",
+        "Earth",
+        "pollution"
+      ],
+      "limitations": "Official NASA Science video and exported English captions (authored or unspecified). The narration discusses completed 2017 work and future plans; it is not current mission status. Potential efficiency/pollution benefits are prospects. Its generic extinguisher mention is not a documented link to any listed Spinoff.",
+      "excerpts": [
+        {
+          "id": "flex",
+          "text": "Three series of combustion experiments taking place on the International Space Station's Combustion Integration Rack (CIR) are looking at combustion in very different ways. The Flame Extinguishment Experiment, or FLEX, examined the burning of a single droplet of fuel in the microgravity confines of the ISS.",
+          "locator": "English captions 1:19–1:38",
+          "kind": "background",
+          "sha256": "e7b53e13b3fbfca8f96a61684fa8fee414eeca2f42754273e33b5d449a93728c"
+        },
+        {
+          "id": "sofie",
+          "text": "These experiments will examine how various gasses burn without gravity affecting the flames. The Solid Fuel Ignition and Extinction or SoFIE experiment, will explore the properties of burning solid matter.",
+          "locator": "English captions 1:53–2:06",
+          "kind": "prospect",
+          "sha256": "63d20b41c91440ae2ff5e5ba83ec11530e2d09ddec44cdada4190d2f527cf639"
+        },
+        {
+          "id": "buoyancy",
+          "text": "For example, consider a candle when it's burning. The flame flickers. Why? Hot gasses from the flame rise while cooler, denser air is pulled to the bottom of the flame. This flow occurs at high speeds, resulting in turbulence and instability. That instability makes it hard to study the properties of the flame. But on the ISS, there's no flicker which allows us to make more precise and consistent measurements. If we have precise measurements we get closer to learning how to burn more efficiently.\"",
+          "locator": "English captions 2:15–2:47",
+          "kind": "background",
+          "sha256": "1a271fc1a13b942b5996bffcbdef5a28152370e51376b8bc69c2cc3fe36467f3"
+        },
+        {
+          "id": "earth",
+          "text": "More efficiency could lead to real cost savings for producing power. The research could also lead to reducing the production of soot and other pollutants.",
+          "locator": "English captions 2:47–2:59",
+          "kind": "prospect",
+          "sha256": "4acafbd3b4cf2d24ca7dfd6f3446c1ca98f64ca71cb68f96568c64d8156b87bf"
+        }
+      ],
+      "links": [
+        {
+          "recordId": "flex",
+          "excerptId": "flex",
+          "basis": "Narration explicitly names FLEX and single-droplet burning."
+        }
+      ],
+      "extractionMethod": "Official NASA Science video; exported English captions, authored or unspecified",
+      "extractedTextSha256": "c06c04ad3d5d7ac93299aed6b5ede666891f8bc7b819ce43005287fb725698f2"
+    },
+    {
+      "id": "nasa-challenge-2026",
+      "title": "NASA Space Apps 2026 — Flame in Freefall challenge",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/?tab=resources",
+      "role": "Scientific background",
+      "tags": [
+        "challenge",
+        "flames",
+        "space",
+        "oxygen",
+        "buoyancy",
+        "diffusion",
+        "fire safety",
+        "microgravity",
+        "predictive modeling",
+        "habitable environments",
+        "lunar",
+        "Martian",
+        "rovers",
+        "spacesuits",
+        "CFI-G",
+        "DAFT",
+        "BRE",
+        "MDCA",
+        "MSG",
+        "ACME",
+        "sensors",
+        "sample geometry",
+        "rockets scope"
+      ],
+      "limitations": "Inspected challenge brief and planning context, not primary test measurements or validated spacecraft limits. Objectives and potential considerations are indexed. Prospective atmosphere and future-investigation statements retain their original framing. Spacesuit and pre-breathing descriptions are source context, not operational or medical instructions. Electric-field analogies and possible gravity bounds are not direct partial-gravity measurements.",
+      "retrievedAt": "2026-11-15T01:23:14.804609+00:00",
+      "snapshotPath": "data/nasa-resources/challenge-details.txt",
+      "sha256": "9a08684d1e17d1f55238fd1b54960fdb504b0102876a6cb5094efb9ce6d28391",
+      "extractedTextSha256": "9a08684d1e17d1f55238fd1b54960fdb504b0102876a6cb5094efb9ce6d28391",
+      "excerpts": [
+        {
+          "id": "buoyancy",
+          "text": "Compared to Earth, flames in free fall (i.e., in microgravity) are often dramatically different because of the absence of buoyancy and thus rising hot gases. Instead of a flickering teardrop, a candle flame becomes a ghostly blue sphere reliant on diffusion for its oxygen.",
+          "kind": "background",
+          "locator": "Background — flame transport",
+          "sha256": "0a32caf49f1cf5bce691bcb3d8e769da04b5c8566d6238734c890d4863cb812b"
+        },
+        {
+          "id": "oxygen",
+          "text": "NASA’s spacecraft fire safety work is focused on prevention, detection, and suppression. Prevention is achieved by controlling ignition sources and through material selection, which depends on understanding flammability limits. To facilitate spacesuit use, an atmosphere with increased oxygen and reduced pressure compared to Earth’s is expected within the planned Moon Base and pressurized rovers. Flammability is highly dependent on oxygen concentration, and air flow is also important in microgravity. Flammability studies focus on solid materials such as fabrics and plastics, as studied in the Burning and Suppression of Solids (BASS and BASS-II) and Spacecraft Fire Safety Demonstration (Saffire-I, -II, and -III) investigations.",
+          "kind": "background",
+          "locator": "Background — prevention and environmental conditions",
+          "sha256": "82be8e518ade68f14c7e868e6673d3bf118dfbc9b2fc2d18a5f10decd038a001"
+        },
+        {
+          "id": "detection",
+          "text": "Fire detection was tested in microgravity through the Smoke and Aerosol Measurement Experiment studies (SAME and SAME-R). Suppression was studied in the Flame Extinguishment Experiment (FLEX) through dilution of the chamber atmosphere with carbon dioxide and helium, both of which suppress fire.",
+          "kind": "background",
+          "locator": "Background — detection and suppression",
+          "sha256": "c276617cb9e6988d26de89fb3dac8ac0bd5710545954ff1525afa46040aa5755"
+        },
+        {
+          "id": "partial-gravity",
+          "text": "Although NASA is heavily focused on the return of astronauts to the Moon’s surface and the establishment of a Moon Base in preparation for the future human exploration of Mars, there is currently no partial-gravity combustion data available in PSI. We expect such data will be added in the future, for example from the Lunar-g Combustion Investigation (LUCI) and the Flammability of Materials on the Moon (FM2) experiment.",
+          "kind": "prospect",
+          "locator": "Potential considerations — partial-gravity data",
+          "sha256": "233aebf10ea1fadf370d06a3fceef4af9df785509053165a2025c0afb4b2a6c0"
+        },
+        {
+          "id": "dashboard-objectives",
+          "text": "Your challenge is to build an SI-powered, web-based dashboard that summarizes, ranks, and interprets combustion science investigations to deliver critical foundational insights for fire safety. You may consider enabling users to: Identify investigations most relevant to the fire safety needs of habitable crew environments, including spacecraft, space stations, bases on the lunar and Martian surfaces, and pressurized rovers.* Extract data that supports predictive modeling of flammability and fire scenarios in space exploration. Highlight research that informs the development of next-generation fire safety controls and equipment.",
+          "kind": "background",
+          "locator": "Objectives — crew environments, prediction data and equipment",
+          "sha256": "bfbd34077a71a68d79e6ae24a0186e94e5219db0aa43386642da3ef2692f95bb"
+        },
+        {
+          "id": "earth-applications",
+          "text": "Your dashboard could also address potential applications of the PSI data to fire safety on Earth. Fine-water-mist extinguishers developed for use on the ISS have practical applications here on Earth, and NASA technology has similarly led to improvements in terrestrial smoke detection and firefighter gear, including protective clothing and air tanks.",
+          "kind": "background",
+          "locator": "Objectives — potential Earth applications",
+          "sha256": "037e313e8631c3403fa32081bd86933bbf59000dc46dfba34eef4769ba0c5d59"
+        },
+        {
+          "id": "scope",
+          "text": "*Fire safety involving rockets and propellants is generally beyond the scope of the research available in the PSI database. The high velocities within rocket engines render the combustion effectively independent of gravity — although a rocket’s launch is of course strongly dependent on gravity.",
+          "kind": "background",
+          "locator": "Objectives — scope boundary",
+          "sha256": "fdf1f111fe5b7f7282c74febb9ff405e8af7026fc083cf152675fce2006cfc03"
+        },
+        {
+          "id": "research-attributes",
+          "text": "Your target audience can include professors, graduate students, undergraduate students, aerospace researchers, and aerospace engineers. Consider how you might summarize and display attributes such as: Experimental objectives Fuels, including shape and size of the samples or burners Other test conditions, such as oxygen concentration and airflow speed Variables: how did tests from the same investigation differ and how were they the same? Sensors or types of measurements Consider how to summarize and display similarities and differences between different investigations.",
+          "kind": "background",
+          "locator": "Potential considerations — audience and comparison attributes",
+          "sha256": "238e6762eed86ed98a3b93d69bd87bbda2a2dad11931db30e2e24e7e10db3546"
+        },
+        {
+          "id": "shared-instrument",
+          "text": "One of the instruments used for smoke detection in the SAME and SAME-R studies was instead used to detect dust in the Dust and Aerosol Measurement Feasibility Test (DAFT and DAFT-2) studies.",
+          "kind": "background",
+          "locator": "Potential considerations — smoke and dust instrument",
+          "sha256": "922143601284edd546e3dac2d761716dee17fdd3df64e71f174846e06cc0bc17"
+        },
+        {
+          "id": "bre",
+          "text": "While it burned gaseous fuels, the Burning Rate Emulator (BRE) experiment of the Advanced Combustion via Microgravity Experiments (ACME) project was a study of materials flammability in still atmospheres as a function of material properties.",
+          "kind": "background",
+          "locator": "Potential considerations — BRE",
+          "sha256": "09d6bd612d15c74dd67603837658cf233f106f3d4636e4bad11783874ba87265"
+        },
+        {
+          "id": "other-investigations",
+          "text": "Other combustion investigations within the PSI database (but not explicitly referenced above) are still relevant to fire safety, just not as strongly or directly.",
+          "kind": "background",
+          "locator": "Potential considerations — relevance beyond named examples",
+          "sha256": "319f0eac51dd9d997d348392c7c309edb879891f078b7ef97a10ec1efa0dbd10"
+        },
+        {
+          "id": "acme-hardware",
+          "text": "The six experiments in the ACME project featured flames of gaseous fuels and were all conducted with the same modular set of ACME hardware in the Combustion Integrated Rack (CIR).",
+          "kind": "background",
+          "locator": "Hardware — ACME",
+          "sha256": "856a5d107c70ac23e26c590c117848a38185eb96890092d68d511f09cb33a714"
+        },
+        {
+          "id": "mdca-hardware",
+          "text": "FLEX, FLEX-2, and the Cool Flames Investigation (CFI) each featured burning droplets of liquid fuel and were conducted with the Multi-user Droplet Combustion Apparatus (MDCA) in the CIR.",
+          "kind": "background",
+          "locator": "Hardware — liquid droplet investigations",
+          "sha256": "10c3bf0e4be20203d5e341329ec31513a5983b8d512693a5c798adbb073d786a"
+        },
+        {
+          "id": "msg-hardware",
+          "text": "BASS, BASS-II, the Smoke Point In Co-flow Experiment (SPICE), and the Structure & Liftoff In Combustion Experiment (SLICE) collectively featured both solid and gaseous fuels. Each of these investigations was conducted within the Microgravity Science Glovebox (MSG) using the modular fan-driven flow duct built for SPICE.",
+          "kind": "background",
+          "locator": "Hardware — MSG and shared duct",
+          "sha256": "6b3b70d57c143cec54669b3d99b6e78675467077bc2136ba189a3c6ea0a35ee3"
+        },
+        {
+          "id": "spacesuits",
+          "text": "To enable flexibility, spacesuits are filled with 100% oxygen to only 4.3 psi (pounds per square inch), where the Earth’s pressure at sea level is 14.7 psi. To avoid the bends (decompression sickness), the astronauts pre-breathe 100% oxygen to expel absorbed nitrogen.",
+          "kind": "background",
+          "locator": "Spacesuits — contextual atmosphere description, not operating instructions",
+          "sha256": "586fdbe11606b07044530400638ed2ef9647bb82fc09b4eacedc54dcf3b2df1c"
+        },
+        {
+          "id": "habitat-atmosphere",
+          "text": "To reduce the pre-breathing duration and thus facilitate lunar excursions, it is expected that the Moon Base and pressurized rover(s) will be at a pressure and oxygen concentration between those in a spacesuit and the Earth’s atmosphere. The intermediate oxygen concentration used on the Moon will likely be 30% or greater, with a corresponding pressure of 10.2 psi or less. Compared to Earth’s atmosphere, that’s more than a 40% increase in the oxygen concentration making materials much more flammable.",
+          "kind": "prospect",
+          "locator": "Spacesuits — prospective lunar atmosphere planning",
+          "sha256": "03b2f54d04c7790641558f72fed245cecb3eb68b51310586b181951b9267d088"
+        },
+        {
+          "id": "cfi-g-oxygen",
+          "text": "Microgravity tests with the highest oxygen concentrations were conducted as part of the ACME’s Cool Flames Investigation with Gases (CFI-G). In those tests, the combustion chamber was filled with a mixture of nitrogen and a flammable gas (e.g., propane), while an oxygen-nitrogen mixture of up to 85% oxygen flowed from the spherical burner creating an inside-out flame.",
+          "kind": "background",
+          "locator": "Spacesuits — CFI-G oxygen context",
+          "sha256": "0dfcdb153e4ec923e817cfd54b747433cef65bd3fbe6038cd1acb59e1c4e399b"
+        },
+        {
+          "id": "e-field",
+          "text": "Partial gravity was mimicked in ACME’s Electric-Field Effects on Laminar Diffusion Flames (E-FIELD Flames) experiment through the effect of the electric field on the ions that naturally occur in flames.",
+          "kind": "background",
+          "locator": "Partial-gravity considerations — electric-field analogy",
+          "sha256": "6e4872122de0cd58a96b3f0ae4414ef8605425288fe339a89265983b77ce40fd"
+        },
+        {
+          "id": "gravity-bounds",
+          "text": "Microgravity and normal-gravity results could bound what occurs at intermediate gravity levels.",
+          "kind": "prospect",
+          "locator": "Partial-gravity considerations — possible bounds, not validation",
+          "sha256": "1b8629bcc9b4d816ee00894ecc19e71cfdbe6c04861c7e9528913edb7ead6bf5"
+        }
+      ],
+      "links": [
+        {
+          "recordId": "psi-102",
+          "excerptId": "shared-instrument",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "samer",
+          "excerptId": "shared-instrument",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-47",
+          "excerptId": "shared-instrument",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-20",
+          "excerptId": "bre",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-10",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-20",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-21",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-22",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-23",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-159",
+          "excerptId": "acme-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "flex",
+          "excerptId": "mdca-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "flex2",
+          "excerptId": "mdca-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-39",
+          "excerptId": "mdca-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-26",
+          "excerptId": "msg-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "bass2",
+          "excerptId": "msg-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-107",
+          "excerptId": "msg-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-106",
+          "excerptId": "msg-hardware",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-159",
+          "excerptId": "cfi-g-oxygen",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        },
+        {
+          "recordId": "psi-22",
+          "excerptId": "e-field",
+          "basis": "Explicitly named in the inspected NASA challenge passage; shared apparatus or context is not equivalent experimental results."
+        }
+      ]
+    },
+    {
+      "id": "nasa-apollo-13",
+      "title": "NASA Apollo 13 — accident, investigation and lessons",
+      "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-13",
+      "role": "Historical safety evidence",
+      "tags": [
+        "Apollo 13",
+        "oxygen tank",
+        "incident",
+        "history",
+        "engineering",
+        "lessons"
+      ],
+      "limitations": "Historical accident and engineering lessons, not controlled combustion results or operational emergency procedures. Linked review reports have not been fully ingested. The archived page has apparent factual inconsistencies elsewhere; the selected passages are limited to the accident review and recommendations.",
+      "retrievedAt": "2026-11-15T01:23:14.804609+00:00",
+      "snapshotPath": "data/nasa-resources/apollo13.txt",
+      "sha256": "cb9b3c8f6c6aedf3c9168f2df3bf08f34234256607e8fbec072e8a53769d63fa",
+      "extractedTextSha256": "cb9b3c8f6c6aedf3c9168f2df3bf08f34234256607e8fbec072e8a53769d63fa",
+      "excerpts": [
+        {
+          "id": "investigation",
+          "text": "On June 15, 1970, Apollo 13 Review Board Chair Edgar M. Cortright released the final report detailing the cause of the oxygen tank explosion. The report found that the accident was a combination of mistakes and a deficient design. The board conducted seven weeks of investigation with four panels looking into different aspects of the accident.",
+          "kind": "history",
+          "locator": "Accident investigation",
+          "sha256": "a69787839f90ed367d79a47f35ab8659ed7b2a1e925c7abaf87faab259c7b908"
+        },
+        {
+          "id": "lessons",
+          "text": "On June 16, 1970, Edgar Cortright summarized the findings in a hearing before the House Committee on Science and Aeronautics and informed them of the Review Board’s recommendations, which included the redesign and recertification of the Service Module oxygen storage system and a thorough review by NASA of all Apollo systems that use cryogenic oxygen. The Review Board also recommended that management and organizational structures be strengthened to ensure an adequate understanding of the engineering and manufacturing processes of subsystems. For Apollo 14 and future missions, engineers at NASA and North American Rockwell redesigned the oxygen tank system by adding a third tank in a different bay, upgrading thermostats, removing stirring fans and sheathing all electrical wiring in stainless steel.",
+          "kind": "history",
+          "locator": "Lessons learned",
+          "sha256": "ee3dfef2a25026a049cc8961162239588fb129355185fc7c698202e37a5b9d58"
+        }
+      ],
+      "links": []
+    }
+  ]
+}

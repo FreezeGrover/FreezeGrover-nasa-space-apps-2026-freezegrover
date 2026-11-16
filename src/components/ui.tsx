@@ -81,8 +81,8 @@ export function SourceLink({
 }) {
   return (
     <a className="source-link" href={href} target="_blank" rel="noreferrer">
-      <ArrowSquareOut size={21} />
-      {label}
+      <ArrowSquareOut size={21} aria-hidden="true" focusable="false" />
+      <span>{label}</span>
     </a>
   );
 }

@@ -3,16 +3,18 @@ import assert from "node:assert/strict";
 import React,{act} from "react";
 import {Window} from "happy-dom";
 import {catalogAnswer} from "../src/lib/research/answer";
+import type {ResearchAnswer} from "../src/types/answer";
 import {evidenceText} from "../src/lib/qa/grounding";
 
 test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and QA",async()=>{
  const window=new Window({url:"http://localhost:3022"});
  const globals=globalThis as unknown as Record<string,unknown>;
- for(const name of ["window","document","HTMLElement","HTMLInputElement","HTMLTextAreaElement","HTMLSelectElement","HTMLDialogElement","Event","MouseEvent","Node"]){
+ for(const name of ["sessionStorage","window","document","HTMLElement","HTMLInputElement","HTMLTextAreaElement","HTMLSelectElement","HTMLDialogElement","Event","MouseEvent","Node"]){
   Object.defineProperty(globalThis,name,{configurable:true,writable:true,value:(window as unknown as Record<string,unknown>)[name]});
  }
  globals.React=React;globals.IS_REACT_ACT_ENVIRONMENT=true;
  const originalFetch=globalThis.fetch;
+ const streamAnswer=(answer:ResearchAnswer)=>new Response(JSON.stringify({type:"result",answer})+"\n",{headers:{"Content-Type":"application/x-ndjson"}});
  let finishSearch:((response:Response)=>void)|undefined;
  let requestCount=0;
  globalThis.fetch=async(_url,options)=>{
@@ -37,20 +39,21 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
  try{
   await act(async()=>{root.render(React.createElement(Dashboard));});
   assert.equal(window.document.querySelectorAll("nav button").length,5);
-  await field('input[aria-label="Research question"]',"How does microgravity affect flame propagation");
+  await field('textarea[aria-label="Research question"]',"How does microgravity affect flame propagation");
   await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
-  assert.ok(dialog());assert.match(dialog()!.textContent,/Fetching information/);
+  assert.ok(dialog());assert.match(dialog()!.textContent,/Connecting to the research service/);
   assert.equal(window.document.querySelectorAll(".result-row").length,0,"No provisional results may flash during a request");
   assert.doesNotMatch(dialog()!.textContent,/BASS-II|No documented records/);
   assert.equal(window.document.querySelector('.research-search button')!.getAttribute("disabled"),"");
   await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
   assert.equal(requestCount,1,"Duplicate submissions must not spend another AI attempt");
-  await act(async()=>{finishSearch!(Response.json(catalogAnswer("How does microgravity affect flame propagation")));});
-  globalThis.fetch=async(_url,options)=>options?.method==="POST"?Response.json(catalogAnswer(JSON.parse(options.body as string).query)):Response.json({configured:false});
-  assert.match(dialog()!.textContent,/BASS-II/);assert.doesNotMatch(dialog()!.textContent,/Fetching information/);
+  await act(async()=>{finishSearch!(streamAnswer(catalogAnswer("How does microgravity affect flame propagation")));});
+  globalThis.fetch=async(_url,options)=>options?.method==="POST"?streamAnswer(catalogAnswer(JSON.parse(options.body as string).message)):Response.json({configured:false});
+  await click(button("Browse NASA investigations ↗"));
+  assert.match(dialog()!.textContent,/BASS-II/);assert.doesNotMatch(dialog()!.textContent,/Connecting to the research service/);
   await close();await click(button("Compare"));await click(button("Investigations"));
   assert.equal(dialog(),null,"A dismissed search must not reopen on tab navigation");
-  assert.equal((window.document.querySelector('input[aria-label="Research question"]') as unknown as HTMLInputElement).value,"How does microgravity affect flame propagation");
+  assert.equal((window.document.querySelector('textarea[aria-label="Research question"]') as unknown as HTMLTextAreaElement).value,"");
   assert.equal(window.document.querySelectorAll(".filter-dropdowns select").length,5);
   const fuel=window.document.querySelector(".filter-dropdowns select")!;
   await act(async()=>{(fuel as unknown as HTMLSelectElement).value="liquid";fuel.dispatchEvent(new window.Event("change",{bubbles:true}));});
@@ -73,7 +76,8 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
   await click(window.document.querySelector(".compare-controls .search-button")!);
   assert.match(dialog()!.textContent,/fuel category/);await close();
   await click(button("Rankings"));await click([...window.document.querySelectorAll(".goal-options button")].find(el=>el.textContent.includes("Earth Applications"))!);
-  await click(button("Environment: All · Choose ↗"));await click(button("Lunar Bases"));
+  await click(button("Choose environment ⌄"));await click(button("Lunar Bases"));
+  await click(button("Show investigations"));
   const browse=buttons().find(el=>el.textContent.startsWith("Browse all"));assert.ok(browse);await click(browse);
   assert.match(dialog()!.textContent,/Earth Applications/);assert.match(dialog()!.textContent,/Lunar context/);assert.ok(dialog()!.querySelectorAll(".ranking-row").length>0);await close();
   await click(button("Scientific QA"));await field("#qa-statement","Flame spread increased by 999999%");
@@ -82,21 +86,23 @@ test("five-tab DOM workflow: search, dismissal, filters, comparison, ranking and
   await click(button("Save review note"));await click(buttons().find(el=>el.textContent.startsWith("Review history"))!);
   assert.match(dialog()!.textContent,/999999/);await close();
   await click(button("Overview"));assert.equal(dialog(),null);
-  globalThis.fetch=async()=>Response.json({query:"PSI-69",mode:"openai",recordIds:["flex"],notice:"Test transport only",groundingIssues:[],statements:[{recordId:"flex",field:"objective",quote:evidenceText("flex","objective").slice(0,100),interpretation:"A liquid-fuel research objective."}]});
-  await field('input[aria-label="Research question"]',"PSI-69");
+  globalThis.fetch=async()=>streamAnswer({query:"PSI-69",mode:"openai",recordIds:["flex"],notice:"Test transport only",groundingIssues:[],statements:[{recordId:"flex",field:"objective",quote:evidenceText("flex","objective").slice(0,100),interpretation:"A liquid-fuel research objective."}]});
+  await field('textarea[aria-label="Research question"]',"PSI-69");
   await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
   await click(button("Review statement in Scientific QA ↗"));
   assert.equal(window.document.querySelector(".page-title")!.textContent,"Scientific QA");
   assert.equal((window.document.querySelector("#qa-statement") as unknown as HTMLTextAreaElement).value,"A liquid-fuel research objective.");
   await click(button("Overview"));
   let pausedRequests=0;
-  globalThis.fetch=async()=>{pausedRequests++;return Response.json({query:"PSI-69",mode:"unavailable",recordIds:[],statements:[],groundingIssues:[],notice:"AI allowance used. No further OpenAI request was sent."});};
+  globalThis.fetch=async()=>{pausedRequests++;return streamAnswer({query:"PSI-69",mode:"unavailable",recordIds:[],statements:[],groundingIssues:[],notice:"OpenAI quota limit reached. Your conversation is intact.",retryable:true} as ResearchAnswer);};
+  await field('textarea[aria-label="Research question"]',"PSI-69");
   await act(async()=>{window.document.querySelector("form")!.dispatchEvent(new window.Event("submit",{bubbles:true,cancelable:true}));});
-  assert.match(dialog()!.textContent,/AI Search Paused/);
+  assert.match(dialog()!.textContent,/quota limit/);
   assert.doesNotMatch(dialog()!.textContent,/No documented records/);
   assert.equal(dialog()!.querySelectorAll(".result-row").length,0);
-  await click(button("Browse catalog matches instead ↗"));
-  assert.match(dialog()!.textContent,/FLEX/);assert.equal(pausedRequests,1);
+  assert.equal(pausedRequests,1);
+  assert.ok(button("Retry request"));
+
 
  }finally{
   await act(async()=>root.unmount());

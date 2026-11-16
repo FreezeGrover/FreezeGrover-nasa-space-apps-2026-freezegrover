@@ -1,0 +1,5 @@
+The objective of the FLEX is to study heptane and methanol droplets in ambient mixtures of oxygen and nitrogen diluted with a second inert gas (nitrogen, carbon dioxide, helium or xenon). The goal of the research is to examine how the addition of an inert gas suppressant influences the flammability limit of the two fuels.
+
+The research to date has shown that the flammability limit is lower in reduced gravity. The implication is that terrestrial standards for inert gas suppressants in low gravity do not offer the same margin of safety as in normal gravity.
+
+FLEX-2, the follow-on experiment, builds upon FLEX. It studies a range of fuels including mixtures of pure fuels, real fuel surrogates, soot formation, slow sub-buoyant, convective flow effects and droplet-droplet interactions.

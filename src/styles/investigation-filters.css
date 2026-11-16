@@ -86,3 +86,8 @@
     font-size: 14px;
   }
 }
+
+.investigations-page .retrieval-summary { font-size:13px; line-height:1.4; color:var(--navy); display:flex; gap:8px; align-items:center; flex-wrap:wrap; white-space:normal; overflow:visible; }
+.investigation-context-badge { display:inline-block; padding:3px 9px; border:1px solid var(--line); border-radius:12px; background:var(--soft); color:#075eac; flex-shrink:0; }
+.investigation-result-scope { display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap; font-size:13px; color:var(--navy); }
+.investigation-result-scope .research-open-button { margin:0; flex-shrink:0; }

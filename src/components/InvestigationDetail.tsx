@@ -17,14 +17,18 @@ import {
 } from "./ExperimentSections";
 import { getExperimentMetadata } from "@/lib/research/metadata";
 import { PsiEvidence } from "./PsiEvidence";
+import {resourcesForInvestigation} from "@/lib/resources/catalog";
+import {OfficialResource} from "./OfficialResources";
 export function InvestigationDetail({
   item,
   onSelectRelated,
   availableIds = [],
+  onResearchAction,
 }: {
   item: Investigation;
   onSelectRelated?: (id: string) => void;
   availableIds?: string[];
+  onResearchAction?:()=>void;
 }) {
   const meta = getExperimentMetadata(item.id);
   return (
@@ -58,6 +62,10 @@ export function InvestigationDetail({
         <Status label="Mission Relevance: Not Assessed" />
       </div>
       <PsiEvidence id={item.id} />
+      <Expandable title="Official NASA background" subtitle="Explicit investigation mentions · separate from primary PSI evidence" icon={<BookOpen/>}>
+        {resourcesForInvestigation(item.id).map(source=><OfficialResource key={source.id} source={source} onAction={onResearchAction}/>)}
+        {!resourcesForInvestigation(item.id).length&&<p>No explicit link to an inspected official background source is recorded for this investigation. Shared topics do not establish a research relationship.</p>}
+      </Expandable>
       <ObjectiveAndFuel item={item} />
       <Expandable
         title="Evidence & Data"

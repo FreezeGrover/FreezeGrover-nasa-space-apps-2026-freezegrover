@@ -1,0 +1,13 @@
+{
+  "localCommit": "cbf1bd112c66375ba586a1eac3b9efba1d8381ae",
+  "branch": "science/source-grounded-responses-20261115",
+  "remoteCommitVerified": false,
+  "nodeTests": 25,
+  "pythonTests": 4,
+  "liveOpenAIVerified": false,
+  "windowsVisualReview": "pending installation",
+  "sourceHistoryBundle": "source-history.bundle",
+  "provider": "OpenAI",
+  "loadingStateVerified": "simulated DOM",
+  "requestCountCap": false
+}
