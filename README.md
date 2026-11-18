@@ -2,7 +2,7 @@
 
 ## NASA Space Apps project demo
 
-**Vercel app:** https://freeze-grover-nasa-space-apps-2026-freezegrover-egln11oi7.vercel.app/
+**Vercel app:** https://freeze-grover-nasa-space-apps-2026.vercel.app/
 
 Explore the Flames in Free Fall project through the online demonstration.
 
