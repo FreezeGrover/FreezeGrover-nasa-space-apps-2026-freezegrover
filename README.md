@@ -1,5 +1,11 @@
 # Flames in Free Fall
 
+## NASA Space Apps project demo
+
+**Vercel app:** https://freeze-grover-nasa-space-apps-2026-freezegrover-egln11oi7.vercel.app/
+
+This is the team's shared deployment URL. The online experience may differ from the local development build; experimental-data presentation, charting, and conversation reliability are being refined and should not be assumed complete.
+
 A private combustion research dashboard for NASA Space Apps. This milestone implements the five-screen white-and-blue interface from the supplied references.
 
 ## Run locally on Windows
@@ -13,7 +19,7 @@ npm ci
 npm run dev -- --port 3020
 ```
 
-No Sites hosting or public deployment is used. No API key is needed for the shipped public PSI snapshot.
+A Vercel deployment URL is provided above. Local setup instructions below describe a separate development environment. No API key is needed to inspect the shipped public PSI snapshot.
 
 ## Current behavior
 
@@ -43,9 +49,7 @@ The default development server binds to 0.0.0.0 for preview compatibility. For s
 
 ## Repository status
 
-Canonical repository: https://github.com/FreezeGrover/flames-in-freefall (private).
-Initial remote commit: 7e47a2f2f123ee61b31a260c95910da39973dfe7.
-The connected GitHub app currently returns 404 for this new private repository, so this UI milestone has not been pushed. The downloadable source preserves the work while repository access is resolved.
+NASA Space Apps repository: https://github.com/FreezeGrover/FreezeGrover-nasa-space-apps-2026-freezegrover .
 
 No open-source license has been added. Design assets are extracted from user-provided mockups; the flame image is illustrative, not experimental imagery.
 
