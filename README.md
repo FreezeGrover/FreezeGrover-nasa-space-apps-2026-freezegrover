@@ -4,9 +4,9 @@
 
 **Vercel app:** https://freeze-grover-nasa-space-apps-2026-freezegrover-egln11oi7.vercel.app/
 
-This is the team's shared deployment URL. The online experience may differ from the local development build; experimental-data presentation, charting, and conversation reliability are being refined and should not be assumed complete.
+Explore the Flames in Free Fall project through the online demonstration.
 
-A private combustion research dashboard for NASA Space Apps. This milestone implements the five-screen white-and-blue interface from the supplied references.
+A NASA Space Apps combustion research dashboard exploring NASA microgravity combustion investigations, experimental evidence, comparisons, and scientific assessment.
 
 ## Run locally on Windows
 
