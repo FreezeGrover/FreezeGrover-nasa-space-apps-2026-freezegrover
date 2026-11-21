@@ -47,6 +47,20 @@ The default development server binds to 0.0.0.0 for preview compatibility. For s
 
 `src/components/` contains reusable function components. `src/screens/` contains the five screens. `src/lib/` holds separate research, comparison, ranking, and QA functions. `src/types/` defines shared data. See ARCHITECTURE.md for how they connect.
 
+## Original creator, copyright, and attribution
+
+**Original project:** Flames in Free Fall — NASA Space Apps 2026  
+**Original creator:** Mohammed Shahrukh Yezdani Jahan (**FreezeGrover**)  
+**Original repository:** https://github.com/FreezeGrover/FreezeGrover-nasa-space-apps-2026-freezegrover
+
+Copyright © 2026 Mohammed Shahrukh Yezdani Jahan, for original contributions owned by the creator.
+
+The original software contributions in this repository are made available under the **Apache License, Version 2.0**. You may use, modify, and redistribute covered code, including commercially, subject to the license conditions. In particular, redistributors must include the license, preserve applicable copyright and attribution notices, retain the applicable notices from the [NOTICE](NOTICE) file in an allowed location, and mark modified files with prominent change notices.
+
+**Please credit the original creator and link to the original repository** when describing, publishing, or presenting adaptations. This public-facing credit is requested as a professional courtesy; the binding attribution obligations are those in the Apache License 2.0, not an additional requirement to display a credit in every app interface.
+
+NASA data, research materials, and third-party assets are not claimed as the creator's original work; their respective rights and terms remain applicable.
+
 ## Repository status
 
 NASA Space Apps repository: https://github.com/FreezeGrover/FreezeGrover-nasa-space-apps-2026-freezegrover .
