@@ -51,7 +51,7 @@ The default development server binds to 0.0.0.0 for preview compatibility. For s
 
 NASA Space Apps repository: https://github.com/FreezeGrover/FreezeGrover-nasa-space-apps-2026-freezegrover .
 
-No open-source license has been added. Design assets are extracted from user-provided mockups; the flame image is illustrative, not experimental imagery.
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for the terms, including redistribution and attribution requirements. Design assets are extracted from user-provided mockups; the flame image is illustrative, not experimental imagery.
 
 See PSI_CONNECTION.md for verified counts, refresh commands, access limits and scientific evidence boundaries.
 
