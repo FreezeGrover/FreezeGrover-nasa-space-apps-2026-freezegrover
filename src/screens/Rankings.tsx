@@ -1,6 +1,6 @@
 "use client";
-import { selectRankingCandidates } from "@/lib/ranking/selection";
-import { assessRankingCandidate } from "@/lib/ranking/assessment";
+
+
 import { rankingFrameworkGroups } from "@/lib/ranking/framework";
 import { RankingAssessmentPanel } from "@/components/RankingAssessmentPanel";
 import { useResearchActions } from "@/components/ResearchActions";
@@ -8,6 +8,8 @@ import { rankingReviewRequest } from "@/lib/qa/handoff";
 import { ResearchDialog } from "@/components/ResearchDialog";
 import { InvestigationDetail } from "@/components/InvestigationDetail";
 import { useEffect, useState } from "react";
+import type { RankingAssessment } from "@/lib/ranking/assessment";
+type RankedItem = {id:string;name:string;source:string;reason:string;tables:number};
 import {
   ShieldCheck,
   ChartBar,
@@ -19,7 +21,7 @@ import {
 } from "@phosphor-icons/react";
 import type { ResearchGoal, Environment } from "@/types/research";
 import { investigations } from "@/lib/research/catalog";
-import { explainRankingReason } from "@/lib/ranking/rank";
+
 import { MissionContext } from "@/components/MissionContext";
 import { Expandable, Notice, Status, SourceLink } from "@/components/ui";
 const goals: {
@@ -105,12 +107,35 @@ export function Rankings({
     onSetupChange,
   ]);
   const activeGoal = goal ?? "Crew Safety";
-  const relevant = submitted
-    ? selectRankingCandidates(investigations, activeGoal, environment, question)
-    : [];
-  const assessment = assessmentId
-    ? assessRankingCandidate(assessmentId, activeGoal, environment, question)
-    : null;
+  const [ranked,setRanked] = useState<RankedItem[]>([]);
+  const [rankError,setRankError] = useState("");
+  const [rankPending,setRankPending] = useState(false);
+  const [assessment,setAssessment] = useState<RankingAssessment|null>(null);
+  const [assessmentError,setAssessmentError] = useState("");
+  useEffect(()=>{
+    if(!submitted||!environmentChosen||!goal){setRanked([]);setRankError("");setRankPending(false);return;}
+    const controller=new AbortController();
+    setRanked([]);setRankError("");setRankPending(true);
+    void fetch("/api/analysis",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({action:"rank",goal,environment,question}),signal:controller.signal})
+      .then(async response=>{if(!response.ok)throw new Error("Ranking unavailable");return response.json() as Promise<{items:RankedItem[]}>;})
+      .then(result=>{if(!controller.signal.aborted)setRanked(result.items);})
+      .catch(()=>{if(!controller.signal.aborted)setRankError("Protected rankings are currently unavailable.");})
+      .finally(()=>{if(!controller.signal.aborted)setRankPending(false);});
+    return ()=>controller.abort();
+  },[submitted,environmentChosen,goal,environment,question]);
+  useEffect(()=>{
+    setAssessment(null);setAssessmentError("");
+    if(!assessmentId||!goal)return;
+    const controller=new AbortController();
+    void fetch("/api/analysis",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({action:"assessment",id:assessmentId,goal,environment,question}),signal:controller.signal})
+      .then(async response=>{if(!response.ok)throw new Error("Assessment unavailable");return response.json() as Promise<{assessment:RankingAssessment}>;})
+      .then(result=>{if(!controller.signal.aborted)setAssessment(result.assessment);})
+      .catch(()=>{if(!controller.signal.aborted)setAssessmentError("Protected evidence assessment is currently unavailable.");});
+    return ()=>controller.abort();
+  },[assessmentId,goal,environment,question]);
+  const relevant=submitted?ranked.map(row=>investigations.find(item=>item.id===row.id)).filter((item):item is (typeof investigations)[number]=>Boolean(item)):[];
   useEffect(() => {
     onContextChange?.(
       assessmentId ? [assessmentId] : detail ? [detail] : [],
@@ -138,12 +163,7 @@ export function Rankings({
               <small>NASA investigation</small>
               <small>
                 Evidence:{" "}
-                {assessRankingCandidate(
-                  item.id,
-                  activeGoal,
-                  environment,
-                  question,
-                ).provenance.tables.length
+                {ranked.find(row=>row.id===item.id)?.tables
                   ? "tables available"
                   : "narrative coverage"}
               </small>
@@ -160,7 +180,7 @@ export function Rankings({
             </div>
             <p>
               <strong>Why relevant? </strong>
-              {explainRankingReason(item, activeGoal, environment)}
+              {ranked.find(row=>row.id===item.id)?.reason??"Review NASA evidence and conditions before interpreting relevance."}
             </p>
             <Status label="Confidence: not established" />
             <SourceLink href={item.source} label="Source" />
@@ -252,6 +272,8 @@ export function Rankings({
           )}
         </div>
       </form>
+      {rankPending && <p role="status">Loading protected rankings…</p>}
+      {rankError && <p role="alert">{rankError}</p>}
       {!submitted && (
         <p className="ranking-next-step" role="status">
           {!environmentChosen
@@ -344,6 +366,8 @@ export function Rankings({
             : "Evidence & Confidence"
         }
       >
+        {assessmentId && !assessment && !assessmentError && <p role="status">Loading evidence assessment…</p>}
+        {assessmentError && <p role="alert">{assessmentError}</p>}
         {assessment && (
           <RankingAssessmentPanel
             assessment={assessment}
