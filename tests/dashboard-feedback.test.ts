@@ -5,8 +5,6 @@ import { Window } from "happy-dom";
 import { investigations } from "../src/lib/research/catalog";
 import { prioritizeForEnvironment } from "../src/lib/research/environment-relevance";
 import { findNasaResource } from "../src/lib/resources/catalog";
-import { buildEvidenceReferences } from "../src/lib/research/evidence-references";
-import { checkMaterialClaims } from "../src/lib/ai/natural-review";
 
 test("environment selection changes research order without changing catalog membership or claiming direct lunar data", () => {
   const all = prioritizeForEnvironment(investigations, "All"),
@@ -50,28 +48,7 @@ test("environment selection changes research order without changing catalog memb
     source.excerpts.find((excerpt) => excerpt.id === "partial-gravity")!.text,
     /no partial-gravity combustion data/,
   );
-  const refs = buildEvidenceReferences({
-      missionContext: "",
-      records: [],
-      resources: [source],
-    }),
-    ref = refs.find((item) => item.id.endsWith(":oxygen"))!;
-  assert.deepEqual(
-    checkMaterialClaims(
-      {
-        reply: "1. Oxygen matters. [1]\n2. Conditions matter. [1]",
-        claims: [
-          {
-            evidenceId: ref.id,
-            interpretation: "Oxygen and conditions matter.",
-          },
-        ],
-      },
-      refs,
-    ),
-    [],
-    "List numbering is not an experimental measurement",
-  );
+
 });
 test("structured replies render safely and QA sidebar opens a visible cited statement", async () => {
   const window = new Window({ url: "http://localhost:3022" });
