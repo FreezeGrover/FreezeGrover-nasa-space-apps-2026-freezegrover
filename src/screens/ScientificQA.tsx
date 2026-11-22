@@ -1,6 +1,6 @@
 "use client";
 import { answerReviewRequest } from "@/lib/qa/handoff";
-import { reviewCitation } from "@/lib/qa/citation-review";
+
 import { useEffect, useState } from "react";
 import {
   ShieldCheck,
@@ -15,7 +15,7 @@ import {
   investigations,
   getInvestigationEvidence,
 } from "@/lib/research/catalog";
-import { reviewScientificClaim } from "@/lib/qa/review";
+
 import { InvestigationPicker } from "@/components/InvestigationPicker";
 import { ResearchDialog } from "@/components/ResearchDialog";
 import { PsiEvidence } from "@/components/PsiEvidence";
@@ -23,7 +23,6 @@ import { SourceLink, Status } from "@/components/ui";
 import { createReviewNote, type ReviewNote } from "@/lib/qa/notes";
 import { findNasaResource } from "@/lib/resources/catalog";
 import {
-  reviewResourceClaim,
   createResourceReviewNote,
   type ResourceReviewNote,
 } from "@/lib/qa/resources";
@@ -111,11 +110,39 @@ export function ScientificQA({
     }
   }, [review]);
   const evidence = getInvestigationEvidence(recordId);
-  const checks = selectedReview?.quote
-    ? reviewCitation(selectedReview, statement)
-    : resource
-      ? reviewResourceClaim(statement, resource.id, review?.excerptId)
-      : reviewScientificClaim(statement, recordId);
+  type Check = {title:string;question:string;status:string;detail:string};
+  const [privateChecks,setPrivateChecks]=useState<Check[]>([]);
+  const [checkPending,setCheckPending]=useState(false);
+  const [checkError,setCheckError]=useState("");
+  const citationPayload = selectedReview?.quote ? JSON.stringify(selectedReview) : "";
+  const sourceId = resource?.id ?? "";
+  const excerptId = review?.excerptId ?? "";
+  useEffect(()=>{
+    const controller=new AbortController();
+    setPrivateChecks([]);setCheckPending(true);setCheckError("");
+    let action:Record<string,unknown>;
+    if(citationPayload) {
+      action={action:"qa-citation",review:JSON.parse(citationPayload),statement};
+    } else if(sourceId) {
+      action={action:"qa-resource",sourceId,excerptId:excerptId||undefined,statement};
+    } else {
+      action={action:"qa-claim",id:recordId,statement};
+    }
+    void fetch("/api/analysis",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(action),signal:controller.signal})
+      .then(async response=>{
+        if(!response.ok) throw new Error("Protected scientific review unavailable");
+        return response.json() as Promise<{checks:Check[]}>;
+      }).then(payload=>{if(!controller.signal.aborted)setPrivateChecks(payload.checks);})
+      .catch(()=>{if(!controller.signal.aborted)setCheckError("Scientific QA is unavailable. No checks were completed.");})
+      .finally(()=>{if(!controller.signal.aborted)setCheckPending(false);});
+    return ()=>controller.abort();
+  },[citationPayload,sourceId,excerptId,statement,recordId]);
+  const checks=reviewAreas.map((area,index)=>privateChecks[index]??{
+    title:area.label,question:area.description,
+    status:checkPending?"Checking…":"Not reviewed",
+    detail:checkError||"No protected scientific assessment available.",
+  });
   function saveNote() {
     const note = resource
       ? createResourceReviewNote(resource.id, statement)
@@ -300,6 +327,8 @@ export function ScientificQA({
       <h3 className="qa-checks-title">
         {review?.answerText ? "4. Check summary" : "Check summary"}
       </h3>
+      {checkPending && <p role="status">Checking claims using the protected scientific QA service…</p>}
+      {checkError && <p role="alert">{checkError}</p>}
       <div className="qa-review-grid">
         {reviewAreas.map(({ label, icon: Icon }, index) => (
           <button
