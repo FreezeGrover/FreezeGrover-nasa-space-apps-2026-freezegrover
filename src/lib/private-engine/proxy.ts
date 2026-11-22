@@ -10,7 +10,7 @@ import "server-only";
  */
 export async function callPrivateEngine(
   request: Request,
-  path: "conversation" | "research",
+  path: "conversation" | "research" | "analysis",
 ): Promise<Response> {
   const origin = process.env.PRIVATE_ENGINE_ORIGIN;
   const token = process.env.PRIVATE_ENGINE_SERVICE_TOKEN;
